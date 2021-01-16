@@ -14,17 +14,17 @@
         </div>
         <h2>歷屆年會網站</h2>
         <div class="thumbnails">
-          <table style="border-style: none; border-spacing: 25.5px 0px">
+          <table class="img-table">
             <tr>
               <td width="225">
                 <img class="images" src="./img/sitcon2020_webpage.png" />
                 <p class="tag">SITCON 2020<br /></p>
-                <p class="tag.sub">#define</p>
+                <p class="tag sub">#define</p>
               </td>
               <td width="225">
                 <img class="images" src="./img/sitcon2019_webpage.png" />
                 <p class="tag">SITCON 2019<br /></p>
-                <p class="tag.sub">開箱演算法</p>
+                <p class="tag sub">開箱演算法</p>
               </td>
               <td width="225">
                 <img class="images" src="./img/sitcon2018_webpage.png" />
@@ -65,21 +65,23 @@
           </p>
 
           <h2 style="margin-top:40px;">徵稿時間</h2>
-          <div style="display: inline-block; margin-top:-20px; position:relative;">
-            <h2 style="display: inline; margin-right: 35px;">01/15 ~ 02/22</h2>
-            <p class="context" style="display: inline; margin-right: 37px;">
+          <div style="display: inline-block;position:relative;">
+            <h2 class="date" style="display: inline;">01/15 ~ 02/22</h2>
+            <p class="context detail" style="display: inline;">
               詳細時程請見
             </p>
-            <div style="display: inline; margin-top:-20px; bottom:0;">
-              <button class="buttons">投稿資訊</button>
-              <button class="buttons">不用說了，快讓我投稿！</button>
+            <div class="button-post">
+              <div style="display: inline;bottom:0;">
+                <button class="buttons">投稿資訊</button>
+                <button class="buttons">不用說了，快讓我投稿！</button>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="last-part">
           <h3>最後...</h3>
-          <h1 style="margin-top:-30px;">SITCON 贊助徵求</h1>
+          <h1>SITCON 贊助徵求</h1> <!--style="margin-top:-30px;"-->
           <p class="context">
             SITCON 的舉辦，除了有賴眾多志工的努力，也需要金錢的支持。<br />
             如果您認同 SITCON 的理念，歡迎以行動支持 SITCON

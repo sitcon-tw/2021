@@ -38,9 +38,14 @@
       font-family: var(--unnamed-font-family-noto-sans-cjk-tc);
       margin-left: 10%;
       margin-top: 1108px;
+
+      @media screen and(max-width: 414px) {
+        margin-top: 733px;
+        margin-left: 3%;
+      }
+
     }
-
-
+  
     .about-section {
       top: 1222px;
       left: 278px;
@@ -54,6 +59,11 @@
       letter-spacing: 0.2px;
       color: #226BB4;
       opacity: 1;
+
+      @media screen and (max-width: 414px) {
+        width: 340px;
+        height: 171px;
+      }
     }
 
     .discuss-section {
@@ -69,6 +79,10 @@
       letter-spacing: 0.2px;
       color: #226BB4;
       opacity: 1;
+
+      @media screen and (max-width: 414px) {
+        width: 342px;
+      }
     }
 
     .topic-intro {
@@ -85,6 +99,12 @@
       letter-spacing: 0.2px;
       color: #226BB4;
       opacity: 1;
+
+      @media screen and (max-width: 414px) {
+        margin-top: 269px;
+        width: 342px;
+        height: 445px;
+      }
     }
 
     .last-part {
@@ -102,6 +122,11 @@
       letter-spacing: 0.2px;
       color: #226BB4;
       opacity: 1;
+
+      @media screen and (max-width: 414px) {
+        margin-top: 246.69px;
+        width: 330px;
+      }
     }
 
     .buttons {
@@ -127,6 +152,19 @@
       cursor: pointer;
       background-color: #ffffff;
       color: #226BB4;
+
+      @media screen and (max-width: 414px) {
+        font-size: 18px;
+        padding: 6px 10px 6px 10px;
+        margin-right: 20px;
+        margin-top: 20px;
+      }
+    }
+
+    .button-post {
+      @media screen and (max-width: 414px) {
+        width: 414px;
+      }
     }
 
     .buttons:hover {
@@ -137,6 +175,14 @@
 
       background-color: #226BB4;
       color: #ffffff;
+    }
+
+    .date {
+      margin-right: 35px;
+      @media screen and (max-width: 414px) {
+        margin-right: 20px;
+        font-size: 26px;
+      }
     }
 
     h1,
@@ -159,11 +205,14 @@
       color: var(--unnamed-color-226bb4);
       color: #226BB4;
 
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
 
       .enlarge {
         font-size: 72px;
+        @media screen and (max-width: 414px) {
+          font-size: 48px;
+        }
       }
 
       .sub {
@@ -187,8 +236,8 @@
       color: var(--unnamed-color-226bb4);
       color: #226BB4;
 
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
 
       @media screen and (max-width: 414px) {
         font-size: 20px;
@@ -206,8 +255,8 @@
       color: var(--unnamed-color-226bb4);
       color: #226BB4;
 
-      display: flex;
-      flex-direction: column;
+      // display: flex;
+      // flex-direction: column;
 
       @media screen and (max-width: 414px) {
         font-size: 14px;
@@ -224,6 +273,15 @@
       letter-spacing: var(--unnamed-character-spacing-0-2);
       color: var(--unnamed-color-226bb4);
       color: #226BB4;
+      
+      .detail {
+        margin-right: 37px;
+
+        @media screen and (max-width: 414px) {
+          margin-right: 0px;
+          font-size: 14px;
+        }
+      }
 
       @media screen and (max-width: 414px) {
         font-size: 14px;
@@ -253,6 +311,10 @@
       color: var(--unnamed-color-226bb4);
       color: #226BB4;
       text-decoration: var(--unnamed-decoration-underline);
+    
+      @media screen and (max-width: 414px){
+        font-size: 14px;
+      }
     }
 
     // .h1-mobile {
@@ -345,10 +407,6 @@
         font-size: 12px;
       }
 
-      @media screen and (min-width: 414px) {
-        font-size: 20px;
-      }
-
       @media screen and (max-width: 414px) {
         font-size: 16px;
       }
@@ -372,6 +430,7 @@
       height: 152px;
 
       @media screen and (max-width: 414px) {
+        border-radius: 2px;
         width: 107px;
         height: 72px;
       }
@@ -384,13 +443,26 @@
       /* remove outer border spacing */
       @media screen and (max-width: 414px) {
         top: 1036px;
-        left: 30px;
-        margin-left: -25.5px;
+        width: 300px;
+        margin-left: -7.5px;
+      }
+    }
+
+    .img-table{
+      border-style: none;
+      border-spacing: 25.5px 0px;
+
+      @media screen and (max-width: 414px) {
+        border-spacing: 7.5px 0px;
       }
     }
 
     .images {
       box-shadow: 0px 3px 20px #5978CE8F;
+
+      @media screen and (max-width:414px){
+        box-shadow: 0px 1px 6px #5978CE8F;
+      }
     }
 
     a {
