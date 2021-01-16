@@ -19,12 +19,12 @@
               <td width="225">
                 <img class="images" src="./img/sitcon2020_webpage.png" />
                 <p class="tag">SITCON 2020<br /></p>
-                <p class="tag">#define</p>
+                <p class="tag.sub">#define</p>
               </td>
               <td width="225">
                 <img class="images" src="./img/sitcon2019_webpage.png" />
                 <p class="tag">SITCON 2019<br /></p>
-                <p class="tag">開箱演算法</p>
+                <p class="tag.sub">開箱演算法</p>
               </td>
               <td width="225">
                 <img class="images" src="./img/sitcon2018_webpage.png" />
