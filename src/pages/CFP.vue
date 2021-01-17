@@ -16,18 +16,18 @@
         <div class="thumbnails">
           <table class="img-table">
             <tr>
-              <td width="225">
-                <img class="images" src="./img/sitcon2020_webpage.png" />
+              <td class="td-width">
+                <img class="images" src="./img/2020.png" />
                 <p class="tag">SITCON 2020<br /></p>
                 <p class="tag sub">#define</p>
               </td>
-              <td width="225">
-                <img class="images" src="./img/sitcon2019_webpage.png" />
+              <td class="td-width">
+                <img class="images" src="./img/2019.png" />
                 <p class="tag">SITCON 2019<br /></p>
                 <p class="tag sub">開箱演算法</p>
               </td>
-              <td width="225">
-                <img class="images" src="./img/sitcon2018_webpage.png" />
+              <td class="td-width">
+                <img class="images" src="./img/2018.png" />
                 <p class="tag">SITCON 2018<br /></p>
                 <p class="small-tag">POPULAR COMPUTER SCIENCE</p>
               </td>
@@ -65,16 +65,14 @@
           </p>
 
           <h2 style="margin-top:40px;">徵稿時間</h2>
-          <div style="display: inline-block;position:relative;">
-            <h2 class="date" style="display: inline;">01/15 ~ 02/22</h2>
-            <p class="context detail" style="display: inline;">
+          <div>
+            <h2 class="date">01/15 ~ 02/22</h2>
+            <p class="detail">
               詳細時程請見
             </p>
             <div class="button-post">
-              <div style="display: inline;bottom:0;">
-                <button class="buttons">投稿資訊</button>
-                <button class="buttons">不用說了，快讓我投稿！</button>
-              </div>
+              <button class="buttons">投稿資訊</button>
+              <button class="buttons">不用說了，快讓我投稿！</button>
             </div>
           </div>
         </div>
