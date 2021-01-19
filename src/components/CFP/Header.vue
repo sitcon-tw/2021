@@ -57,7 +57,7 @@
       <div class="cfp-news">
         <div class="cfp-news-wrapper">
           <div class="hexagon">
-            <a href="/news" rel="noopener" class="btn">
+            <a href="/2021/cfp/news" rel="noopener" class="btn">
               <img
                 src="~@/assets/images/burnfont/news.svg"
                 class="svg"

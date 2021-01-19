@@ -216,13 +216,14 @@ $limitWidth: 80vw;
   }
 
   &-qa {
-    width: 1000px;
+    width: 100vw;
     &__itemBox {
       border-radius: 29px;
       box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
       background-color: $white;
       margin: 20px 0;
       padding: 10px 20px;
+      width: 80%;
       cursor: pointer;
       span {
         font-family: $fontFamily-NotoSansTC;
