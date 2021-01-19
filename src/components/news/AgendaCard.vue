@@ -20,5 +20,5 @@ export default class AgendaCard extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/CFP/card';
+@import '@/assets/scss/news/card';
 </style>

@@ -5,7 +5,7 @@
 
 $fontFamily: Noto Sans CJK TC, monospace;
 
-#info-schedule {
+#news-schedule {
   max-width: 80vw;
   margin: 0 auto;
 
@@ -91,7 +91,7 @@ $fontFamily: Noto Sans CJK TC, monospace;
 }
 
 @include md {
-  #info-schedule {
+  #news-schedule {
     margin: 0 auto;
     font-size: 14px;
 

@@ -1,4 +1,4 @@
-@import '../color.scss';
+@import '../color';
 
 $fontColor: #226bb4; // added to solve unnamed color error
 
@@ -15,7 +15,7 @@ $fontColor: #226bb4; // added to solve unnamed color error
 // $color-slate-blue: #5f7a95;
 // $color-mid-blue: #226bb4;
 
-$fontFamily-NotoSansTC: "Noto Sans TC";
+$fontFamily-NotoSansTC: 'Noto Sans TC';
 
 //@mixin
 @mixin clearFloat() {
@@ -134,16 +134,15 @@ $limitWidth: 80vw;
         letter-spacing: normal;
         text-align: center;
         font-size: 34px;
-        
       }
       &-text {
         width: 100%;
         //height: 172px;
         margin: 0 auto;
         text-align: left;
-        
+
         font-size: 19px;
-        P {
+        p {
           color: $white;
           font-family: $fontFamily-NotoSansTC;
           margin: 15px 0;
@@ -153,21 +152,19 @@ $limitWidth: 80vw;
         }
       }
 
-    //     p {
-    //       color: $color-white;
-    //       font-family: $fontFamily-NotoSansTC;
-    //       font-size: 19px;
-    //       font-weight: 500;
-    //       font-stretch: normal;
-    //       font-style: normal;
-    //       line-height: 2.1;
-    //       letter-spacing: 0.2px;
-    //     }
-    //     
-    //   }
+      //     p {
+      //       color: $color-white;
+      //       font-family: $fontFamily-NotoSansTC;
+      //       font-size: 19px;
+      //       font-weight: 500;
+      //       font-stretch: normal;
+      //       font-style: normal;
+      //       line-height: 2.1;
+      //       letter-spacing: 0.2px;
+      //     }
+      //
+      //   }
     }
-    
-
 
     // &__itemBox {
     //   float: left;
