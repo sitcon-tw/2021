@@ -2,7 +2,7 @@
   <header>
     <div class="top-bar">
       <div class="return-wrapper">
-        <a class="shape-wrapper diamond" href="/cfp"
+        <a class="shape-wrapper diamond" href="/2021/cfp"
           ><span class="text-wrapper">返回</span></a
         >
       </div>
