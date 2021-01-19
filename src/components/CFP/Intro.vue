@@ -16,8 +16,8 @@
             <!-- src="@/assets/images/cfp/Background.svg" -->
             <!-- first part -->
             <img src="@/assets/images/cfp/Path 740.svg" class="SITCON-text-path"/>
-            <svg width="890" height="900" class="first-box">
-              <rect width="1000" height="1000" style="fill:#ffffff;" />
+            <svg width="1200" height="1000" class="first-box">
+              <rect width="1200" height="1000" style="fill:#ffffff;" />
             </svg>
             <div class="box-back">
                 <h1>關於 SITCON</h1>
@@ -109,7 +109,7 @@
                         <div class="button-post">
                             <button
                                 class="buttons"
-                                onclick="window.location.href='/2021/cfp/news'"
+                                onclick="window.location.href='/cfp/news'"
                             ><h3>投稿資訊</h3></button>
                             <!-- NOTE: this button's hover won't work because paper.png is too big -->
                             <button
