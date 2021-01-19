@@ -11,9 +11,10 @@ module.exports = {
     prerenderSpa: {
       registry: undefined,
       renderRoutes: [
-        "/2021/",
-        "/2021/cfp",
-        "/2021/cfp/"
+        '/2021/',
+        '/2021/cfp',
+        '/2021/cfp/',
+        '/'
       ],
       useRenderEvent: true,
       headless: true,
