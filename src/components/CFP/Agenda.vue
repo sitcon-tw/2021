@@ -249,5 +249,5 @@ export default class Agenda extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/CFP/agenda.scss';
+@import '@/assets/scss/CFP/agenda';
 </style>
