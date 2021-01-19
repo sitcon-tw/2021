@@ -109,7 +109,7 @@
                         <div class="button-post">
                             <button
                                 class="buttons"
-                                onclick="window.location.href='/cfp/news'"
+                                onclick="window.location.href='/2021/cfp/news'"
                             ><h3>投稿資訊</h3></button>
                             <!-- NOTE: this button's hover won't work because paper.png is too big -->
                             <button
