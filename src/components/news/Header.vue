@@ -7,7 +7,7 @@
         >
       </div>
       <div class="title-wrapper text-center">
-        <img src="~@/assets/image/burnfont/news.svg" class="svg svg-cfp-news" />
+        <img src="~@/assets/images/burnfont/news.svg" class="svg svg-cfp-news" />
       </div>
       <div class="contribute-wrapper">
         <a class="btn-contribute" href="#">我要投稿</a>
