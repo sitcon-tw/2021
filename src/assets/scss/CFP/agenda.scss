@@ -1,16 +1,19 @@
+@import '../color.scss';
+
 $fontColor: #226bb4; // added to solve unnamed color error
 
 // import google font
 // This font has been imported in main.scss linked to App.vue; no need to import
 // @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
 
-//my variable
-$color-pale-grey: #f0f7fd;
-$color-dark-slate-blue: #1f4163;
-$color-dark-sky-blue: #3d93e9;
-$color-white: #ffffff;
-$color-slate-blue: #5f7a95;
-$color-mid-blue: #226bb4;
+// my variable
+// There colors have been moved to scss/color.scss to share with others
+// $color-pale-grey: #f0f7fd;
+// $color-dark-slate-blue: #1f4163;
+// $color-dark-sky-blue: #3d93e9;
+// $color-white: #ffffff;
+// $color-slate-blue: #5f7a95;
+// $color-mid-blue: #226bb4;
 
 $fontFamily-NotoSansTC: "Noto Sans TC";
 
@@ -41,7 +44,7 @@ $limitWidth: 80vw;
       line-height: 1.9;
       letter-spacing: normal;
       text-align: left;
-      color: $color-mid-blue;
+      color: $mid-blue;
       margin: 10px 0;
     }
     &__content {
@@ -55,7 +58,7 @@ $limitWidth: 80vw;
         line-height: 2.1;
         letter-spacing: 0.2px;
         text-align: left;
-        color: $color-mid-blue;
+        color: $mid-blue;
       }
 
       strong {
@@ -75,7 +78,7 @@ $limitWidth: 80vw;
             height: 4px;
             width: 4px;
             transform: translate(-200%, -150%);
-            background-color: $color-mid-blue;
+            background-color: $mid-blue;
             border-radius: 50%;
           }
         }
@@ -93,7 +96,7 @@ $limitWidth: 80vw;
           line-height: 2.2;
           letter-spacing: normal;
           text-align: left;
-          color: $color-mid-blue;
+          color: $mid-blue;
           margin: 10px 0;
         }
       }
@@ -113,14 +116,14 @@ $limitWidth: 80vw;
     &__itemBox {
       width: 330px;
       border-radius: 13px;
-      background-color: $color-mid-blue;
+      background-color: $mid-blue;
       padding: 26px 20px 34px 20px;
       @media screen and (max-width: 1200px) {
         width: 90%;
         margin: 20px auto;
       }
       &-title {
-        color: $color-white;
+        color: $white;
         display: inline-block;
         text-align: center;
         width: 100%;
@@ -141,7 +144,7 @@ $limitWidth: 80vw;
         
         font-size: 19px;
         P {
-          color: $color-white;
+          color: $white;
           font-family: $fontFamily-NotoSansTC;
           margin: 15px 0;
         }
@@ -220,7 +223,7 @@ $limitWidth: 80vw;
     &__itemBox {
       border-radius: 29px;
       box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
-      background-color: $color-white;
+      background-color: $white;
       margin: 20px 0;
       padding: 10px 20px;
       cursor: pointer;
