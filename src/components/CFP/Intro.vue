@@ -2,6 +2,7 @@
   <main class="introduction-container">
     <div class="introduction">
       <div class="box-back box">
+        <div class="introd-text">
         <div class="about-sitcon">
           <h2>關於 SITCON</h2>
           <p>
@@ -66,9 +67,14 @@
             >
           </div>
         </div>
+        </div>
+        <svg width="1000" height="950" class="first-box"><rect width="1500" height="1200" style="fill: rgb(255, 255, 255);"></rect></svg>
       </div>
-
+<!-- ==================================================================================================== -->
+      <div class="box-bluearea">
+      </div>
       <div class="box-back2 box">
+      <div class="introd-text">
         <div class="topic-intro">
           <div class="about-topic">
             <h2>2021 年會主題</h2>
@@ -97,8 +103,8 @@
               >
             </div>
           </div>
+          </div>
         </div>
-
         <div class="give-me-money">
           <p class="whisper">最後...</p>
           <h2>SITCON 贊助徵求</h2>
@@ -126,7 +132,9 @@
               >個人贊助方案</a
             >
           </div>
+          
         </div>
+        <svg width="1100" height="1200" class="second-box"><rect width="1500" height="1500" style="fill: rgb(255, 255, 255);"></rect></svg>
       </div>
     </div>
   </main>
