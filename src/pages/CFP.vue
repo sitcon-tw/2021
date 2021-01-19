@@ -1,6 +1,6 @@
 <template>
   <div id="cfp" class="cfp cfp-background">
-    <!-- CfpHeader id="cfp-header"/ -->
+    <CfpHeader id="cfp-header"/>
     <Intro id="cfp-intro"></Intro>
     
   </div>
