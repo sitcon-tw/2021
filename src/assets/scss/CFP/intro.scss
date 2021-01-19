@@ -1,8 +1,11 @@
+$fontFamily: Noto Sans TC;
+$fontColor:  #226BB4;
+
 // General settings: 
 //    font-size and paragraph spacing for headers and paragraph text
 #cfp-intro {
-
-  padding: 96px 0;
+  margin-top: 90px;
+  padding: 96px 0 0 0;
 
   h1,
   h2,
@@ -36,7 +39,11 @@
     font-weight: 900;
   }
 }
-
+.introduction{
+    height: 2250px;
+    overflow: hidden;
+    padding-bottom: 0;
+}
 // Utiliy
 #cfp-intro {
   .mr-2 {
@@ -54,10 +61,30 @@
   .box-back {
     // margin-top: -120px;
     // width: 880px;
-    margin-bottom: 2em;
+    margin-bottom: -40em;
+    font-family: $fontFamily;
+    color: $fontColor;
 
+    width: 700px;
+    padding: 20px;
+
+    .first-box {
+      transform: rotate(15deg);
+      box-shadow: 0 3px 12px 0 rgba(89,120,206,.56);
+      border-radius: 30px;
+      position: relative;
+      bottom: 550px;
+      right: 50px;
+      z-index: 0;
+    }
+    .introd-text {
+      position: relative;
+      top: 200px;
+      left: 150px;
+      z-index: 2;
+    }
     .about-sitcon {
-      margin-bottom: 2em;
+      margin-bottom: 0 auto 2em;
     }
 
     .past-sitcon {
@@ -93,15 +120,51 @@
     }
   }
 
+  .box-bluearea {
+    width: 150vw;
+    height: 450px;
+    background: rgba(34, 107, 180,1);
+    right: 25%;
+    position:relative;
+    z-index: -1;
+    transform: rotate(15deg);
+    opacity: 1;
+  }
+
   .box-back2 {
     // width: 760px;
+    font-family: $fontFamily;
+    color: $fontColor;
+
+    width: 900px;
+    padding: 20px;
+    height: 2200px;
 
     .about-topic {
       margin-bottom: 2em;
+      position:relative;
+      bottom: 75px;
+      z-index: 2;
+      left: 50px;
+    }
+
+    .second-box {
+        transform: rotate(15deg);
+        box-shadow: 0 3px 12px 0 rgba(89,120,206,.56);
+        border-radius: 30px;
+        position: relative;
+        bottom: 1100px;
+        right: 120px;
+        z-index: 0;
     }
 
     .cfp-deadline {
       margin-bottom: 2em;
+      margin-bottom: 2em;
+      position:relative;
+      z-index: 2;
+      left: 50px;
+      bottom: 75px;
       .cfp-deadline-content {
         margin-top: -1.5em;
         display: flex;
@@ -111,10 +174,15 @@
     }
 
     .give-me-money {
+      position:relative;
+      z-index: 2;
+      left: 50px;
+      bottom: 75px;
       .whisper {
         font-weight: 900;
         font-size: 1.25em;
         margin-bottom: 0.5em;
+        
       }
     }
   }
