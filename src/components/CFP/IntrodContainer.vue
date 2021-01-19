@@ -32,17 +32,17 @@
                 <div class="thumbnails">
                     <table class="img-table">
                         <tr>
-                            <td class="td-width">
+                            <td class="td-width" onclick="window.location.href='/2020'">
                                 <img class="cfp-img" src="@/assets/images/cfp/2020.png" />
                                 <p class="tag">SITCON 2020<br /></p>
                                 <p class="tag sub">#define</p>
                             </td>
-                            <td class="td-width">
+                            <td class="td-width" onclick="window.location.href='/2019'">
                                 <img class="cfp-img" src="@/assets/images/cfp/2019.png" />
                                 <p class="tag">SITCON 2019<br /></p>
                                 <p class="tag sub">開箱演算法</p>
                             </td>
-                            <td class="td-width">
+                            <td class="td-width" onclick="window.location.href='/2018'">
                                 <img class="cfp-img" src="@/assets/images/cfp/2018.png" />
                                 <p class="tag">SITCON 2018<br /></p>
                                 <p class="small-tag">POPULAR COMPUTER SCIENCE</p>
@@ -64,8 +64,14 @@
                     </p>
                 </div>
                 <div>
-                    <button class="buttons"><h3>SITCON 論壇</h3></button>
-                    <button class="buttons"><h3>會議記錄</h3></button>
+                    <button
+                        class="buttons"
+                        onclick="window.location.href='https://groups.google.com/g/sitcon-general'"
+                    ><h3>SITCON 論壇</h3></button>
+                    <button
+                        class="buttons"
+                        onclick="window.location.href='https://hackmd.io/@SITCON/SITCON2021'"
+                    ><h3>會議記錄</h3></button>
                 </div>
             </div>
             
@@ -101,9 +107,15 @@
                             詳細時程請見
                         </p>
                         <div class="button-post">
-                            <button class="buttons"><h3>投稿資訊</h3></button>
+                            <button
+                                class="buttons"
+                                onclick="window.location.href='/news'"
+                            ><h3>投稿資訊</h3></button>
                             <!-- NOTE: this button's hover won't work because paper.png is too big -->
-                            <button class="buttons"><h3>不用說了，快讓我投稿！</h3></button>
+                            <button
+                                class="buttons"
+                                onclick="window.location.href='https://forms.gle/XoXJSD2P8dL8X8s2A'"
+                            ><h3>不用說了，快讓我投稿！</h3></button>
                         </div>
                     </div>
                 </div>
@@ -122,7 +134,10 @@
                         <a class="context-hyperlink" href="mailto:contact@sitcon.org">contact@sitcon.org</a>
                     </p>
                     <div>
-                        <button class="buttons"><h3>個人贊助方案</h3></button>
+                        <button
+                            class="buttons"
+                            onclick="window.location.href='http://bit.ly/donatesitcon2021'"
+                        ><h3>個人贊助方案</h3></button>
                     </div>
                 </div>
                 <!-- second part -->
