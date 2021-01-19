@@ -1,7 +1,7 @@
 const path = require("path");
 const fs = require("fs");
 
-//const gaTempHTML = fs.readFileSync(path.join(__dirname, "./template/ga.html"));
+const gaTempHTML = fs.readFileSync(path.join(__dirname, "./template/ga.html"));
 
 //const sessionData = require(path.join(__dirname, "./public/json/session.json"));
 
@@ -14,11 +14,20 @@ module.exports = {
         '/2021/',
         '/2021/cfp',
         '/2021/cfp/',
-        '/'
+        '/2021/cfp/news',
+        '/2021/cfp/news/'
       ],
       useRenderEvent: true,
       headless: true,
-      onlyProduction: true
+      onlyProduction: true,
+      postProcess: (route) => {
+        // Auto inject GA template
+        route.html = route.html.replace(
+          "<noscript>{{{ %GA_TEMPLATE% }}}</noscript>",
+          gaTempHTML
+        );
+        return route;
+      }
     },
   },
 };

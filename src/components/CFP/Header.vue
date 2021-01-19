@@ -4,7 +4,7 @@
       <div class="sitcon-2021 text-center spot-box-row">
         <img
           alt="SITCON2021"
-          src="~@/assets/image/burnfont/2021.svg"
+          src="~@/assets/images/burnfont/2021.svg"
           class="svg"
           id="svg-sitcon2021"
         />
@@ -12,7 +12,7 @@
       <div class="sitcon-name text-center spot-box-row">
         <img
           alt="學生計算機年會"
-          src="~@/assets/image/burnfont/sitcon.svg"
+          src="~@/assets/images/burnfont/sitcon.svg"
           class="svg"
           id="svg-sitcon"
         />
@@ -20,7 +20,7 @@
       <h1 class="sitcon-topic text-center spot-box-row">
         <img
           alt="算盤的後裔"
-          src="~@/assets/image/burnfont/topic.svg"
+          src="~@/assets/images/burnfont/topic.svg"
           class="svg"
           id="svg-topic"
         />
@@ -30,7 +30,7 @@
       <div class="cfp-title">
         <div class="cfp-svg-wrapper text-center">
           <img
-            src="~@/assets/image/burnfont/cfp.svg"
+            src="~@/assets/images/burnfont/cfp.svg"
             class="svg"
             id="svg-cfp"
           />
@@ -40,14 +40,14 @@
         <div class="date-location-wrapper">
           <div class="date-wrapper">
             <img
-              src="~@/assets/image/burnfont/date.svg"
+              src="~@/assets/images/burnfont/date.svg"
               class="svg"
               id="svg-date"
             />
           </div>
           <div class="location-wrapper">
             <img
-              src="~@/assets/image/burnfont/location.svg"
+              src="~@/assets/images/burnfont/location.svg"
               class="svg"
               id="svg-location"
             />
@@ -59,7 +59,7 @@
           <div class="hexagon">
             <a href="/news" rel="noopener" class="btn">
               <img
-                src="~@/assets/image/burnfont/news.svg"
+                src="~@/assets/images/burnfont/news.svg"
                 class="svg"
                 id="svg-news"
               />
@@ -77,3 +77,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class CfpHeader extends Vue {}
 </script>
+
+<style lang="scss">
+@import '@/assets/scss/CFP/header';
+</style>
