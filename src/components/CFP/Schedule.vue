@@ -77,5 +77,5 @@ export default class Schedule extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/CFP/schedule.scss';
+@import '@/assets/scss/CFP/schedule';
 </style>
