@@ -16,8 +16,8 @@
             <!-- src="@/assets/images/cfp/Background.svg" -->
             <!-- first part -->
             <img src="@/assets/images/cfp/Path 740.svg" class="SITCON-text-path"/>
-            <svg width="890" height="900" class="first-box">
-              <rect width="1000" height="1000" style="fill:#ffffff;" />
+            <svg width="1200" height="1000" class="first-box">
+              <rect width="1200" height="1000" style="fill:#ffffff;" />
             </svg>
             <div class="box-back">
                 <h1>關於 SITCON</h1>
