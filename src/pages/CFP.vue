@@ -1,7 +1,7 @@
 <template>
   <div id="cfp" class="cfp cfp-background">
     <!-- CfpHeader id="cfp-header"/ -->
-    <IntrodContainer></IntrodContainer>
+    <Intro id="cfp-intro"></Intro>
     
   </div>
 </template>
@@ -10,12 +10,12 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 // components
 import CfpHeader from '@/components/CFP/Header.vue';
-import IntrodContainer from '@/components/CFP/IntrodContainer.vue';
+import Intro from '@/components/CFP/Intro.vue';
 
 @Component({
   components: {
     CfpHeader,
-    IntrodContainer
+    Intro
   }
 })
 export default class CFP extends Vue {

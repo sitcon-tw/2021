@@ -114,3 +114,7 @@ export default class CfpHeader extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+@import '@/assets/scss/news/header'
+</style>

@@ -21,5 +21,5 @@ export default class Topic extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/CFP/topic.scss';
+@import '@/assets/scss/news/topic';
 </style>

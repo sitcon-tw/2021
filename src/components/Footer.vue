@@ -69,3 +69,7 @@ export default class CFP extends Vue {
   ];
 }
 </script>
+
+<style lang="scss">
+@import '@/assets/scss/footer';
+</style>
