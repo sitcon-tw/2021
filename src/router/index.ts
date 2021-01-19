@@ -10,7 +10,7 @@ export const routes: RouteConfig[] = [
   {
     path: '/',
     name: 'Home',
-    component: CFP,
+    redirect: '/cfp',
     meta: {
       index: 0,
       label: 'SITCON 2021',
