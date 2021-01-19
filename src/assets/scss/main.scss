@@ -23,13 +23,14 @@
 
 body {
   width: 100vw;
+  height: 100vh;
+
   position: relative;
   overflow-x: hidden;
+  
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  font-size: 14pt;
-  margin:0;
+  font-size: 13pt;
 }
 
 #app {

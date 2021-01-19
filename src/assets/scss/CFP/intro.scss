@@ -10,11 +10,12 @@ $buttonHoverColor: #ffffff;
 @mixin hyperlinkFont() {
   text-decoration: underline;
 }
+
 // font size
-$h1FontSize: 30px;
-$h2FontSize: 24px;
-$h3FontSize: 16px;
-$contextFontSize: 13px;
+$h1FontSize: 42pt;
+$h2FontSize: 27pt;
+$h3FontSize: 20pt;
+// $contextFontSize: 13px;
 $buttonFontSize: 24px;
 
 $mh1FontSize: 26px;
@@ -36,6 +37,16 @@ $hyperlinkLetterSpace: 0;
 $buttonHoverBg: #226bb4;
 
 #cfp {
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 2em;
+  }
+
+  p {
+    line-height: 2;
+  }
+
   .introduction-container {
     overflow-x: hidden;
     overflow-y: hidden;
@@ -62,24 +73,24 @@ $buttonHoverBg: #226bb4;
 
   .about-section {
     // font
-    font-size: $contextFontSize;
+    // font-size: $contextFontSize;
     letter-spacing: $contextLetterSpace;
-    line-height: 42px;
+    //line-height: 42px;
     width: 90%;
 
     @media screen and(max-width: 414px) {
-      font-size: $mcontextFontSize;
+      // font-size: $mcontextFontSize;
       width: 160%;
     }
   }
 
   .discuss-section {
-    font-size: $contextFontSize;
+    // font-size: $contextFontSize;
     letter-spacing: $contextLetterSpace;
-    line-height: 42px;
+    // line-height: 42px;
 
     @media screen and(max-width: 414px) {
-      font-size: $mcontextFontSize;
+      // font-size: $mcontextFontSize;
       width: 80%;
     }
   }
@@ -88,11 +99,11 @@ $buttonHoverBg: #226bb4;
     // size
     margin-top: 130px;
     // font
-    font-size: $contextFontSize;
+    // font-size: $contextFontSize;
     letter-spacing: $contextLetterSpace;
-    line-height: 42px;
+    // line-height: 42px;
 
-    width: 1100px;
+    // width: 1100px;
 
     @media screen and(max-width: 414px) {
       margin-top: 50%;
@@ -105,9 +116,9 @@ $buttonHoverBg: #226bb4;
     margin-top: 70px;
     height: 325px;
     // font
-    font-size: $contextFontSize;
+    // font-size: $contextFontSize;
     letter-spacing: $contextLetterSpace;
-    line-height: 42px;
+    // line-height: 42px;
 
     @media screen and(max-width: 414px) {
       margin-top: 40%;
@@ -122,7 +133,7 @@ $buttonHoverBg: #226bb4;
     font-size: $buttonFontSize;
     font-weight: 900;
     letter-spacing: $buttonLetterSpace;
-    line-height: 30px;
+    // line-height: 30px;
     // size
     margin-right: 37px;
     padding: 12px 15px 12px 15px;
@@ -184,12 +195,12 @@ $buttonHoverBg: #226bb4;
     margin-right: 35px;
     // align
     vertical-align: bottom;
-    line-height: 30px;
+    // line-height: 16pt;
 
     @media screen and(max-width:414px) {
-      font-size: 30px;
+      font-size: 16pt;
       margin-right: 10px;
-      line-height: 50px;
+      //line-height: 1.5;
       vertical-align: middle;
     }
   }
@@ -208,7 +219,7 @@ $buttonHoverBg: #226bb4;
   h1 {
     // font
     font-size: $h1FontSize;
-    line-height: 70px;
+    //@function: 70px;
     font-weight: 900;
     letter-spacing: $titleLetterSpace;
 
@@ -216,7 +227,7 @@ $buttonHoverBg: #226bb4;
       font-size: $enlargeFontSize;
 
       @media screen and (max-width: 414px) {
-        line-height: 50px;
+        // line-height: 50px;
         margin-bottom: 50px;
       }
     }
@@ -226,7 +237,7 @@ $buttonHoverBg: #226bb4;
     }
 
     @media screen and (max-width: 414px) {
-      line-height: 60px;
+      // line-height: 60px;
     }
   }
 
@@ -242,20 +253,20 @@ $buttonHoverBg: #226bb4;
 
   h2 {
     // font
-    font-size: $h2FontSize;
+    // font-size: $h2FontSize;
     letter-spacing: $titleLetterSpace;
     font-weight: 900;
-    line-height: 70px;
-    margin: 0px;
+    //line-height: 70px;
+    // margin: 0px;
   }
 
   h3 {
     // Font
-    font-size: $h3FontSize;
+    // font-size: $h3FontSize;
     letter-spacing: $titleLetterSpace;
     font-weight: 900;
-    line-height: 15px;
-    margin: 0px;
+    //line-height: 15px;
+    // margin: 0px;
   }
 
   .about-section > .context {
@@ -266,20 +277,22 @@ $buttonHoverBg: #226bb4;
     margin-right: 30%;
   }
 
+  /*
   .context {
     // font
-    font-size: $contextFontSize;
+    // font-size: $contextFontSize;
     line-height: 30px;
     letter-spacing: $contextLetterSpace;
     font-weight: normal;
   }
+  */
 
   .detail {
     // display
     display: inline;
     // font
-    font-size: $contextFontSize;
-    line-height: 20px;
+    // font-size: $contextFontSize;
+    // line-height: 20px;
     letter-spacing: $contextLetterSpace;
     font-weight: normal;
     // align
@@ -288,17 +301,17 @@ $buttonHoverBg: #226bb4;
 
     @media screen and (max-width: 414px) {
       margin-right: 25%;
-      line-height: 35px;
-      font-size: $mcontextFontSize;
+      //line-height: 35px;
+      // font-size: $mcontextFontSize;
     }
   }
 
   .context-span {
     // font
-    font-size: $contextFontSize;
+    // font-size: $contextFontSize;
     font-weight: 900;
     letter-spacing: $contextLetterSpace;
-    line-height: 42px;
+    //line-height: 42px;
   }
 
   .context-hyperlink {
@@ -307,13 +320,13 @@ $buttonHoverBg: #226bb4;
     letter-spacing: $hyperlinkLetterSpace;
     color: $light-blue;
     font-weight: normal;
-    line-height: 42px;
+    //line-height: 42px;
   }
 
   p.tag {
     // font
     font-size: 14px;
-    line-height: 15px;
+    // line-height: 15px;
     letter-spacing: 0;
     font-weight: 900;
     // align
@@ -328,7 +341,7 @@ $buttonHoverBg: #226bb4;
 
   p.tag.sub {
     font-size: 12px;
-    line-height: 10px;
+    // line-height: 10px;
 
     @media screen and (max-width: 414px) {
       font-size: 12px;
@@ -343,7 +356,7 @@ $buttonHoverBg: #226bb4;
     text-align: center;
 
     @media screen and (max-width: 414px) {
-      line-height: 12px;
+      //  line-height: 12px;
       font-size: 10px;
     }
   }
@@ -369,7 +382,7 @@ $buttonHoverBg: #226bb4;
 
   .thumbnails {
     // box
-    margin-left: -20.5px;
+    // margin-left: -20.5px;
 
     @media screen and (max-width: 414px) {
       margin-left: -9px;
@@ -689,6 +702,120 @@ $buttonHoverBg: #226bb4;
     @media screen and(max-width: 414px) {
       margin-top: 50%;
       transform: scale(0.6);
+    }
+  }
+}
+
+// General settings: font-size and paragraph spacing
+#cfp-intro {
+  h1,
+  h2,
+  h3 {
+    margin-bottom: 1em;
+  }
+
+  p:not(:last-child) {
+    margin-bottom: 1em;
+    line-height: 1.75;
+  }
+
+  h1,
+  .h1 {
+    font-size: 42pt;
+    font-weight: 900;
+  }
+
+  h2,
+  .h2 {
+    font-size: 26pt;
+    font-weight: 900;
+  }
+
+  h3,
+  .h3 {
+    font-size: 22pt;
+    font-weight: 900;
+  }
+}
+
+// Utiliy
+#cfp-intro {
+  .mr-2 {
+    margin-right: 2em;
+  }
+  .ml-2 {
+    margin-left: 2em;
+  }
+  .mt-1 {
+    margin-top: 1em;
+  }
+}
+
+#cfp-intro {
+  .box-back {
+    margin-top: -120px;
+    width: 880px;
+
+    .about-sitcon {
+      margin-bottom: 2em;
+    }
+
+    .past-sitcon {
+      margin-bottom: 2em;
+
+      .thumbnails {
+        display: flex;
+        flex-direction: row;
+        padding: 0.25em 0;
+
+        .thumb-wrapper {
+          .thumb-title,
+          .thumb-subtitle {
+            margin: 0;
+            font-size: 0.8em;
+            line-height: 1.75em;
+            font-weight: 900;
+          }
+
+          .small {
+            font-size: 0.6em;
+          }
+
+          &:not(:last-child) {
+            margin-right: 1em;
+          }
+        }
+      }
+    }
+
+    .join-discuss {
+      // empty
+    }
+  }
+
+  .box-back2 {
+    width: 760px;
+
+    .about-topic {
+      margin-bottom: 1em;
+    }
+
+    .cfp-deadline {
+      margin-bottom: 7em;
+      .cfp-deadline-content {
+        margin-top: -1.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+      }
+    }
+
+    .give-me-money {
+      .whisper {
+        font-weight: 900;
+        font-size: 1.25em;
+        margin-bottom: 0.5em;
+      }
     }
   }
 }

@@ -1,3 +1,5 @@
+@import 'color';
+
 .text-center {
   text-align: center;
   .ignore {
@@ -32,4 +34,29 @@
 
 .d-inline-block {
   display: inline-block;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.85em 1.25em;
+
+  font-size: 1.1em;
+  font-weight: 900;
+  border: none;
+  border-radius: 8px;
+
+  &.btn-primary {
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
+    transition-duration: 0.2s;
+    color: $mid-blue;
+
+    &:hover {
+      // box
+      background-color: $mid-blue;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.19);
+      // font
+      color: $white;
+    }
+  }
 }
