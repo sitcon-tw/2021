@@ -1,7 +1,8 @@
 $fontColor: #226bb4; // added to solve unnamed color error
 
-//import google font
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
+// import google font
+// This font has been imported in main.scss linked to App.vue; no need to import
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
 
 //my variable
 $color-pale-grey: #f0f7fd;
