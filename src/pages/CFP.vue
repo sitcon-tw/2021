@@ -9,20 +9,19 @@
     </div>
     <!-- WTF = = -->
     <CfpHeader id="cfp-header" />
-    <!--<Intro id="cfp-intro"></Intro>-->
+    <Intro id="cfp-intro"></Intro>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-// components
 import CfpHeader from '@/components/CFP/Header.vue';
-// import Intro from '@/components/CFP/Intro.vue';
+import Intro from '@/components/CFP/Intro.vue';
 
 @Component({
   components: {
-    CfpHeader
-    // Intro
+    CfpHeader,
+    Intro
   }
 })
 export default class CFP extends Vue {
