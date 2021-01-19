@@ -109,7 +109,7 @@
                         <div class="button-post">
                             <button
                                 class="buttons"
-                                onclick="window.location.href='/news'"
+                                onclick="window.location.href='/cfp/news'"
                             ><h3>投稿資訊</h3></button>
                             <!-- NOTE: this button's hover won't work because paper.png is too big -->
                             <button
@@ -152,3 +152,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class IntrodContainer extends Vue {}
 </script>
+
+<style lang="scss">
+@import '@/assets/scss/CFP/intro';
+</style>
