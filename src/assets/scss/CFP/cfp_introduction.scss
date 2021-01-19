@@ -92,6 +92,8 @@ $buttonHoverBg: #226BB4;
     letter-spacing: $contextLetterSpace;
     line-height: 42px;
 
+    width: 1100px;
+
     @media screen and(max-width: 414px) {
       margin-top: 60%;
       width: 110%;
@@ -359,7 +361,7 @@ p.small-tag {
 
 .thumbnails {
   // box
-  margin-left: -25.5px;
+  margin-left: -20.5px;
 
   @media screen and (max-width:414px){
     margin-left: -9px;
@@ -370,6 +372,8 @@ p.small-tag {
   // box
   border-style: none;
   border-spacing: 25.5px 0px; //25.5
+  text-align: center; 
+  width: 640px;
 
   @media screen and (max-width: 414px) {
     width: 87%;
@@ -399,7 +403,7 @@ p.small-tag {
   box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
   border-radius: 60px; 
   transform: rotate(15deg); 
-  margin-bottom: -900px; 
+  margin-bottom: -800px; 
   margin-left: -200px;
   margin-top: -300px;
   z-index: 1;
@@ -672,7 +676,7 @@ p.small-tag {
   position: absolute;
   width: 100%;
   margin-top: -18.5%;
-  margin-left: -14%;
+  margin-left: -13%;
   transform: scale(0.2);
 
   @media screen and(max-width: 414px){
