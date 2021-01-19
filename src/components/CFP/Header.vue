@@ -55,17 +55,11 @@
         </div>
       </div>
       <div class="cfp-news">
-        <div class="cfp-news-wrapper">
-          <div class="hexagon">
-            <a href="/news" rel="noopener" class="btn">
-              <img
-                src="~@/assets/images/burnfont/news.svg"
-                class="svg"
-                id="svg-news"
-              />
-            </a>
+        <a href="/cfp/news" rel="noopener">
+          <div class="btn-news-wrapper">
+            <img src="~@/assets/images/burnfont/btn-news.svg" />
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </header>
@@ -79,5 +73,5 @@ export default class CfpHeader extends Vue {}
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/CFP/header';
+@import "@/assets/scss/CFP/header";
 </style>

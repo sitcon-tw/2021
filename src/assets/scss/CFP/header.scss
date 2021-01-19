@@ -59,6 +59,15 @@ $width-svg-news: 188px;
       order: 3;
       margin-bottom: 72px;
       flex: 1;
+      position: relative;
+
+      .btn-news-wrapper {
+        margin: -48px;
+      }
+
+      &:hover {
+        bottom: 6px;
+      }
     }
   }
 }
@@ -230,6 +239,7 @@ $width-svg-news: 188px;
         }
       }
       .cfp-news {
+        //empty
       }
     }
   }
