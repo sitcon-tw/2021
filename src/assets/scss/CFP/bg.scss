@@ -1,3 +1,5 @@
+@import '../hyperpoint';
+
 #cfp {
   position: relative;
 }
@@ -28,8 +30,76 @@
       width: 640px;
     }
     .radial {
-      width: 100vw;
+      width: 1920px;
       position: absolute;
+    }
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  #cfp-bg {
+    .korea-fish {
+      .radial {
+        margin-top: calc(576px - 30vw);
+        width: 100vw;
+      }
+    }
+  }
+}
+
+@include md {
+  #cfp-bg {
+    .korea-fish {
+      .sitcon-apple {
+        margin-top: 320px;
+        width: 216px;
+      }
+      .ellipse {
+        margin-top: 280px;
+        width: 420px;
+      }
+      .radial {
+        margin-top: 0;
+        width: 1666px;
+      }
+    }
+  }
+}
+
+@include sm {
+  #cfp-bg {
+    .korea-fish {
+      .sitcon-apple {
+        margin-top: 288px;
+        width: 180px;
+      }
+      .ellipse {
+        margin-top: 240px;
+        width: 360px;
+      }
+      .radial {
+        margin-top: -36px;
+        width: 1666px;
+      }
+    }
+  }
+}
+
+@include xs {
+  #cfp-bg {
+    .korea-fish {
+      .sitcon-apple {
+        margin-top: 216px;
+        width: 120px;
+      }
+      .ellipse {
+        margin-top: 180px;
+        width: 240px;
+      }
+      .radial {
+        margin-top: -180px;
+        width: 1666px;
+      }
     }
   }
 }
