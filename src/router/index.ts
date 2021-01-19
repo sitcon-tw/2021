@@ -26,7 +26,7 @@ export const routes: RouteConfig[] = [
     }
   },
   {
-    path: '/news',
+    path: '/cfp/news',
     name: 'news',
     component: News,
     meta: {
