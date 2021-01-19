@@ -92,6 +92,9 @@ $fontFamily: Noto Sans CJK TC, monospace;
   padding-top: 45px;
   padding-bottom: 45px;
 
+  position: relative;
+  z-index: 2;
+
   .footer-left {
     display: inline-flex;
     flex-direction: column;
