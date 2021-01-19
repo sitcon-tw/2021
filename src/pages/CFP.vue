@@ -1,7 +1,7 @@
 <template>
   <div id="cfp" class="cfp cfp-background">
     <!-- CfpHeader id="cfp-header"/ -->
-    <IntrodContainer></IntrodContainer>
+    <IntrodContainer id="cfp-intro"></IntrodContainer>
     
   </div>
 </template>

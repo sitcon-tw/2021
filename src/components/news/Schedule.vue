@@ -1,5 +1,5 @@
 <template>
-    <div id="info-schedule">
+    <div>
         <!-- 重要時程 -->
         <section id="schedule">
             <h1>重要時程</h1>
@@ -77,5 +77,5 @@ export default class Schedule extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/CFP/schedule';
+@import '@/assets/scss/news/schedule';
 </style>
