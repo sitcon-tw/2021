@@ -1,0 +1,35 @@
+#cfp {
+  position: relative;
+}
+
+// The Korea Fish
+
+#cfp-bg {
+  width: 100vw;
+  z-index: -1;
+  position: absolute;
+  left: -12px; // offset
+
+  .korea-fish {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    .sitcon-apple {
+      position: absolute;
+      margin-top: 360px;
+      width: 250px;
+    }
+    .ellipse {
+      position: absolute;
+      margin-top: 200px;
+      width: 640px;
+    }
+    .radial {
+      width: 100vw;
+      position: absolute;
+    }
+  }
+}
