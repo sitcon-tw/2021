@@ -26,4 +26,5 @@ export default class News extends Vue {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/news'
 </style>
