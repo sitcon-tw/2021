@@ -1,0 +1,259 @@
+@import '../hyperpoint.scss';
+
+$width-svg-sitcon2021: 341px;
+$width-svg-sitcon: 244px;
+$width-svg-topic: 515px;
+$width-svg-cfp: 368px;
+$width-svg-date: 207px;
+$width-svg-location: 227px;
+$width-svg-news: 188px;
+
+#cfp-header {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 126px;
+
+  img.svg {
+    height: auto;
+  }
+  z-index: 1;
+
+  .spot-box {
+    padding-bottom: 260px;
+
+    .spot-box-row:not(:first-child) {
+      margin-top: 32px;
+    }
+  }
+
+  .info-box {
+    .date-location {
+      .date-wrapper {
+        margin-bottom: 48px;
+      }
+    }
+  }
+
+  .info-box {
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-around;
+    align-items: flex-end;
+
+    & > * {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .date-location {
+      order: 1;
+      margin-bottom: 72px;
+      flex: 1;
+    }
+    .cfp-title {
+      order: 2;
+      flex: 1;
+    }
+    .cfp-news {
+      order: 3;
+      margin-bottom: 72px;
+      flex: 1;
+    }
+  }
+}
+
+// Layout for mobile
+@include md {
+  #cfp-header {
+    .info-box {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      flex-wrap: wrap;
+
+      .cfp-title {
+        order: 1;
+        flex: 0 0 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 72px;
+      }
+
+      .date-location {
+        order: 2;
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+        .date-wrapper {
+          margin-bottom: 36px;
+        }
+      }
+
+      .cfp-news {
+        order: 3;
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include md {
+  #cfp-header {
+    padding-top: 72px;
+    padding-bottom: 72px;
+
+    .spot-box {
+      padding-bottom: 400px;
+
+      .spot-box-row:not(:first-child) {
+        margin-top: 30px;
+      }
+    }
+
+    .info-box {
+      .cfp-title {
+        margin-bottom: 56px;
+      }
+      .date-location {
+        .date-wrapper {
+          margin-bottom: 36px;
+        }
+      }
+      .cfp-news {
+      }
+    }
+  }
+
+  $scale: 0.8;
+  #svg-sitcon2021 {
+    width: $width-svg-sitcon2021 * $scale;
+  }
+  #svg-sitcon {
+    width: $width-svg-sitcon * $scale;
+  }
+  #svg-topic {
+    width: $width-svg-topic * $scale;
+  }
+  #svg-date {
+    width: $width-svg-date * $scale;
+  }
+  #svg-location {
+    width: $width-svg-location * $scale;
+  }
+  #svg-news {
+    width: $width-svg-news * $scale;
+  }
+  #svg-cfp {
+    width: $width-svg-cfp * $scale;
+  }
+}
+
+@include sm {
+  #cfp-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .spot-box {
+      padding-bottom: 360px;
+
+      .spot-box-row:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    .info-box {
+      .cfp-title {
+        margin-bottom: 56px;
+      }
+      .date-location {
+        .date-wrapper {
+          margin-bottom: 20px;
+        }
+      }
+      .cfp-news {
+      }
+    }
+  }
+
+  $scale: 0.7;
+  #svg-sitcon2021 {
+    width: $width-svg-sitcon2021 * $scale;
+  }
+  #svg-sitcon {
+    width: $width-svg-sitcon * $scale;
+  }
+  #svg-topic {
+    width: $width-svg-topic * $scale;
+  }
+  #svg-date {
+    width: $width-svg-date * $scale;
+  }
+  #svg-location {
+    width: $width-svg-location * $scale;
+  }
+  #svg-news {
+    width: $width-svg-news * $scale;
+  }
+  #svg-cfp {
+    width: $width-svg-cfp * $scale;
+  }
+}
+
+@include xs {
+  #cfp-header {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    .spot-box {
+      padding-bottom: 240px;
+
+      .spot-box-row:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+
+    .info-box {
+      .cfp-title {
+        margin-bottom: 32px;
+      }
+      .date-location {
+        .date-wrapper {
+          margin-bottom: 16px;
+        }
+      }
+      .cfp-news {
+      }
+    }
+  }
+
+  $scale: 0.45;
+  #svg-sitcon2021 {
+    width: $width-svg-sitcon2021 * $scale;
+  }
+  #svg-sitcon {
+    width: $width-svg-sitcon * $scale;
+  }
+  #svg-topic {
+    width: $width-svg-topic * $scale;
+  }
+  #svg-date {
+    width: $width-svg-date * $scale;
+  }
+  #svg-location {
+    width: $width-svg-location * $scale;
+  }
+  #svg-news {
+    width: $width-svg-news * $scale;
+  }
+  #svg-cfp {
+    width: $width-svg-cfp * $scale;
+  }
+}

@@ -1,0 +1,43 @@
+// global
+@import './reset.scss';
+@import './variable.scss';
+@import './color.scss';
+@import './util.scss';
+
+// components
+@import './footer.scss';
+@import './CFP/cfp_introduction.scss';
+@import './CFP/CFP.scss';
+@import './CFP/cfpSubNew.scss';
+@import "./news.scss";
+
+.sitcon-burnfont {
+  color: $mid-blue;
+  font-weight: 900;
+}
+
+.link {
+  cursor: pointer;
+}
+
+body {
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-size: 14pt;
+  margin:0;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+small {
+  font-size: 0.66em;
+}

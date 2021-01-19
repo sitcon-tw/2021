@@ -1,0 +1,35 @@
+.text-center {
+  text-align: center;
+  .ignore {
+    display: inline-block;
+    width: 0;
+  }
+}
+
+.shape-wrapper {
+  display: inline-block;
+  .text-wrapper {
+    display: inline-block;
+  }
+
+  &.diamond {
+    $angle: 45deg;
+    -moz-transform: rotate($angle);
+    -webkit-transform: rotate($angle);
+    -o-transform: rotate($angle);
+    -ms-transform: rotate($angle);
+    transform: rotate($angle);
+
+    .text-wrapper {
+      -moz-transform: rotate(-$angle);
+      -webkit-transform: rotate(-$angle);
+      -o-transform: rotate(-$angle);
+      -ms-transform: rotate(-$angle);
+      transform: rotate(-$angle);
+    }
+  }
+}
+
+.d-inline-block {
+  display: inline-block;
+}
