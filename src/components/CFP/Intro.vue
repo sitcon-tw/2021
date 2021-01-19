@@ -17,7 +17,7 @@
       <svg width="890" height="900" class="first-box">
         <rect width="1000" height="1000" style="fill: #ffffff" />
       </svg>
-      <div class="box-back">
+      <div class="box-back box">
         <div class="about-sitcon">
           <h2>關於 SITCON</h2>
           <p>
@@ -61,13 +61,17 @@
               的會議記錄。
             </p>
           </div>
-          <div class="link-group">
+          <div class="link-group mt-1">
             <a
-              class="btn btn-primary"
+              rel="noopener"
+              target="_blank"
+              class="btn btn-primary mr-2"
               href="https://groups.google.com/g/sitcon-general"
               >SITCON 論壇</a
             >
             <a
+              rel="noopener"
+              target="_blank"
               class="btn btn-primary"
               href="https://hackmd.io/@SITCON/SITCON2021"
               >會議記錄</a
@@ -89,64 +93,90 @@
       <svg width="1500" height="900" class="hiden-box">
         <rect width="1500" height="900" style="fill: #ffffff" />
       </svg>
-      <div class="box-back2" style="margin-top: 1000px">
+
+      <div class="box-back2 box" style="margin-top: 1000px">
         <div class="topic-intro">
-          <h2 class="right">2021 年會主題</h2>
-          <h1 class="right">算盤的後裔</h1>
-          <p class="context">
-            千年以前的人類，發明了各式各樣輔助算術的工具，在世界各地的文明中，皆能找到廣義上的「算盤」。隨著時代演進，那些原始的工具，逐步進化成為現代的計算機與電腦，更進一步發展為隨處可見的智慧型裝置。俗話說「站在巨人的肩膀上」，前人的智慧成果成為墊腳石，讓站在其之上的後人可以看得更高、更遠。科技層層疊疊、承先啟後，文明才能跨越時空持續成長。
-          </p>
-          <p class="context">
-            人們不再需要重新發明輪子，只要善用前人的成果，就能造出更有效率的工具，並擁有更好的生活。生於現代的我們，每天寫著電腦程式、把玩著智慧型手機、徜徉在網際網路上沒有邊際的資訊大海。奠基於科技的現有成果，對科技的未來持續做出貢獻的我們，都是「算盤的後裔」。
-          </p>
-          <img src="@/assets/images/cfp/paper/paper.png" class="paper-image" />
-          <h3>徵稿時間</h3>
-          <div>
-            <!-- TODO is this header? -->
-            <h3 class="date">01/15 ~ 02/22</h3>
-            <p class="detail">詳細時程請見</p>
-            <div class="button-post">
-              <button class="buttons" onclick="window.location.href='/news'">
-                <h3>投稿資訊</h3>
-              </button>
-              <!-- NOTE: this button's hover won't work because paper.png is too big -->
-              <button
-                class="buttons"
-                onclick="window.location.href='https://forms.gle/XoXJSD2P8dL8X8s2A'"
+          <div class="about-topic">
+            <h2>2021 年會主題</h2>
+            <h1>算盤的後裔</h1>
+            <p>
+              千年以前的人類，發明了各式各樣輔助算術的工具，在世界各地的文明中，皆能找到廣義上的「算盤」。隨著時代演進，那些原始的工具，逐步進化成為現代的計算機與電腦，更進一步發展為隨處可見的智慧型裝置。俗話說「站在巨人的肩膀上」，前人的智慧成果成為墊腳石，讓站在其之上的後人可以看得更高、更遠。科技層層疊疊、承先啟後，文明才能跨越時空持續成長。
+            </p>
+            <p>
+              人們不再需要重新發明輪子，只要善用前人的成果，就能造出更有效率的工具，並擁有更好的生活。生於現代的我們，每天寫著電腦程式、把玩著智慧型手機、徜徉在網際網路上沒有邊際的資訊大海。奠基於科技的現有成果，對科技的未來持續做出貢獻的我們，都是「算盤的後裔」。
+            </p>
+          </div>
+
+          <!-- TODO This cover the button -->
+          <img
+            src="@/assets/images/cfp/paper/paper.png"
+            class="paper-image"
+            style="z-index: 999"
+          />
+
+          <div class="cfp-deadline">
+            <h3>徵稿時間</h3>
+            <div class="cfp-deadline-content">
+              <span class="h3">01/15 ～ 02/22</span
+              ><span class="ml-2 mr-2">詳細時程請見</span
+              ><a class="btn btn-primary mr-2" rel="noopener" href="/news"
+                >投稿資訊</a
+              ><a
+                class="btn btn-primary"
+                rel="noopener"
+                target="_blank"
+                href="https://forms.gle/XoXJSD2P8dL8X8s2A"
+                ><!-- TODO Omit some characters to fit the size -->快讓我投稿！</a
               >
-                <h3>不用說了，快讓我投稿！</h3>
-              </button>
             </div>
+            <!--
+            <div>
+              <h3 class="date">01/15 ~ 02/22</h3>
+              <p class="detail">詳細時程請見</p>
+              <div class="button-post">
+                <button class="buttons" onclick="window.location.href='/news'">
+                  <h3>投稿資訊</h3>
+                </button>
+                <button
+                  class="buttons"
+                  onclick="window.location.href='https://forms.gle/XoXJSD2P8dL8X8s2A'"
+                >
+                  <h3>不用說了，快讓我投稿！</h3>
+                </button>
+              </div>
+            </div>
+            -->
           </div>
         </div>
 
-        <div class="last-part">
-          <!-- TODO this is not header -->
-          <h3>最後...</h3>
+        <div class="give-me-money">
+          <p class="whisper">最後...</p>
           <h2>SITCON 贊助徵求</h2>
-          <!--style="margin-top:-30px;"-->
-          <p class="context">
+          <p>
             SITCON 的舉辦，除了有賴眾多志工的努力，也需要金錢的支持。<br />
             如果您認同 SITCON 的理念，歡迎以行動支持 SITCON
             的運作，讓更多交流產生！
           </p>
-          <p class="context">
+          <p>
             企業合作歡迎聯繫
-            <a class="context-hyperlink" href="mailto:contact@sitcon.org"
+            <a
+              class="context-hyperlink"
+              href="mailto:contact@sitcon.org"
+              rel="noopener"
+              target="_blank"
               >contact@sitcon.org</a
             >
           </p>
           <div>
-            <button
-              class="buttons"
-              onclick="window.location.href='http://bit.ly/donatesitcon2021'"
+            <a
+              class="btn btn-primary"
+              rel="noopener"
+              target="_blank"
+              href="http://bit.ly/donatesitcon2021"
+              >個人贊助方案</a
             >
-              <!-- TODO This is not header -->
-              <h3>個人贊助方案</h3>
-            </button>
           </div>
         </div>
-        <!-- second part -->
       </div>
     </div>
   </main>

@@ -103,7 +103,7 @@ $buttonHoverBg: #226bb4;
     letter-spacing: $contextLetterSpace;
     // line-height: 42px;
 
-    width: 1100px;
+    // width: 1100px;
 
     @media screen and(max-width: 414px) {
       margin-top: 60%;
@@ -716,16 +716,35 @@ $buttonHoverBg: #226bb4;
     line-height: 1.75;
   }
 
-  h1 {
+  h1,
+  .h1 {
     font-size: 42pt;
+    font-weight: 900;
   }
 
-  h2 {
+  h2,
+  .h2 {
     font-size: 26pt;
+    font-weight: 900;
   }
 
-  h3 {
+  h3,
+  .h3 {
     font-size: 22pt;
+    font-weight: 900;
+  }
+}
+
+// Utiliy
+#cfp-intro {
+  .mr-2 {
+    margin-right: 2em;
+  }
+  .ml-2 {
+    margin-left: 2em;
+  }
+  .mt-1 {
+    margin-top: 1em;
   }
 }
 
@@ -767,13 +786,32 @@ $buttonHoverBg: #226bb4;
     }
 
     .join-discuss {
-      .link-group {
-        margin-top: 1em;
-        .btn {
-          &:not(:first-child) {
-            margin-left: 2em;
-          }
-        }
+      // empty
+    }
+  }
+
+  .box-back2 {
+    width: 760px;
+
+    .about-topic {
+      margin-bottom: 1em;
+    }
+
+    .cfp-deadline {
+      margin-bottom: 7em;
+      .cfp-deadline-content {
+        margin-top: -1.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+      }
+    }
+
+    .give-me-money {
+      .whisper {
+        font-weight: 900;
+        font-size: 1.25em;
+        margin-bottom: 0.5em;
       }
     }
   }
