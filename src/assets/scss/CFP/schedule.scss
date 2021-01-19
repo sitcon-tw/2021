@@ -1,126 +1,133 @@
-@import '@/assets/scss/breakpoint.scss';
-@import '@/assets/scss/color.scss';
-@import '@/assets/scss/font.scss';
+@import '../breakpoint';
+@import '../color';
+// No need to import font; the fonts have been imported in App.vue
+// @import '@/assets/scss/font';
 
 $fontFamily: Noto Sans CJK TC, monospace;
 
 #info-schedule {
-    max-width: 80vw;
-    margin: 0 auto;
+  max-width: 80vw;
+  margin: 0 auto;
 
-    font-family: $fontFamily;
-    font-size: 20px;
-    line-height: 2.1em;
-    letter-spacing: 0.2px;
+  font-family: $fontFamily;
+  font-size: 20px;
+  line-height: 2.1em;
+  letter-spacing: 0.2px;
+  color: $mid-blue;
+
+  * {
+    position: relative;
+  }
+
+  a {
     color: $mid-blue;
+    text-decoration: underline;
+  }
 
-    * {
-        position: relative;
+  h1 {
+    font-size: 48px;
+    line-height: 70px;
+    margin: 15px 0;
+  }
+
+  h2 {
+    font-size: 36px;
+    line-height: 70px;
+  }
+
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-weight: 900;
+  }
+
+  ul {
+    li {
+      &::before {
+        content: '•';
+        margin: 2px;
+        line-height: 42px;
+      }
+    }
+  }
+
+  section:not(:last-of-type),
+  article:not(:last-of-type) {
+    margin-bottom: 55px;
+  }
+
+  #theme-example {
+    > p {
+      padding: 20px 0;
+    }
+  }
+
+  #theme-example ~ p {
+    padding: 20px 0;
+  }
+
+  #presentation-example,
+  #espresso-example {
+    > p {
+      padding-bottom: 40px;
     }
 
-    a {
-        color: $mid-blue;
-        text-decoration: underline;
+    .agenda.card.container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 62px;
+      row-gap: 40px;
     }
-
-    h1 {
-        font-size: 48px;
-        line-height: 70px;
-        margin: 15px 0;
-    }
-
-    h2 {
-        font-size: 36px;
-        line-height: 70px;
-    }
-
-    h3 {
-        font-size: 24px;
-        line-height: 30px;
-    }
-
-    h1, h2, h3 {
-        font-weight: 900;
-    }
-
-    ul {
-        li {
-            &::before {
-                content: "•";
-                margin: 2px;
-                line-height: 42px;
-            }
-        }
-    }
-
-    section:not(:last-of-type), article:not(:last-of-type) {
-        margin-bottom: 55px;
-    }
-
-    #theme-example {
-        > p {
-            padding: 20px 0;
-        }
-    }
-
-    #theme-example ~ p {
-        padding: 20px 0;
-    }
-
-    #presentation-example, #espresso-example {
-        > p {
-            padding-bottom: 40px;
-        }
-
-        .agenda.card.container {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            column-gap: 62px;
-            row-gap: 40px;
-        }
-    }
+  }
 }
 
 #code-of-conduct a {
-    font-weight: 900;
+  font-weight: 900;
 }
 
-
 @include md {
-    #info-schedule {
-        margin: 0 auto;
-        font-size: 14px;
+  #info-schedule {
+    margin: 0 auto;
+    font-size: 14px;
 
-        h1, h2 {
-            font-size: 26px;
-            line-height: 2.69em;
-        }
-    
-        h3 {
-            font-size: 20px;
-            line-height: 30px;
-        }
-
-        h1, h2, h3 {
-            margin: 0;
-        }
-
-        #schedule {
-            margin-bottom: unset;
-        }
-
-        #theme-example ~ p {
-            padding: 15px 0;
-        }
-
-        #presentation-example, #espresso-example {
-            margin-bottom: unset;
-            .agenda.card.container {
-                grid-template-columns: repeat(2, 1fr);
-                column-gap: 42px;
-                row-gap: 30px;
-            }
-        }
+    h1,
+    h2 {
+      font-size: 26px;
+      line-height: 2.69em;
     }
 
+    h3 {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+    }
+
+    #schedule {
+      margin-bottom: unset;
+    }
+
+    #theme-example ~ p {
+      padding: 15px 0;
+    }
+
+    #presentation-example,
+    #espresso-example {
+      margin-bottom: unset;
+      .agenda.card.container {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 42px;
+        row-gap: 30px;
+      }
+    }
+  }
 }
