@@ -95,7 +95,7 @@ $buttonHoverBg: #226bb4;
     width: 1100px;
 
     @media screen and(max-width: 414px) {
-      margin-top: 60%;
+      margin-top: 50%;
       width: 110%;
     }
   }
@@ -110,7 +110,7 @@ $buttonHoverBg: #226bb4;
     line-height: 42px;
 
     @media screen and(max-width: 414px) {
-      margin-top: 30%;
+      margin-top: 40%;
       width: 70%;
       margin-bottom: 30%;
     }
@@ -214,8 +214,10 @@ $buttonHoverBg: #226bb4;
 
     .enlarge {
       font-size: $enlargeFontSize;
+
       @media screen and (max-width: 414px) {
-        line-height: 80px;
+        line-height: 50px;
+        margin-bottom: 50px;
       }
     }
 
@@ -234,6 +236,7 @@ $buttonHoverBg: #226bb4;
     @media screen and (max-width: 414px) {
       text-align: right;
       margin-right: 30%;
+      margin-bottom: 30px;
     }
   }
 
@@ -547,9 +550,9 @@ $buttonHoverBg: #226bb4;
 
     @media screen and(max-width: 414px) {
       z-index: 3;
-      margin-top: -890px;
-      margin-left: -150px;
-      margin-bottom: -1030px;
+      margin-top: -840px;
+      margin-left: -140px;
+      margin-bottom: -1060px;
       transform: rotate(-7deg) scale(0.35);
     }
   }
