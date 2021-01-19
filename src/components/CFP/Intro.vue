@@ -1,18 +1,6 @@
 <template>
   <main class="introduction-container">
     <div class="introduction">
-      <img src="@/assets/images/cfp/Ellipse 5.svg" class="ellipse"/>
-            <img src="@/assets/images/cfp/Group 10.svg" class="sitcon-icon"/>
-            <img src="@/assets/images/cfp/Path 733.svg" class="sitcon-pic-2021"/>
-            <img src="@/assets/images/cfp/Path 734.svg" class="sitcon-title-zh"/>
-            <img src="@/assets/images/cfp/Path 735.svg" class="sitcon-topic"/>
-            <img src="@/assets/images/cfp/Path 736.svg" class="sitcon-date"/>
-            <img src="@/assets/images/cfp/Path 737.svg" class="sitcon-place"/>
-            <img src="@/assets/images/cfp/Path 738.svg" class="sitcon-qeury"/>
-            <!-- ../../assets/images/cfp/Mobile/Mobile-background.svg -->
-            <img src="@/assets/images/cfp/Background.svg" class="background"/>
-            <!-- src="@/assets/images/cfp/Background.svg" -->
-            <!-- first part -->
             <img src="@/assets/images/cfp/Path 740.svg" class="SITCON-text-path"/>
             <svg width="1200" height="1000" class="first-box">
               <rect width="1200" height="1000" style="fill:#ffffff;" />
