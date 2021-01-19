@@ -510,7 +510,7 @@ p.small-tag {
     margin-top: 40px;
     margin-left: -80px;
     transform: scale(0.9); 
-    background: url(./assets/images/cfp/Mobile/Path_763.svg) no-repeat;
+    background: url(~@/assets/images/cfp/Mobile/Path_763.svg) no-repeat;
     padding-top: -565px; 
     margin-bottom: -665px;
   }
@@ -561,7 +561,7 @@ p.small-tag {
   @media screen and(max-width: 414px){
     //content: url() no-repeat;//../../assets/images/cfp/Mobile/Mobile-background.svg
     //visibility: hidden;
-    background: url(./assets/images/cfp/Mobile/Mobile-background.svg) !important;
+    background: url(~@/assets/images/cfp/Mobile/Mobile-background.svg) !important;
     object-position: -99999px 99999px;
     overflow: hidden;
     margin-left: -20%;
