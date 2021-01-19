@@ -1,15 +1,16 @@
 // global
-@import './reset.scss';
-@import './variable.scss';
-@import './color.scss';
-@import './util.scss';
+@import 'reset.scss';
+@import 'variable.scss';
+@import 'color.scss';
+@import 'util.scss';
+@import 'font.scss';
 
 // components
-@import './footer.scss';
-@import './CFP/cfp_introduction.scss';
-@import './CFP/CFP.scss';
-@import './CFP/cfpSubNew.scss';
-@import "./news.scss";
+// @import './footer.scss';
+// @import './CFP/cfp_introduction.scss';
+// @import './CFP/CFP.scss';
+// @import './CFP/cfpSubNew.scss';
+// @import "./news.scss";
 
 .sitcon-burnfont {
   color: $mid-blue;
