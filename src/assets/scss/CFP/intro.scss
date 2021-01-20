@@ -1,11 +1,11 @@
+@import '../color';
 $fontFamily: Noto Sans TC;
-$fontColor:  #226BB4;
+$fontColor: $mid-blue;
 
-// General settings: 
+// General settings:
 //    font-size and paragraph spacing for headers and paragraph text
 #cfp-intro {
   margin-top: 90px;
-  padding: 96px 0 0 0;
 
   h1,
   h2,
@@ -15,9 +15,6 @@ $fontColor:  #226BB4;
 
   p {
     line-height: 1.75;
-  }
-
-  p:not(:last-child) {
     margin-bottom: 2em;
   }
 
@@ -39,11 +36,12 @@ $fontColor:  #226BB4;
     font-weight: 900;
   }
 }
-.introduction{
-    height: 2250px;
-    overflow: hidden;
-    padding-bottom: 0;
+.introduction {
+  height: 2400px;
+  overflow: hidden;
+  padding-bottom: 0;
 }
+
 // Utiliy
 #cfp-intro {
   .mr-2 {
@@ -58,8 +56,8 @@ $fontColor:  #226BB4;
 }
 
 #cfp-intro {
+
   .box-back {
-    // margin-top: -120px;
     // width: 880px;
     margin-bottom: -40em;
     font-family: $fontFamily;
@@ -70,7 +68,7 @@ $fontColor:  #226BB4;
 
     .first-box {
       transform: rotate(15deg);
-      box-shadow: 0 3px 12px 0 rgba(89,120,206,.56);
+      box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
       border-radius: 30px;
       position: relative;
       bottom: 550px;
@@ -123,9 +121,9 @@ $fontColor:  #226BB4;
   .box-bluearea {
     width: 150vw;
     height: 450px;
-    background: rgba(34, 107, 180,1);
+    background: rgba(34, 107, 180, 1);
     right: 25%;
-    position:relative;
+    position: relative;
     z-index: -1;
     transform: rotate(15deg);
     opacity: 1;
@@ -137,31 +135,31 @@ $fontColor:  #226BB4;
     color: $fontColor;
 
     width: 900px;
-    padding: 20px;
-    height: 2200px;
+    padding: 20px 20px 168px 20px;
+    height: 2350px;
 
     .about-topic {
       margin-bottom: 2em;
-      position:relative;
+      position: relative;
       bottom: 75px;
       z-index: 2;
       left: 50px;
     }
 
     .second-box {
-        transform: rotate(15deg);
-        box-shadow: 0 3px 12px 0 rgba(89,120,206,.56);
-        border-radius: 30px;
-        position: relative;
-        bottom: 1100px;
-        right: 120px;
-        z-index: 0;
+      transform: rotate(15deg);
+      box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
+      border-radius: 30px;
+      position: relative;
+      bottom: 1100px;
+      right: 120px;
+      z-index: 0;
     }
 
     .cfp-deadline {
       margin-bottom: 2em;
       margin-bottom: 2em;
-      position:relative;
+      position: relative;
       z-index: 2;
       left: 50px;
       bottom: 75px;
@@ -174,7 +172,7 @@ $fontColor:  #226BB4;
     }
 
     .give-me-money {
-      position:relative;
+      position: relative;
       z-index: 2;
       left: 50px;
       bottom: 75px;
@@ -182,7 +180,6 @@ $fontColor:  #226BB4;
         font-weight: 900;
         font-size: 1.25em;
         margin-bottom: 0.5em;
-        
       }
     }
   }
