@@ -1,9 +1,8 @@
-@import '../breakpoint';
-@import '../color';
+@import "../breakpoint";
+@import "../color";
+@import "../font.scss";
 // No need to import font; the fonts have been imported in App.vue
 // @import '@/assets/scss/font';
-
-$fontFamily: Noto Sans CJK TC, monospace;
 
 #news-schedule {
   max-width: 80vw;
@@ -49,7 +48,7 @@ $fontFamily: Noto Sans CJK TC, monospace;
   ul {
     li {
       &::before {
-        content: '•';
+        content: "•";
         margin: 2px;
         line-height: 42px;
       }
