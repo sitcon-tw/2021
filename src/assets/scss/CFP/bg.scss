@@ -1,37 +1,102 @@
-@import '../hyperpoint';
+@import "../hyperpoint";
+@import "../color";
 
 #cfp {
   position: relative;
 }
 
-// The Korea Fish
+// z-indecies
+$z-section: -1;
+$z-korea-fish: -10;
+$z-first-card: -8;
+$z-blue-bar: -9;
+$z-second-card: -8;
+// for mobile
+$zm-section: -1;
+$zm-korea-fish: -10;
+$zm-first-card: -9;
+$zm-blue-bar: -8;
+$zm-second-card: -7;
 
 #cfp-bg {
   width: 100vw;
-  z-index: -1;
+  z-index: $z-section;
   position: absolute;
-  // left: -12px; // offset
 
   .korea-fish {
-    top: 0;
-    left: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    height: 960px;
+
     .sitcon-apple {
       position: absolute;
       margin-top: 360px;
       width: 250px;
+      z-index: -10;
     }
     .ellipse {
       position: absolute;
       margin-top: 200px;
       width: 640px;
+      z-index: -10;
     }
     .radial {
       width: 1920px;
       position: absolute;
+      z-index: -10;
+    }
+  }
+
+  .cards {
+    .first-card {
+      transform: rotate(15deg);
+      box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
+      border-radius: 30px;
+      position: relative;
+      top: 72px;
+      right: 0px;
+      z-index: $z-first-card;
+    }
+
+    .blue-bar {
+      z-index: $z-blue-bar;
+      width: 3600px; // this is enough
+      height: 300px;
+      background: rgba(34, 107, 180, 1);
+      position: relative;
+      right: 160px;
+      top: 300px;
+      transform: rotate(15deg);
+      opacity: 1;
+
+      p {
+        padding-top: 160px;
+        padding-left: 240px;
+        color: $white;
+        font-size: 48pt;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        z-index: $z-blue-bar;
+      }
+    }
+
+    .card2-wrapper {
+      height: 1300px;
+      overflow: hidden;
+      position: relative;
+      margin-top: -300px;
+      z-index: $z-second-card;
+      
+      .second-card {
+        transform: rotate(15deg);
+        box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
+        border-radius: 30px;
+        z-index: $z-second-card;
+        position: relative;
+        top: 240px;
+        right: 240px;
+      }
     }
   }
 }

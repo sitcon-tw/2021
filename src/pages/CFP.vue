@@ -6,23 +6,50 @@
         <img class="ellipse" src="~@/assets/images/CFP/ellipse.svg" />
         <img class="sitcon-apple" src="~@/assets/images/CFP/sitcon-apple.svg" />
       </div>
+      <div class="cards">
+        <svg width="1000" height="950" class="first-bozzx first-card">
+          <rect
+            width="1000"
+            height="950"
+            style="fill: rgb(255, 255, 255)"
+          ></rect>
+        </svg>
+        <div class="box-bluearea blue-bar">
+          <p>Descendents of The Abacus</p>
+        </div>
+        <div class="card2-wrapper">
+          <svg
+            width="1500"
+            height="1200"
+            class="second-box second-card"
+          >
+            <rect
+              width="1500"
+              height="1200"
+              style="fill: rgb(255, 255, 255)"
+            ></rect>
+          </svg>
+        </div>
+      </div>
     </div>
-    <!-- WTF = = -->
-    <CfpHeader id="cfp-header" />
-    <Intro id="cfp-intro"></Intro>
+    <div class="cfp-fg">
+      <!-- WTF = = -->
+      <CfpHeader id="cfp-header" />
+      <Intro id="cfp-intro" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
-import CfpHeader from '@/components/CFP/Header.vue';
-import Intro from '@/components/CFP/Intro.vue';
+import { Component, Prop, Vue } from "vue-property-decorator";
+import CfpHeader from "@/components/CFP/Header.vue";
+import Intro from "@/components/CFP/Intro.vue";
 
 @Component({
   components: {
     CfpHeader,
-    Intro
-  }
+    Intro,
+  },
 })
 export default class CFP extends Vue {
   @Prop() private msg!: string;
