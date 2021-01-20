@@ -1,13 +1,9 @@
-@import '../hyperpoint';
-@import '../color';
-$fontFamily: Noto Sans TC;
-$fontColor: $mid-blue;
+@import "../hyperpoint";
+@import "../color";
 
 // General settings:
 //    font-size and paragraph spacing for headers and paragraph text
 #cfp-intro {
-  margin-top: 90px;
-
   h1,
   h2,
   h3 {
@@ -23,6 +19,10 @@ $fontColor: $mid-blue;
   .h1 {
     font-size: 42pt;
     font-weight: 900;
+
+    @include sm {
+      font-size: 38pt;
+    }
   }
 
   h2,
@@ -35,24 +35,11 @@ $fontColor: $mid-blue;
   .h3 {
     font-size: 22pt;
     font-weight: 900;
+    @include sm {
+      font-size: 19pt;
+    }
   }
 }
-.introduction {
-  height: 2400px;
-  overflow: hidden;
-  padding-bottom: 0;
-}
-@media screen and (max-width: 1021px) {
-  .introduction {
-    height: 2230px;
-  }
-}
-@media screen and (max-width: 891px) {
-  .introduction {
-    height: 2400px;
-  }
-}
-
 
 // Utiliy
 #cfp-intro {
@@ -65,44 +52,28 @@ $fontColor: $mid-blue;
   .mt-1 {
     margin-top: 1em;
   }
+  .mb-1 {
+    margin-bottom: 1em;
+  }
 }
 
 #cfp-intro {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  padding-left: 135px;
+  color: $mid-blue;
 
   .box-back {
-    // width: 880px;
-    margin-bottom: -40em;
-    font-family: $fontFamily;
-    color: $fontColor;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    width: 800px;
 
-    width: 700px;
-    padding: 20px;
-
-    .first-box {
-      transform: rotate(15deg);
-      box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
-      border-radius: 30px;
-      position: relative;
-      bottom: 620px;
-      right: 50px;
-      z-index: 0;
-    }
-    .introd-text {
-      position: relative;
-      top: 200px;
-      left: 150px;
-      z-index: 2;
-    }
     .about-sitcon {
-      margin-bottom: 0 auto 2em;
+      // empty
     }
 
     .past-sitcon {
-      margin-bottom: 2em;
-      width: 60vw;
-      height: 13em;
-
-      .cfp-img{
+      .cfp-img {
         width: 180px; //225
         height: 121px; //152
       }
@@ -118,6 +89,7 @@ $fontColor: $mid-blue;
         display: flex;
         flex-direction: row;
         padding: 0.25em 0;
+        margin-bottom: 2em;
 
         .thumb-wrapper {
           .thumb-title,
@@ -134,62 +106,28 @@ $fontColor: $mid-blue;
           }
 
           &:not(:last-child) {
-            margin-right: 1em;
+            margin-right: 2em;
           }
         }
       }
     }
-    
+
     .join-discuss {
       // empty
     }
   }
 
-  .box-bluearea {
-    width: 150vw;
-    height: 450px;
-    background: rgba(34, 107, 180, 1);
-    right: 25%;
-    position: relative;
-    z-index: -1;
-    transform: rotate(15deg);
-    opacity: 1;
-  }
-
   .box-back2 {
-    // width: 760px;
-    font-family: $fontFamily;
-    color: $fontColor;
-
-    width: 900px;
-    padding: 20px 20px 168px 20px;
-    height: 2350px;
+    width: 1050px;
+    padding-top: 180px;
 
     .about-topic {
-      margin-bottom: 2em;
-      position: relative;
-      bottom: 75px;
-      z-index: 2;
-      left: 50px;
-    }
-
-    .second-box {
-      transform: rotate(15deg);
-      box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
-      border-radius: 30px;
-      position: relative;
-      bottom: 1100px;
-      right: 120px;
-      z-index: 0;
+      // empty
     }
 
     .cfp-deadline {
-      margin-bottom: 2em;
-      margin-bottom: 2em;
-      position: relative;
-      z-index: 2;
-      left: 50px;
-      bottom: 75px;
+      margin-bottom: 2.5em;
+
       .cfp-deadline-content {
         margin-top: -1.5em;
         display: flex;
@@ -197,12 +135,8 @@ $fontColor: $mid-blue;
         align-items: flex-end;
       }
     }
-    
+
     .give-me-money {
-      position: relative;
-      z-index: 2;
-      left: 50px;
-      bottom: 75px;
       .whisper {
         font-weight: 900;
         font-size: 1.25em;
@@ -212,91 +146,224 @@ $fontColor: $mid-blue;
   }
 }
 
-@include md{ //for width 786px
-  #cfp-intro{
-    h1,
-    h2,
-    h3 {
-      margin-bottom: 12pt;
-    }
-
-    p {
-      font-size: 14pt;
-      line-height: 1.75;
-      width:85vw;
-    }
-
-    p:not(:last-child) {
-      margin-bottom: 2em;
+@include lg {
+  #cfp-intro {
+    padding-left: 135px;
+    padding-right: 135px;
+    .box-back2 {
+      width: initial;
     }
   }
-  #cfp-intro{
-    .box-back {
-      margin-bottom: -42em;
-      margin-left:-6em;
-  
-      .first-box {
-        transform: rotate(12deg) scale(1.2);
-        bottom: 590px;
-        left: 100px;
-      }
+}
 
-      .introd-text {
-        top: 120px;
-      }
+@include md {
+  #cfp-intro {
+    padding-top: 72px;
+    padding-bottom: 144px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    .box {
+      width: 632px;
+      margin: 0 auto;
+    }
+
+    .box-back {
+      padding-top: 120px;
+      padding-bottom: 90px;
+
       .past-sitcon {
+        .cfp-img {
+          width: 180px; //225
+          height: 121px; //152
+        }
+
         .thumbnails {
           .thumb-wrapper {
-            width:200.5px;//25vw;
-            .thumb-title,
-            .thumb-subtitle {
-              width:185.5px; //25vw;
+            &:not(:last-child) {
+              margin-right: 1em;
             }
           }
         }
       }
     }
-  }
 
-  #cfp-intro{
-    .box-bluearea {
-      height: 200px;
-      z-index: 0;
-      transform: rotate(12deg);
-    }
-  }
-  
-  #cfp-intro{
     .box-back2 {
-      margin-top: 1em;
-      margin-left: -2em;
-  
-      .second-box {
-          transform: rotate(12deg);
-          bottom: 1030px;
-          left:-5em;
-      }
-    }
-    
-  }
+      padding-top: 320px;
 
-  #cfp-intro {
-    //button util
-    .mr-2 {
-      margin-right: 0.5em;
-    }
-    .ml-2 {
-      margin-left: 0.5em;
-    }
-    .mt-1 {
-      margin-top: 1em;
+      .topic-intro {
+        .about-topic {
+          h1,
+          h2 {
+            text-align: right;
+          }
+        }
+        .cfp-deadline {
+          .cfp-deadline-content {
+            display: initial;
+          }
+        }
+      }
+
+      .give-me-money {
+        margin-top: 240px;
+      }
     }
   }
 }
 
-@include sm { //for width 600px
+@media screen and (max-width: 768px)  {
+  #cfp-intro {
+    .box-back2 {
 
-  #cfp-intro{
+      .topic-intro {
+        .cfp-deadline {
+          .cfp-deadline-content {
+          }
+        }
+      }
+
+      .give-me-money {
+        margin-top: 200px;
+      }
+    }
+  }
+}
+
+@include sm {
+  #cfp-intro {
+    padding-top: 96px;
+    padding-bottom: 60px;
+    padding-left: 36px;
+    padding-right: 36px;
+    font-size: 0.9em;
+
+    .box {
+      width: initial;
+      margin: 0;
+    }
+
+    .box-back {
+      padding-top: 0px;
+      padding-bottom: 90px;
+      // height: 1240px;
+
+      .past-sitcon {
+        .cfp-img {
+          width: 180px; //225
+          height: 121px; //152
+        }
+
+        .thumbnails {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .thumb-wrapper {
+            &:not(:last-child) {
+              margin-right: 0;
+              margin-bottom: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .box-back2 {
+      padding-top: 380px;
+
+      .give-me-money {
+        margin-top: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px)  {
+  #cfp-intro {
+    .box-back2 {
+      padding-top: 360px;
+
+      .give-me-money {
+        margin-top: 180px;
+      }
+    }
+  }
+}
+
+@include xs {
+  #cfp-intro {
+    padding-top: 126px;
+    padding-bottom: 60px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .box {
+      width: initial;
+      margin: 0;
+    }
+
+    .box-back {
+      padding-top: 0px;
+      padding-bottom: 90px;
+      // height: 1240px;
+
+      .past-sitcon {
+        .cfp-img {
+          width: 180px; //225
+          height: 121px; //152
+        }
+
+        .thumbnails {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          .thumb-wrapper {
+            &:not(:last-child) {
+              margin-right: 0;
+              margin-bottom: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .box-back2 {
+      padding-top: 300px;
+
+      .topic-intro {
+        .cfp-deadline {
+          .cfp-deadline-content {
+            display: initial;
+          }
+        }
+      }
+
+      .give-me-money {
+        margin-top: 180px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #cfp-intro {
+    .box-back2 {
+      padding-top: 240px;
+
+      .give-me-money {
+        margin-top: 180px;
+      }
+    }
+  }
+}
+
+/*
+@include sm {
+  //for width 600px
+
+  #cfp-intro {
     h1,
     h2,
     h3 {
@@ -306,7 +373,7 @@ $fontColor: $mid-blue;
     p {
       font-size: 13pt;
       line-height: 1.5;
-      width:70vw;
+      width: 70vw;
     }
 
     p:not(:last-child) {
@@ -314,11 +381,11 @@ $fontColor: $mid-blue;
     }
   }
 
-  #cfp-intro{
+  #cfp-intro {
     .box-back {
       margin-bottom: -45em;
-      margin-left:-5em;
-  
+      margin-left: -5em;
+
       .first-box {
         transform: rotate(12deg) scale(1.1);
         bottom: 610px;
@@ -329,18 +396,18 @@ $fontColor: $mid-blue;
       }
 
       .past-sitcon {
-        margin-bottom:-1em;
+        margin-bottom: -1em;
         .thumbnails {
           .thumb-wrapper {
-            width:122.5px;//25vw;
+            width: 122.5px; //25vw;
             .thumb-title,
             .thumb-subtitle {
-              width:132.5px; //25vw;
+              width: 132.5px; //25vw;
             }
           }
         }
 
-        .cfp-img{
+        .cfp-img {
           width: 128.5px; //225
           height: 80px; //152
           margin-left: 0em;
@@ -349,24 +416,24 @@ $fontColor: $mid-blue;
     }
   }
 
-  #cfp-intro{
+  #cfp-intro {
     .box-bluearea {
       height: 300px;
       z-index: 0;
       transform: rotate(12deg);
     }
   }
-  
-  #cfp-intro{
+
+  #cfp-intro {
     .box-back2 {
-      margin-top:-6em;
+      margin-top: -6em;
       .second-box {
-          transform: rotate(12deg);
-          bottom: 1060px;
+        transform: rotate(12deg);
+        bottom: 1060px;
       }
     }
   }
-  
+
   #cfp-intro {
     //button util
     .mr-2 {
@@ -381,8 +448,8 @@ $fontColor: $mid-blue;
   }
 }
 
-@include ss { //
-  #cfp-intro{
+@include ss {
+  #cfp-intro {
     h1,
     h2,
     h3 {
@@ -410,7 +477,7 @@ $fontColor: $mid-blue;
     p {
       font-size: 12pt;
       line-height: 1.65;
-      width:80vw;
+      width: 80vw;
     }
 
     p:not(:last-child) {
@@ -418,11 +485,11 @@ $fontColor: $mid-blue;
     }
   }
 
-  #cfp-intro{
+  #cfp-intro {
     .box-back {
       margin-bottom: -45em;
-      margin-left:-7em;
-  
+      margin-left: -7em;
+
       .first-box {
         transform: rotate(12deg);
         bottom: 640px;
@@ -432,20 +499,20 @@ $fontColor: $mid-blue;
         top: 100px;
       }
       .past-sitcon {
-        margin-top:1em;
+        margin-top: 1em;
       }
       .past-sitcon {
         .thumbnails {
           .thumb-wrapper {
-            width:122.5px;//25vw;
+            width: 122.5px; //25vw;
             .thumb-title,
             .thumb-subtitle {
-              width:132.5px; //25vw;
+              width: 132.5px; //25vw;
             }
           }
         }
 
-        .cfp-img{
+        .cfp-img {
           width: 128.5px; //225
           height: 80px; //152
           margin-left: 0em;
@@ -454,26 +521,26 @@ $fontColor: $mid-blue;
     }
   }
 
-  #cfp-intro{
+  #cfp-intro {
     .box-bluearea {
       height: 280px;
       z-index: 0;
       transform: rotate(12deg);
     }
   }
-  
-  #cfp-intro{
+
+  #cfp-intro {
     .box-back2 {
       margin-top: -5em;
       margin-left: -1em;
-  
+
       .second-box {
-          transform: rotate(12deg) scale(0.65);
-          bottom: 1270px;
-          left:-14em;
+        transform: rotate(12deg) scale(0.65);
+        bottom: 1270px;
+        left: -14em;
       }
     }
-    
+
     .give-me-money {
       top: 2em;
       .whisper {
@@ -484,7 +551,7 @@ $fontColor: $mid-blue;
     }
   }
 
-  #cfp-intro{
+  #cfp-intro {
     .past-sitcon {
       margin-bottom: 2em;
       width: 40vw;
@@ -496,10 +563,10 @@ $fontColor: $mid-blue;
         padding: 0.25em 0;
 
         .thumb-wrapper {
-          width:225px;//25vw;
+          width: 225px; //25vw;
           .thumb-title,
           .thumb-subtitle {
-            width:190px; //25vw;
+            width: 190px; //25vw;
             text-align: center;
             margin: 0;
             font-size: 0.8em;
@@ -521,7 +588,7 @@ $fontColor: $mid-blue;
 }
 
 @include xs {
-  #cfp-intro{
+  #cfp-intro {
     h1,
     h2,
     h3 {
@@ -549,6 +616,7 @@ $fontColor: $mid-blue;
     p {
       font-size: 11pt;
       line-height: 1.65;
+      width: 80vw;
     }
 
     p:not(:last-child) {
@@ -556,11 +624,11 @@ $fontColor: $mid-blue;
     }
   }
 
-  #cfp-intro{
+  #cfp-intro {
     .box-back {
       margin-bottom: -45em;
-      margin-left: -8em; //40
-  
+      margin-left: -8em;
+
       .first-box {
         transform: rotate(12deg);
         bottom: 600px; //625
@@ -570,31 +638,25 @@ $fontColor: $mid-blue;
         top: 100px;
       }
       .past-sitcon {
-        margin-top:1em;
-        margin-bottom:-3em;
+        margin-top: 1em;
+
         .thumbnails {
           margin-left: -0.5em;
           padding: 0.25em 0;
-  
+
           .thumb-wrapper {
-            width:90px;//25vw;
+            width: 110px; //25vw;
             .thumb-title,
             .thumb-subtitle {
-              width:115px; //25vw;
+              width: 130px; //25vw;
               text-align: center;
               margin: 0;
               font-size: 0.1em;
               line-height: 15em;
               font-weight: 900;
             }
-            .thumb-subtitle{
-              display: none;
-            }
-            .small {
-              font-size: 0.1em;
-            }
-            .cfp-img{
-              width: 95.5px; //225
+            .cfp-img {
+              width: 110.5px; //225
               height: 63px; //152
               margin-left: 0.6em;
             }
@@ -604,37 +666,27 @@ $fontColor: $mid-blue;
     }
   }
 
-  #cfp-intro{
+  #cfp-intro {
     .box-bluearea {
       height: 220px;
       z-index: 0;
       transform: rotate(12deg);
     }
   }
-  
-  #cfp-intro{
-    .box-back2 {
-      margin-top: 0em;
-      margin-left: -2em;
-  
-      .second-box {
-          transform: rotate(12deg) scale(0.63);
-          bottom: 1270px;
-          left:-15em;
-      }
-    }
-    
-    .give-me-money {
-      top: 2em;
-      .whisper {
-        font-weight: 900;
-        font-size: 1.25em;
-        margin-bottom: 0.5em;
-      }
-    }
-  }
-}
 
+  #cfp-intro {
+    .box-back2 {
+      margin-top: 3em;
+      margin-left: -1em;
+
+      .second-box {
+        transform: rotate(12deg) scale(0.63);
+        bottom: 1250px;
+        left: -15em;
+      }
+    }
+
+<<<<<<< HEAD
 @media screen and (max-width: 800px) {
   .cfp-deadline-content {
     display: flex;
@@ -691,11 +743,10 @@ $fontColor: $mid-blue;
       }
     }
     
+=======
+>>>>>>> dev2
     .give-me-money {
-      position: relative;
-      z-index: 2;
-      left: 50px;
-      bottom: 55px;
+      top: 2em;
       .whisper {
         font-weight: 900;
         font-size: 1.25em;
@@ -704,4 +755,4 @@ $fontColor: $mid-blue;
     }
   }
 }
-}
+*/

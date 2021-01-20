@@ -1,47 +1,111 @@
-@import '../hyperpoint';
+@import "../hyperpoint";
+@import "../color";
 
 #cfp {
   position: relative;
 }
 
-// The Korea Fish
+// z-indecies
+$z-section: -1;
+$z-korea-fish: -10;
+$z-first-card: -8;
+$z-blue-bar: -9;
+$z-second-card: -8;
+// for mobile
+$zm-section: -1;
+$zm-korea-fish: -10;
+$zm-first-card: -9;
+$zm-blue-bar: -8;
+$zm-second-card: -7;
+$zm-third-card: -6;
 
+// general
+#cfp-bg {
+  .card {
+    transform: rotate(15deg);
+    box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
+    border-radius: 30px;
+    background: $white;
+  }
+}
+
+// lg
 #cfp-bg {
   width: 100vw;
-  z-index: -1;
+  z-index: $z-section;
   position: absolute;
-  // left: -12px; // offset
 
   .korea-fish {
-    top: 0;
-    left: 0;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    height: 960px;
+
     .sitcon-apple {
       position: absolute;
       margin-top: 360px;
       width: 250px;
+      z-index: -10;
     }
     .ellipse {
       position: absolute;
       margin-top: 200px;
       width: 640px;
+      z-index: -10;
     }
     .radial {
       width: 1920px;
       position: absolute;
+      z-index: -10;
     }
   }
-}
 
-@media screen and (min-width: 1921px) {
-  #cfp-bg {
-    .korea-fish {
-      .radial {
-        margin-top: calc(576px - 30vw);
-        width: 100vw;
+  .cards {
+    .first-card {
+      position: relative;
+      top: 72px;
+      right: 0px;
+      width: 1000px;
+      height: 950px;
+      z-index: $z-first-card;
+    }
+
+    .blue-bar {
+      z-index: $z-blue-bar;
+      width: 3600px; // this is enough
+      height: 300px;
+      background: rgba(34, 107, 180, 1);
+      position: relative;
+      right: 160px;
+      top: 300px;
+      transform: rotate(15deg);
+      opacity: 1;
+
+      p {
+        padding-top: 160px;
+        padding-left: 240px;
+        color: $white;
+        font-size: 48pt;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        z-index: $z-blue-bar;
+      }
+    }
+
+    .card2-wrapper {
+      height: 1600px;
+      overflow: hidden;
+      position: relative;
+      margin-top: -300px;
+      z-index: $z-second-card;
+
+      .second-card {
+        z-index: $z-second-card;
+        position: relative;
+        top: 240px;
+        right: 240px;
+        width: 1500px;
+        height: 1800px;
       }
     }
   }
@@ -63,7 +127,226 @@
         width: 1666px;
       }
     }
+
+    .cards {
+      .first-card {
+        position: relative;
+        top: 172px;
+        right: 108px;
+        width: 1400px; // enough
+        height: 1100px;
+        z-index: $zm-first-card;
+      }
+
+      .blue-bar {
+        z-index: $zm-blue-bar;
+        width: 3600px; // this is enough
+        height: 240px;
+        position: relative;
+        right: 160px;
+        top: 400px;
+
+        p {
+          padding-top: 20px;
+          padding-left: 180px;
+          z-index: $zm-blue-bar;
+        }
+      }
+
+      .card2-wrapper {
+        z-index: $zm-second-card;
+
+        .second-card {
+          z-index: $zm-second-card;
+          position: relative;
+          height: 900px;
+          top: 362px;
+          right: 90px;
+        }
+      }
+    }
   }
+}
+
+@include sm {
+  #cfp-bg {
+    .korea-fish {
+      .sitcon-apple {
+        margin-top: 320px;
+        width: 216px;
+      }
+      .ellipse {
+        margin-top: 280px;
+        width: 420px;
+      }
+      .radial {
+        margin-top: 0;
+        width: 1666px;
+      }
+    }
+
+    .cards {
+      .first-card {
+        position: relative;
+        top: 0px;
+        right: 180px;
+        height: 1500px;
+      }
+
+      .blue-bar {
+        position: relative;
+        right: 160px;
+        top: 240px;
+
+        p {
+          padding-top: 20px;
+          padding-left: 180px;
+        }
+      }
+
+      .card2-wrapper {
+        .second-card {
+          position: relative;
+          height: 950px;
+          top: 198px;
+          right: 90px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1450px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 880px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #cfp-bg {
+    .cards {
+      .card2-wrapper {
+        .second-card {
+          height: 960px;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  #cfp-bg {
+    .korea-fish {
+      .sitcon-apple {
+        margin-top: 216px;
+        width: 120px;
+      }
+      .ellipse {
+        margin-top: 180px;
+        width: 240px;
+      }
+      .radial {
+        margin-top: -180px;
+        width: 1666px;
+      }
+    }
+
+    .cards {
+      .first-card {
+        position: relative;
+        top: -180px;
+        right: 180px;
+        height: 1400px;
+      }
+
+      .blue-bar {
+        position: relative;
+        right: 160px;
+        top: 60px;
+      }
+
+      .card2-wrapper {
+        margin-top: -600px;
+
+        .second-card {
+          position: relative;
+          height: 940px;
+          top: 318px;
+          right: 90px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1400px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 1050px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1400px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 1000px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1500px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 1050px;
+        }
+      }
+    }
+  }
+}
+
+/*
+@media screen and (min-width: 1921px) {
+  #cfp-bg {
+    .korea-fish {
+      .radial {
+        margin-top: calc(576px - 30vw);
+        width: 100vw;
+      }
+    }
+  }
+}
+
+@include md {
+  
 }
 
 @include sm {
@@ -103,3 +386,4 @@
     }
   }
 }
+*/
