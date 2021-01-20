@@ -204,7 +204,7 @@ $fontColor: $mid-blue;
   }
 }
 
-@include md{
+@include md{ //for width 786px
   #cfp-intro{
     h1,
     h2,
@@ -253,7 +253,7 @@ $fontColor: $mid-blue;
 
   #cfp-intro{
     .box-bluearea {
-      height: 280px;
+      height: 200px;
       z-index: 0;
       transform: rotate(12deg);
     }
@@ -261,19 +261,33 @@ $fontColor: $mid-blue;
   
   #cfp-intro{
     .box-back2 {
-      margin-top: -5em;
-      margin-left: -1em;
+      margin-top: 1em;
+      margin-left: -2em;
   
       .second-box {
           transform: rotate(12deg);
           bottom: 1030px;
-          left:-6em;
+          left:-5em;
       }
+    }
+    
+  }
+
+  #cfp-intro {
+    //button util
+    .mr-2 {
+      margin-right: 0.5em;
+    }
+    .ml-2 {
+      margin-left: 0.5em;
+    }
+    .mt-1 {
+      margin-top: 1em;
     }
   }
 }
 
-@include sm {
+@include sm { //for width 600px
 
   #cfp-intro{
     h1,
@@ -284,7 +298,7 @@ $fontColor: $mid-blue;
 
     p {
       font-size: 13pt;
-      line-height: 1.85;
+      line-height: 1.5;
       width:70vw;
     }
 
@@ -295,16 +309,16 @@ $fontColor: $mid-blue;
 
   #cfp-intro{
     .box-back {
-      margin-bottom: -43em;
+      margin-bottom: -45em;
       margin-left:-5em;
   
       .first-box {
         transform: rotate(12deg) scale(1.1);
-        bottom: 685px;
+        bottom: 610px;
         left: 50px;
       }
       .introd-text {
-        top: 7em;
+        top: 5em;
       }
 
       .past-sitcon {
@@ -338,11 +352,24 @@ $fontColor: $mid-blue;
   
   #cfp-intro{
     .box-back2 {
-      margin-top:-2em;
+      margin-top:-6em;
       .second-box {
           transform: rotate(12deg);
-          bottom: 1200px;
+          bottom: 1060px;
       }
+    }
+  }
+  
+  #cfp-intro {
+    //button util
+    .mr-2 {
+      margin-right: 0.5em;
+    }
+    .ml-2 {
+      margin-left: 0.5em;
+    }
+    .mt-1 {
+      margin-top: 1em;
     }
   }
 }
