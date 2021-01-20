@@ -2,6 +2,7 @@
 $w1366: 1366px;
 $w1024: 1024px;
 $w768: 768px;
+$w523: 523px;
 $w414: 414px;
 
 @mixin lg {
@@ -18,6 +19,12 @@ $w414: 414px;
 
 @mixin sm {
   @media screen and (max-width: $w768 - 1px) {
+    @content;
+  }
+}
+
+@mixin ss {
+  @media screen and (max-width: $w523 - 1px) {
     @content;
   }
 }
