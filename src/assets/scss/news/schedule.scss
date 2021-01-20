@@ -9,7 +9,7 @@
   margin: 0 auto;
 
   font-family: $fontFamily;
-  font-size: 20px;
+  font-size: 15pt;
   line-height: 2.1em;
   letter-spacing: 0.2px;
   color: $mid-blue;
@@ -24,19 +24,19 @@
   }
 
   h1 {
-    font-size: 48px;
-    line-height: 70px;
+    font-size: 36pt;
+    line-height: 1.45em;
     margin: 15px 0;
   }
 
   h2 {
-    font-size: 36px;
-    line-height: 70px;
+    font-size: 27pt;
+    line-height: 2em;
   }
 
   h3 {
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18pt;
+    line-height: 1.25em;
   }
 
   h1,
@@ -92,17 +92,17 @@
 @include md {
   #news-schedule {
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 11pt;
 
     h1,
     h2 {
-      font-size: 26px;
+      font-size: 20pt;
       line-height: 2.69em;
     }
 
     h3 {
-      font-size: 20px;
-      line-height: 30px;
+      font-size: 15pt;
+      line-height: 1.5em;
     }
 
     h1,
