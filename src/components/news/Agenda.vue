@@ -123,9 +123,9 @@
                         <li><span />SITCON 2021 採用 Google Forms 接收投稿。</li>
                         <li><span />SITCON 2021 將會有 4 軌議程同時進行（不計其他議程相關活動）。</li>
                         <li><span />上述審稿方式不考慮稿件內容的難度。我們以稿件是否能夠吸引人、高品質、適合聽眾（即前述審稿方式）為考量。</li>
-                        為鼓勵投稿，大會提供投稿者一組入場票邀請碼
+                        <li><span />為鼓勵投稿，大會提供投稿者一組入場票邀請碼
                         （投稿者有多個投稿亦同，即為一人一組，非一稿一組），可優先報名參與本年會。若您的稿件被接受，屆時可使用講者身分入場，不需要另外報名，並可以將入場票邀請碼贈與他人使用，邀請親朋好友共襄盛舉。講者身分入場，每組可獲得一張講者識別證、一份午餐餐盒與一份講者專屬迎賓禮。
-
+                        </li>
                         <li><span />在截稿之前，投稿者可以隨時使用投稿系統修改已投的稿件。</li>
                         <li><span />SITCON 議程組得與投稿者討論並經同意後，轉換稿件之投稿類型。</li>
                         <li><span />無論投稿有無入選，仍然歡迎於年會當天報名其他議程相關活動！</li>
@@ -194,7 +194,7 @@
                     <article class="info-section__content--sub info-section__content--sub-extend">
                         <h2>Q&A</h2>
                         <div class="info-qa">
-                            <div class="info-qa__itemBox" v-for="item,index in QA" :key="index" @click="e=>fade(index)">
+                            <div class="info-qa__itemBox" v-for="item,index in QA" :key="index">
 
                                 <input class="info-qa__itemBox-input" type="checkbox" name="checkbox" :id="index">
                                 <label class="info-qa__itemBox-title" :for="index">
