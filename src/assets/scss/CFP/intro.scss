@@ -1,7 +1,5 @@
 @import "../hyperpoint";
 @import "../color";
-$fontFamily: Noto Sans TC;
-$fontColor: $mid-blue;
 
 // General settings:
 //    font-size and paragraph spacing for headers and paragraph text
@@ -63,7 +61,7 @@ $fontColor: $mid-blue;
   padding-top: 72px;
   padding-bottom: 72px;
   padding-left: 135px;
-  color: $fontColor;
+  color: $mid-blue;
 
   .box-back {
     padding-top: 180px;
@@ -156,7 +154,6 @@ $fontColor: $mid-blue;
     padding-bottom: 144px;
     padding-left: 0px;
     padding-right: 0px;
-    color: $fontColor;
 
     .box {
       width: 632px;
@@ -184,9 +181,15 @@ $fontColor: $mid-blue;
     }
 
     .box-back2 {
-      padding-top: 280px;
+      padding-top: 320px;
 
       .topic-intro {
+        .about-topic {
+          h1,
+          h2 {
+            text-align: right;
+          }
+        }
         .cfp-deadline {
           .cfp-deadline-content {
             display: initial;
@@ -201,17 +204,31 @@ $fontColor: $mid-blue;
   }
 }
 
+@media screen and (max-width: 768px)  {
+  #cfp-intro {
+    .box-back2 {
+
+      .topic-intro {
+        .cfp-deadline {
+          .cfp-deadline-content {
+          }
+        }
+      }
+
+      .give-me-money {
+        margin-top: 200px;
+      }
+    }
+  }
+}
+
 @include sm {
   #cfp-intro {
     padding-top: 96px;
     padding-bottom: 60px;
     padding-left: 36px;
     padding-right: 36px;
-    color: $fontColor;
-
-    p {
-      font-size: 0.9em;
-    }
+    font-size: 0.9em;
 
     .box {
       width: initial;
@@ -221,7 +238,7 @@ $fontColor: $mid-blue;
     .box-back {
       padding-top: 0px;
       padding-bottom: 90px;
-      height: 1240px;
+      // height: 1240px;
 
       .past-sitcon {
         .cfp-img {
@@ -247,6 +264,66 @@ $fontColor: $mid-blue;
     .box-back2 {
       padding-top: 380px;
 
+      .give-me-money {
+        margin-top: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px)  {
+  #cfp-intro {
+    .box-back2 {
+      padding-top: 360px;
+
+      .give-me-money {
+        margin-top: 180px;
+      }
+    }
+  }
+}
+
+@include xs {
+  #cfp-intro {
+    padding-top: 126px;
+    padding-bottom: 60px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    .box {
+      width: initial;
+      margin: 0;
+    }
+
+    .box-back {
+      padding-top: 0px;
+      padding-bottom: 90px;
+      // height: 1240px;
+
+      .past-sitcon {
+        .cfp-img {
+          width: 180px; //225
+          height: 121px; //152
+        }
+
+        .thumbnails {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+
+          .thumb-wrapper {
+            &:not(:last-child) {
+              margin-right: 0;
+              margin-bottom: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .box-back2 {
+      padding-top: 300px;
+
       .topic-intro {
         .cfp-deadline {
           .cfp-deadline-content {
@@ -256,7 +333,19 @@ $fontColor: $mid-blue;
       }
 
       .give-me-money {
-        margin-top: 140px;
+        margin-top: 180px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #cfp-intro {
+    .box-back2 {
+      padding-top: 240px;
+
+      .give-me-money {
+        margin-top: 180px;
       }
     }
   }

@@ -37,13 +37,13 @@ $w414: 414px;
 }
 
 .desktop-only {
-  @media screen and (max-width: $w1366 - 1px) {
+  @media screen and (max-width: $w1024 - 1px) {
     display: none;
   }
 }
 
 .mobile-only {
-  @media screen and (min-width: $w1366) {
+  @media screen and (min-width: $w1024) {
     display: none;
   }
 }

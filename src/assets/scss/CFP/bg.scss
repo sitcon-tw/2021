@@ -105,7 +105,7 @@ $zm-third-card: -6;
         top: 240px;
         right: 240px;
         width: 1500px;
-        height: 1200px;
+        height: 1800px;
       }
     }
   }
@@ -201,19 +201,132 @@ $zm-third-card: -6;
         p {
           padding-top: 20px;
           padding-left: 180px;
-          z-index: $zm-blue-bar;
         }
       }
 
       .card2-wrapper {
-        z-index: $zm-second-card;
-
         .second-card {
-          z-index: $zm-second-card;
           position: relative;
-          height: 1000px;
+          height: 950px;
           top: 198px;
           right: 90px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1450px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 880px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #cfp-bg {
+    .cards {
+      .card2-wrapper {
+        .second-card {
+          height: 960px;
+        }
+      }
+    }
+  }
+}
+
+@include xs {
+  #cfp-bg {
+    .korea-fish {
+      .sitcon-apple {
+        margin-top: 216px;
+        width: 120px;
+      }
+      .ellipse {
+        margin-top: 180px;
+        width: 240px;
+      }
+      .radial {
+        margin-top: -180px;
+        width: 1666px;
+      }
+    }
+
+    .cards {
+      .first-card {
+        position: relative;
+        top: -180px;
+        right: 180px;
+        height: 1400px;
+      }
+
+      .blue-bar {
+        position: relative;
+        right: 160px;
+        top: 60px;
+      }
+
+      .card2-wrapper {
+        margin-top: -600px;
+
+        .second-card {
+          position: relative;
+          height: 940px;
+          top: 318px;
+          right: 90px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 380px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1400px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 1050px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1400px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 1000px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #cfp-bg {
+    .cards {
+      .first-card {
+        height: 1500px;
+      }
+      .card2-wrapper {
+        .second-card {
+          height: 1050px;
         }
       }
     }
