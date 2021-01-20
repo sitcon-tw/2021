@@ -1,20 +1,6 @@
-//import google font
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
-$fontFamily-NotoSansTC: "Noto Sans TC";
-
-//Color
-$color-white: #ffffff;
-$color-mid-blue: #226bb4;
-
-//Screen breakpoint
-$max-width-big-0: 1800px;
-$max-width-big: 1500px;
-$max-width-medium-0: 1100px;
-$max-width-medium-1: 900px;
-$max-width-small-0: 750px;
-$max-width-small-1: 500px;
-$max-width-small-2: 410px;
-$max-width-small-3: 360px;
+@import "../breakpoint.scss";
+@import "../color.scss";
+@import "../font.scss";
 
 // .info-container
 @mixin infoContainer() {
@@ -354,7 +340,7 @@ $max-width-small-3: 360px;
 //cfp-sub-information <subInformation>
 .info {
   width: 100%;
-  font-family: $fontFamily-NotoSansTC;
+  font-family: $fontFamily;
   float: left;
 
   &-container {
@@ -377,7 +363,7 @@ $max-width-small-3: 360px;
       line-height: 1.9;
       letter-spacing: normal;
       text-align: left;
-      color: $color-mid-blue;
+      color: $mid-blue;
       margin-block-start: 0.83em;
       margin-block-end: 0.83em;
     }
@@ -394,7 +380,7 @@ $max-width-small-3: 360px;
         line-height: 2.1;
         letter-spacing: 0.2px;
         text-align: left;
-        color: $color-mid-blue;
+        color: $mid-blue;
       }
 
       strong {
@@ -414,7 +400,7 @@ $max-width-small-3: 360px;
             height: 4px;
             width: 4px;
             transform: translate(-200%, -150%);
-            background-color: $color-mid-blue;
+            background-color: $mid-blue;
             border-radius: 50%;
           }
         }
@@ -430,7 +416,7 @@ $max-width-small-3: 360px;
           line-height: 2.2;
           letter-spacing: normal;
           text-align: left;
-          color: $color-mid-blue;
+          color: $mid-blue;
           margin-block-start: 0.83em;
           margin-block-end: 0.83em;
         }
@@ -459,7 +445,7 @@ $max-width-small-3: 360px;
       float: left;
       padding: 25px 1.5% 35px 1.5%;
       border-radius: 13px;
-      background-color: $color-mid-blue;
+      background-color: $mid-blue;
       width: 30%;
       &:not(:last-child) {
         margin-right: 5%;
@@ -468,7 +454,7 @@ $max-width-small-3: 360px;
       &-title {
         @include kindTitleFontsize();
         width: 100%;
-        color: $color-white;
+        color: $white;
         display: inline-block;
         text-align: center;
         font-weight: 900;
@@ -487,7 +473,7 @@ $max-width-small-3: 360px;
         p {
           @include kindTextFontsize();
           margin: 10px auto;
-          color: $color-white;
+          color: $white;
           font-weight: 500;
           font-stretch: normal;
           font-style: normal;
@@ -512,7 +498,7 @@ $max-width-small-3: 360px;
     &__itemBox {
       border-radius: 29px;
       box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
-      background-color: $color-white;
+      background-color: $white;
       margin: 0 0 30px 0;
 
       position: relative;
@@ -537,7 +523,7 @@ $max-width-small-3: 360px;
           line-height: 1.25;
           letter-spacing: normal;
           text-align: left;
-          color: $color-mid-blue;
+          color: $mid-blue;
         }
         span {
           @include qaIcon();
