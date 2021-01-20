@@ -90,20 +90,40 @@
         <div class="cfp-deadline">
           <h3>徵稿時間</h3>
           <div class="cfp-deadline-content">
-            <span class="h3">01/15 ～ 02/22</span
-            ><span class="ml-2 mr-2">詳細時程請見</span
-            ><a
-              class="btn btn-primary mr-2"
-              rel="noopener"
-              href="/2021/cfp/news"
-              >投稿資訊</a
-            ><a
-              class="btn btn-primary"
-              rel="noopener"
-              target="_blank"
-              href="https://forms.gle/XoXJSD2P8dL8X8s2A"
-              >我知道了，快讓我投稿！</a
-            >
+            <p class="desktop-only">
+              <span class="h3">01/15 ～ 02/22</span
+              ><span class="ml-2 mr-2">詳細時程請見</span
+              ><a
+                class="btn btn-primary mr-2"
+                rel="noopener"
+                href="/2021/cfp/news"
+                >投稿資訊</a
+              ><a
+                class="btn btn-primary"
+                rel="noopener"
+                target="_blank"
+                href="https://forms.gle/XoXJSD2P8dL8X8s2A"
+                >我知道了，快讓我投稿！</a
+              >
+            </p>
+            <p class="mobile-only mb-1">
+              <span class="h3">01/15 ～ 02/22</span
+              ><span class="ml-2">詳細時程請見</span>
+            </p>
+            <p class="mobile-only">
+              <a
+                class="btn btn-primary mr-2"
+                rel="noopener"
+                href="/2021/cfp/news"
+                >投稿資訊</a
+              ><a
+                class="btn btn-primary"
+                rel="noopener"
+                target="_blank"
+                href="https://forms.gle/XoXJSD2P8dL8X8s2A"
+                >快讓我投稿！</a
+              >
+            </p>
           </div>
         </div>
       </div>

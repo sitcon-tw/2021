@@ -21,6 +21,10 @@ $fontColor: $mid-blue;
   .h1 {
     font-size: 42pt;
     font-weight: 900;
+
+    @include sm {
+      font-size: 38pt;
+    }
   }
 
   h2,
@@ -33,6 +37,9 @@ $fontColor: $mid-blue;
   .h3 {
     font-size: 22pt;
     font-weight: 900;
+    @include sm {
+      font-size: 19pt;
+    }
   }
 }
 
@@ -46,6 +53,9 @@ $fontColor: $mid-blue;
   }
   .mt-1 {
     margin-top: 1em;
+  }
+  .mb-1 {
+    margin-bottom: 1em;
   }
 }
 
@@ -106,11 +116,11 @@ $fontColor: $mid-blue;
     padding-top: 180px;
 
     .about-topic {
-     // empty
+      // empty
     }
 
     .cfp-deadline {
-       margin-bottom: 2.5em;
+      margin-bottom: 2.5em;
 
       .cfp-deadline-content {
         margin-top: -1.5em;
@@ -130,89 +140,129 @@ $fontColor: $mid-blue;
   }
 }
 
-@include md {
-  //for width 786px
+@include lg {
   #cfp-intro {
-    h1,
-    h2,
-    h3 {
-      margin-bottom: 12pt;
-    }
-
-    p {
-      font-size: 14pt;
-      line-height: 1.75;
-      width: 85vw;
-    }
-
-    p:not(:last-child) {
-      margin-bottom: 2em;
+    padding-left: 135px;
+    padding-right: 135px;
+    .box-back2 {
+      width: initial;
     }
   }
+}
+
+@include md {
   #cfp-intro {
+    padding-top: 72px;
+    padding-bottom: 144px;
+    padding-left: 0px;
+    padding-right: 0px;
+    color: $fontColor;
+
+    .box {
+      width: 632px;
+      margin: 0 auto;
+    }
+
     .box-back {
-      margin-bottom: -42em;
-      margin-left: -6em;
-
-      .first-box {
-        transform: rotate(12deg) scale(1.2);
-        bottom: 520px;
-        left: 100px;
-      }
-
-      .introd-text {
-        top: 120px;
-      }
+      padding-top: 120px;
+      padding-bottom: 90px;
 
       .past-sitcon {
+        .cfp-img {
+          width: 180px; //225
+          height: 121px; //152
+        }
+
         .thumbnails {
           .thumb-wrapper {
-            width: 200.5px; //25vw;
-            .thumb-title,
-            .thumb-subtitle {
-              width: 185.5px; //25vw;
+            &:not(:last-child) {
+              margin-right: 1em;
             }
           }
         }
       }
     }
-  }
 
-  #cfp-intro {
-    .box-bluearea {
-      height: 200px;
-      z-index: 0;
-      transform: rotate(12deg);
-    }
-  }
-
-  #cfp-intro {
     .box-back2 {
-      margin-top: 1em;
-      margin-left: -2em;
+      padding-top: 280px;
 
-      .second-box {
-        transform: rotate(12deg);
-        bottom: 1030px;
-        left: -5em;
+      .topic-intro {
+        .cfp-deadline {
+          .cfp-deadline-content {
+            display: initial;
+          }
+        }
       }
-    }
-  }
 
-  #cfp-intro {
-    //button util
-    .mr-2 {
-      margin-right: 0.5em;
-    }
-    .ml-2 {
-      margin-left: 0.5em;
-    }
-    .mt-1 {
-      margin-top: 1em;
+      .give-me-money {
+        margin-top: 240px;
+      }
     }
   }
 }
 
+@include sm {
+  #cfp-intro {
+    padding-top: 96px;
+    padding-bottom: 60px;
+    padding-left: 36px;
+    padding-right: 36px;
+    color: $fontColor;
+
+    p {
+      font-size: 0.9em;
+    }
+
+    .box {
+      width: initial;
+      margin: 0;
+    }
+
+    .box-back {
+      padding-top: 0px;
+      padding-bottom: 90px;
+      height: 1240px;
+
+      .past-sitcon {
+        .cfp-img {
+          width: 180px; //225
+          height: 121px; //152
+        }
+
+        .thumbnails {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+
+          .thumb-wrapper {
+            &:not(:last-child) {
+              margin-right: 0;
+              margin-bottom: 1em;
+            }
+          }
+        }
+      }
+    }
+
+    .box-back2 {
+      padding-top: 380px;
+
+      .topic-intro {
+        .cfp-deadline {
+          .cfp-deadline-content {
+            display: initial;
+          }
+        }
+      }
+
+      .give-me-money {
+        margin-top: 140px;
+      }
+    }
+  }
+}
+
+/*
 @include sm {
   //for width 600px
 
@@ -549,3 +599,4 @@ $fontColor: $mid-blue;
     }
   }
 }
+*/
