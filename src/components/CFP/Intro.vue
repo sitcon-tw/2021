@@ -90,7 +90,7 @@
           <div class="cfp-deadline">
             <h3>徵稿時間</h3>
             <div class="cfp-deadline-content">
-              <span class="h3">01/15 ～ 02/22</span
+              <span class="h3">01/20 ～ 02/22</span
               ><span class="ml-2 mr-2">詳細時程請見</span
               ><a class="btn btn-primary mr-2" rel="noopener" href="/2021/cfp/news"
                 >投稿資訊</a
@@ -132,7 +132,7 @@
               >個人贊助方案</a
             >
           </div>
-          
+
         </div>
         <svg width="1100" height="1200" class="second-box"><rect width="1500" height="1500" style="fill: rgb(255, 255, 255);"></rect></svg>
       </div>
