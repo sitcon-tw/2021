@@ -42,6 +42,17 @@ $fontColor: $mid-blue;
   overflow: hidden;
   padding-bottom: 0;
 }
+@media screen and (max-width: 1021px) {
+  .introduction {
+    height: 2230px;
+  }
+}
+@media screen and (max-width: 891px) {
+  .introduction {
+    height: 2200px;
+  }
+}
+
 
 // Utiliy
 #cfp-intro {
@@ -178,7 +189,7 @@ $fontColor: $mid-blue;
         align-items: flex-end;
       }
     }
-
+    
     .give-me-money {
       position: relative;
       z-index: 2;
@@ -263,6 +274,7 @@ $fontColor: $mid-blue;
 }
 
 @include sm {
+
   #cfp-intro{
     h1,
     h2,
@@ -326,8 +338,7 @@ $fontColor: $mid-blue;
   
   #cfp-intro{
     .box-back2 {
-      margin-top:-4em;
-  
+      margin-top:-2em;
       .second-box {
           transform: rotate(12deg);
           bottom: 1200px;
