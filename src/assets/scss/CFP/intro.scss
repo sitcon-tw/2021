@@ -686,65 +686,6 @@
       }
     }
 
-<<<<<<< HEAD
-@media screen and (max-width: 800px) {
-  .cfp-deadline-content {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 600px;
-    height: 120px;
-  }
-  #cfp-intro{
-  .box-back2 {
-    // width: 760px;
-    font-family: $fontFamily;
-    color: $fontColor;
-
-    width: 900px;
-    padding: 20px 20px 168px 20px;
-    height: 2350px;
-
-    .about-topic {
-      margin-bottom: 2em;
-      position: relative;
-      bottom: 35px;
-      z-index: 2;
-      left: 50px;
-    }
-
-    .second-box {
-      transform: rotate(15deg);
-      box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
-      border-radius: 30px;
-      position: relative;
-      bottom: 1100px;
-      right: 120px;
-      z-index: 0;
-    }
-
-    .cfp-deadline {
-      margin-bottom: 2em;
-      margin-bottom: 2em;
-      position: relative;
-      z-index: 2;
-      left: 50px;
-      bottom: 55px;
-      .cfp-deadline-content {
-        margin-top: -1.5em;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        .cfp-introd-btn-outter {
-          transform: scale(.85);
-          position: relative;
-          right: 25px;
-        }
-      }
-    }
-    
-=======
->>>>>>> dev2
     .give-me-money {
       top: 2em;
       .whisper {
