@@ -1,64 +1,400 @@
-@import '../color';
+//import google font
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
+$fontFamily-NotoSansTC: "Noto Sans TC";
 
-$fontColor: #226bb4; // added to solve unnamed color error
+//Color
+$color-white: #ffffff;
+$color-mid-blue: #226bb4;
 
-// import google font
-// This font has been imported in main.scss linked to App.vue; no need to import
-// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
+//Screen breakpoint
+$max-width-big-0: 1800px;
+$max-width-big: 1500px;
+$max-width-medium-0: 1100px;
+$max-width-medium-1: 900px;
+$max-width-small-0: 750px;
+$max-width-small-1: 500px;
+$max-width-small-2: 410px;
+$max-width-small-3: 360px;
 
-// my variable
-// There colors have been moved to scss/color.scss to share with others
-// $color-pale-grey: #f0f7fd;
-// $color-dark-slate-blue: #1f4163;
-// $color-dark-sky-blue: #3d93e9;
-// $color-white: #ffffff;
-// $color-slate-blue: #5f7a95;
-// $color-mid-blue: #226bb4;
-
-$fontFamily-NotoSansTC: 'Noto Sans TC';
-
-//@mixin
-@mixin clearFloat() {
-  clear: both;
+// .info-container
+@mixin infoContainer() {
+  width: 80%;
+  // padding-left: 7%;
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 89%;
+    padding-left: 0;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    width: 89%;
+    padding-left: 0;
+  }
 }
 
-$limitWidth: 80vw;
+// .info-section
+@mixin sectionH1Fontsize() {
+  font-size: 44px;
+  @media only screen and (min-width: $max-width-big-0) {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 38px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 32px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 26px;
+  }
+}
 
-//cfp-information <Agenda> component
+@mixin sectionH2Fontsize() {
+  font-size: 32px;
+  @media only screen and (min-width: $max-width-big-0) {
+    font-size: 36px;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 30px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 26px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 24px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 24px;
+  }
+}
+
+//.info-section__content
+@mixin sectionContentParagraphWidth() {
+  // width: 92%;
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+    margin-left: 0;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@mixin sectionContentParagraphFontsize() {
+  font-size: 20px;
+  @media only screen and (max-width: $max-width-big-0) {
+    font-size: 18.5px;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 17px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 15px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 14px;
+  }
+}
+
+@mixin ulPadding {
+  padding: 0 0 0 20px;
+  @media only screen and (max-width: $max-width-big) {
+    padding: 0 0 0 5px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    padding: 0;
+  }
+}
+
+@mixin sectionContentSubExtendWidth {
+  width: 107%;
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+  }
+}
+
+// .info-kind
+@mixin kind() {
+  @media only screen and (min-width: $max-width-big-0) {
+    padding-bottom: 330px;
+    &__itemBox {
+      height: 305px;
+      padding-top: 0;
+      padding-bottom: 0;
+      &-title {
+        margin-top: 30px;
+      }
+      &-text {
+        padding-top: 8px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+    &__itemBox {
+      width: 100%;
+      height: 201px;
+      margin-bottom: 20px;
+      margin-right: 0;
+      padding: 0;
+      &-title {
+        margin-top: 20px;
+      }
+      &-text {
+        width: 86%;
+      }
+    }
+  }
+}
+
+@mixin kindTitleFontsize() {
+  font-size: 36px;
+  @media only screen and (max-width: $max-width-big-0) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: $max-width-big) {
+    font-size: 25px;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 28px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 20px;
+  }
+}
+
+@mixin kindTextFontsize() {
+  font-size: 20px;
+  @media only screen and (max-width: $max-width-big-0) {
+    font-size: 17px;
+  }
+  @media only screen and (max-width: $max-width-big) {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 14px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 12px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 17px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 14px;
+  }
+}
+
+// .info-qa
+@mixin qaLayout {
+  width: 86%;
+  margin-bottom: 120px;
+  @media only screen and (max-width: $max-width-big) {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+@mixin qaTitleFontsize() {
+  font-size: 24px;
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 22px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 15px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 12px;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    font-size: 11px;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    font-size: 9.3px;
+  }
+}
+
+@mixin qaTextFontsize() {
+  font-size: 20px;
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 18px;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 16px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 14px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 12px;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    font-size: 10px;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    font-size: 8.5px;
+  }
+}
+
+@mixin qaTitleHeight {
+  height: 57px;
+  @media only screen and (max-width: $max-width-small-0) {
+    height: 45px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    height: 36px;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    height: 32px;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    height: 28px;
+  }
+}
+
+@mixin qaTitleMarginTop {
+  margin-top: 15px;
+  @media only screen and (max-width: $max-width-small-1) {
+    margin-top: 10px;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    margin-top: 9px;
+  }
+}
+@mixin qaTextMarginTop {
+  margin-top: 25px;
+  @media only screen and (max-width: $max-width-small-1) {
+    margin-top: 15px;
+  }
+}
+
+@mixin qaQdisplay {
+  margin-left: 25px;
+
+  &::before {
+    content: "Q：";
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    margin-left: 18px;
+    &::before {
+      content: "";
+    }
+  }
+}
+
+@mixin qaIconSize {
+  height: 25px;
+  width: 30px;
+  @media only screen and (max-width: $max-width-medium-1) {
+    height: 16px;
+    width: 19px;
+  }
+}
+
+@mixin qaIcon {
+  background-image: url("../../assets/images/CFP/Polygon-big.svg");
+
+  @media only screen and (max-width: $max-width-medium-1) {
+    background-image: url("../../assets/images/CFP/Polygon-small.svg");
+  }
+}
+
+@mixin sitconImg {
+  float: right;
+  margin-top: 382px;
+  margin-right: 15%;
+  margin-bottom: 30px;
+  @media only screen and (max-width: $max-width-big) {
+    margin-top: 0;
+    margin-right: 80%;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    width: 108px;
+    height: 135px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    margin-right: 15%;
+  }
+
+  @media only screen and (max-width: $max-width-small-1) {
+    width: 86px;
+    height: 107px;
+  }
+
+  @media only screen and (max-width: $max-width-small-2) {
+    width: 69px;
+    height: 86px;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    width: 55px;
+    height: 68px;
+  }
+}
+
+//cfp-sub-information <subInformation>
 .info {
+  width: 100%;
+  font-family: $fontFamily-NotoSansTC;
+  float: left;
+
   &-container {
-    width: $limitWidth;
+    @include infoContainer();
     margin: 0 auto;
+    // float: left;
   }
 
   &-section {
-    @include clearFloat();
-    width: $limitWidth;
+    float: left;
+    clear: both;
+    width: 100%;
+
     h1 {
+      @include sectionH1Fontsize();
       height: 70px;
-      font-family: $fontFamily-NotoSansTC;
-      font-size: 48px;
       font-weight: 900;
       font-stretch: normal;
       font-style: normal;
       line-height: 1.9;
       letter-spacing: normal;
       text-align: left;
-      color: $mid-blue;
-      margin: 10px 0;
+      color: $color-mid-blue;
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
     }
     &__content {
-      width: $limitWidth;
+      width: 100%;
+
       p {
-        font-size: 18.5px;
-        font-family: $fontFamily-NotoSansTC;
+        @include sectionContentParagraphWidth();
+        @include sectionContentParagraphFontsize();
+
         font-weight: 500;
         font-stretch: normal;
         font-style: normal;
         line-height: 2.1;
         letter-spacing: 0.2px;
         text-align: left;
-        color: $mid-blue;
+        color: $color-mid-blue;
       }
 
       strong {
@@ -71,219 +407,186 @@ $limitWidth: 80vw;
         padding: 0;
 
         li {
+          @include ulPadding();
           margin: 0;
-          padding: 0 0 0 20px;
           span {
             display: inline-block;
             height: 4px;
             width: 4px;
             transform: translate(-200%, -150%);
-            background-color: $mid-blue;
+            background-color: $color-mid-blue;
             border-radius: 50%;
           }
         }
       }
 
       &--sub {
-        width: $limitWidth;
         h2 {
+          @include sectionH2Fontsize();
           height: 60px;
-          font-family: $fontFamily-NotoSansTC;
-          font-size: 36px;
           font-weight: 900;
           font-stretch: normal;
           font-style: normal;
           line-height: 2.2;
           letter-spacing: normal;
           text-align: left;
-          color: $mid-blue;
-          margin: 10px 0;
+          color: $color-mid-blue;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+        }
+
+        &-extend {
+          @include sectionContentSubExtendWidth();
         }
       }
     }
   }
 
-  &-kind {
-    //background-color: blueviolet;
-    width: 90vw;
-    margin-top: 45px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    @media screen and (max-width: 1200px) {
-      flex-direction: column;
+  &-sitcon-img {
+    &__box {
+      float: right;
     }
+
+    @include sitconImg();
+  }
+
+  //cfp-sub-information <subInformation> kind, qa components
+  &-kind {
+    width: 100%;
+    margin-top: 45px;
+    padding-bottom: 300px;
     &__itemBox {
-      width: 330px;
+      float: left;
+      padding: 25px 1.5% 35px 1.5%;
       border-radius: 13px;
-      background-color: $mid-blue;
-      padding: 26px 20px 34px 20px;
-      @media screen and (max-width: 1200px) {
-        width: 90%;
-        margin: 20px auto;
+      background-color: $color-mid-blue;
+      width: 30%;
+      &:not(:last-child) {
+        margin-right: 5%;
       }
+
       &-title {
-        color: $white;
+        @include kindTitleFontsize();
+        width: 100%;
+        color: $color-white;
         display: inline-block;
         text-align: center;
-        width: 100%;
-        font-family: $fontFamily-NotoSansTC;
         font-weight: 900;
         font-stretch: normal;
         font-style: normal;
         letter-spacing: normal;
         text-align: center;
-        font-size: 34px;
+        margin-top: 25px;
       }
       &-text {
         width: 100%;
-        //height: 172px;
+        height: 172px;
         margin: 0 auto;
         text-align: left;
 
-        font-size: 19px;
         p {
-          color: $white;
-          font-family: $fontFamily-NotoSansTC;
-          margin: 15px 0;
+          @include kindTextFontsize();
+          margin: 10px auto;
+          color: $color-white;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 2.1;
+          letter-spacing: 0.2px;
         }
+
         strong {
           font-weight: 900;
         }
       }
-
-      //     p {
-      //       color: $color-white;
-      //       font-family: $fontFamily-NotoSansTC;
-      //       font-size: 19px;
-      //       font-weight: 500;
-      //       font-stretch: normal;
-      //       font-style: normal;
-      //       line-height: 2.1;
-      //       letter-spacing: 0.2px;
-      //     }
-      //
-      //   }
     }
-
-    // &__itemBox {
-    //   float: left;
-    //   padding: 26px 20px 34px 20px;
-    //   border-radius: 13px;
-    //   background-color: $color-mid-blue;
-    //   width: 354px;
-    //   height: 230px;
-    //   margin: 0 72px 62px 0;
-
-    //   &-title {
-    //     color: $color-white;
-    //     display: inline-block;
-    //     text-align: center;
-    //     width: 100%;
-    //     font-family: $fontFamily-NotoSansTC;
-    //     font-weight: 900;
-    //     font-stretch: normal;
-    //     font-style: normal;
-    //     // line-height: 1.94;
-    //     letter-spacing: normal;
-    //     text-align: center;
-    //     //modify
-    //     font-size: 34px;
-    //     // margin: 0 0px 0px 40px;
-    //   }
-    //   &-text {
-    //     width: 350px;
-    //     height: 172px;
-    //     margin: 0 auto;
-
-    //     text-align: left;
-
-    //     p {
-    //       color: $color-white;
-    //       font-family: $fontFamily-NotoSansTC;
-    //       font-size: 19px;
-    //       font-weight: 500;
-    //       font-stretch: normal;
-    //       font-style: normal;
-    //       line-height: 2.1;
-    //       letter-spacing: 0.2px;
-    //     }
-    //     strong {
-    //       font-weight: 900;
-    //     }
-    //   }
-    // }
+    //RWD for kind
+    @include kind();
   }
 
   &-qa {
-    width: 100vw;
+    @include qaLayout();
+    margin-bottom: 120px;
+    float: left;
+    // margin: 0 auto;
     &__itemBox {
       border-radius: 29px;
       box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
-      background-color: $white;
-      margin: 20px 0;
-      padding: 10px 20px;
-      width: 80%;
-      cursor: pointer;
-      span {
-        font-family: $fontFamily-NotoSansTC;
-        color: $fontColor;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 42px;
-      }
-      p {
+      background-color: $color-white;
+      margin: 0 0 30px 0;
+
+      position: relative;
+      &-title {
+        @include qaTitleHeight();
         display: block;
-        width: 90%;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        p {
+          @include qaTitleFontsize();
+          @include qaTitleMarginTop();
+
+          @include qaQdisplay();
+          display: inline-block;
+          font-weight: 900;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.25;
+          letter-spacing: normal;
+          text-align: left;
+          color: $color-mid-blue;
+        }
+        span {
+          @include qaIcon();
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 15px;
+          top: 50%;
+          transform: translateY(-45%);
+          right: 3.5%;
+        }
+      }
+
+      &-input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      &-input:checked ~ &-text {
+        display: block;
+        width: 88%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        p {
+          width: 100%;
+          @include qaTextFontsize();
+        }
+      }
+
+      &-input:checked ~ &-title {
+        p {
+          @include qaTextMarginTop();
+        }
+        span {
+          transform: rotate(180deg);
+          position: absolute;
+          top: 20px;
+          right: 3.5%;
+        }
+      }
+
+      &-text {
+        display: none;
       }
     }
+
+    &-icon {
+      @include qaIconSize();
+    }
   }
-
-  // &-qa {
-  //   margin: 30px 0;
-  //   padding: 15px 0;
-  //   // margin-bottom: 120px;
-  //   &__itemBox {
-  //     border-radius: 29px;
-  //     box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
-  //     background-color: $color-white;
-  //     margin: 0 0 30px 0;
-  //     &-title {
-  //       display: inline-block;
-  //       width: 1230px;
-  //       height: 30px;
-  //       padding: 8px 41px 11px 23px;
-
-  //       font-family: $fontFamily-NotoSansTC;
-  //       font-size: 24px;
-  //       font-weight: 900;
-  //       font-stretch: normal;
-  //       font-style: normal;
-  //       line-height: 1.5;
-  //       letter-spacing: normal;
-  //       text-align: left;
-  //       color: $color-mid-blue;
-  //     }
-
-  //     &-input {
-  //       position: absolute;
-  //       opacity: 0;
-  //       cursor: pointer;
-  //     }
-
-  //     &-input:checked ~ &-text {
-  //       display: block;
-  //       width: 94%;
-  //       margin: 0 auto;
-  //       padding-bottom: 20px;
-  //     }
-
-  //     &-text {
-  //       display: none;
-  //     }
-
-  //     &-checkmark {
-  //     }
-  //   }
-  // }
 }
