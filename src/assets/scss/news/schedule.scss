@@ -91,7 +91,8 @@
 
 @include md {
   #news-schedule {
-    margin: 0 auto;
+    max-width: 100vw;
+    padding: 0 40px;
     font-size: 11pt;
 
     h1,
