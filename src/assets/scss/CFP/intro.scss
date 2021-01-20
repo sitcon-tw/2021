@@ -374,7 +374,7 @@ $fontColor: $mid-blue;
   }
 }
 
-@include ss {
+@include ss { //
   #cfp-intro{
     h1,
     h2,
@@ -542,7 +542,6 @@ $fontColor: $mid-blue;
     p {
       font-size: 11pt;
       line-height: 1.65;
-      width:80vw;
     }
 
     p:not(:last-child) {
@@ -553,25 +552,25 @@ $fontColor: $mid-blue;
   #cfp-intro{
     .box-back {
       margin-bottom: -45em;
-      margin-left:-8em;
+      margin-left: -8em; //40
   
       .first-box {
         transform: rotate(12deg);
-        bottom: 620px;
-        left: 30px;
+        bottom: 600px; //625
+        left: 12vw;
       }
       .introd-text {
-        top: 100px;
+        top: 80px;
       }
       .past-sitcon {
         margin-top:1em;
-        
+        margin-bottom:-3em;
         .thumbnails {
           margin-left: -0.5em;
           padding: 0.25em 0;
   
           .thumb-wrapper {
-            width:110px;//25vw;
+            width:90px;//25vw;
             .thumb-title,
             .thumb-subtitle {
               width:130px; //25vw;
@@ -581,8 +580,11 @@ $fontColor: $mid-blue;
               line-height: 10em;
               font-weight: 900;
             }
+            .small {
+              font-size: 0.1em;
+            }
             .cfp-img{
-              width: 110.5px; //225
+              width: 100.5px; //225
               height: 63px; //152
               margin-left: 0.6em;
             }
@@ -602,12 +604,12 @@ $fontColor: $mid-blue;
   
   #cfp-intro{
     .box-back2 {
-      margin-top: 3em;
-      margin-left: -1em;
+      margin-top: 0em;
+      margin-left: -2em;
   
       .second-box {
           transform: rotate(12deg) scale(0.63);
-          bottom: 1250px;
+          bottom: 1270px;
           left:-15em;
       }
     }
