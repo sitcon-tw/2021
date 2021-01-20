@@ -246,3 +246,91 @@ $fontColor:  #226BB4;
     }
   }
 }
+
+@include xs {
+  #cfp-intro{
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 10pt;
+    }
+
+    h1,
+    .h1 {
+      font-size: 36pt;
+      font-weight: 900;
+    }
+
+    h2,
+    .h2 {
+      font-size: 20pt;
+      font-weight: 900;
+    }
+
+    h3,
+    .h3 {
+      font-size: 18pt;
+      font-weight: 900;
+    }
+
+    p {
+      font-size: 11pt;
+      line-height: 1.55;
+      width:75vw;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+
+  #cfp-intro{
+    .box-back {
+      margin-bottom: -44em;
+      margin-left:-8em;
+  
+      .first-box {
+        transform: rotate(12deg);
+        bottom: 550px;
+        left: 40px;
+      }
+      .introd-text {
+        top: 100px;
+      }
+      .past-sitcon {
+        margin-top:1em;
+      }
+    }
+  }
+
+  #cfp-intro{
+    .box-bluearea {
+      height: 280px;
+      z-index: 0;
+      transform: rotate(12deg);
+    }
+  }
+  
+  #cfp-intro{
+    .box-back2 {
+      margin-top:0em;
+      margin-left:-3em;
+  
+      .second-box {
+          transform: rotate(12deg) scale(0.65);
+          bottom: 1260px;
+          left:-13em;
+      }
+    }
+    
+    .give-me-money {
+      top: 2em;
+      .whisper {
+        font-weight: 900;
+        font-size: 1.25em;
+        margin-bottom: 0.5em;
+      }
+    }
+  }
+}
+
