@@ -57,7 +57,7 @@
       <div class="cfp-news">
         <a href="/cfp/news" rel="noopener">
           <div class="btn-news-wrapper">
-            <img src="~@/assets/images/burnfont/btn-news.svg" />
+            <img src="~@/assets/images/burnfont/btn-news.svg" id="svg-news" />
           </div>
         </a>
       </div>
