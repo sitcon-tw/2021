@@ -683,6 +683,11 @@ $fontColor: $mid-blue;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
+        .cfp-introd-btn-outter {
+          transform: scale(.85);
+          position: relative;
+          right: 25px;
+        }
       }
     }
     
