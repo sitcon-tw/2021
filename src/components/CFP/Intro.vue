@@ -41,9 +41,7 @@
           <h3>參與討論！</h3>
           <div class="discuss-section">
             <p>
-              SITCON 是個開放的社群，許多籌備的相關事項都會在公開的 Mailing list
-              上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的 Mailing list
-              並貢獻你的想法！
+              SITCON 是個開放的社群，許多籌備的相關事項都會在公開的郵件論壇上進行討論，如果有興趣參與，歡迎訂閱 SITCON 的郵件論壇並貢獻你的想法！
             </p>
             <p>
               若你想進一步了解過往討論的內容，也歡迎在 HackMD 上查看 SITCON 2021
@@ -56,14 +54,14 @@
               target="_blank"
               class="btn btn-primary mr-2"
               href="https://groups.google.com/g/sitcon-general"
-              >SITCON 論壇</a
+              >SITCON 郵件論壇</a
             >
             <a
               rel="noopener"
               target="_blank"
               class="btn btn-primary"
               href="https://hackmd.io/@SITCON/SITCON2021"
-              >會議記錄</a
+              >籌備會議記錄</a
             >
           </div>
         </div>
