@@ -72,7 +72,7 @@ $fontColor: $mid-blue;
       box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
       border-radius: 30px;
       position: relative;
-      bottom: 550px;
+      bottom: 620px;
       right: 50px;
       z-index: 0;
     }
@@ -88,7 +88,13 @@ $fontColor: $mid-blue;
 
     .past-sitcon {
       margin-bottom: 2em;
-      width: 700px;
+      width: 60vw;
+      height: 13em;
+
+      .cfp-img{
+        width: 180px; //225
+        height: 121px; //152
+      }
 
       .thumbnails {
         display: flex;
@@ -114,7 +120,7 @@ $fontColor: $mid-blue;
         }
       }
     }
-
+    
     .join-discuss {
       // empty
     }
@@ -205,22 +211,31 @@ $fontColor: $mid-blue;
       margin-bottom: 2em;
     }
   }
-
   #cfp-intro{
     .box-back {
       margin-bottom: -40em;
       margin-left:-6em;
   
       .first-box {
-        transform: rotate(12deg);
-        bottom: 650px;
-        left: 20px;
+        transform: rotate(12deg) scale(1.2);
+        bottom: 630px;
+        left: 90px;
       }
+
       .introd-text {
-        top: 100px;
+        top: 150px;
       }
+
       .past-sitcon {
-        margin-top:1em;
+        .thumbnails {
+          .thumb-wrapper {
+            width:200.5px;//25vw;
+            .thumb-title,
+            .thumb-subtitle {
+              width:185.5px; //25vw;
+            }
+          }
+        }
       }
     }
   }
@@ -281,6 +296,24 @@ $fontColor: $mid-blue;
       }
       .past-sitcon {
         margin-top:1em;
+      }
+
+      .past-sitcon {
+        .thumbnails {
+          .thumb-wrapper {
+            width:122.5px;//25vw;
+            .thumb-title,
+            .thumb-subtitle {
+              width:132.5px; //25vw;
+            }
+          }
+        }
+
+        .cfp-img{
+          width: 128.5px; //225
+          height: 80px; //152
+          margin-left: 0em;
+        }
       }
     }
   }
@@ -358,6 +391,23 @@ $fontColor: $mid-blue;
       .past-sitcon {
         margin-top:1em;
       }
+      .past-sitcon {
+        .thumbnails {
+          .thumb-wrapper {
+            width:122.5px;//25vw;
+            .thumb-title,
+            .thumb-subtitle {
+              width:132.5px; //25vw;
+            }
+          }
+        }
+
+        .cfp-img{
+          width: 128.5px; //225
+          height: 80px; //152
+          margin-left: 0em;
+        }
+      }
     }
   }
 
@@ -387,6 +437,41 @@ $fontColor: $mid-blue;
         font-weight: 900;
         font-size: 1.25em;
         margin-bottom: 0.5em;
+      }
+    }
+  }
+
+  #cfp-intro{
+    .past-sitcon {
+      margin-bottom: 2em;
+      width: 40vw;
+      height: 10em;
+
+      .thumbnails {
+        display: flex;
+        flex-direction: row;
+        padding: 0.25em 0;
+
+        .thumb-wrapper {
+          width:225px;//25vw;
+          .thumb-title,
+          .thumb-subtitle {
+            width:190px; //25vw;
+            text-align: center;
+            margin: 0;
+            font-size: 0.8em;
+            line-height: 1.75em;
+            font-weight: 900;
+          }
+
+          .small {
+            font-size: 0.6em;
+          }
+
+          &:not(:last-child) {
+            margin-right: 1em;
+          }
+        }
       }
     }
   }
