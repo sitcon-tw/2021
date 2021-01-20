@@ -54,6 +54,8 @@ $width-svg-news: 259px;
     .cfp-title {
       order: 2;
       flex: 1;
+      position: relative;
+      left: calc(#{$width-svg-cfp} * 0.07);
     }
     .cfp-news {
       order: 3;
@@ -130,6 +132,7 @@ $width-svg-news: 259px;
     .info-box {
       .cfp-title {
         margin-bottom: 56px;
+        left: calc(#{$width-svg-cfp} * 0.06)
       }
       .date-location {
         .date-wrapper {
@@ -181,6 +184,7 @@ $width-svg-news: 259px;
     .info-box {
       .cfp-title {
         margin-bottom: 56px;
+        left: calc(#{$width-svg-cfp} * 0.05)
       }
       .date-location {
         .date-wrapper {
@@ -233,6 +237,7 @@ $width-svg-news: 259px;
     .info-box {
       .cfp-title {
         margin-bottom: 32px;
+        left: calc(#{$width-svg-cfp} * 0.033)
       }
       .date-location {
         .date-wrapper {
