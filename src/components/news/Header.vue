@@ -10,7 +10,7 @@
         <img src="~@/assets/images/burnfont/news.svg" class="svg svg-cfp-news" />
       </div>
       <div class="contribute-wrapper">
-        <a class="btn-contribute" href="#">我要投稿</a>
+        <a class="btn-contribute" href="https://forms.gle/XoXJSD2P8dL8X8s2A">我要投稿</a>
       </div>
     </div>
     <div class="cfp-body">
@@ -28,7 +28,7 @@
       <div class="time-wrapper">
         <div class="start-time-wrapper">
           <h2>投稿開始</h2>
-          <p>2021/01/15（五）</p>
+          <p>2021/01/12（三）</p>
         </div>
         <div class="tilde-wrapper">
           <h2><!-- pseudo element --></h2>
