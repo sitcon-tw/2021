@@ -4,6 +4,8 @@
 // No need to import font; the fonts have been imported in App.vue
 // @import '@/assets/scss/font';
 
+$fontFamily: 'Noto Sans CJK TC', monospace;
+
 #news-schedule {
   max-width: 80vw;
   margin: 0 auto;
