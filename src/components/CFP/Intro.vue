@@ -16,19 +16,19 @@
           <div class="thumbnails">
             <div class="thumb-wrapper">
               <!-- TODO add thumb -->
-              <img class="cfp-img" src="" />
+              <img class="cfp-img" src="@/assets/images/CFP/2020.png" />
               <p class="thumb-title text-center">SITCON 2020<br /></p>
               <p class="thumb-subtitle text-center">#define</p>
             </div>
             <div class="thumb-wrapper">
               <!-- TODO add thumb -->
-              <img class="cfp-img" src="" />
+              <img class="cfp-img" src="@/assets/images/CFP/2019.png" />
               <p class="thumb-title text-center">SITCON 2019<br /></p>
               <p class="thumb-subtitle text-center">開箱演算法</p>
             </div>
             <div class="thumb-wrapper">
               <!-- TODO add thumb -->
-              <img class="cfp-img" src="" />
+              <img class="cfp-img" src="@/assets/images/CFP/2018.png" />
               <p class="thumb-title text-center">SITCON 2018<br /></p>
               <!-- TODO alignment is not good -->
               <p class="thumb-subtitle text-center small">
