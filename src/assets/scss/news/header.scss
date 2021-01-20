@@ -5,6 +5,10 @@
 #news-header {
   padding: 72px 280px;
 
+  * {
+    font-family: "Noto Sans TC";
+  }
+
   .top-bar {
     position: relative;
     // background: red; // debug
