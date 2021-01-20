@@ -283,22 +283,20 @@ $fontColor: $mid-blue;
 
   #cfp-intro{
     .box-back {
-      margin-bottom: -40em;
+      margin-bottom: -43em;
       margin-left:-5em;
   
       .first-box {
-        transform: rotate(12deg);
-        bottom: 660px;
-        left: 20px;
+        transform: rotate(12deg) scale(1.1);
+        bottom: 685px;
+        left: 50px;
       }
       .introd-text {
         top: 7em;
       }
-      .past-sitcon {
-        margin-top:1em;
-      }
 
       .past-sitcon {
+        margin-bottom:-1em;
         .thumbnails {
           .thumb-wrapper {
             width:122.5px;//25vw;
@@ -328,11 +326,11 @@ $fontColor: $mid-blue;
   
   #cfp-intro{
     .box-back2 {
-      margin-top:-2em;
+      margin-top:-4em;
   
       .second-box {
           transform: rotate(12deg);
-          bottom: 1150px;
+          bottom: 1200px;
       }
     }
   }
@@ -382,7 +380,7 @@ $fontColor: $mid-blue;
   
       .first-box {
         transform: rotate(12deg);
-        bottom: 560px;
+        bottom: 640px;
         left: 30px;
       }
       .introd-text {
@@ -517,11 +515,11 @@ $fontColor: $mid-blue;
   #cfp-intro{
     .box-back {
       margin-bottom: -40em;
-      margin-left:-7em;
+      margin-left:-8em;
   
       .first-box {
         transform: rotate(12deg);
-        bottom: 580px;
+        bottom: 620px;
         left: 30px;
       }
       .introd-text {
@@ -529,6 +527,29 @@ $fontColor: $mid-blue;
       }
       .past-sitcon {
         margin-top:1em;
+        
+        .thumbnails {
+          margin-left: -0.5em;
+          padding: 0.25em 0;
+  
+          .thumb-wrapper {
+            width:110px;//25vw;
+            .thumb-title,
+            .thumb-subtitle {
+              width:130px; //25vw;
+              text-align: center;
+              margin: 0;
+              font-size: 0.1em;
+              line-height: 10em;
+              font-weight: 900;
+            }
+            .cfp-img{
+              width: 110.5px; //225
+              height: 63px; //152
+              margin-left: 0.6em;
+            }
+          }
+        }
       }
     }
   }
