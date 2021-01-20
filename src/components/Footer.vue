@@ -44,27 +44,27 @@ export default class CFP extends Vue {
     {
       title: 'facebook',
       icon: 'facebook-f',
-      link: '#'
+      link: 'https://sitcon.org/fb'
     },
     {
       title: 'flickr',
       icon: 'flickr',
-      link: '#'
+      link: 'https://sitcon.org/flickr'
     },
     {
       title: 'telegram',
       icon: 'telegram-plane',
-      link: '#'
+      link: 'https://sitcon.org/tg'
     },
     {
       title: 'twitter',
       icon: 'twitter',
-      link: '#'
+      link: 'https://sitcon.org/twitter'
     },
     {
       title: 'youtube',
       icon: 'youtube',
-      link: '#'
+      link: 'https://sitcon.org/yt'
     }
   ];
 }
