@@ -106,7 +106,14 @@ $fontColor: $mid-blue;
         width: 180px; //225
         height: 121px; //152
       }
-
+      .thumb-link {
+        color: $mid-blue;
+        &:visited {
+          p {
+            color: $mid-blue;
+          }
+        }
+      }
       .thumbnails {
         display: flex;
         flex-direction: row;
@@ -119,6 +126,7 @@ $fontColor: $mid-blue;
             font-size: 0.8em;
             line-height: 1.75em;
             font-weight: 900;
+            color: $mid-blue;
           }
 
           .small {

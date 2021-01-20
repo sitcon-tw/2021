@@ -16,24 +16,27 @@
           <div class="thumbnails">
             <div class="thumb-wrapper">
               <!-- TODO add thumb -->
+              <a class="thumb-link" href="/2020">
               <img class="cfp-img" src="@/assets/images/CFP/2020.png" />
               <p class="thumb-title text-center">SITCON 2020<br /></p>
-              <p class="thumb-subtitle text-center">#define</p>
+              <p class="thumb-subtitle text-center">#define</p></a>
             </div>
             <div class="thumb-wrapper">
               <!-- TODO add thumb -->
+              <a class="thumb-link" href="/2019">
               <img class="cfp-img" src="@/assets/images/CFP/2019.png" />
               <p class="thumb-title text-center">SITCON 2019<br /></p>
-              <p class="thumb-subtitle text-center">開箱演算法</p>
+              <p class="thumb-subtitle text-center">開箱演算法</p></a>
             </div>
             <div class="thumb-wrapper">
               <!-- TODO add thumb -->
+              <a class="thumb-link" href="/2018">
               <img class="cfp-img" src="@/assets/images/CFP/2018.png" />
               <p class="thumb-title text-center">SITCON 2018<br /></p>
               <!-- TODO alignment is not good -->
               <p class="thumb-subtitle text-center small">
                 POPULAR COMPUTER SCIENCE
-              </p>
+              </p></a>
             </div>
           </div>
         </div>
