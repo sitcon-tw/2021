@@ -7,28 +7,14 @@
         <img class="sitcon-apple" src="~@/assets/images/CFP/sitcon-apple.svg" />
       </div>
       <div class="cards">
-        <svg width="1000" height="950" class="first-bozzx first-card">
-          <rect
-            width="1000"
-            height="950"
-            style="fill: rgb(255, 255, 255)"
-          ></rect>
-        </svg>
+        <div class="first-card card" />
         <div class="box-bluearea blue-bar">
-          <p>Descendents of The Abacus</p>
+          <p class="desktop-only">Descendents of The Abacus</p>
+          <p class="mobile-only">Descendents of<br />The Abacus</p>
         </div>
         <div class="card2-wrapper">
-          <svg
-            width="1500"
-            height="1200"
-            class="second-box second-card"
-          >
-            <rect
-              width="1500"
-              height="1200"
-              style="fill: rgb(255, 255, 255)"
-            ></rect>
-          </svg>
+          <div class="second-card card" />
+          <div class="third-card card mobile-only" />
         </div>
       </div>
     </div>

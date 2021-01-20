@@ -23,6 +23,7 @@ $w414: 414px;
   }
 }
 
+// WTF is this
 @mixin ss {
   @media screen and (max-width: $w523 - 1px) {
     @content;
@@ -32,5 +33,17 @@ $w414: 414px;
 @mixin xs {
   @media screen and (max-width: $w414 - 1px) {
     @content;
+  }
+}
+
+.desktop-only {
+  @media screen and (max-width: $w1366 - 1px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @media screen and (min-width: $w1366) {
+    display: none;
   }
 }
