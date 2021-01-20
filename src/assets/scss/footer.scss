@@ -3,7 +3,7 @@
 // varible declare
 $fontColor: white;
 $backgroundColor: #1f4163;
-$fontFamily: Noto Sans CJK TC, monospace;
+$fontFamily: 'Noto Sans CJK TC', monospace;
 
 @mixin fontSize() {
   font-size: 14pt;
