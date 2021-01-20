@@ -56,11 +56,37 @@
         }
       }
     }
-
+    @media screen and (min-width: 1023px) {
     .contribute-wrapper {
-      display: none; // display in mobile
+        position:absolute;
+        background-color: #ffffff;
+        box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
+        transition-duration: 0.2s;
+        color: #226bb4;
+        width: 126px;
+        height: 50px;
+        border-radius: 8px;
+        top: 20px;
+        right: 25px;
+      .btn-contribute {
+        padding: 0.85em 1.25em;
+        font-size: 1.1em;
+        font-weight: 900;
+        border: none;
+        position: absolute;
+        color:$mid-blue;
+        top:0;
+        bottom:0;
+        margin:auto;
+        &:hover {
+          background-color: #226bb4;
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.19);
+          color: white;
+          border-radius: 8px;
+        }
+      }
     }
-
+  }
     .title-wrapper {
       .svg-cfp-news {
         height: 60px;
