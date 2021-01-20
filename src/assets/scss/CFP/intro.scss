@@ -573,18 +573,21 @@ $fontColor: $mid-blue;
             width:90px;//25vw;
             .thumb-title,
             .thumb-subtitle {
-              width:130px; //25vw;
+              width:115px; //25vw;
               text-align: center;
               margin: 0;
               font-size: 0.1em;
-              line-height: 10em;
+              line-height: 15em;
               font-weight: 900;
+            }
+            .thumb-subtitle{
+              display: none;
             }
             .small {
               font-size: 0.1em;
             }
             .cfp-img{
-              width: 100.5px; //225
+              width: 95.5px; //225
               height: 63px; //152
               margin-left: 0.6em;
             }
