@@ -1,4 +1,5 @@
 @import 'color';
+@import 'hyperpoint';
 
 .text-center {
   text-align: center;
@@ -39,6 +40,10 @@
 .btn {
   display: inline-block;
   padding: 0.85em 1.25em;
+
+  @include sm {
+    padding: 0.5em 0.85em;
+  }
 
   font-size: 1.1em;
   font-weight: 900;
