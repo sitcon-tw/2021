@@ -4,8 +4,16 @@ $max-width-2: 1030px;
 $max-width-3: 646px;
 $max-width-4: 415px;
 
+$max-width-35: 480px;
+
 @mixin xs {
   @media (max-width: $max-width-4) {
+    @content;
+  }
+}
+
+@mixin subs {
+  @media (max-width: $max-width-35) {
     @content;
   }
 }
