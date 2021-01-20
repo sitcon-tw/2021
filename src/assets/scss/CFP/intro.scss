@@ -189,64 +189,6 @@ $fontColor:  #226BB4;
   }
 }
 
-@include sm {
-  #cfp-intro{
-    h1,
-    h2,
-    h3 {
-      margin-bottom: 10pt;
-    }
-
-    p {
-      font-size: 12pt;
-      line-height: 1.85;
-      width:75vw;
-    }
-
-    p:not(:last-child) {
-      margin-bottom: 2em;
-    }
-  }
-
-  #cfp-intro{
-    .box-back {
-      margin-bottom: -45em;
-      margin-left:-4em;
-  
-      .first-box {
-        transform: rotate(12deg) scale(0.9);
-        bottom: 640px;
-        left: -20px;
-      }
-      .introd-text {
-        top: 100px;
-      }
-      .past-sitcon {
-        margin-top:1em;
-      }
-    }
-  }
-
-  #cfp-intro{
-    .box-bluearea {
-      height: 280px;
-      z-index: 0;
-      transform: rotate(12deg);
-    }
-  }
-  
-  #cfp-intro{
-    .box-back2 {
-      margin-top:3em;
-  
-      .second-box {
-          transform: rotate(12deg);
-          bottom: 1100px;
-      }
-    }
-  }
-}
-
 @include xs {
   #cfp-intro{
     h1,
@@ -334,3 +276,120 @@ $fontColor:  #226BB4;
   }
 }
 
+@include sm {
+  #cfp-intro{
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 10pt;
+    }
+
+    p {
+      font-size: 12pt;
+      line-height: 1.85;
+      width:75vw;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+
+  #cfp-intro{
+    .box-back {
+      margin-bottom: -45em;
+      margin-left:-4em;
+  
+      .first-box {
+        transform: rotate(12deg) scale(0.9);
+        bottom: 640px;
+        left: -20px;
+      }
+      .introd-text {
+        top: 100px;
+      }
+      .past-sitcon {
+        margin-top:1em;
+      }
+    }
+  }
+
+  #cfp-intro{
+    .box-bluearea {
+      height: 280px;
+      z-index: 0;
+      transform: rotate(12deg);
+    }
+  }
+  
+  #cfp-intro{
+    .box-back2 {
+      margin-top:3em;
+  
+      .second-box {
+          transform: rotate(12deg);
+          bottom: 1100px;
+      }
+    }
+  }
+}
+
+@include md{
+  #cfp-intro{
+    h1,
+    h2,
+    h3 {
+      margin-bottom: 12pt;
+    }
+
+    p {
+      font-size: 14pt;
+      line-height: 1.85;
+      width:80vw;
+    }
+
+    p:not(:last-child) {
+      margin-bottom: 2em;
+    }
+  }
+
+  #cfp-intro{
+    .box-back {
+      margin-bottom: -40em;
+      margin-left:-6em;
+  
+      .first-box {
+        transform: rotate(12deg);
+        bottom: 600px;
+        left: 20px;
+      }
+      .introd-text {
+        top: 100px;
+      }
+      .past-sitcon {
+        margin-top:1em;
+      }
+    }
+  }
+
+  #cfp-intro{
+    .box-bluearea {
+      height: 280px;
+      z-index: 0;
+      transform: rotate(12deg);
+    }
+  }
+  
+  #cfp-intro{
+    .box-back2 {
+      margin-top:0em;
+      margin-left: -1em;
+  
+      .second-box {
+          transform: rotate(12deg);
+          bottom: 1150px;
+          left:-6em;
+      }
+    }
+  }
+}
