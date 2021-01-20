@@ -70,6 +70,10 @@
     padding: 20px 0;
   }
 
+  #example > p {
+    word-wrap: break-word;
+  }
+
   #presentation-example,
   #espresso-example {
     > p {
