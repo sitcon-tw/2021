@@ -110,21 +110,7 @@
               <span class="h3">01/15 ～ 02/22</span
               ><span class="ml-2">詳細時程請見</span>
             </p>
-<<<<<<< HEAD
-          </div>
-
-          <div class="cfp-deadline">
-            <h3>徵稿時間</h3>
-            <div class="cfp-deadline-content">
-            <div>
-              <span class="h3">01/20 ～ 02/22</span>
-              <span class="ml-2 mr-2">詳細時程請見</span>
-            </div>
-              <div class="cfp-introd-btn-outter">
-              <a class="btn btn-primary mr-2" rel="noopener" href="/2021/cfp/news">投稿資訊</a>
-=======
             <p class="mobile-only">
->>>>>>> dev2
               <a
                 class="btn btn-primary mr-2"
                 rel="noopener"
