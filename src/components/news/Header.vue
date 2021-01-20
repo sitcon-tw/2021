@@ -28,7 +28,7 @@
       <div class="time-wrapper">
         <div class="start-time-wrapper">
           <h2>投稿開始</h2>
-          <p>2021/01/12（三）</p>
+          <p>2021/01/20（三）</p>
         </div>
         <div class="tilde-wrapper">
           <h2><!-- pseudo element --></h2>
