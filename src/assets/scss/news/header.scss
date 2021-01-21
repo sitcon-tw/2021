@@ -31,18 +31,9 @@
           0px 0px 10px 0px rgba(0, 0, 0, 0.2);
 
         @keyframes jump {
-          0% {
-            position: relative;
-            bottom: 0px;
-          }
           50% {
-            position: relative;
-            bottom: 20px;
-          }
-          100% {
-            position: relative;
-            bottom: 0px;
-          }
+		    transform: translateY(-5px) rotate(45deg) ;
+	      } 
         }
 
         &:hover {
