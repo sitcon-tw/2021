@@ -46,6 +46,24 @@
         </div>
       </div>
     </div>
+    <nav v-if="navVisible">
+        <div class="news-nav">
+          <a class="news-nav-item" href="#schedule">重要時程</a>
+          <a class="news-nav-item" href="#example">投稿主題範例</a>
+          <a class="news-nav-item" href="#code-of-conduct">Code of Conduct</a>
+          <a class="news-nav-item" href="#info-section">議程種類</a>
+          <a class="news-nav-item" href="#process">流程</a>
+          <a class="news-nav-item" href="#methods">投稿方式</a>
+          <a class="news-nav-item" href="#review">審稿方式</a>
+          <a class="news-nav-item" href="#precautions">投稿注意事項</a>
+          <a class="news-nav-item" href="https://forms.gle/XoXJSD2P8dL8X8s2A">我要投稿</a>
+          <button class="news-nav-button" @click="(e)=>navVisible=!navVisible">&#9650;</button>
+        </div>
+    </nav>
+    <button v-if="!navVisible" class="nav-control-button" @click="(e)=>navVisible=!navVisible">
+      <p>&#9650;</p>
+      <p>&#9660;</p>
+    </button>
   </header>
 </template>
 
@@ -66,6 +84,7 @@ interface Countdown {
 @Component
 export default class CfpHeader extends Vue {
   private timerId!: number;
+  private navVisible = false;
   private countdown: Countdown = {
     s: 0,
     m: 0,
@@ -112,6 +131,7 @@ export default class CfpHeader extends Vue {
   private unregisterTimer () {
     clearInterval(this.timerId);
   }
+
 }
 </script>
 
