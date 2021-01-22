@@ -1,5 +1,7 @@
 @import '../hyperpoint';
 @import '../color';
+$fontFamily: Noto Sans TC, monospace;
+
 
 // desktop mode
 #news-header {
@@ -351,5 +353,67 @@
     .cfp-body {
       font-size: 12pt;
     }
+  }
+}
+
+.news-nav {
+  position: fixed;
+  text-align: end;
+  top: 25px;
+  right: 50px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 3px 3px 15px $mid-blue;
+  background: white;
+  z-index: 5;
+  &-item {
+    margin: 5px 8px;
+    color: $mid-blue;
+    font-family: $fontFamily;
+    cursor: point;
+  }
+  &-button {
+    color: $mid-blue;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: point;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.nav-control-button {
+  color: $mid-blue;
+  position: fixed;
+  z-index: 5;
+  top: 25px;
+  right: 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 24px;
+  position: flex;
+  flex-direction: column;
+  width: 55px;
+  background-color: white;
+  box-shadow: -2px 0 15px $mid-blue;
+  padding: 0 15px;
+  cursor: pointer;
+  p {
+    text-align: end;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-control-button {
+    top: 250px;
+    right: 0;
+    width: 35px;
+    font-size: 16px;
+    text-align: left;
+    padding: 0 10px;
   }
 }

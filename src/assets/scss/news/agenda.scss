@@ -360,6 +360,7 @@ $max-width-small-3: 360px;
 
 //cfp-sub-information <subInformation>
 .info {
+  position: relative;
   width: 100%;
   font-family: $fontFamily;
   float: left;

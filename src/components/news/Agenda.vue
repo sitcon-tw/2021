@@ -2,7 +2,7 @@
     <div class="info">
         <div class="info-container">
             <!--    議程種類方塊     -->
-            <section class="info-section">
+            <section class="info-section" id="info-section">
                 <h1>議程種類</h1>
                 <article class="info-section__content">
                     <div class="info-kind">
@@ -35,7 +35,7 @@
             </section>
             <!--    議程種類方塊     -->
             <!--    流程             -->
-            <section class="info-section">
+            <section class="info-section" id="process">
                 <h1>流程</h1>
                 <article class="info-section__content">
                     <p>
@@ -47,7 +47,7 @@
             </section>
             <!--    流程             -->
             <!--    投稿方式         -->
-            <section class="info-section">
+            <section class="info-section" id="methods">
                 <h1>投稿方式</h1>
                 <article class="info-section__content">
                     <p>
@@ -100,7 +100,7 @@
             </section>
             <!--    投稿方式         -->
             <!--    審稿方式         -->
-            <section class="info-section">
+            <section class="info-section" id="review">
                 <h1>審稿方式</h1>
                 <article class="info-section__content">
                     <p>
@@ -115,7 +115,7 @@
                 <!--    審稿方式         -->
                 <!--    投稿注意事項     -->
             </section>
-            <section class="info-section">
+            <section class="info-section" id="precautions">
                 <h1>投稿注意事項</h1>
                 <article class="info-section__content">
                     <p>
