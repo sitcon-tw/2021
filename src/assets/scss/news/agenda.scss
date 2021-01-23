@@ -23,7 +23,7 @@ $max-width-small-3: 360px;
 @mixin infoContainer() {
   max-width: 80%;
   // padding-left: 7%;
-  @media only screen and (max-width: 1030px){
+  @media only screen and (max-width: 767px){
       max-width: 100%;
       padding-left: 40px;
       padding-right: 40px;
