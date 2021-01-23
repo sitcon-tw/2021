@@ -247,7 +247,21 @@
       padding-top: 0px;
       padding-bottom: 90px;
       // height: 1240px;
+    }
 
+    .box-back2 {
+      padding-top: 380px;
+
+      .give-me-money {
+        margin-top: 140px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 646px)  {
+  #cfp-intro {
+    .box-back {  
       .past-sitcon {
         .cfp-img {
           width: 180px; //225
@@ -268,17 +282,8 @@
         }
       }
     }
-
-    .box-back2 {
-      padding-top: 380px;
-
-      .give-me-money {
-        margin-top: 140px;
-      }
-    }
   }
 }
-
 @media screen and (max-width: 540px)  {
   #cfp-intro {
     .box-back2 {
