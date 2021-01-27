@@ -374,11 +374,11 @@ $fontFamily: Noto Sans TC, monospace;
     color: $mid-blue;
     font-family: $fontFamily;
     cursor: point;
-    border-right: 2px solid $sky-blue;
+    border-right: 3px solid $sky-blue;
 
     &.active {
       font-weight: 900;
-      border-right: 2px solid $mid-blue;
+      border-right: 3px solid $mid-blue;
     }
   }
   &-button {
