@@ -47,7 +47,7 @@
       </div>
     </div>
     <nav v-if="navVisible">
-        <div class="news-nav">
+        <div class="news-nav" v-scrollspy="{ selectors: navbarItems }">
           <a class="news-nav-item" href="#schedule">重要時程</a>
           <a class="news-nav-item" href="#example">投稿主題範例</a>
           <a class="news-nav-item" href="#code-of-conduct">Code of Conduct</a>
@@ -69,6 +69,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import ScrollSpyDirective from './ScrollSpyDirective';
 
 const DEAD_LINE = Math.floor(
   new Date('22 Feb 2021 06:24:00 GMT+8').getTime() / 1000
@@ -81,9 +82,23 @@ interface Countdown {
   d: number;
 }
 
-@Component
+@Component({
+  directives: {
+    scrollspy: ScrollSpyDirective
+  }
+})
 export default class CfpHeader extends Vue {
   private timerId!: number;
+  private navbarItems = [
+    '#schedule',
+    '#example',
+    '#code-of-conduct',
+    '#info-section',
+    '#process',
+    '#methods',
+    '#review',
+    '#precautions'
+  ];
   private navVisible = false;
   private countdown: Countdown = {
     s: 0,

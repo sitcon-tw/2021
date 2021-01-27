@@ -369,10 +369,17 @@ $fontFamily: Noto Sans TC, monospace;
   background: white;
   z-index: 5;
   &-item {
-    margin: 5px 8px;
+    margin: 0 8px;
+    padding: 5px 1em;
     color: $mid-blue;
     font-family: $fontFamily;
     cursor: point;
+    border-right: 2px solid $sky-blue;
+
+    &.active {
+      font-weight: 900;
+      border-right: 2px solid $mid-blue;
+    }
   }
   &-button {
     color: $mid-blue;
