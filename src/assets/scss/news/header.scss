@@ -391,6 +391,16 @@ $fontFamily: Noto Sans TC, monospace;
       outline: none;
     }
   }
+  &-contribute-button {
+    display: inline-block;
+    border-radius: 6px;
+    background: $mid-blue;
+    color: $white;
+    font-weight: 900;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    margin: 1em auto;
+  }
 }
 
 .nav-control-button {
