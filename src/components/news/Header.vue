@@ -56,7 +56,7 @@
           <a class="news-nav-item" href="#methods">投稿方式</a>
           <a class="news-nav-item" href="#review">審稿方式</a>
           <a class="news-nav-item" href="#precautions">投稿注意事項</a>
-          <a class="news-nav-item" href="https://forms.gle/XoXJSD2P8dL8X8s2A">我要投稿</a>
+          <a class="news-nav-contribute-button" target="_blank" rel="noopener" href="https://forms.gle/XoXJSD2P8dL8X8s2A">我要投稿</a>
           <button class="news-nav-button" @click="(e)=>navVisible=!navVisible">&#9650;</button>
         </div>
     </nav>
