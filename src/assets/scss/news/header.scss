@@ -360,10 +360,17 @@ $fontFamily: Noto Sans TC, monospace;
   background: white;
   z-index: 5;
   &-item {
-    margin: 5px 8px;
+    margin: 0 8px;
+    padding: 5px 1em;
     color: $mid-blue;
     font-family: $fontFamily;
     cursor: point;
+    border-right: 3px solid $sky-blue;
+
+    &.active {
+      font-weight: 900;
+      border-right: 3px solid $mid-blue;
+    }
   }
   &-button {
     color: $mid-blue;
@@ -374,6 +381,16 @@ $fontFamily: Noto Sans TC, monospace;
     &:focus {
       outline: none;
     }
+  }
+  &-contribute-button {
+    display: inline-block;
+    border-radius: 6px;
+    background: $mid-blue;
+    color: $white;
+    font-weight: 900;
+    padding: 0.5em 1em;
+    font-size: 1.2em;
+    margin: 1em auto;
   }
 }
 
