@@ -22,15 +22,16 @@ $max-width-small-3: 360px;
 // .info-container
 @mixin infoContainer() {
   max-width: 80%;
-  // padding-left: 7%;
-  @media only screen and (max-width: $max-width-small-0) {
-    // width: 89%;
-    max-width: 100%;
-    padding-left: 40px;
-    padding-right: 40px;
+  @media screen and (max-width: 1365px) {
+    margin: 0 120px;
   }
-  @media only screen and (max-width: $max-width-small-1) {
-    // width: 89%;
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 100px;
+  }
+  
+  @media screen and (max-width: $max-width-small-0) {
+    margin: 0;
     max-width: 100%;
     padding-left: 40px;
     padding-right: 40px;
@@ -367,7 +368,7 @@ $max-width-small-3: 360px;
 
   &-container {
     @include infoContainer();
-    margin: 0 auto;
+    margin: 0 280px;
     // float: left;
   }
 
