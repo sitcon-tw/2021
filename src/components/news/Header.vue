@@ -66,8 +66,6 @@ interface Countdown {
 @Component({})
 export default class CfpHeader extends Vue {
   private timerId!: number;
-
-  private navVisible = false;
   private countdown: Countdown = {
     s: 0,
     m: 0,
