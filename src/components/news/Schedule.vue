@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Navbar />
         <!-- 重要時程 -->
         <section id="schedule">
             <h1>重要時程</h1>
@@ -57,6 +58,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import AgendaCard from './AgendaCard.vue';
 import Topic from './Topic.vue';
+import Navbar from './Navbar.vue';
 
 // import data
 import themeExample from '../../../template/themeExample.cfp';
@@ -66,7 +68,8 @@ import presentation from '../../../template/presentation.cfp';
 @Component({
     components: {
         AgendaCard,
-        Topic
+        Topic,
+        Navbar
     }
 })
 export default class Schedule extends Vue {

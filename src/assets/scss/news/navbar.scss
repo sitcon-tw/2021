@@ -1,0 +1,114 @@
+@import '../color';
+@import '../font';
+
+$mobileView: 1024px;
+
+#news-nav {
+  font-size: 13pt;
+  line-height: 1em;
+  z-index: 2;
+
+  position: sticky;
+  top: 25px;
+
+  &.fixed {
+    position: fixed;
+    top: 25px;
+    right: 50px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .news-nav {
+    float: right;
+    text-align: end;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 3px 3px 15px $mid-blue;
+    background: white;
+    z-index: 5;
+
+    transform: translateX(0);
+    transition: transform 0.5s ease-in-out;
+
+    &-item {
+      margin: 0 8px;
+      padding: 5px 1em;
+      color: $mid-blue;
+      font-family: $fontFamily;
+      cursor: point;
+      border-right: 3px solid $sky-blue;
+  
+      &.active {
+        font-weight: 900;
+        border-right: 3px solid $mid-blue;
+      }
+    }
+    &-button {
+      color: $mid-blue;
+      border: none;
+      background: transparent;
+      padding: 0.5em 0;
+      font-size: 20px;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+    }
+    &-contribute-button {
+      display: inline-block;
+      border-radius: 6px;
+      background: $mid-blue;
+      color: $white;
+      font-weight: 900;
+      padding: 0.5em 1em;
+      font-size: 1.2em;
+      margin: 1em auto;
+    }
+  }
+  
+  .nav-control-button {
+    color: $mid-blue;
+    position: fixed;
+    z-index: 5;
+    top: 25px;
+    right: 50px;
+    border-radius: 5px;
+    border: none;
+    font-size: 24px;
+    position: flex;
+    flex-direction: column;
+    width: 55px;
+    background-color: white;
+    box-shadow: -2px 0 15px $mid-blue;
+    padding: 0 15px;
+    cursor: pointer;
+    p {
+      text-align: end;
+    }
+  }
+  
+  @media screen and (max-width: $mobileView) {
+    .nav-control-button {
+      top: 250px;
+      right: 0;
+      width: 35px;
+      font-size: 16px;
+      text-align: left;
+      padding: 0 10px;
+    }
+  }
+}
+
+@media screen and (max-width: $mobileView) {
+  #news-nav,
+  #news-nav.fixed {
+    position: fixed;
+    top: 25px;
+    right: 20px;
+  }
+}
