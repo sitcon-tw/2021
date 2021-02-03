@@ -22,14 +22,6 @@ $max-width-small-3: 360px;
 // .info-container
 @mixin infoContainer() {
   max-width: 80%;
-<<<<<<< HEAD
-  // padding-left: 7%;
-  @media only screen and (max-width: 1030px){
-      max-width: 100%;
-      padding-left: 40px;
-      padding-right: 40px;
-  } 
-=======
   @media screen and (max-width: 1365px) {
     margin: 0 120px;
   }
@@ -44,7 +36,6 @@ $max-width-small-3: 360px;
     padding-left: 40px;
     padding-right: 40px;
   }
->>>>>>> dev2
 }
 
 // .info-section
