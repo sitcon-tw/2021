@@ -22,12 +22,29 @@ $max-width-small-3: 360px;
 // .info-container
 @mixin infoContainer() {
   max-width: 80%;
+<<<<<<< HEAD
   // padding-left: 7%;
   @media only screen and (max-width: 1030px){
       max-width: 100%;
       padding-left: 40px;
       padding-right: 40px;
   } 
+=======
+  @media screen and (max-width: 1365px) {
+    margin: 0 120px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 100px;
+  }
+  
+  @media screen and (max-width: $max-width-small-0) {
+    margin: 0;
+    max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+>>>>>>> dev2
 }
 
 // .info-section
@@ -215,10 +232,10 @@ $max-width-small-3: 360px;
 @mixin qaTitleFontsize() {
   font-size: 18pt;
   @media only screen and (max-width: $max-width-medium-0) {
-    font-size: 17pt;
+    font-size: 16pt;
   }
   @media only screen and (max-width: $max-width-medium-1) {
-    font-size: 15pt;
+    font-size: 14pt;
   }
   @media only screen and (max-width: $max-width-small-0) {
     font-size: 11pt;
@@ -360,7 +377,7 @@ $max-width-small-3: 360px;
 
   &-container {
     @include infoContainer();
-    margin: 0 auto;
+    margin: 0 280px;
     // float: left;
   }
 

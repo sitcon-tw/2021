@@ -4,7 +4,7 @@ let selectors!: string[];
 let observer!: IntersectionObserver;
 
 const ScrollSpyDirective: DirectiveOptions = {
-  bind (el: Element, binding: VNodeDirective , vnode: VNode) {
+  inserted (el: Element, binding: VNodeDirective, vnode: VNode) {
     selectors = binding.value.selectors;
 
     // highlight first element
