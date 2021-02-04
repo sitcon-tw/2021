@@ -43,29 +43,40 @@ export default class Navbar extends Vue {
     '#precautions'
   ];
 
-  public mounted () {
-    this.$nextTick().then(() => {
-      const query: string = '(max-width: 1024px)';
-      const mq: MediaQueryList = window.matchMedia(query);
-      if (mq.addEventListener) {
-        mq.addEventListener('change', this.matchMediaCallback);
-      } else {
-        mq.addListener(this.matchMediaCallback);
-      }
-      // check first
-      this.matchMediaCallback(mq);
+  public created () {
+    const query: string = '(max-width: 1024px)';
+    const mq: MediaQueryList = window.matchMedia(query);
+    if (mq.addEventListener) {
+      mq.addEventListener('change', this.matchMediaCallback);
+    } else {
+      // for sad safari
+      mq.addListener(this.matchMediaCallback);
+    }
+    // check first
+    this.matchMediaCallback(mq);
+  }
 
-      // observe header: header appears => no fix; header disappears => fix.
-      const fixObserver: IntersectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            this.isNavbarFixed = true;
-          } else {
-            this.isNavbarFixed = false;
-          }
-        });
-      }, { rootMargin: '25px 0px 0px 0px', threshold: 0 });
+  public mounted () {
+    // observe header: header appears => no fix; header disappears => fix.
+    const fixObserver: IntersectionObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          this.isNavbarFixed = true;
+        } else {
+          this.isNavbarFixed = false;
+        }
+      });
+    }, { rootMargin: '25px 0px 0px 0px', threshold: 0 });
+    this.$nextTick().then(() => {
       fixObserver.observe(document.querySelector('#news-header') as Element);
+
+      if (location.hash) {
+        const hash = location.hash;
+        // scroll to anchor
+        // value should be changed to scroll, so set to empty string first.
+        location.hash = '';
+        location.hash = hash;
+      }
     });
   }
 
