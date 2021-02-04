@@ -32,6 +32,8 @@ $mobileView: 1024px;
     background: white;
     z-index: 5;
 
+    margin-left: 25px;
+
     transform: translateX(0);
     transition: transform 0.5s ease-in-out;
 
@@ -40,7 +42,7 @@ $mobileView: 1024px;
       padding: 5px 1em;
       color: $mid-blue;
       font-family: $fontFamily;
-      cursor: point;
+      cursor: pointer;
       border-right: 3px solid $sky-blue;
   
       &.active {
