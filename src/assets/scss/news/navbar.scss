@@ -2,19 +2,32 @@
 @import '../font';
 
 $mobileView: 1024px;
+$fixedTopPadding: 25px;
+$fixedRightPadding: 50px;
 
 #news-nav {
   font-size: 13pt;
   line-height: 1em;
   z-index: 2;
 
+  // prevent slow animation update
   position: sticky;
-  top: 25px;
+  top: $fixedTopPadding;
 
   &.fixed {
     position: fixed;
-    top: 25px;
-    right: 50px;
+    top: $fixedTopPadding;
+    right: $fixedRightPadding;
+
+    .news-nav.animating {
+      // from section to fixed
+      animation-name: move-to-side;
+    }
+  }
+
+  &.returning {
+    // prevent navbar overlap header
+    position: sticky;
   }
 
   a {
@@ -34,8 +47,14 @@ $mobileView: 1024px;
 
     margin-left: 25px;
 
-    transform: translateX(0);
-    transition: transform 0.5s ease-in-out;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+    &.animating {
+      // from fixed to section
+      animation-name: move-to-section;
+    }
 
     &-item {
       margin: 0 8px;
@@ -74,23 +93,34 @@ $mobileView: 1024px;
   }
   
   .nav-control-button {
-    color: $mid-blue;
-    position: fixed;
-    z-index: 5;
-    top: 25px;
-    right: 50px;
-    border-radius: 5px;
-    border: none;
-    font-size: 24px;
-    position: flex;
+    display: flex;
     flex-direction: column;
+    position: fixed;
+    top: $fixedTopPadding;
+    right: $fixedRightPadding;
+    z-index: 5;
+    padding: 0 15px;
     width: 55px;
+    border: none;
+    border-radius: 5px;
+    color: $mid-blue;
+    font-size: 24px;
     background-color: white;
     box-shadow: -2px 0 15px $mid-blue;
-    padding: 0 15px;
     cursor: pointer;
     p {
       text-align: end;
+    }
+  }
+
+  // narrower padding
+  @media screen and (max-width: 1365px) {
+    .news-nav.animating {
+      animation-name: slide-to-section;
+    }
+
+    &.fixed .news-nav.animating {
+      animation-name: slide-to-side;
     }
   }
   
@@ -103,14 +133,57 @@ $mobileView: 1024px;
       text-align: left;
       padding: 0 10px;
     }
+
+    .news-nav.animating,
+    &.fixed .news-nav.animating {
+      animation-name: none;
+    }
   }
 }
 
 @media screen and (max-width: $mobileView) {
-  #news-nav,
   #news-nav.fixed {
-    position: fixed;
-    top: 25px;
     right: 20px;
+  }
+}
+
+@keyframes move-to-section {
+  0% {
+    transform: translateX(280px - $fixedRightPadding);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes move-to-side {
+  0% {
+    transform: translateX(-(280px - $fixedRightPadding));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+// for narrower padding
+@keyframes slide-to-section {
+  0% {
+    transform: translateX(120px - $fixedRightPadding);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-to-side {
+  0% {
+    transform: translateX(-(120px - $fixedRightPadding));
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
