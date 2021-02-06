@@ -27,7 +27,7 @@
   h1 {
     font-size: 36pt;
     line-height: 1.45em;
-    margin: 15px 0;
+    padding: 15px 0;
   }
 
   h2 {
@@ -104,6 +104,10 @@
   #news-schedule {
     margin: 0 100px;
 
+    h1 {
+      font-size: 28pt;
+    }
+
     #presentation-example,
     #espresso-example {
       margin-bottom: unset;
@@ -137,7 +141,7 @@
     h1,
     h2,
     h3 {
-      margin: 0;
+      padding: 0;
     }
 
     #schedule {

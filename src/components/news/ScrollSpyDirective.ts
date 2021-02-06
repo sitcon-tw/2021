@@ -8,10 +8,10 @@ const ScrollSpyDirective: DirectiveOptions = {
     selectors = binding.value.selectors;
 
     // highlight first element
-    el.querySelector(`[href="${location.hash || selectors[0] || ''}"]`)?.classList.toggle('active', true);
+    el.querySelector(`[href="${selectors[0] || ''}"]`)?.classList.toggle('active', true);
 
     const config = {
-      rootMargin: '-10% 0px -80% 0px',
+      rootMargin: '-5% 0px -85% 0px',
       threshold: 0
     };
 
