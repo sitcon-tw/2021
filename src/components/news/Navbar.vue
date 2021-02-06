@@ -1,6 +1,11 @@
 <template>
-  <nav id="news-nav" :class="{ fixed: isNavbarFixed }">
-    <div v-show="!isMobileView || navVisible" class="news-nav" v-scrollspy="{ selectors: navbarItems }">
+  <nav id="news-nav" :class="{ fixed: (isNavbarFixed || isMobileView), returning: isNavbarReturning }">
+    <div 
+      class="news-nav"
+      :class="{ animating: isNavbarAnimating }"
+      v-show="!isMobileView || navVisible"
+      v-scrollspy="{ selectors: navbarItems }"
+    >
       <a class="news-nav-item" href="#schedule">重要時程</a>
       <a class="news-nav-item" href="#example">投稿主題範例</a>
       <a class="news-nav-item" href="#code-of-conduct">Code of Conduct</a>
@@ -30,7 +35,9 @@ import ScrollSpyDirective from './ScrollSpyDirective';
 })
 export default class Navbar extends Vue {
   private isMobileView: boolean = false;
-  private isNavbarFixed = false;
+  private isNavbarFixed: boolean = false;
+  private isNavbarAnimating: boolean = false;
+  private isNavbarReturning: boolean = false;
   private navVisible: boolean = false;
   private navbarItems: string[] = [
     '#schedule',
@@ -43,29 +50,56 @@ export default class Navbar extends Vue {
     '#precautions'
   ];
 
-  public mounted () {
-    this.$nextTick().then(() => {
-      const query: string = '(max-width: 1024px)';
-      const mq: MediaQueryList = window.matchMedia(query);
-      if (mq.addEventListener) {
-        mq.addEventListener('change', this.matchMediaCallback);
-      } else {
-        mq.addListener(this.matchMediaCallback);
-      }
-      // check first
-      this.matchMediaCallback(mq);
+  public created () {
+    const query: string = '(max-width: 1024px)';
+    const mq: MediaQueryList = window.matchMedia(query);
+    if (mq.addEventListener) {
+      mq.addEventListener('change', this.matchMediaCallback);
+    } else {
+      // for sad safari
+      mq.addListener(this.matchMediaCallback);
+    }
+    // check first
+    this.matchMediaCallback(mq);
+  }
 
-      // observe header: header appears => no fix; header disappears => fix.
-      const fixObserver: IntersectionObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            this.isNavbarFixed = true;
-          } else {
-            this.isNavbarFixed = false;
+  public mounted () {
+    // observe header: header appears => no fix; header disappears => fix.
+    const fixObserver: IntersectionObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        // no animation for mobile
+        if (!this.isMobileView) {
+          // only show animation if fix status has changed
+          if (!entry.isIntersecting !== this.isNavbarFixed) {
+            if (!entry.isIntersecting) {
+              this.isNavbarFixed = true;
+            } else {
+              this.isNavbarFixed = false;
+              this.isNavbarReturning = true;
+            }
+
+            this.isNavbarAnimating = true;    
           }
-        });
-      }, { rootMargin: '25px 0px 0px 0px', threshold: 0 });
+        }
+      });
+    }, { rootMargin: '25px 0px 0px 0px', threshold: 0 });
+    this.$nextTick().then(() => {
       fixObserver.observe(document.querySelector('#news-header') as Element);
+
+      document.querySelector('.news-nav')?.addEventListener('animationend', (ev) => {
+        if (!this.isNavbarFixed) {
+          this.isNavbarReturning = false;
+        }
+        this.isNavbarAnimating = false;
+      });
+
+      if (location.hash) {
+        const hash = location.hash;
+        // scroll to anchor
+        // value should be changed to scroll, so set to empty string first.
+        location.hash = '';
+        location.hash = hash;
+      }
     });
   }
 

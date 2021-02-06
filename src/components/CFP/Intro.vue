@@ -14,19 +14,19 @@
       <div class="past-sitcon">
         <h3>歷屆年會網站</h3>
         <div class="thumbnails">
-          <div class="thumb-wrapper">
+          <a class="thumb-wrapper" href="https://sitcon.org/2020/" target="_blank" rel="noopener">
             <!-- TODO add thumb -->
             <img class="cfp-img" src="@/assets/images/CFP/2020.png" />
             <p class="thumb-title text-center">SITCON 2020<br /></p>
             <p class="thumb-subtitle text-center">#define</p>
-          </div>
-          <div class="thumb-wrapper">
+          </a>
+          <a class="thumb-wrapper" href="https://sitcon.org/2019/" target="_blank" rel="noopener">
             <!-- TODO add thumb -->
             <img class="cfp-img" src="@/assets/images/CFP/2019.png" />
             <p class="thumb-title text-center">SITCON 2019<br /></p>
             <p class="thumb-subtitle text-center">開箱演算法</p>
-          </div>
-          <div class="thumb-wrapper">
+          </a>
+          <a class="thumb-wrapper" href="https://sitcon.org/2018/" target="_blank" rel="noopener">
             <!-- TODO add thumb -->
             <img class="cfp-img" src="@/assets/images/CFP/2018.png" />
             <p class="thumb-title text-center">SITCON 2018<br /></p>
@@ -34,7 +34,7 @@
             <p class="thumb-subtitle text-center small">
               POPULAR COMPUTER SCIENCE
             </p>
-          </div>
+          </a>
         </div>
       </div>
       <div class="join-discuss">
