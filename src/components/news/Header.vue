@@ -13,16 +13,18 @@
         <a class="btn-contribute" target="_blank" rel="noopener" href="https://forms.gle/XoXJSD2P8dL8X8s2A">我要投稿</a>
       </div>
     </div>
-    <div class="cfp-body">
-      <div class="spot-wrapper">
-        <h1 class="text-center">現正徵稿中<span class="ignore">！</span></h1>
+    <div class="cfp-body" :class="(cfp)? 'cfp-body-blue':'cfp-body-gray'">
+      <div class="spot-wrapper" >
+        <h1 class="text-center" v-if="cfp">現正徵稿中<span class="ignore">！</span></h1>
+        <h1 class="text-center" v-else>徵稿已截止 :<span class="ignore">(</span></h1>
         <!-- TODO counter -->
         <p class="text-center countdown">
           距離投稿截止還有
-          <span class="d-inline-block">
+          <span class="d-inline-block" v-if="cfp">
             {{ countdown.d }} 天 {{ countdown.h }} 小時 {{ countdown.m }} 分
             {{ countdown.s }} 秒</span
           >
+          <span v-else class="d-inline-block">...喔不! 你沒有時間了</span>
         </p>
       </div>
       <div class="time-wrapper">
@@ -72,7 +74,7 @@ export default class CfpHeader extends Vue {
     h: 0,
     d: 0
   };
-
+  private cfp: boolean = true;
   public beforeMount () {
     this.registerTimer();
   }
@@ -96,6 +98,7 @@ export default class CfpHeader extends Vue {
   }
 
   private async onTick (t: number) {
+    if (t<0) this.cfp = false;
     this.countdown.s = t % 60;
     t = Math.floor(t / 60);
     this.countdown.m = t % 60;
