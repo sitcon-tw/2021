@@ -99,7 +99,6 @@ $fontFamily: Noto Sans TC, monospace;
     border-radius: 24px;
 
     color: $white;
-    background: $mid-blue;
 
     font-size: 14pt;
     font-weight: bold;
@@ -139,6 +138,12 @@ $fontFamily: Noto Sans TC, monospace;
       }
     }
   }
+}
+.cfp-body-gray {
+  background: #5F7A95;
+}
+.cfp-body-blue {
+  background: $mid-blue;
 }
 
 @include lg {
@@ -231,7 +236,7 @@ $fontFamily: Noto Sans TC, monospace;
       border-radius: 24px;
 
       color: $white;
-      background: $mid-blue;
+      //background: $mid-blue;
       font-weight: bold;
       font-size: 1em;
 
