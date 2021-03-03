@@ -7,13 +7,13 @@
       v-scrollspy="{ selectors: navbarItems }"
     >
       <a class="news-nav-item" href="#schedule">重要時程</a>
-      <a class="news-nav-item" href="#example">投稿主題範例</a>
+      <a class="news-nav-item" href="#example">投稿主題</a>
       <a class="news-nav-item" href="#code-of-conduct">Code of Conduct</a>
-      <a class="news-nav-item" href="#info-section">議程種類</a>
-      <a class="news-nav-item" href="#process">流程</a>
-      <a class="news-nav-item" href="#methods">投稿方式</a>
+      <a class="news-nav-item" href="#methods">投稿格式</a>
       <a class="news-nav-item" href="#review">審稿方式</a>
       <a class="news-nav-item" href="#precautions">投稿注意事項</a>
+      <a class="news-nav-item" href="#record">錄影與紀錄</a>
+      <a class="news-nav-item" href="#QA">QA</a>
       <a class="news-nav-contribute-button" target="_blank" rel="noopener" href="https://forms.gle/XoXJSD2P8dL8X8s2A" v-show="!isMobileView">我要投稿</a>
       <button class="news-nav-button" @click="(e)=>navVisible=!navVisible" v-show="isMobileView">&#9650;</button>
     </div>
@@ -47,7 +47,9 @@ export default class Navbar extends Vue {
     '#process',
     '#methods',
     '#review',
-    '#precautions'
+    '#precautions',
+    '#record',
+    '#QA'
   ];
 
   public created () {

@@ -30,7 +30,7 @@
       <div class="time-wrapper">
         <div class="start-time-wrapper">
           <h2>投稿開始</h2>
-          <p>2021/01/20（三）</p>
+          <p>現在</p>
         </div>
         <div class="tilde-wrapper">
           <h2><!-- pseudo element --></h2>
@@ -41,8 +41,8 @@
         <div class="end-time-wrapper">
           <h2>投稿結束</h2>
           <p>
-            2021/02/22（一）日出<small class="d-inline-block"
-              >（清晨 06：23）</small
+            2021/04/06（二）日出<small class="d-inline-block"
+              >（清晨 06：41）</small
             >
           </p>
         </div>
@@ -55,7 +55,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 const DEAD_LINE = Math.floor(
-  new Date('22 Feb 2021 06:24:00 GMT+8').getTime() / 1000
+  new Date('06 Apr 2021 06:41:00 GMT+8').getTime() / 1000
 );
 
 interface Countdown {
