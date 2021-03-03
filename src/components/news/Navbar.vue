@@ -78,7 +78,7 @@ export default class Navbar extends Vue {
               this.isNavbarReturning = true;
             }
 
-            this.isNavbarAnimating = true;    
+            this.isNavbarAnimating = true;
           }
         }
       });

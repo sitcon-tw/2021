@@ -43,8 +43,6 @@ export default class Navbar extends Vue {
     '#schedule',
     '#example',
     '#code-of-conduct',
-    '#info-section',
-    '#process',
     '#methods',
     '#review',
     '#precautions',
@@ -79,8 +77,7 @@ export default class Navbar extends Vue {
               this.isNavbarFixed = false;
               this.isNavbarReturning = true;
             }
-
-            this.isNavbarAnimating = true;    
+            this.isNavbarAnimating = true;
           }
         }
       });

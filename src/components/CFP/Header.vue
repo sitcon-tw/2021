@@ -55,7 +55,7 @@
         </div>
       </div>
       <div class="cfp-news">
-        <a href="/2021/cfp/news" rel="noopener">
+        <a href="/2021/cfp/ocfp-news" rel="noopener">
           <div class="btn-news-wrapper">
             <img src="~@/assets/images/burnfont/btn-news.svg" id="svg-news" />
           </div>

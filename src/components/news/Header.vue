@@ -98,7 +98,9 @@ export default class CfpHeader extends Vue {
   }
 
   private async onTick (t: number) {
-    if (t<0) this.cfp = false;
+    if (t < 0) {
+      this.cfp = false;
+    }
     this.countdown.s = t % 60;
     t = Math.floor(t / 60);
     this.countdown.m = t % 60;
