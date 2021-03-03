@@ -3,6 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router';
 // components
 import CFP from '../pages/CFP.vue';
 import News from '../pages/News.vue';
+import OCFP from '../pages/OCFP.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,14 @@ export const routes: RouteConfig[] = [
     path: '/cfp',
     name: 'CFP',
     component: CFP,
+    meta: {
+      menuItem: false
+    }
+  },
+  {
+    path: '/cfp/ocfp-news',
+    name: 'ocfp-news',
+    component: OCFP,
     meta: {
       menuItem: false
     }
