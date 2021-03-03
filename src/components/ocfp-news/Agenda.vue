@@ -86,7 +86,7 @@
                     <br />
                     若有任何問題或投稿建議，請 E-mail 至 SITCON 議程組信箱 session[at]sitcon.org。
                     </p>
-                    <article class="info-section__content--sub">
+                    <article class="info-section__content--sub" id="record">
 
                         <h2>錄影與紀錄</h2>
                         <p>
@@ -128,7 +128,7 @@
                         </ul>
                         </p>
                     </article>
-                    <article class="info-section__content--sub info-section__content--sub-extend">
+                    <article class="info-section__content--sub info-section__content--sub-extend" id="QA">
                         <h2>Q&A</h2>
                         <div class="info-qa">
                             <div class="info-qa__itemBox">

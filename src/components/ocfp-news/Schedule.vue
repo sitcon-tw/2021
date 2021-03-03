@@ -39,7 +39,6 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import AgendaCard from './AgendaCard.vue';
 import Topic from './Topic.vue';
 import Navbar from './Navbar.vue';
 
@@ -50,7 +49,6 @@ import presentation from '../../../template/presentation.cfp';
 
 @Component({
     components: {
-        AgendaCard,
         Topic,
         Navbar
     }
