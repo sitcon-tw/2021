@@ -1,4 +1,4 @@
-@import '../hyperpoint.scss';
+@import "../hyperpoint.scss";
 
 $width-svg-sitcon2021: 341px;
 $width-svg-sitcon: 244px;
@@ -66,9 +66,20 @@ $width-svg-news: 259px;
       .btn-news-wrapper {
         margin: -48px;
       }
-
-      &:hover {
-        bottom: 6px;
+      .cfp-news__btn {
+        position: relative;
+        &--1 {
+          transform: translate(50%, -75%);
+          &:hover {
+            transform: translate(50%, -90%);
+          }
+        }
+        &--2 {
+          transform: translate(-50%, 75%);
+          &:hover {
+            transform: translate(-50%, 50%);
+          }
+        }
       }
     }
   }
@@ -132,7 +143,7 @@ $width-svg-news: 259px;
     .info-box {
       .cfp-title {
         margin-bottom: 56px;
-        left: calc(#{$width-svg-cfp} * 0.06)
+        left: calc(#{$width-svg-cfp} * 0.06);
       }
       .date-location {
         .date-wrapper {
@@ -184,7 +195,7 @@ $width-svg-news: 259px;
     .info-box {
       .cfp-title {
         margin-bottom: 56px;
-        left: calc(#{$width-svg-cfp} * 0.05)
+        left: calc(#{$width-svg-cfp} * 0.05);
       }
       .date-location {
         .date-wrapper {
@@ -237,7 +248,7 @@ $width-svg-news: 259px;
     .info-box {
       .cfp-title {
         margin-bottom: 32px;
-        left: calc(#{$width-svg-cfp} * 0.033)
+        left: calc(#{$width-svg-cfp} * 0.033);
       }
       .date-location {
         .date-wrapper {
