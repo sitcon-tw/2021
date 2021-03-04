@@ -55,18 +55,27 @@
         </div>
       </div>
       <div class="cfp-news">
-        <a href="/2021/cfp/ocfp-news" rel="noopener">
-          <div class="btn-news-wrapper">
-            <img src="~@/assets/images/burnfont/btn-news.svg" id="svg-news" />
-          </div>
-        </a>
+        <div class="cfp-news__btn cfp-news__btn--1">
+          <a href="/2021/cfp/ocfp-news" rel="noopener">
+            <div class="btn-news-wrapper">
+              <img src="~@/assets/images/burnfont/btn-news.svg" id="svg-news" />
+            </div>
+          </a>
+        </div>
+        <div class="cfp-news__btn cfp-news__btn--2">
+          <a href="/2021/cfp/ocfp-news" rel="noopener">
+            <div class="btn-news-wrapper">
+              <img src="~@/assets/images/burnfont/btn-news.svg" id="svg-news" />
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from "vue-property-decorator";
 
 @Component
 export default class CfpHeader extends Vue {}
