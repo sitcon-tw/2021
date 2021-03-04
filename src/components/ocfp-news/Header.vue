@@ -10,7 +10,7 @@
         <img src="~@/assets/images/burnfont/news.svg" class="svg svg-cfp-news" />
       </div>
       <div class="contribute-wrapper">
-        <a class="btn-contribute" target="_blank" rel="noopener" href="https://forms.gle/XoXJSD2P8dL8X8s2A">我要投稿</a>
+        <a class="btn-contribute" target="_blank" rel="noopener" href="https://forms.gle/k4XobTn3Pac6NrLE7">我要投稿</a>
       </div>
     </div>
     <div class="cfp-body" :class="(cfp)? 'cfp-body-blue':'cfp-body-gray'">
