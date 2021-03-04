@@ -14,7 +14,7 @@
       <a class="news-nav-item" href="#precautions">投稿注意事項</a>
       <a class="news-nav-item" href="#record">錄影與紀錄</a>
       <a class="news-nav-item" href="#QA">QA</a>
-      <a class="news-nav-contribute-button" target="_blank" rel="noopener" href="https://forms.gle/XoXJSD2P8dL8X8s2A" v-show="!isMobileView">我要投稿</a>
+      <a class="news-nav-contribute-button" target="_blank" rel="noopener" href="https://forms.gle/k4XobTn3Pac6NrLE7" v-show="!isMobileView">我要投稿</a>
       <button class="news-nav-button" @click="(e)=>navVisible=!navVisible" v-show="isMobileView">&#9650;</button>
     </div>
     <button v-show="!navVisible && isMobileView" class="nav-control-button" @click="(e)=>navVisible=!navVisible">

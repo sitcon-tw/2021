@@ -43,7 +43,7 @@ import Topic from './Topic.vue';
 import Navbar from './Navbar.vue';
 
 // import data
-import themeExample from '../../../template/themeExample.cfp';
+import themeExample from '../../../template/themeExample.ocfp';
 import espresso from '../../../template/espresso.cfp';
 import presentation from '../../../template/presentation.cfp';
 
