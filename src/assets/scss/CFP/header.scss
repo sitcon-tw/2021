@@ -69,15 +69,15 @@ $width-svg-news: 259px;
       .cfp-news__btn {
         position: relative;
         &--1 {
-          transform: translate(50%, -75%);
+          transform: translate(50%, 0%);
           &:hover {
-            transform: translate(50%, -90%);
+            transform: translate(50%, -20%);
           }
         }
         &--2 {
-          transform: translate(-50%, 75%);
+          transform: translate(-50%, 280%);
           &:hover {
-            transform: translate(-50%, 50%);
+            transform: translate(-50%, 260%);
           }
         }
       }
