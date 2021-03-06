@@ -60,7 +60,7 @@
             <div class="btn-news-wrapper">
               <img
                 src="~@/assets/images/burnfont/btn-news1-desktop.svg"
-                id="svg-news"
+                id="svg-news1"
               />
             </div>
           </a>
@@ -70,7 +70,7 @@
             <div class="btn-news-wrapper">
               <img
                 src="~@/assets/images/burnfont/btn-news2-desktop.svg"
-                id="svg-news"
+                id="svg-news2"
               />
             </div>
           </a>

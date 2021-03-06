@@ -6,7 +6,8 @@ $width-svg-topic: 515px;
 $width-svg-cfp: 368px;
 $width-svg-date: 207px;
 $width-svg-location: 227px;
-$width-svg-news: 259px;
+$width-svg-news1: 259px;
+$width-svg-news2: 285px;
 
 #cfp-header {
   padding-left: 20px;
@@ -68,6 +69,8 @@ $width-svg-news: 259px;
       }
       .cfp-news__btn {
         position: relative;
+
+        // @include
         &--1 {
           transform: translate(50%, 0%);
           &:hover {
@@ -114,15 +117,6 @@ $width-svg-news: 259px;
           margin-bottom: 36px;
         }
       }
-
-      .cfp-news {
-        order: 3;
-        flex: 0 0 50%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-bottom: 12px;
-      }
     }
   }
 }
@@ -151,6 +145,28 @@ $width-svg-news: 259px;
         }
       }
       .cfp-news {
+        order: 3;
+        flex: 0 0 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-bottom: 12px;
+        .cfp-news__btn {
+          position: relative;
+
+          &--1 {
+            top: -95px;
+            &:hover {
+              top: -100px;
+            }
+          }
+          &--2 {
+            top: -45px;
+            &:hover {
+              top: -50px;
+            }
+          }
+        }
       }
     }
   }
@@ -171,8 +187,11 @@ $width-svg-news: 259px;
   #svg-location {
     width: $width-svg-location * $scale;
   }
-  #svg-news {
-    width: $width-svg-news * $scale;
+  #svg-news1 {
+    width: $width-svg-news1 * $scale;
+  }
+  #svg-news2 {
+    width: $width-svg-news2 * $scale;
   }
   #svg-cfp {
     width: $width-svg-cfp * $scale;
@@ -204,6 +223,24 @@ $width-svg-news: 259px;
       }
       .cfp-news {
         margin-bottom: 16px;
+
+        .cfp-news__btn {
+          position: relative;
+
+          &--1 {
+            top: -75px;
+            right: -5px;
+            &:hover {
+              top: -80px;
+            }
+          }
+          &--2 {
+            top: 0px;
+            &:hover {
+              top: -5px;
+            }
+          }
+        }
       }
     }
   }
@@ -224,8 +261,11 @@ $width-svg-news: 259px;
   #svg-location {
     width: $width-svg-location * $scale;
   }
-  #svg-news {
-    width: $width-svg-news * $scale;
+  #svg-news1 {
+    width: $width-svg-news1 * $scale;
+  }
+  #svg-news2 {
+    width: $width-svg-news2 * $scale;
   }
   #svg-cfp {
     width: $width-svg-cfp * $scale;
@@ -257,6 +297,27 @@ $width-svg-news: 259px;
       }
       .cfp-news {
         margin-bottom: 2px;
+        position: relative;
+
+        .cfp-news__btn {
+          position: relative;
+
+          &--1 {
+            top: -45px;
+            right: -25px;
+
+            &:hover {
+              top: -48px;
+            }
+          }
+          &--2 {
+            top: 5px;
+            right: -21px;
+            &:hover {
+              top: 2px;
+            }
+          }
+        }
       }
     }
   }
@@ -277,8 +338,11 @@ $width-svg-news: 259px;
   #svg-location {
     width: $width-svg-location * $scale;
   }
-  #svg-news {
-    width: $width-svg-news * $scale;
+  #svg-news1 {
+    width: $width-svg-news1 * $scale;
+  }
+  #svg-news2 {
+    width: $width-svg-news2 * $scale;
   }
   #svg-cfp {
     width: $width-svg-cfp * $scale;
