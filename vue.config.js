@@ -15,7 +15,9 @@ module.exports = {
         '/2021/cfp',
         '/2021/cfp/',
         '/2021/cfp/news',
-        '/2021/cfp/news/'
+        '/2021/cfp/news/',
+        '/2021/cfp/ocfp-news',
+        '/2021/cfp/ocfp-news/'
       ],
       useRenderEvent: true,
       headless: true,
