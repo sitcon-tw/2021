@@ -56,7 +56,7 @@
       </div>
       <div class="cfp-news">
         <div class="cfp-news__btn cfp-news__btn--1">
-          <a href="/2021/cfp/ocfp-news" rel="noopener">
+          <a href="/2021/cfp/news" rel="noopener">
             <div class="btn-news-wrapper">
               <img
                 src="~@/assets/images/burnfont/btn-news1-desktop.svg"
@@ -81,12 +81,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component
 export default class CfpHeader extends Vue {}
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/CFP/header";
+@import '@/assets/scss/CFP/header';
 </style>
