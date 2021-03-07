@@ -7,7 +7,7 @@
         >
       </div>
       <div class="title-wrapper text-center">
-        <img src="~@/assets/images/burnfont/news.svg" class="svg svg-cfp-news" />
+        <img src="~@/assets/images/burnfont/ocfp_title.svg" class="svg svg-cfp-news" />
       </div>
       <div class="contribute-wrapper">
         <a class="btn-contribute" target="_blank" rel="noopener" href="https://forms.gle/k4XobTn3Pac6NrLE7">我要投稿</a>
