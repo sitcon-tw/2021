@@ -195,5 +195,5 @@ export default class Agenda extends Vue {}
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/news/agenda";
+@import "@/assets/scss/ocfp/agenda";
 </style>

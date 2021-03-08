@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="ocfp-header">
     <div class="top-bar">
       <div class="return-wrapper">
         <a class="shape-wrapper diamond" href="/2021/cfp"
@@ -122,5 +122,5 @@ export default class CfpHeader extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/news/header'
+@import '@/assets/scss/ocfp/header';
 </style>
