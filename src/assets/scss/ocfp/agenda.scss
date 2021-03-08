@@ -1,0 +1,601 @@
+// import google font
+// no need to import font; such font has been imported in App.vue
+// @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
+$fontFamily-NotoSansTC: 'Noto Sans TC', sans-serif;
+$fontFamily: 'Noto Sans TC', sans-serif;
+// Color
+// dont define private color if these are common ones 
+@import '../color';
+// $white: #ffffff;
+// $mid-blue: #226bb4;
+
+//Screen breakpoint
+$max-width-big-0: 1800px;
+$max-width-big: 1500px;
+$max-width-medium-0: 1100px;
+$max-width-medium-1: 900px;
+$max-width-small-0: 750px;
+$max-width-small-1: 500px;
+$max-width-small-2: 410px;
+$max-width-small-3: 360px;
+
+// .info-container
+@mixin infoContainer() {
+  max-width: 80%;
+  @media screen and (max-width: 1365px) {
+    margin: 0 120px;
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 100px;
+  }
+  
+  @media screen and (max-width: $max-width-small-0) {
+    margin: 0;
+    max-width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+// .info-section
+@mixin sectionH1Fontsize() {
+  font-size: 32pt;
+  @media only screen and (min-width: $max-width-big-0) {
+    font-size: 36pt;
+    margin-bottom: 50px;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 28pt;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 24pt;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 21pt;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 19pt;
+  }
+}
+
+@mixin sectionH2Fontsize() {
+  font-size: 24pt;
+  @media only screen and (min-width: $max-width-big-0) {
+    font-size: 27pt;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 22pt;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 19pt;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 18pt;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 18pt;
+  }
+}
+
+//.info-section__content
+@mixin sectionContentParagraphWidth() {
+  // width: 92%;
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+    margin-left: 0;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@mixin sectionContentParagraphFontsize() {
+  font-size: 15pt;
+  @media only screen and (max-width: $max-width-big-0) {
+    font-size: 14pt;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 13pt;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 12pt;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 11pt;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 10pt;
+  }
+}
+
+@mixin ulPadding {
+  padding: 0 0 0 20px;
+  @media only screen and (max-width: $max-width-big) {
+    padding: 0 0 0 5px;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    padding: 0;
+  }
+}
+
+@mixin sectionContentSubExtendWidth {
+  width: 107%;
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+  }
+}
+
+// .info-kind
+@mixin kind() {
+  @media only screen and (min-width: $max-width-big-0) {
+    padding-bottom: 330px;
+    &__itemBox {
+      height: 305px;
+      padding-top: 0;
+      padding-bottom: 0;
+      &-title {
+        margin-top: 30px;
+      }
+      &-text {
+        padding-top: 8px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+    &__itemBox {
+      width: 100%;
+      height: 201px;
+      margin-bottom: 20px;
+      margin-right: 0;
+      padding: 0;
+      &-title {
+        margin-top: 20px;
+      }
+      &-text {
+        width: 86%;
+      }
+    }
+  }
+}
+
+@mixin kindTitleFontsize() {
+  font-size: 27pt;
+  @media only screen and (max-width: $max-width-big-0) {
+    font-size: 21pt;
+  }
+  @media only screen and (max-width: $max-width-big) {
+    font-size: 19pt;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 15pt;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 12pt;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 21pt;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 15pt;
+  }
+}
+
+@mixin kindTextFontsize() {
+  font-size: 15pt;
+  @media only screen and (max-width: $max-width-big-0) {
+    font-size: 13pt;
+  }
+  @media only screen and (max-width: $max-width-big) {
+    font-size: 12pt;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 11pt;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 9pt;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 13pt;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 11pt;
+  }
+}
+
+// .info-qa
+@mixin qaLayout {
+  width: 86%;
+  margin-bottom: 120px;
+  @media only screen and (max-width: $max-width-big) {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    width: 100%;
+    margin-bottom: 0px;
+  }
+}
+
+@mixin qaTitleFontsize() {
+  font-size: 18pt;
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 16pt;
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 14pt;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 11pt;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 9pt;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    font-size: 8pt;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    font-size: 7pt;
+  }
+}
+
+@mixin qaTextFontsize() {
+  font-size: 15pt;
+  @media only screen and (max-width: $max-width-medium-1) {
+    font-size: 14pt;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    font-size: 12pt;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    font-size: 11pt;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    font-size: 9pt;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    font-size: 8pt;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    font-size: 6.5pt;
+  }
+}
+
+@mixin qaTitleHeight {
+  height: 57px;
+  @media only screen and (max-width: $max-width-small-0) {
+    height: 45px;
+  }
+  @media only screen and (max-width: $max-width-small-1) {
+    height: 36px;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    height: 32px;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    height: 28px;
+  }
+}
+
+@mixin qaTitleMarginTop {
+  margin-top: 15px;
+  @media only screen and (max-width: $max-width-small-1) {
+    margin-top: 10px;
+  }
+  @media only screen and (max-width: $max-width-small-2) {
+    margin-top: 9px;
+  }
+}
+@mixin qaTextMarginTop {
+  margin-top: 25px;
+  @media only screen and (max-width: $max-width-small-1) {
+    margin-top: 15px;
+  }
+}
+
+@mixin qaQdisplay {
+  margin-left: 25px;
+
+  &::before {
+    content: "Q：";
+  }
+  @media only screen and (max-width: $max-width-medium-1) {
+    margin-left: 18px;
+    &::before {
+      content: "";
+    }
+  }
+}
+
+@mixin qaIconSize {
+  height: 25px;
+  width: 30px;
+  @media only screen and (max-width: $max-width-medium-1) {
+    height: 16px;
+    width: 19px;
+  }
+}
+
+@mixin qaIcon {
+  background-image: url("../../assets/images/CFP/Polygon-big.svg");
+
+  @media only screen and (max-width: $max-width-medium-1) {
+    background-image: url("../../assets/images/CFP/Polygon-small.svg");
+  }
+}
+
+@mixin sitconImg {
+  float: right;
+  margin-top: 382px;
+  margin-right: 15%;
+  margin-bottom: 30px;
+  @media only screen and (max-width: $max-width-big) {
+    margin-top: 0;
+    margin-right: 80%;
+  }
+  @media only screen and (max-width: $max-width-medium-0) {
+    width: 108px;
+    height: 135px;
+  }
+  @media only screen and (max-width: $max-width-small-0) {
+    margin-right: 15%;
+  }
+
+  @media only screen and (max-width: $max-width-small-1) {
+    width: 86px;
+    height: 107px;
+  }
+
+  @media only screen and (max-width: $max-width-small-2) {
+    width: 69px;
+    height: 86px;
+  }
+  @media only screen and (max-width: $max-width-small-3) {
+    width: 55px;
+    height: 68px;
+  }
+}
+
+//cfp-sub-information <subInformation>
+.info {
+  position: relative;
+  width: 100%;
+  font-family: $fontFamily;
+  float: left;
+
+  &-container {
+    @include infoContainer();
+    margin: 0 280px;
+    // float: left;
+  }
+
+  &-section {
+    float: left;
+    clear: both;
+    width: 100%;
+
+    h1 {
+      @include sectionH1Fontsize();
+      height: 70px;
+      font-weight: 900;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.9;
+      letter-spacing: normal;
+      text-align: left;
+      color: $mid-blue;
+      margin-block-start: 0.83em;
+      margin-block-end: 0.83em;
+    }
+    &__content {
+      width: 100%;
+
+      p {
+        @include sectionContentParagraphWidth();
+        @include sectionContentParagraphFontsize();
+
+        font-weight: 500;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 2.1;
+        letter-spacing: 0.2px;
+        text-align: left;
+        color: $mid-blue;
+      }
+
+      strong {
+        font-weight: 900;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+          @include ulPadding();
+          margin: 0;
+          span {
+            display: inline-block;
+            height: 4px;
+            width: 4px;
+            transform: translate(-200%, -150%);
+            background-color: $mid-blue;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      &--sub {
+        h2 {
+          @include sectionH2Fontsize();
+          height: 60px;
+          font-weight: 900;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 2.2;
+          letter-spacing: normal;
+          text-align: left;
+          color: $mid-blue;
+          margin-block-start: 0.83em;
+          margin-block-end: 0.83em;
+        }
+
+        &-extend {
+          @include sectionContentSubExtendWidth();
+        }
+      }
+    }
+  }
+
+  &-sitcon-img {
+    &__box {
+      float: right;
+    }
+
+    @include sitconImg();
+  }
+
+  //cfp-sub-information <subInformation> kind, qa components
+  &-kind {
+    width: 100%;
+    margin-top: 45px;
+    padding-bottom: 300px;
+    &__itemBox {
+      float: left;
+      padding: 25px 1.5% 35px 1.5%;
+      border-radius: 13px;
+      background-color: $mid-blue;
+      width: 30%;
+      &:not(:last-child) {
+        margin-right: 5%;
+      }
+
+      &-title {
+        @include kindTitleFontsize();
+        width: 100%;
+        color: $white;
+        display: inline-block;
+        text-align: center;
+        font-weight: 900;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        margin-top: 25px;
+      }
+      &-text {
+        width: 100%;
+        height: 172px;
+        margin: 0 auto;
+        text-align: left;
+
+        p {
+          @include kindTextFontsize();
+          margin: 10px auto;
+          color: $white;
+          font-weight: 500;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 2.1;
+          letter-spacing: 0.2px;
+        }
+
+        strong {
+          font-weight: 900;
+        }
+      }
+    }
+    //RWD for kind
+    @include kind();
+  }
+
+  &-qa {
+    @include qaLayout();
+    margin-bottom: 120px;
+    float: left;
+    // margin: 0 auto;
+    &__itemBox {
+      border-radius: 29px;
+      box-shadow: 0 3px 12px 0 rgba(89, 120, 206, 0.56);
+      background-color: $white;
+      margin: 0 0 30px 0;
+
+      position: relative;
+      &-title {
+        @include qaTitleHeight();
+        display: block;
+        width: 100%;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        p {
+          @include qaTitleFontsize();
+          @include qaTitleMarginTop();
+
+          @include qaQdisplay();
+          display: inline-block;
+          font-weight: bold;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.25;
+          letter-spacing: normal;
+          text-align: left;
+          color: $mid-blue;
+        }
+        span {
+          @include qaIcon();
+          background-repeat: no-repeat;
+          position: absolute;
+          top: 15px;
+          top: 50%;
+          transform: translateY(-45%);
+          right: 3.5%;
+        }
+      }
+
+      &-input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      &-input:checked ~ &-text {
+        display: block;
+        width: 88%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+
+        p {
+          width: 100%;
+          @include qaTextFontsize();
+        }
+      }
+
+      &-input:checked ~ &-title {
+        p {
+          @include qaTextMarginTop();
+        }
+        span {
+          transform: rotate(180deg);
+          position: absolute;
+          top: 20px;
+          right: 3.5%;
+        }
+      }
+
+      &-text {
+        display: none;
+      }
+    }
+
+    &-icon {
+      @include qaIconSize();
+    }
+  }
+}

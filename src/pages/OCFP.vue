@@ -1,8 +1,8 @@
 <template>
   <div class="news">
-    <NewsHeader id="news-header" />
-    <Schedule id="news-schedule" />
-    <Agenda id="news-agenda" />
+    <NewsHeader id="ocfp-header" />
+    <Schedule id="ocfp-schedule" />
+    <Agenda id="ocfp-agenda" />
     <!-- <Footer></Footer> should be put at App.vue (?) -->
   </div>
 </template>
