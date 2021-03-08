@@ -83,7 +83,7 @@ export default class Navbar extends Vue {
       });
     }, { rootMargin: '25px 0px 0px 0px', threshold: 0 });
     this.$nextTick().then(() => {
-      fixObserver.observe(document.querySelector('#news-header') as Element);
+      fixObserver.observe(document.querySelector('#ocfp-header') as Element);
 
       document.querySelector('.news-nav')?.addEventListener('animationend', (ev) => {
         if (!this.isNavbarFixed) {
