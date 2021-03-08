@@ -41,8 +41,8 @@
         <div class="end-time-wrapper">
           <h2>投稿結束</h2>
           <p>
-            2021/04/06（二）日出<small class="d-inline-block"
-              >（清晨 06：41）</small
+            2021/04/07（三）日出<small class="d-inline-block"
+              >（清晨 05：40）</small
             >
           </p>
         </div>
@@ -55,7 +55,7 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
 const DEAD_LINE = Math.floor(
-  new Date('06 Apr 2021 06:41:00 GMT+8').getTime() / 1000
+  new Date('07 Apr 2021 05:40:00 GMT+8').getTime() / 1000
 );
 
 interface Countdown {
