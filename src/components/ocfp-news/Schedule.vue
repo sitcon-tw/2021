@@ -61,5 +61,5 @@ export default class Schedule extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/news/schedule';
+@import '@/assets/scss/ocfp/schedule';
 </style>
