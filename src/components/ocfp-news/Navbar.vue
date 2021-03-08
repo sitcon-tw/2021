@@ -1,5 +1,5 @@
 <template>
-  <nav id="news-nav" :class="{ fixed: (isNavbarFixed || isMobileView), returning: isNavbarReturning }">
+  <nav id="ocfp-nav" :class="{ fixed: (isNavbarFixed || isMobileView), returning: isNavbarReturning }">
     <div 
       class="news-nav"
       :class="{ animating: isNavbarAnimating }"
@@ -111,5 +111,5 @@ export default class Navbar extends Vue {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/news/navbar';
+@import '@/assets/scss/ocfp/navbar';
 </style>
