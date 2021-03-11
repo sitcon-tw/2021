@@ -21,6 +21,11 @@
       <p>&#9650;</p>
       <p>&#9660;</p>
     </button>
+    <div
+      style="width:100vw;height:100vh;color:red;position:fixed;top:0;right:0;"
+      v-if="isMobileView && navVisible"
+      @click="()=>navVisible=!navVisible"
+    ></div>
   </nav>
 </template>
 
