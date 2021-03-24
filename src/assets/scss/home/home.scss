@@ -1,3 +1,46 @@
+.section {
+  &-title {
+    margin-top: 150px;
+    height: 500px;
+    // background-color: chartreuse;
+  }
+}
+
 .home {
-  height: 900px;
+  position: relative;
+  text-align: center;
+  &__title {
+    width: 500px;
+    // background-color: cornflowerblue;
+    margin: 0 auto;
+    position: relative;
+
+    &-box1 {
+      position: relative;
+
+      margin-top: 100px;
+      // background-color: chocolate;
+      height: 80px;
+      width: 500px;
+      span {
+        font-size: 16pt;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+      }
+    }
+
+    &-topic {
+    }
+
+    &-box2 {
+      // background-color: chocolate;
+      height: 80px;
+      width: 500px;
+      p {
+        font-size: 16pt;
+      }
+    }
+  }
 }

@@ -1,15 +1,12 @@
 @import "../color.scss";
 
 .header {
-  //   position: fixed;
   position: relative;
   z-index: 99;
   left: 6%;
   top: 60px;
   width: 88%;
   height: 62px;
-  //   margin: 0 0 98px;
-  //   padding: 18px 26px 0 46.4px;
   border-radius: 73px;
   box-shadow: 0 6px 18px 0 rgba(0, 0, 255, 0.22);
   background-color: $white;
@@ -27,14 +24,13 @@
 
   &-logo {
     position: absolute;
-    left: 40px;
+    left: 35px;
     top: 50%;
     transform: translateY(-50%);
   }
 
   &__right {
     float: right;
-    // background-color: violet;
     width: 80%;
   }
 
@@ -42,34 +38,29 @@
     float: right;
     width: 600px;
     margin-right: 92px;
-    // background-color: turquoise;
     height: 100%;
     height: 50px;
     top: 6px;
-    // width: 85%;
 
     ul {
-      //   background-color: yellowgreen;
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
 
       li {
-        // background-color: lightpink;
         float: left;
         margin: 0;
         padding: 0;
-        width: 20%;
+        padding: 22px 20px;
         height: 100%;
         display: block;
+        text-align: left;
 
         a {
           font-size: 12pt;
           color: $black;
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
+          padding-bottom: 15px;
         }
       }
     }
@@ -78,8 +69,6 @@
   &-apply {
     width: 92px;
     height: 38px;
-    // margin: 0 0 11px 58px;
-    // padding: 9px 27px 10px;
     border-radius: 38px;
     background-color: $indigo-blue;
     position: absolute;
