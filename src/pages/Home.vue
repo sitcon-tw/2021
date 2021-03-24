@@ -1,9 +1,27 @@
 <template>
-  <div>
-    <Header />
-    <div class="home">
-      home
-    </div>
+  <div id="home" class="home">
+    <header>
+      <!-- <Header /> -->
+    </header>
+    <section class="section-title">
+      <div class="home__title">
+        <div class="home__title-box1">
+          <span>SITCON 學生計算機年會 2021</span>
+        </div>
+        <div class="home__title-topic">
+          <img
+            class="sitcon-apple"
+            src="~@/assets/images/home/home-topic.svg"
+            width="500"
+          />
+        </div>
+        <div class="home__title-box2">
+          <p>
+            05/29 • 中央研究院－人文社會科學館 •免費報名
+          </p>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
