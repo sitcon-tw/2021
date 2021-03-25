@@ -41,7 +41,7 @@
     i.icon {
       position: absolute;
       z-index: 0;
-      scale: 0.75;
+      transform: scale(0.75);
   
       &::before {
         width: 100%;
