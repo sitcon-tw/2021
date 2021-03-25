@@ -1,0 +1,17 @@
+#agenda {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    div.event.container {
+        display: grid;
+        grid-template-columns: min-content repeat(6, 1fr) min-content;
+        grid-template-rows: 1fr;
+        column-gap: 30px;
+
+        img.arrow {
+            margin: auto;
+            width: auto;
+            height: calc(99/217 * 100%);
+        }
+    }
+}
