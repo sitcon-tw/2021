@@ -1,26 +1,27 @@
+@import "../color.scss";
 $font-home: "Noto Serif CJK TC -SemiBold";
 $font-home-h1: "Noto Serif CJK TC -Bold";
 $font-home-h2: "Letter Gothic Std Bold";
+$font-home-button: "Noto Serif CJK TC -Black";
 
 .section {
   &-title {
     margin-top: 150px;
-    height: 500px;
+    height: 583px;
     // background-color: chartreuse;
   }
   &-content {
-    height: 1000px;
+    height: 1900px;
     // background-color: cornsilk;
   }
 }
 
 .home {
-  // font-family: "Courier New", Courier, monospace;
   font-family: $font-home;
   position: relative;
-  text-align: center;
   &__title {
     width: 600px;
+    text-align: center;
     // background-color: cornflowerblue;
     margin: 0 auto;
     padding-top: 10px;
@@ -42,6 +43,7 @@ $font-home-h2: "Letter Gothic Std Bold";
     }
 
     &-box2 {
+      text-align: center;
       // background-color: chocolate;
       height: 80px;
       width: 600px;
@@ -54,28 +56,94 @@ $font-home-h2: "Letter Gothic Std Bold";
   }
 
   &__info {
-    width: 60%;
+    width: 75%;
+    padding-bottom: 75px;
     // background-color: darkseagreen;
+    // border: 1px solid blueviolet;
     margin: 0 auto;
 
+    position: relative;
+
     &-container {
-      width: 95%;
-      margin-left: 5%;
+      width: 75%;
+      margin-left: 15%;
     }
 
     &-title {
       // background-color: darkgray;
-      height: 100px;
-
+      // height: 100px;
       h1 {
         font-family: $font-home-h1;
         font-size: 26pt;
+        padding-top: 25px;
       }
 
       h2 {
         font-family: $font-home-h2;
-        font-size: 28pt;
+        // font-size: 32pt;
+        padding-top: 25px;
+      }
+
+      &-h2 {
+        &--small {
+          font-size: 19pt;
+        }
+        &--mid {
+          font-size: 23pt;
+        }
+        &--big {
+          font-size: 31pt;
+        }
       }
     }
+
+    &-paragraph {
+      padding-top: 30px;
+      // background-color: yellow;
+      p {
+        font-size: 12pt;
+        line-height: 33px;
+        a {
+          text-decoration: underline;
+          color: $indigo-blue;
+        }
+      }
+    }
+
+    &-buttonsBox {
+      height: 50px;
+      width: 245px;
+      margin-top: 40px;
+      // background-color: burlywood;
+    }
+  }
+
+  &-button {
+    font-family: $font-home-button;
+    font-size: 12.5pt;
+    position: relative;
+    top: 15px;
+    color: $white;
+    background-color: $indigo-blue;
+    padding: 6px 17px 8px 17px;
+    border-radius: 32px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 255, 0.18);
+    margin-right: 20px;
+  }
+
+  &-squareImg {
+    position: absolute;
+    left: 0;
+  }
+
+  &-appleImg {
+    position: absolute;
+    top: -30px;
+    right: 80px;
+  }
+
+  &-sponsorsImg {
+    position: absolute;
+    bottom: 0;
   }
 }
