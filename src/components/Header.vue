@@ -117,5 +117,5 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/home/header";
+@import "@/assets/scss/header";
 </style>

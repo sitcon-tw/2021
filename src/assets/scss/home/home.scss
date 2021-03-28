@@ -1,33 +1,40 @@
+$font-home: "Noto Serif CJK TC -SemiBold";
+$font-home-h1: "Noto Serif CJK TC -Bold";
+$font-home-h2: "Letter Gothic Std Bold";
+
 .section {
   &-title {
     margin-top: 150px;
     height: 500px;
     // background-color: chartreuse;
   }
+  &-content {
+    height: 1000px;
+    // background-color: cornsilk;
+  }
 }
 
 .home {
+  // font-family: "Courier New", Courier, monospace;
+  font-family: $font-home;
   position: relative;
   text-align: center;
   &__title {
-    width: 500px;
+    width: 600px;
     // background-color: cornflowerblue;
     margin: 0 auto;
+    padding-top: 10px;
     position: relative;
 
     &-box1 {
-      position: relative;
-
-      margin-top: 100px;
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
       // background-color: chocolate;
       height: 80px;
-      width: 500px;
-      span {
-        font-size: 16pt;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateY(-50%) translateX(-50%);
+      width: 600px;
+      p {
+        font-size: 18pt;
       }
     }
 
@@ -37,9 +44,37 @@
     &-box2 {
       // background-color: chocolate;
       height: 80px;
-      width: 500px;
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 80px;
       p {
-        font-size: 16pt;
+        font-size: 18pt;
+      }
+    }
+  }
+
+  &__info {
+    width: 60%;
+    // background-color: darkseagreen;
+    margin: 0 auto;
+
+    &-container {
+      width: 95%;
+      margin-left: 5%;
+    }
+
+    &-title {
+      // background-color: darkgray;
+      height: 100px;
+
+      h1 {
+        font-family: $font-home-h1;
+        font-size: 26pt;
+      }
+
+      h2 {
+        font-family: $font-home-h2;
+        font-size: 28pt;
       }
     }
   }
