@@ -32,44 +32,59 @@
           </span>
         </p>
       </div>
+      <div class="footer-sitesOverYears">
+        <div class="footer-sitesOverYears__title">
+          <p class="footer-context">歷年網站</p>
+        </div>
+        <div class="footer-sitesOverYears__links">
+          <a href="https://sitcon.org/2020/">2020</a>
+          <a href="https://sitcon.org/2019/">2019</a>
+          <a href="https://sitcon.org/2018/">2018</a>
+          <a href="https://sitcon.org/2017/">2017</a>
+          <a href="https://sitcon.org/2016/">2016</a>
+          <a href="https://sitcon.org/2015/">2015</a>
+          <a href="https://sitcon.org/2014/">2014</a>
+          <a href="https://sitcon.org/2013/">2013</a>
+        </div>
+      </div>
     </div>
   </footer>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Prop, Vue } from "vue-property-decorator";
 @Component
 export default class CFP extends Vue {
   private communityLink = [
     {
-      title: 'facebook',
-      icon: 'facebook-f',
-      link: 'https://sitcon.org/fb'
+      title: "facebook",
+      icon: "facebook-f",
+      link: "https://sitcon.org/fb",
     },
     {
-      title: 'flickr',
-      icon: 'flickr',
-      link: 'https://sitcon.org/flickr'
+      title: "flickr",
+      icon: "flickr",
+      link: "https://sitcon.org/flickr",
     },
     {
-      title: 'telegram',
-      icon: 'telegram-plane',
-      link: 'https://sitcon.org/tg'
+      title: "telegram",
+      icon: "telegram-plane",
+      link: "https://sitcon.org/tg",
     },
     {
-      title: 'twitter',
-      icon: 'twitter',
-      link: 'https://sitcon.org/twitter'
+      title: "twitter",
+      icon: "twitter",
+      link: "https://sitcon.org/twitter",
     },
     {
-      title: 'youtube',
-      icon: 'youtube',
-      link: 'https://sitcon.org/yt'
-    }
+      title: "youtube",
+      icon: "youtube",
+      link: "https://sitcon.org/yt",
+    },
   ];
 }
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/footer';
+@import "@/assets/scss/footer-primary";
 </style>
