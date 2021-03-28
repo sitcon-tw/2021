@@ -13,13 +13,49 @@
       </div>
     </div>
     <div class="header__right">
-      <div class="header-link">
+      <div class="header-links">
         <ul>
-          <li><a href="/2021/agenda">議程與活動</a></li>
-          <li><a href="/2021/traffic">交通方式</a></li>
-          <li><a href="/2021/venue">會場地圖</a></li>
-          <li><a href="/2021/sponsor">贊助資訊</a></li>
-          <li><a href="/2021/team">籌備團隊</a></li>
+          <li>
+            <input
+              type="radio"
+              id="1"
+              class="header-link__input"
+              name="checlbox"
+            />
+            <a
+              href="/2021/agenda"
+              v-bind:class="onRoute('Agenda') ? 'header-link--active' : ''"
+              >議程與活動</a
+            >
+          </li>
+          <li>
+            <a
+              href="/2021/traffic"
+              v-bind:class="onRoute('Traffic') ? 'header-link--active' : ''"
+              >交通方式</a
+            >
+          </li>
+          <li>
+            <a
+              href="/2021/venue"
+              v-bind:class="onRoute('Venue') ? 'header-link--active' : ''"
+              >會場地圖</a
+            >
+          </li>
+          <li>
+            <a
+              href="/2021/sponsor"
+              v-bind:class="onRoute('Sponsor') ? 'header-link--active' : ''"
+              >贊助資訊</a
+            >
+          </li>
+          <li>
+            <a
+              href="/2021/team"
+              v-bind:class="onRoute('Team') ? 'header-link--active' : ''"
+              >籌備團隊</a
+            >
+          </li>
         </ul>
       </div>
       <div class="header-apply">
@@ -34,8 +70,24 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-@Component
+@Component({
+  props: ["route"],
+})
 export default class Header extends Vue {
+  mounted() {
+    console.log(this.$props.route.name);
+  }
+  public onRoute(routeName: String) {
+    return this.$props.route.name === routeName ? true : false;
+  }
+
+  // computed(){
+  //   pagePosition:function(){
+
+  //   }
+
+  // }
+
   //   header = document.getElementById("topHeader");
   //   sticky = this.header.offsetTop;
   //   header = null;

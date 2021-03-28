@@ -34,7 +34,7 @@
     width: 80%;
   }
 
-  &-link {
+  &-links {
     float: right;
     width: 600px;
     margin-right: 92px;
@@ -56,6 +56,9 @@
         height: 100%;
         display: block;
         text-align: left;
+        // &:active {
+        //   border-bottom: $indigo-blue solid 5px;
+        // }
 
         a {
           font-size: 12pt;
@@ -64,6 +67,11 @@
         }
       }
     }
+  }
+
+  &-link--active {
+    // padding-bottom: 10px;
+    border-bottom: $indigo-blue solid 3.5px;
   }
 
   &-apply {
