@@ -1,8 +1,5 @@
 <template>
   <div id="home" class="home">
-    <header>
-      <!-- <Header /> -->
-    </header>
     <section class="section-title">
       <div class="home__title">
         <div class="home__title-box1">
@@ -109,19 +106,14 @@
         width="100%"
       />
     </section>
-    <!-- <section class="section-sponsors">
-    </section> -->
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
-import Header from "@/components/Header.vue";
 
 @Component({
-  components: {
-    Header,
-  },
+  components: {},
 })
 export default class CFP extends Vue {
   @Prop() private msg!: string;
