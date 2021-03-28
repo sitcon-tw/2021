@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header v-if="headerVisible()" />
+    <Header v-if="headerVisible()" v-bind:route="$route" />
     <router-view />
     <Footer />
   </div>
