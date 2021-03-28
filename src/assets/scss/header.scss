@@ -1,4 +1,6 @@
-@import "../color.scss";
+@import "./color.scss";
+$font-header-link: "Noto Serif CJK TC -Bold";
+$font-header-apply: "Noto Serif CJK TC -Black";
 
 .header {
   position: relative;
@@ -35,6 +37,7 @@
   }
 
   &-links {
+    font-family: $font-header-link;
     float: right;
     width: 600px;
     margin-right: 92px;
@@ -75,6 +78,7 @@
   }
 
   &-apply {
+    font-family: $font-header-apply;
     width: 92px;
     height: 38px;
     border-radius: 38px;
