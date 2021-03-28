@@ -115,7 +115,7 @@ $fontFamily: "Noto Sans TC", monospace;
     padding-bottom: 24px;
 
     //for footer-primary
-    transform: translateY(10%);
+    transform: translateY(11%);
 
     .footer-context {
       margin-bottom: 14px;
@@ -169,6 +169,7 @@ $fontFamily: "Noto Sans TC", monospace;
   width: 480px;
   @include subs {
     width: 300px;
+    margin-bottom: 50px;
   }
 }
 
