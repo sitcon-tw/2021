@@ -1,0 +1,189 @@
+@import "breakpoint.scss";
+
+// varible declare
+$fontColor: white;
+
+//for footer-primary
+$backgroundColor: #000098;
+
+$fontFamily: "Noto Sans TC", monospace;
+
+@mixin fontSize() {
+  font-size: 14pt;
+  line-height: 2;
+  @include xl {
+  }
+  @include lg {
+  }
+  @include md {
+  }
+  @include sm {
+    font-size: 14pt;
+  }
+  @include xs {
+    font-size: 12pt;
+  }
+}
+
+@mixin iconSize() {
+  font-size: 2.2em;
+  margin-right: 36px;
+  @include xl {
+    font-size: 2.1em;
+    margin-right: 20px;
+  }
+  @include lg {
+  }
+  @include md {
+    font-size: 1.8em;
+  }
+  @include sm {
+  }
+  @include xs {
+    font-size: 1.6em;
+  }
+}
+
+@mixin footerLayout() {
+  // flex
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  & > .footer-right {
+    margin-left: 100px;
+  }
+
+  @include md {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    // height: 320px;
+    & > .footer-right {
+      margin-left: 0;
+    }
+    & > * {
+      margin-left: 0;
+      width: 80%;
+    }
+
+    .footer-left {
+      margin-bottom: 24px;
+    }
+
+    .footer-right {
+      padding-bottom: 0;
+    }
+  }
+
+  @include xs {
+    & > * {
+      width: 90%;
+    }
+  }
+}
+
+.footer-container {
+  background: $backgroundColor;
+  // position
+  // position: absolute;
+  // bottom: 0;
+  // left: 0;
+  margin-top: auto;
+
+  // size
+  width: 100vw;
+  padding-top: 45px;
+  padding-bottom: 45px;
+
+  position: relative;
+  z-index: 2;
+
+  .footer-left {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .footer-brand {
+      margin-bottom: 24px;
+    }
+  }
+
+  .footer-right {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 24px;
+
+    //for footer-primary
+    transform: translateY(11%);
+
+    .footer-context {
+      margin-bottom: 14px;
+    }
+  }
+
+  // layout
+  @include footerLayout;
+}
+
+.footer-community-icon {
+  .community-icon {
+    @include iconSize;
+    color: $fontColor;
+  }
+  .community-icon:first {
+    margin-left: 0;
+  }
+}
+
+.footer-context {
+  @include fontSize;
+  font-family: $fontFamily;
+  color: $fontColor;
+  font-weight: bold;
+}
+
+.footer-font-block {
+  // display flex
+  display: flex;
+  flex-direction: column;
+  // size
+  width: auto;
+}
+
+//for footer-primary (on below)
+@mixin sitesOverYearsLink() {
+  margin-right: 20px;
+
+  @media (max-width: 570px) {
+    margin-right: 10px;
+  }
+
+  @include subs {
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+}
+@mixin sitesOverYears() {
+  height: 100px;
+  width: 480px;
+  @include subs {
+    width: 300px;
+    margin-bottom: 50px;
+  }
+}
+
+.footer-sitesOverYears {
+  @include sitesOverYears;
+  &__title {
+    margin-top: 20px;
+    height: 50px;
+  }
+  &__links {
+    a {
+      float: left;
+      color: $fontColor;
+      @include sitesOverYearsLink;
+    }
+  }
+}
