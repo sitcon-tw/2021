@@ -1,6 +1,27 @@
 @import "./color.scss";
+@import "./breakpoint.scss";
+
 $font-header-link: "Noto Serif CJK TC -Bold";
 $font-header-apply: "Noto Serif CJK TC -Black";
+
+@mixin headerLinksFontSize {
+  font-size: 12pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 13.5pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 15pt;
+  }
+}
+@mixin headerLinksWidth {
+  width: 600px;
+  @media screen and (min-width: $max-width-big) {
+    width: 630px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    width: 680px;
+  }
+}
 
 .header {
   position: relative;
@@ -29,17 +50,21 @@ $font-header-apply: "Noto Serif CJK TC -Black";
     left: 35px;
     top: 50%;
     transform: translateY(-50%);
+    width: 150px;
   }
 
   &__right {
     float: right;
     width: 80%;
+    // background-color: lightgoldenrodyellow;
   }
 
   &-links {
+    // background-color: lightgray;
     font-family: $font-header-link;
     float: right;
-    width: 600px;
+    @include headerLinksWidth;
+    // width: 600px;
     margin-right: 92px;
     height: 100%;
     height: 50px;
@@ -64,7 +89,7 @@ $font-header-apply: "Noto Serif CJK TC -Black";
         // }
 
         a {
-          font-size: 12pt;
+          @include headerLinksFontSize;
           color: $black;
           padding-bottom: 15px;
         }
@@ -89,8 +114,8 @@ $font-header-apply: "Noto Serif CJK TC -Black";
     transform: translateY(-50%);
 
     a {
-      color: $white;
       font-size: 13pt;
+      color: $white;
       position: absolute;
       top: 50%;
       left: 40%;

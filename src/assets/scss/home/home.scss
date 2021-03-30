@@ -1,17 +1,141 @@
 @import "../color.scss";
+@import "../breakpoint.scss";
 $font-home: "Noto Serif CJK TC -SemiBold";
 $font-home-h1: "Noto Serif CJK TC -Bold";
 $font-home-h2: "Letter Gothic Std Bold";
 $font-home-button: "Noto Serif CJK TC -Black";
 
+//default screen size width: 1440px
+
+//section
+@mixin sectionTitleHeight {
+  height: 583px;
+  @media screen and (min-width: $max-width-big) {
+    height: 635px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    height: 700px;
+  }
+}
+@mixin sectionContentHeight {
+  height: 1900px;
+  @media screen and (min-width: $max-width-big) {
+    height: 2050px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    height: 2150px;
+  }
+}
+// -------------------------------------------
+
+//home__title
+@mixin homeTitleFontsize {
+  font-size: 18pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 22pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 25pt;
+  }
+}
+@mixin homeTitleTopicWidth {
+  width: 500px;
+  @media screen and (min-width: $max-width-big) {
+    width: 600px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    width: 700px;
+  }
+}
+// -------------------------------------------
+
+//home__info
+@mixin homeInfoTitleH1Fontsize {
+  font-size: 26pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 30pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 35pt;
+  }
+}
+@mixin homeInfoTitleH2Fontsize {
+  &--small {
+    font-size: 19pt;
+  }
+  &--mid {
+    font-size: 23pt;
+  }
+  &--big {
+    font-size: 31pt;
+  }
+  @media screen and (min-width: $max-width-big) {
+    &--small {
+      font-size: 22pt;
+    }
+    &--mid {
+      font-size: 27pt;
+    }
+    &--big {
+      font-size: 35pt;
+    }
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    &--small {
+      font-size: 26pt;
+    }
+    &--mid {
+      font-size: 32pt;
+    }
+    &--big {
+      font-size: 40pt;
+    }
+  }
+}
+@mixin homeInfoParagraphFontsize {
+  font-size: 12pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 15pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 18pt;
+  }
+}
+@mixin homeInfoButtonBox {
+  height: 50px;
+  width: 245px;
+  margin-top: 40px;
+  // background-color: burlywood;
+  @media screen and (min-width: $max-width-big) {
+    transform: scale(1.2) translateX(8%) translateY(20%);
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    transform: scale(1.4) translateX(14%) translateY(25%);
+  }
+}
+//home__info  <img>
+@mixin homeInfoImgWidth {
+  width: 120px;
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 80px;
+  }
+  @media screen and (min-width: $max-width-big) {
+    width: 130px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    width: 150px;
+  }
+}
+// ----------------------------------------------------------------------------------------------
+
 .section {
   &-title {
     margin-top: 150px;
-    height: 583px;
+    @include sectionTitleHeight;
     // background-color: chartreuse;
   }
   &-content {
-    height: 1900px;
+    @include sectionContentHeight;
     // background-color: cornsilk;
   }
 }
@@ -20,7 +144,9 @@ $font-home-button: "Noto Serif CJK TC -Black";
   font-family: $font-home;
   position: relative;
   &__title {
-    width: 600px;
+    // width: 600px;
+    width: 75%;
+    // width: 60%;
     text-align: center;
     // background-color: cornflowerblue;
     margin: 0 auto;
@@ -33,24 +159,28 @@ $font-home-button: "Noto Serif CJK TC -Black";
       margin-bottom: 20px;
       // background-color: chocolate;
       height: 80px;
-      width: 600px;
+      // width: 600px;
+      width: 100%;
       p {
-        font-size: 18pt;
+        @include homeTitleFontsize;
       }
     }
 
     &-topic {
+      margin: 0 auto;
+      @include homeTitleTopicWidth;
     }
 
     &-box2 {
       text-align: center;
       // background-color: chocolate;
       height: 80px;
-      width: 600px;
+      // width: 600px;
+      width: 100%;
       margin: 0 auto;
       margin-top: 80px;
       p {
-        font-size: 18pt;
+        @include homeTitleFontsize;
       }
     }
   }
@@ -67,33 +197,28 @@ $font-home-button: "Noto Serif CJK TC -Black";
     &-container {
       width: 75%;
       margin-left: 15%;
+      // background-color: blanchedalmond;
     }
 
     &-title {
+      // width: 80%;
+      margin: 0 auto;
       // background-color: darkgray;
+      position: relative;
       // height: 100px;
       h1 {
         font-family: $font-home-h1;
-        font-size: 26pt;
+        @include homeInfoTitleH1Fontsize;
         padding-top: 25px;
       }
 
       h2 {
         font-family: $font-home-h2;
-        // font-size: 32pt;
         padding-top: 25px;
       }
 
       &-h2 {
-        &--small {
-          font-size: 19pt;
-        }
-        &--mid {
-          font-size: 23pt;
-        }
-        &--big {
-          font-size: 31pt;
-        }
+        @include homeInfoTitleH2Fontsize;
       }
     }
 
@@ -101,7 +226,7 @@ $font-home-button: "Noto Serif CJK TC -Black";
       padding-top: 30px;
       // background-color: yellow;
       p {
-        font-size: 12pt;
+        @include homeInfoParagraphFontsize;
         line-height: 33px;
         a {
           text-decoration: underline;
@@ -111,16 +236,14 @@ $font-home-button: "Noto Serif CJK TC -Black";
     }
 
     &-buttonsBox {
-      height: 50px;
-      width: 245px;
-      margin-top: 40px;
-      // background-color: burlywood;
+      @include homeInfoButtonBox;
     }
   }
 
   &-button {
-    font-family: $font-home-button;
+    // transform: scale(2);
     font-size: 12.5pt;
+    font-family: $font-home-button;
     position: relative;
     top: 15px;
     color: $white;
@@ -134,12 +257,16 @@ $font-home-button: "Noto Serif CJK TC -Black";
   &-squareImg {
     position: absolute;
     left: 0;
+    transform: translateX(-130%);
+    @include homeInfoImgWidth;
   }
 
   &-appleImg {
     position: absolute;
-    top: -30px;
-    right: 80px;
+    top: 0;
+    right: 0;
+    transform: translateX(25%) translateY(-12%);
+    @include homeInfoImgWidth;
   }
 
   &-sponsorsImg {
