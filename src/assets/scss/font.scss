@@ -1,4 +1,24 @@
 // import web font
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap");
 
+@font-face {
+  font-family: "Noto Serif CJK TC -Bold";
+  src: url("~@/assets/font/NotoSerifCJKtc-Bold.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif CJK TC -Black";
+  src: url("~@/assets/font/NotoSerifCJKtc-Black.otf");
+}
+
+@font-face {
+  font-family: "Noto Serif CJK TC -SemiBold";
+  src: url("~@/assets/font/NotoSerifCJKtc-SemiBold.otf");
+}
+
+@font-face {
+  font-family: "Letter Gothic Std Bold";
+  src: url("~@/assets/font/Letter Gothic Std Bold.ttf");
+}
+
 $fontFamily: Noto Sans TC, monospace;
