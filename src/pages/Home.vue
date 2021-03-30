@@ -6,7 +6,7 @@
           <p>SITCON 學生計算機年會 2021</p>
         </div>
         <div class="home__title-topic">
-          <img src="~@/assets/images/home/home-topic.svg" width="500" />
+          <img src="~@/assets/images/home/home-topic.svg" width="100%" />
         </div>
         <div class="home__title-box2">
           <p>
@@ -17,13 +17,12 @@
     </section>
     <section class="section-content">
       <section class="home__info">
-        <img
-          class="home-squareImg"
-          src="~@/assets/images/home/home-icon-square.svg"
-          width="120"
-        />
         <div class="home__info-container">
           <div class="home__info-title">
+            <img
+              class="home-squareImg"
+              src="~@/assets/images/home/home-icon-square.svg"
+            />
             <h1>算盤的後裔</h1>
             <h2 class="home__info-title-h2--big">Descendants of the abacus</h2>
           </div>
@@ -40,13 +39,12 @@
         </div>
       </section>
       <section class="home__info">
-        <img
-          class="home-appleImg"
-          src="~@/assets/images/home/home-icon-apple.svg"
-          width="120"
-        />
         <div class="home__info-container">
           <div class="home__info-title">
+            <img
+              class="home-appleImg"
+              src="~@/assets/images/home/home-icon-apple.svg"
+            />
             <h1>關於 SITCON</h1>
             <h2 class="home__info-title-h2--small">
               Students' Information Technology Conference

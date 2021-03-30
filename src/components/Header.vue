@@ -4,11 +4,7 @@
     <div class="header__left">
       <div class="header-logo">
         <a href="/2021/">
-          <img
-            class="sitcon-apple"
-            src="~@/assets/images/home/home-headerIcon.svg"
-            height="35"
-          />
+          <img src="~@/assets/images/home/home-headerIcon.svg" width="100%" />
         </a>
       </div>
     </div>
