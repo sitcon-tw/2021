@@ -24,10 +24,10 @@ $font-header-apply: "Noto Serif CJK TC -Black";
 }
 
 .header {
-  position: relative;
   z-index: 99;
+  position: relative;
+  top: 40px;
   left: 6%;
-  top: 60px;
   width: 88%;
   height: 62px;
   border-radius: 73px;
@@ -35,11 +35,10 @@ $font-header-apply: "Noto Serif CJK TC -Black";
   background-color: $white;
 
   &--sticky {
-    // position: fixed;
     position: sticky;
     z-index: 99;
     left: 6%;
-    top: 65px;
+    margin-top: 60px;
   }
   &__left {
     float: left;
@@ -57,15 +56,12 @@ $font-header-apply: "Noto Serif CJK TC -Black";
   &__right {
     float: right;
     width: 80%;
-    // background-color: lightgoldenrodyellow;
   }
 
   &-links {
-    // background-color: lightgray;
     font-family: $font-header-link;
     float: right;
     @include headerLinksWidth;
-    // width: 600px;
     margin-right: 92px;
     height: 100%;
     height: 50px;
@@ -85,9 +81,6 @@ $font-header-apply: "Noto Serif CJK TC -Black";
         height: 100%;
         display: block;
         text-align: left;
-        // &:active {
-        //   border-bottom: $indigo-blue solid 5px;
-        // }
 
         a {
           @include headerLinksFontSize;
@@ -99,7 +92,6 @@ $font-header-apply: "Noto Serif CJK TC -Black";
   }
 
   &-link--active {
-    // padding-bottom: 10px;
     border-bottom: $indigo-blue solid 3.5px;
   }
 
