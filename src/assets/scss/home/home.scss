@@ -130,7 +130,7 @@ $font-home-button: "Noto Serif CJK TC -Black";
 
 .section {
   &-title {
-    margin-top: 88px;
+    margin-top: 20px;
     @include sectionTitleHeight;
     // background-color: chartreuse;
   }
@@ -144,9 +144,7 @@ $font-home-button: "Noto Serif CJK TC -Black";
   font-family: $font-home;
   position: relative;
   &__title {
-    // width: 600px;
     width: 75%;
-    // width: 60%;
     text-align: center;
     // background-color: cornflowerblue;
     margin: 0 auto;
@@ -159,7 +157,6 @@ $font-home-button: "Noto Serif CJK TC -Black";
       margin-bottom: 20px;
       // background-color: chocolate;
       height: 80px;
-      // width: 600px;
       width: 100%;
       p {
         @include homeTitleFontsize;
@@ -175,7 +172,6 @@ $font-home-button: "Noto Serif CJK TC -Black";
       text-align: center;
       // background-color: chocolate;
       height: 80px;
-      // width: 600px;
       width: 100%;
       margin: 0 auto;
       margin-top: 80px;
@@ -241,7 +237,6 @@ $font-home-button: "Noto Serif CJK TC -Black";
   }
 
   &-button {
-    // transform: scale(2);
     font-size: 12.5pt;
     font-family: $font-home-button;
     position: relative;

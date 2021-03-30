@@ -76,39 +76,6 @@ export default class Header extends Vue {
   public onRoute(routeName: String) {
     return this.$props.route.name === routeName ? true : false;
   }
-
-  // computed(){
-  //   pagePosition:function(){
-
-  //   }
-
-  // }
-
-  //   header = document.getElementById("topHeader");
-  //   sticky = this.header.offsetTop;
-  //   header = null;
-  //   sticky = null;
-  //   created() {
-  //     window.addEventListener("scroll", this.handleScroll);
-  //   }
-  //   destroyed() {
-  //     window.removeEventListener("scroll", this.handleScroll);
-  //   }
-  //   mounted() {
-  //     this.header = document.getElementById("topHeader");
-  //     this.sticky = this.header.offsetTop;
-  //     console.log("window.pageYOffset", window.pageYOffset);
-  //     console.log("sticky", this.sticky);
-  //   }
-  //   handleScroll(event) {
-  //     if (window.pageYOffset < this.sticky) {
-  //       this.header.classList.add("header--sticky");
-  //     } else {
-  //       this.header.classList.remove("header--sticky");
-  //     }
-  //     console.log("func window.pageYOffset", window.pageYOffset);
-  //     console.log("func sticky", this.sticky);
-  //   }
 }
 </script>
 
