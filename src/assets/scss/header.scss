@@ -35,7 +35,8 @@ $font-header-apply: "Noto Serif CJK TC -Black";
   background-color: $white;
 
   &--sticky {
-    position: fixed;
+    // position: fixed;
+    position: sticky;
     z-index: 99;
     left: 6%;
     top: 65px;
