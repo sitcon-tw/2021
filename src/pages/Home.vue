@@ -108,10 +108,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({
-  components: {},
+  components: {}
 })
 export default class CFP extends Vue {
   @Prop() private msg!: string;
@@ -119,5 +119,5 @@ export default class CFP extends Vue {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/home/home";
+@import '@/assets/scss/home/home';
 </style>

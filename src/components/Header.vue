@@ -47,11 +47,12 @@
           </li>
         </ul>
       </div>
+
       <div class="header-links--mobile">
         <select onchange="location = this.value;">
-          <option value="/">年會主題</option>
+          <option value="/"> 年會主題</option>
           <option value="/agenda" :selected="onRoute('Agenda') ? true : false">
-            <a href="/2021/agenda">議程與活動</a></option
+            <a href="/2021/agenda"> 議程與活動</a></option
           >
           <option
             value="/traffic"
@@ -69,6 +70,7 @@
             ><a href="/2021/team">籌備團隊</a></option
           >
         </select>
+        <div class="header-links--mobile-bg"></div>
       </div>
       <div class="header-apply">
         <a href="https://sitcon.kktix.cc/events/sitcon2021" target="_blank">
@@ -80,10 +82,10 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component({
-  props: ["route"],
+  props: ['route']
 })
 export default class Header extends Vue {
   mounted() {
@@ -96,5 +98,5 @@ export default class Header extends Vue {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/header";
+@import '@/assets/scss/header';
 </style>
