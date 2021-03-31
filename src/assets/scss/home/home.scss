@@ -10,6 +10,7 @@ $font-home-button: "Noto Serif CJK TC -Black";
 //section
 @mixin sectionTitleHeight {
   height: 583px;
+
   @media screen and (min-width: $max-width-big) {
     height: 635px;
   }
@@ -19,6 +20,9 @@ $font-home-button: "Noto Serif CJK TC -Black";
 }
 @mixin sectionContentHeight {
   height: 1900px;
+  @media screen and (max-width: $max-width-medium-1) {
+    height: 1950px;
+  }
   @media screen and (min-width: $max-width-big) {
     height: 2050px;
   }
@@ -50,6 +54,35 @@ $font-home-button: "Noto Serif CJK TC -Black";
 // -------------------------------------------
 
 //home__info
+@mixin homeInfoWidth {
+  width: 75%;
+  @media screen and (max-width: $max-width-big-1) {
+    width: 85%;
+  }
+}
+@mixin homeInfoPaddingBottom {
+  padding-bottom: 75px;
+  @media screen and (max-width: $max-width-medium-1) {
+    padding-bottom: 50px;
+  }
+}
+@mixin homeInfoContainerWidth {
+  width: 75%;
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 80%;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    width: 90%;
+  }
+}
+@mixin homeInfoTittleModifiedWidth {
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 90%;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    width: 80%;
+  }
+}
 @mixin homeInfoTitleH1Fontsize {
   font-size: 26pt;
   @media screen and (min-width: $max-width-big) {
@@ -106,6 +139,9 @@ $font-home-button: "Noto Serif CJK TC -Black";
   width: 245px;
   margin-top: 40px;
   // background-color: burlywood;
+  @media screen and (max-width: $max-width-medium-1) {
+    transform: scale(1.2) translateX(8%) translateY(5%);
+  }
   @media screen and (min-width: $max-width-big) {
     transform: scale(1.2) translateX(8%) translateY(20%);
   }
@@ -117,7 +153,7 @@ $font-home-button: "Noto Serif CJK TC -Black";
 @mixin homeInfoImgWidth {
   width: 120px;
   @media screen and (max-width: $max-width-medium-0) {
-    width: 80px;
+    width: 110px;
   }
   @media screen and (min-width: $max-width-big) {
     width: 130px;
@@ -126,6 +162,19 @@ $font-home-button: "Noto Serif CJK TC -Black";
     width: 150px;
   }
 }
+@mixin homeInfoSquareImgTranslate {
+  transform: translateX(-130%);
+  @media screen and (max-width: $max-width-medium-0) {
+    transform: translateX(-110%);
+  }
+}
+@mixin homeInfoAppleImgTranslate {
+  transform: translateX(150%) translateY(-12%);
+  @media screen and (max-width: $max-width-medium-0) {
+    transform: translateX(100%) translateY(-12%);
+  }
+}
+
 // ----------------------------------------------------------------------------------------------
 
 .section {
@@ -146,18 +195,18 @@ $font-home-button: "Noto Serif CJK TC -Black";
   &__title {
     width: 75%;
     text-align: center;
-    // background-color: cornflowerblue;
     margin: 0 auto;
     padding-top: 10px;
     position: relative;
+    // background-color: cornflowerblue;
 
     &-box1 {
       margin: 0 auto;
       margin-top: 50px;
       margin-bottom: 20px;
-      // background-color: chocolate;
       height: 80px;
       width: 100%;
+      // background-color: chocolate;
       p {
         @include homeTitleFontsize;
       }
@@ -182,29 +231,27 @@ $font-home-button: "Noto Serif CJK TC -Black";
   }
 
   &__info {
-    width: 75%;
-    padding-bottom: 75px;
+    @include homeInfoWidth;
+    @include homeInfoPaddingBottom;
+    margin: 0 auto;
+    position: relative;
     // background-color: darkseagreen;
     // border: 1px solid blueviolet;
-    margin: 0 auto;
-
-    position: relative;
 
     &-container {
-      width: 75%;
-      margin-left: 15%;
+      @include homeInfoContainerWidth;
+      margin: 0 auto;
       // background-color: blanchedalmond;
     }
 
     &-title {
-      // width: 80%;
       margin: 0 auto;
-      // background-color: darkgray;
       position: relative;
-      // height: 100px;
+      // background-color: darkgray;
+
       h1 {
-        font-family: $font-home-h1;
         @include homeInfoTitleH1Fontsize;
+        font-family: $font-home-h1;
         padding-top: 25px;
       }
 
@@ -216,9 +263,22 @@ $font-home-button: "Noto Serif CJK TC -Black";
       &-h2 {
         @include homeInfoTitleH2Fontsize;
       }
+
+      &--1 {
+        float: right;
+        width: 100%;
+        @include homeInfoTittleModifiedWidth;
+      }
+
+      &--2 {
+        float: left;
+        width: 80%;
+        @include homeInfoTittleModifiedWidth;
+      }
     }
 
     &-paragraph {
+      clear: both;
       padding-top: 30px;
       // background-color: yellow;
       p {
@@ -252,16 +312,16 @@ $font-home-button: "Noto Serif CJK TC -Black";
   &-squareImg {
     position: absolute;
     left: 0;
-    transform: translateX(-130%);
     @include homeInfoImgWidth;
+    @include homeInfoSquareImgTranslate;
   }
 
   &-appleImg {
     position: absolute;
     top: 0;
     right: 0;
-    transform: translateX(25%) translateY(-12%);
     @include homeInfoImgWidth;
+    @include homeInfoAppleImgTranslate;
   }
 
   &-sponsorsImg {
