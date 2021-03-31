@@ -7,7 +7,10 @@
   </div>
 </template>
 <script lang="ts">
-import { Component, Vue, Watch } from "vue-property-decorator";
+import { Component, Vue } from 'vue-property-decorator';
+import { Action, Getter } from 'vuex-class';
+
+import { DeviceType } from '@/store/types/app';
 
 // components
 import Header from "@/components/Header.vue";
@@ -22,6 +25,22 @@ import FooterPrimary from "@/components/FooterPrimary.vue";
   },
 })
 export default class App extends Vue {
+  @Action('toggleDevice', { namespace: 'app' }) private toggleDevice!: (device: DeviceType) => void;
+  @Getter('device', { namespace: 'app' }) private device!: DeviceType;
+  private deviceTypeMediaQuery: MediaQueryList = window.matchMedia('(min-width: 900px)');
+
+  public mounted() {
+    this.detectDeviceType(this.deviceTypeMediaQuery);
+
+    // add change listener instead of resize listener
+    if (this.deviceTypeMediaQuery.addEventListener) {
+      this.deviceTypeMediaQuery.addEventListener('change', this.detectDeviceType);
+    } else {
+      // sad safari
+      this.deviceTypeMediaQuery.addListener(this.detectDeviceType);
+    }
+  }
+
   public isRoot(): boolean {
     if (
       this.$route.name == "CFP" ||
@@ -30,6 +49,16 @@ export default class App extends Vue {
     )
       return false;
     else return true;
+  }
+
+  private detectDeviceType (mq: (MediaQueryList | MediaQueryListEvent)): void {
+    const isDesktop: boolean = mq.matches;
+
+    if (isDesktop) {
+      this.toggleDevice(DeviceType.DESKTOP);
+    } else {
+      this.toggleDevice(DeviceType.MOBILE);
+    }
   }
 }
 </script>
