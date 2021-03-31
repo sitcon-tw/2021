@@ -1,6 +1,27 @@
 <template>
   <div id="agenda">
-    <div class="event container">
+    <!-- Vote Section -->
+    <BlockTitle text="人氣投票" id="#vote" />
+    <article>
+      投票時間：4/2 (五) 20:00 至 4/9 (五) 23:59（UTC+8）<br />
+      投票資格：於 4/9 (五) 23:59 前取得 2021 年會門票的與會者（不分票種）、2021 年會志工、2021 年會講者
+    </article>
+    <p class="vote"><a class="vote button" href="https://docs.google.com/forms/d/e/1FAIpQLSdWJtLP96bqXWukmOEar0xiBfGScm3qAlp-Xii05-cmU2Gxlg/viewform" target="_blank" rel="noopeener">投票去</a></p>
+    <article>
+     【注意事項】
+      <ol class="vote rule">
+        <li>0. 事前人氣投票結果，將作為議程組與審稿委員會於安排議程時段與會議廳的參考依據之一。</li>
+        <li>1. 投票為「記名投票」，使用 KKTIX 四碼檢查碼作為投票依據。議程組以檢查碼辨識投票的人是否持有年會門票，不對外公布各組檢查碼的具體投票內容。</li>
+        <li>2. 三個議程種類（Espresso、Double Espresso 與 Presentation）可各選擇投給 1 個議程。</li>
+        <li>3. 若同一議程種類選擇超過一個議程，或不選擇任何議程，視為無效票。各個議程種類的選票有效性互相獨立，無效票不影響其他議程種類的選票認定，舉例來說，若 Espresso 選擇 2 個議程、Double Espresso 選擇 1 個議程、Presentation 選擇 0 個議程，則 Double Espresso 的部分為有效票，其他二種議程為無效票。</li>
+        <li>4. 此投票表單使用 Google Forms「隨機決定問題順序」功能決定各個議程的顯示順序。</li>
+        <li>5. 在投票截止前，可以使用同一組檢查碼重複投票。計票時以最新一筆投票記錄為準。</li>
+      </ol>
+    </article>
+    <!-- Vote Section End -->
+    <!-- Event Section -->
+    <BlockTitle text="活動" id="#event" />
+    <div v-if="!isMobile()" class="event container">
       <img class="arrow" src="@/assets/images/arrow-left.svg">
       <EventBlock icon="union" text="大地遊戲"/>
       <EventBlock icon="stall-outline" text="社群攤位"/>
@@ -10,19 +31,32 @@
       <EventBlock text="開放式\n議程"/>
       <img class="arrow" src="@/assets/images/arrow-right.svg">
     </div>
+    <div v-if="isMobile()" class="mobile event container">
+      <!-- TODO -->
+    </div>
+    <!-- Event Section End -->
   </div>
 </template>
 <script lang="ts">
 import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
+import { Action, Getter } from 'vuex-class';
+
+import { DeviceType } from '@/store/types/app';
 
 import EventBlock from '../components/EventBlock.vue';
+import BlockTitle from '../components/BlockTitle.vue';
 @Component({
   components: {
     EventBlock
+    BlockTitle
   }
 })
 export default class Agenda extends Vue {
+  @Getter('device', { namespace: 'app' }) private device!: DeviceType;
 
+  private isMobile (): boolean {
+    return this.device === DeviceType.MOBILE;
+  }
 }
 </script>
 <style lang="scss">
