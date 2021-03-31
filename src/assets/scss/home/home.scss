@@ -1,0 +1,331 @@
+@import "../color.scss";
+@import "../breakpoint.scss";
+$font-home: "Noto Serif CJK TC -SemiBold";
+$font-home-h1: "Noto Serif CJK TC -Bold";
+$font-home-h2: "Letter Gothic Std Bold";
+$font-home-button: "Noto Serif CJK TC -Black";
+
+//default screen size width: 1440px
+
+//section
+@mixin sectionTitleHeight {
+  height: 583px;
+
+  @media screen and (min-width: $max-width-big) {
+    height: 635px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    height: 700px;
+  }
+}
+@mixin sectionContentHeight {
+  height: 1900px;
+  @media screen and (max-width: $max-width-medium-1) {
+    height: 1950px;
+  }
+  @media screen and (min-width: $max-width-big) {
+    height: 2050px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    height: 2150px;
+  }
+}
+// -------------------------------------------
+
+//home__title
+@mixin homeTitleFontsize {
+  font-size: 18pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 22pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 25pt;
+  }
+}
+@mixin homeTitleTopicWidth {
+  width: 500px;
+  @media screen and (min-width: $max-width-big) {
+    width: 600px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    width: 700px;
+  }
+}
+// -------------------------------------------
+
+//home__info
+@mixin homeInfoWidth {
+  width: 75%;
+  @media screen and (max-width: $max-width-big-1) {
+    width: 85%;
+  }
+}
+@mixin homeInfoPaddingBottom {
+  padding-bottom: 75px;
+  @media screen and (max-width: $max-width-medium-1) {
+    padding-bottom: 50px;
+  }
+}
+@mixin homeInfoContainerWidth {
+  width: 75%;
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 80%;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    width: 90%;
+  }
+}
+@mixin homeInfoTittleModifiedWidth {
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 90%;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    width: 80%;
+  }
+}
+@mixin homeInfoTitleH1Fontsize {
+  font-size: 26pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 30pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 35pt;
+  }
+}
+@mixin homeInfoTitleH2Fontsize {
+  &--small {
+    font-size: 19pt;
+  }
+  &--mid {
+    font-size: 23pt;
+  }
+  &--big {
+    font-size: 31pt;
+  }
+  @media screen and (min-width: $max-width-big) {
+    &--small {
+      font-size: 22pt;
+    }
+    &--mid {
+      font-size: 27pt;
+    }
+    &--big {
+      font-size: 35pt;
+    }
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    &--small {
+      font-size: 26pt;
+    }
+    &--mid {
+      font-size: 32pt;
+    }
+    &--big {
+      font-size: 40pt;
+    }
+  }
+}
+@mixin homeInfoParagraphFontsize {
+  font-size: 12pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 15pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 18pt;
+  }
+}
+@mixin homeInfoButtonBox {
+  height: 50px;
+  width: 245px;
+  margin-top: 40px;
+  // background-color: burlywood;
+  @media screen and (max-width: $max-width-medium-1) {
+    transform: scale(1.2) translateX(8%) translateY(5%);
+  }
+  @media screen and (min-width: $max-width-big) {
+    transform: scale(1.2) translateX(8%) translateY(20%);
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    transform: scale(1.4) translateX(14%) translateY(25%);
+  }
+}
+//home__info  <img>
+@mixin homeInfoImgWidth {
+  width: 120px;
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 110px;
+  }
+  @media screen and (min-width: $max-width-big) {
+    width: 130px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    width: 150px;
+  }
+}
+@mixin homeInfoSquareImgTranslate {
+  transform: translateX(-130%);
+  @media screen and (max-width: $max-width-medium-0) {
+    transform: translateX(-110%);
+  }
+}
+@mixin homeInfoAppleImgTranslate {
+  transform: translateX(150%) translateY(-12%);
+  @media screen and (max-width: $max-width-medium-0) {
+    transform: translateX(100%) translateY(-12%);
+  }
+}
+
+// ----------------------------------------------------------------------------------------------
+
+.section {
+  &-title {
+    margin-top: 20px;
+    @include sectionTitleHeight;
+    // background-color: chartreuse;
+  }
+  &-content {
+    @include sectionContentHeight;
+    // background-color: cornsilk;
+  }
+}
+
+.home {
+  font-family: $font-home;
+  position: relative;
+  &__title {
+    width: 75%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: relative;
+    // background-color: cornflowerblue;
+
+    &-box1 {
+      margin: 0 auto;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      height: 80px;
+      width: 100%;
+      // background-color: chocolate;
+      p {
+        @include homeTitleFontsize;
+      }
+    }
+
+    &-topic {
+      margin: 0 auto;
+      @include homeTitleTopicWidth;
+    }
+
+    &-box2 {
+      text-align: center;
+      // background-color: chocolate;
+      height: 80px;
+      width: 100%;
+      margin: 0 auto;
+      margin-top: 80px;
+      p {
+        @include homeTitleFontsize;
+      }
+    }
+  }
+
+  &__info {
+    @include homeInfoWidth;
+    @include homeInfoPaddingBottom;
+    margin: 0 auto;
+    position: relative;
+    // background-color: darkseagreen;
+    // border: 1px solid blueviolet;
+
+    &-container {
+      @include homeInfoContainerWidth;
+      margin: 0 auto;
+      // background-color: blanchedalmond;
+    }
+
+    &-title {
+      margin: 0 auto;
+      position: relative;
+      // background-color: darkgray;
+
+      h1 {
+        @include homeInfoTitleH1Fontsize;
+        font-family: $font-home-h1;
+        padding-top: 25px;
+      }
+
+      h2 {
+        font-family: $font-home-h2;
+        padding-top: 25px;
+      }
+
+      &-h2 {
+        @include homeInfoTitleH2Fontsize;
+      }
+
+      &--1 {
+        float: right;
+        width: 100%;
+        @include homeInfoTittleModifiedWidth;
+      }
+
+      &--2 {
+        float: left;
+        width: 80%;
+        @include homeInfoTittleModifiedWidth;
+      }
+    }
+
+    &-paragraph {
+      clear: both;
+      padding-top: 30px;
+      // background-color: yellow;
+      p {
+        @include homeInfoParagraphFontsize;
+        line-height: 33px;
+        a {
+          text-decoration: underline;
+          color: $indigo-blue;
+        }
+      }
+    }
+
+    &-buttonsBox {
+      @include homeInfoButtonBox;
+    }
+  }
+
+  &-button {
+    font-size: 12.5pt;
+    font-family: $font-home-button;
+    position: relative;
+    top: 15px;
+    color: $white;
+    background-color: $indigo-blue;
+    padding: 6px 17px 8px 17px;
+    border-radius: 32px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 255, 0.18);
+    margin-right: 20px;
+  }
+
+  &-squareImg {
+    position: absolute;
+    left: 0;
+    @include homeInfoImgWidth;
+    @include homeInfoSquareImgTranslate;
+  }
+
+  &-appleImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include homeInfoImgWidth;
+    @include homeInfoAppleImgTranslate;
+  }
+
+  &-sponsorsImg {
+    position: absolute;
+    bottom: 0;
+  }
+}
