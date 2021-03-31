@@ -1,6 +1,5 @@
 <template>
-  <!-- <div id="topHeader" class="header"> -->
-  <div id="topHeader" class="header header--sticky">
+  <div class="header header--sticky">
     <div class="header__left">
       <div class="header-logo">
         <a href="/2021/">
@@ -12,12 +11,6 @@
       <div class="header-links">
         <ul>
           <li>
-            <input
-              type="radio"
-              id="1"
-              class="header-link__input"
-              name="checlbox"
-            />
             <a
               href="/2021/agenda"
               v-bind:class="onRoute('Agenda') ? 'header-link--active' : ''"
@@ -53,6 +46,29 @@
             >
           </li>
         </ul>
+      </div>
+      <div class="header-links--mobile">
+        <select onchange="location = this.value;">
+          <option value="/">年會主題</option>
+          <option value="/agenda" :selected="onRoute('Agenda') ? true : false">
+            <a href="/2021/agenda">議程與活動</a></option
+          >
+          <option
+            value="/traffic"
+            :selected="onRoute('Traffic') ? true : false"
+          >
+            <a href="/2021/traffic">交通方式</a></option
+          >
+          <option value="/venue" :selected="onRoute('Venue') ? true : false"
+            ><a href="/2021/venue">會場地圖</a></option
+          >
+          <option value="/sponsor" :selected="onRoute('Sponsor') ? true : false"
+            ><a href="/2021/sponsor">贊助資訊</a></option
+          >
+          <option value="/team" :selected="onRoute('Team') ? true : false"
+            ><a href="/2021/team">籌備團隊</a></option
+          >
+        </select>
       </div>
       <div class="header-apply">
         <a href="">

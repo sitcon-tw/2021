@@ -18,7 +18,7 @@
     <section class="section-content">
       <section class="home__info">
         <div class="home__info-container">
-          <div class="home__info-title">
+          <div class="home__info-title home__info-title--1">
             <img
               class="home-squareImg"
               src="~@/assets/images/home/home-icon-square.svg"
@@ -40,7 +40,7 @@
       </section>
       <section class="home__info">
         <div class="home__info-container">
-          <div class="home__info-title">
+          <div class="home__info-title home__info-title--2">
             <img
               class="home-appleImg"
               src="~@/assets/images/home/home-icon-apple.svg"
