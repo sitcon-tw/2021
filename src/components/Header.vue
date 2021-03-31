@@ -71,7 +71,7 @@
         </select>
       </div>
       <div class="header-apply">
-        <a href="">
+        <a href="https://sitcon.kktix.cc/events/sitcon2021" target="_blank">
           報名去
         </a>
       </div>
