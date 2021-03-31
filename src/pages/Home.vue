@@ -9,8 +9,12 @@
           <img src="~@/assets/images/home/home-topic.svg" width="100%" />
         </div>
         <div class="home__title-box2">
-          <p>
+          <p class="home__title-box2--p1">
             05/29 • 中央研究院－人文社會科學館 •免費報名
+          </p>
+          <p class="home__title-box2--p2">
+            05/29 <br /><br />
+            中央研究院－人文社會科學館 •免費報名
           </p>
         </div>
       </div>

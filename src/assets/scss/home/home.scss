@@ -1,9 +1,9 @@
-@import "../color.scss";
-@import "../breakpoint.scss";
-$font-home: "Noto Serif CJK TC -SemiBold";
-$font-home-h1: "Noto Serif CJK TC -Bold";
-$font-home-h2: "Letter Gothic Std Bold";
-$font-home-button: "Noto Serif CJK TC -Black";
+@import '../color.scss';
+@import '../breakpoint.scss';
+$font-home: 'Noto Serif CJK TC -SemiBold';
+$font-home-h1: 'Noto Serif CJK TC -Bold';
+$font-home-h2: 'Letter Gothic Std Bold';
+$font-home-button: 'Noto Serif CJK TC -Black';
 
 //default screen size width: 1440px
 
@@ -17,17 +17,23 @@ $font-home-button: "Noto Serif CJK TC -Black";
   @media screen and (min-width: $max-width-big-0) {
     height: 700px;
   }
+  @media screen and (max-width: $max-width-small-1) {
+    height: 535px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    height: 500px;
+  }
 }
 @mixin sectionContentHeight {
   height: 1900px;
-  @media screen and (max-width: $max-width-medium-1) {
-    height: 1950px;
-  }
   @media screen and (min-width: $max-width-big) {
     height: 2050px;
   }
   @media screen and (min-width: $max-width-big-0) {
     height: 2150px;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    height: 1950px;
   }
 }
 // -------------------------------------------
@@ -35,13 +41,36 @@ $font-home-button: "Noto Serif CJK TC -Black";
 //home__title
 @mixin homeTitleFontsize {
   font-size: 18pt;
+
   @media screen and (min-width: $max-width-big) {
     font-size: 22pt;
   }
   @media screen and (min-width: $max-width-big-0) {
     font-size: 25pt;
   }
+  @media screen and (max-width: $max-width-small-0) {
+    font-size: 17pt;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 15pt;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    font-size: 13pt;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    font-size: 11pt;
+  }
 }
+@mixin homeTitleWidth {
+  width: 75%;
+  @media screen and (max-width: $max-width-big-1) {
+    width: 85%;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    width: 92%;
+  }
+}
+
 @mixin homeTitleTopicWidth {
   width: 500px;
   @media screen and (min-width: $max-width-big) {
@@ -50,7 +79,36 @@ $font-home-button: "Noto Serif CJK TC -Black";
   @media screen and (min-width: $max-width-big-0) {
     width: 700px;
   }
+  @media screen and (max-width: $max-width-small-0) {
+    width: 400px;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    width: 340px;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    width: 320px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    width: 270px;
+  }
 }
+@mixin homeTitleBox2PDisplay {
+  &--p1 {
+    display: block;
+  }
+  &--p2 {
+    display: none;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    &--p1 {
+      display: none;
+    }
+    &--p2 {
+      display: block;
+    }
+  }
+}
+
 // -------------------------------------------
 
 //home__info
@@ -59,11 +117,17 @@ $font-home-button: "Noto Serif CJK TC -Black";
   @media screen and (max-width: $max-width-big-1) {
     width: 85%;
   }
+  @media screen and (max-width: $max-width-small-1) {
+    width: 92%;
+  }
 }
 @mixin homeInfoPaddingBottom {
   padding-bottom: 75px;
   @media screen and (max-width: $max-width-medium-1) {
     padding-bottom: 50px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    padding-bottom: 30px;
   }
 }
 @mixin homeInfoContainerWidth {
@@ -71,8 +135,17 @@ $font-home-button: "Noto Serif CJK TC -Black";
   @media screen and (max-width: $max-width-medium-0) {
     width: 80%;
   }
+  @media screen and (max-width: $max-width-medium-1) {
+    width: 85%;
+  }
   @media screen and (max-width: $max-width-small-0) {
     width: 90%;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    width: 94%;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    width: 98%;
   }
 }
 @mixin homeInfoTittleModifiedWidth {
@@ -80,7 +153,7 @@ $font-home-button: "Noto Serif CJK TC -Black";
     width: 90%;
   }
   @media screen and (max-width: $max-width-medium-1) {
-    width: 80%;
+    width: 75%;
   }
 }
 @mixin homeInfoTitleH1Fontsize {
@@ -90,6 +163,15 @@ $font-home-button: "Noto Serif CJK TC -Black";
   }
   @media screen and (min-width: $max-width-big-0) {
     font-size: 35pt;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    font-size: 22pt;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 20pt;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 18pt;
   }
 }
 @mixin homeInfoTitleH2Fontsize {
@@ -124,6 +206,56 @@ $font-home-button: "Noto Serif CJK TC -Black";
       font-size: 40pt;
     }
   }
+  @media screen and (max-width: $max-width-medium-0) {
+    &--small {
+      font-size: 14pt;
+    }
+    &--mid {
+      font-size: 17pt;
+    }
+    &--big {
+      font-size: 24pt;
+    }
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    &--small {
+      font-size: 13pt;
+    }
+    &--mid {
+      font-size: 15pt;
+    }
+    &--big {
+      font-size: 21pt;
+    }
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    &--big {
+      font-size: 16pt;
+    }
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    &--small {
+      font-size: 11pt;
+    }
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    &--small {
+      font-size: 9pt;
+    }
+    &--mid {
+      font-size: 12pt;
+    }
+    &--big {
+      font-size: 14pt;
+    }
+  }
+}
+
+@mixin homeInfoParagraphPadding {
+  padding-top: 30px;
+  @media screen and (max-width: $max-width-small-1) {
+    padding-top: 20px;
+  }
 }
 @mixin homeInfoParagraphFontsize {
   font-size: 12pt;
@@ -133,33 +265,53 @@ $font-home-button: "Noto Serif CJK TC -Black";
   @media screen and (min-width: $max-width-big-0) {
     font-size: 18pt;
   }
+  @media screen and (max-width: $max-width-small-0) {
+    font-size: 11pt;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    font-size: 10pt;
+  }
 }
 @mixin homeInfoButtonBox {
   height: 50px;
   width: 245px;
   margin-top: 40px;
-  // background-color: burlywood;
-  @media screen and (max-width: $max-width-medium-1) {
-    transform: scale(1.2) translateX(8%) translateY(5%);
-  }
   @media screen and (min-width: $max-width-big) {
     transform: scale(1.2) translateX(8%) translateY(20%);
   }
   @media screen and (min-width: $max-width-big-0) {
     transform: scale(1.4) translateX(14%) translateY(25%);
   }
+  @media screen and (max-width: $max-width-medium-1) {
+    transform: scale(1.2) translateX(8%) translateY(5%);
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    transform: scale(1.1) translateX(5%) translateY(5%);
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    transform: scale(0.9) translateX(-6%) translateY(-20%);
+  }
 }
 //home__info  <img>
 @mixin homeInfoImgWidth {
   width: 120px;
-  @media screen and (max-width: $max-width-medium-0) {
-    width: 110px;
-  }
   @media screen and (min-width: $max-width-big) {
     width: 130px;
   }
   @media screen and (min-width: $max-width-big-0) {
     width: 150px;
+  }
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 110px;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    width: 90px;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    width: 80px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    width: 70px;
   }
 }
 @mixin homeInfoSquareImgTranslate {
@@ -173,6 +325,9 @@ $font-home-button: "Noto Serif CJK TC -Black";
   @media screen and (max-width: $max-width-medium-0) {
     transform: translateX(100%) translateY(-12%);
   }
+  @media screen and (max-width: $max-width-small-2) {
+    transform: translateX(90%) translateY(-12%);
+  }
 }
 
 // ----------------------------------------------------------------------------------------------
@@ -181,11 +336,9 @@ $font-home-button: "Noto Serif CJK TC -Black";
   &-title {
     margin-top: 20px;
     @include sectionTitleHeight;
-    // background-color: chartreuse;
   }
   &-content {
     @include sectionContentHeight;
-    // background-color: cornsilk;
   }
 }
 
@@ -193,12 +346,11 @@ $font-home-button: "Noto Serif CJK TC -Black";
   font-family: $font-home;
   position: relative;
   &__title {
-    width: 75%;
+    @include homeTitleWidth;
     text-align: center;
     margin: 0 auto;
     padding-top: 10px;
     position: relative;
-    // background-color: cornflowerblue;
 
     &-box1 {
       margin: 0 auto;
@@ -206,7 +358,6 @@ $font-home-button: "Noto Serif CJK TC -Black";
       margin-bottom: 20px;
       height: 80px;
       width: 100%;
-      // background-color: chocolate;
       p {
         @include homeTitleFontsize;
       }
@@ -219,7 +370,6 @@ $font-home-button: "Noto Serif CJK TC -Black";
 
     &-box2 {
       text-align: center;
-      // background-color: chocolate;
       height: 80px;
       width: 100%;
       margin: 0 auto;
@@ -227,6 +377,8 @@ $font-home-button: "Noto Serif CJK TC -Black";
       p {
         @include homeTitleFontsize;
       }
+
+      @include homeTitleBox2PDisplay;
     }
   }
 
@@ -235,19 +387,15 @@ $font-home-button: "Noto Serif CJK TC -Black";
     @include homeInfoPaddingBottom;
     margin: 0 auto;
     position: relative;
-    // background-color: darkseagreen;
-    // border: 1px solid blueviolet;
 
     &-container {
       @include homeInfoContainerWidth;
       margin: 0 auto;
-      // background-color: blanchedalmond;
     }
 
     &-title {
       margin: 0 auto;
       position: relative;
-      // background-color: darkgray;
 
       h1 {
         @include homeInfoTitleH1Fontsize;
@@ -279,8 +427,7 @@ $font-home-button: "Noto Serif CJK TC -Black";
 
     &-paragraph {
       clear: both;
-      padding-top: 30px;
-      // background-color: yellow;
+      @include homeInfoParagraphPadding;
       p {
         @include homeInfoParagraphFontsize;
         line-height: 33px;
