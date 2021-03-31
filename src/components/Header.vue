@@ -70,7 +70,7 @@
             ><a href="/2021/team">籌備團隊</a></option
           >
         </select>
-        <div class="header-links--mobile-bg"></div>
+        <!-- <div class="header-links--mobile-bg"></div> -->
       </div>
       <div class="header-apply">
         <a href="https://sitcon.kktix.cc/events/sitcon2021" target="_blank">

@@ -209,7 +209,6 @@ $font-header-apply: 'Noto Serif CJK TC -Black';
   &__right {
     float: right;
     width: 80%;
-    // background-color: lightslategrey;
   }
 
   &-links {
@@ -219,7 +218,6 @@ $font-header-apply: 'Noto Serif CJK TC -Black';
         visibility: hidden;
       }
 
-      // background-color: lightyellow;
       @include headerLinksMobilePosition;
       left: 40%;
       select {
