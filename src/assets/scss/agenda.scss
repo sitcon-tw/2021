@@ -57,6 +57,7 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
     margin: 50px 0;
 
     &.bold {
+      font-family: $fontFamilyBold;
       font-weight: bold;
     }
   }
