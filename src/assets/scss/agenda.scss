@@ -58,7 +58,7 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
 
     &.bold {
       font-weight: bold;
-  }
+    }
   }
 
   p.vote {
@@ -80,7 +80,6 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
   }
 
   ol.vote.rule {
-    counter-reset: 0;
     list-style-type: decimal;
 
     li {
