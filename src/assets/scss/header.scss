@@ -1,0 +1,323 @@
+@import './color.scss';
+@import './breakpoint.scss';
+
+$font-header-link: 'Noto Serif CJK TC -Bold';
+$font-header-apply: 'Noto Serif CJK TC -Black';
+
+@mixin headerWidth {
+  width: 88%;
+  @media screen and (max-width: $max-width-small-0) {
+    width: 92%;
+  }
+}
+
+@mixin headerHeight {
+  height: 62px;
+  @media screen and (max-width: $max-width-medium-1) {
+    height: 75px;
+  }
+}
+
+// -------------------------------------------
+
+// header-logo
+@mixin headerLogoPosition {
+  position: absolute;
+  left: 35px;
+  top: 50%;
+
+  @media screen and (max-width: $max-width-small-1) {
+    left: 20px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    left: 15px;
+  }
+}
+@mixin headerLogoWidth {
+  width: 150px;
+
+  @media screen and (max-width: $max-width-small-1) {
+    width: 120px;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    width: 105px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    width: 98px;
+  }
+}
+
+// -------------------------------------------
+
+// header-links
+@mixin headerLinksFontSize {
+  font-size: 12pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 13.5pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 15pt;
+  }
+}
+@mixin headerLinksWidth {
+  width: 600px;
+
+  @media screen and (min-width: $max-width-big) {
+    width: 630px;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    width: 680px;
+  }
+}
+@mixin headerLinksMarginRight {
+  margin-right: 92px;
+  @media screen and (max-width: $max-width-medium-0) {
+    margin-right: -35px;
+  }
+}
+@mixin headerLinksLiPadding {
+  padding: 22px 20px;
+  @media screen and (max-width: $max-width-medium-0) {
+    padding: 22px 8px;
+  }
+}
+
+// -------------------------------------------
+
+// header-apply
+@mixin headerApplyWidthAndHeight {
+  width: 92px;
+  height: 38px;
+  @media screen and (max-width: $max-width-medium-1) {
+    width: 85px;
+    height: 43px;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    width: 75px;
+    height: 40px;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    width: 65px;
+    height: 38px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    width: 55px;
+    height: 35px;
+  }
+}
+@mixin headerApplyFontsize {
+  font-size: 13pt;
+  @media screen and (max-width: $max-width-medium-1) {
+    font-size: 12pt;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 11pt;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    font-size: 9pt;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    font-size: 8pt;
+  }
+}
+
+// -------------------------------------------
+
+// header-links--mobile
+@mixin headerLinksMobilePosition {
+  position: relative;
+  left: 40%;
+  top: 12px;
+
+  @media screen and (max-width: $max-width-small-0) {
+    left: 35%;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    left: 28%;
+  }
+}
+@mixin headerLinksMobileSelectWidth {
+  width: 150px;
+  @media screen and (max-width: $max-width-small-0) {
+    width: 120px;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    width: 110px;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    width: 95px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    width: 85px;
+  }
+}
+@mixin headerLinksMobileSelectFontsize {
+  font-size: 14pt;
+
+  @media screen and (max-width: $max-width-small-0) {
+    font-size: 13pt;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    font-size: 11pt;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    font-size: 9pt;
+  }
+}
+@mixin headerLinksMobileSelectPadding {
+  padding-left: 10px;
+  padding-bottom: 10px;
+
+  @media screen and (max-width: $max-width-small-0) {
+    padding-left: 3px;
+    padding-bottom: 10px;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    padding-bottom: 7px;
+  }
+}
+
+// ----------------------------------------------------------------------------------------------
+
+.header {
+  z-index: 99;
+  position: relative;
+  top: 35px;
+  margin: 0 auto;
+  @include headerWidth;
+  @include headerHeight;
+  border-radius: 73px;
+  box-shadow: 0 6px 18px 0 rgba(0, 0, 255, 0.22);
+  background-color: $white;
+
+  &--sticky {
+    position: sticky;
+    z-index: 99;
+    margin-top: 60px;
+  }
+  &__left {
+    float: left;
+    width: 20%;
+  }
+
+  &-logo {
+    @include headerLogoPosition;
+    @include headerLogoWidth;
+    transform: translateY(-50%);
+  }
+
+  &__right {
+    float: right;
+    width: 80%;
+  }
+
+  &-links {
+    &--mobile {
+      @media screen and (min-width: $max-width-medium-1) {
+        display: none;
+        visibility: hidden;
+      }
+
+      @include headerLinksMobilePosition;
+      left: 40%;
+      select {
+        z-index: 99;
+        @include headerLinksMobileSelectWidth;
+        height: 60px;
+        @include headerLinksMobileSelectPadding;
+        font-family: $font-header-link;
+        @include headerLinksMobileSelectFontsize;
+        background-color: $white;
+        border: none;
+        border-bottom: 4px solid $indigo-blue;
+
+        &:focus {
+          border: none;
+          outline: none;
+        }
+
+        option {
+          text-align: center;
+          @include headerLinksMobileSelectFontsize;
+        }
+      }
+      select:focus ~ &-bg {
+        opacity: 1;
+        display: block;
+        transition: 0.3s linear;
+      }
+
+      &-bg {
+        z-index: 90;
+        opacity: 0;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba($black, 0.5);
+        backdrop-filter: blur(3px);
+      }
+    }
+    @media screen and (max-width: $max-width-medium-1) {
+      display: none;
+      visibility: hidden;
+    }
+
+    font-family: $font-header-link;
+    float: right;
+    @include headerLinksWidth;
+    @include headerLinksMarginRight;
+    height: 100%;
+    height: 50px;
+    top: 6px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+
+      li {
+        float: left;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: block;
+        text-align: left;
+        @include headerLinksLiPadding;
+
+        a {
+          @include headerLinksFontSize;
+          color: $black;
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  &-link--active {
+    border-bottom: $indigo-blue solid 3.5px;
+  }
+
+  &-apply {
+    font-family: $font-header-apply;
+    @include headerApplyWidthAndHeight;
+    border-radius: 38px;
+    background-color: $indigo-blue;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    a {
+      @include headerApplyFontsize;
+      color: $white;
+      position: absolute;
+      top: 50%;
+      left: 40%;
+      transform: translateX(-35%) translateY(-50%);
+    }
+  }
+}

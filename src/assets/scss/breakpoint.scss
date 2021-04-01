@@ -6,7 +6,7 @@ $max-width-4: 415px;
 
 $max-width-35: 480px;
 
-//agenda.scsss breakpoint
+//agenda.scsss and  home.scss breakpoint
 $max-width-big-0: 1800px;
 $max-width-big: 1500px;
 $max-width-medium-0: 1100px;
@@ -15,6 +15,9 @@ $max-width-small-0: 750px;
 $max-width-small-1: 500px;
 $max-width-small-2: 410px;
 $max-width-small-3: 360px;
+
+// home.scss breakpoint
+$max-width-big-1: 1300px;
 
 @mixin xs {
   @media (max-width: $max-width-4) {

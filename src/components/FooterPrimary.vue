@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer-container">
+  <footer class="footer-container-primary">
     <div class="footer-left">
       <p class="footer-brand footer-font-block">
         <span class="footer-context">學生計算機年會</span>
@@ -31,6 +31,21 @@
             </a>
           </span>
         </p>
+      </div>
+      <div class="footer-sitesOverYears">
+        <div class="footer-sitesOverYears__title">
+          <p class="footer-context">歷年網站</p>
+        </div>
+        <div class="footer-sitesOverYears__links">
+          <a href="https://sitcon.org/2020/">2020</a>
+          <a href="https://sitcon.org/2019/">2019</a>
+          <a href="https://sitcon.org/2018/">2018</a>
+          <a href="https://sitcon.org/2017/">2017</a>
+          <a href="https://sitcon.org/2016/">2016</a>
+          <a href="https://sitcon.org/2015/">2015</a>
+          <a href="https://sitcon.org/2014/">2014</a>
+          <a href="https://sitcon.org/2013/">2013</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -71,5 +86,5 @@ export default class CFP extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/footer';
+@import '@/assets/scss/footer-primary';
 </style>
