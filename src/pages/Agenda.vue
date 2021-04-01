@@ -2,6 +2,12 @@
   <div id="agenda">
     <!-- Vote Section -->
     <BlockTitle text="人氣投票" id="#vote" />
+    <article class="bold">
+      總是因為擠不進會議廳，而聽不到感興趣的議程嗎？
+      <br /><br />
+      喜歡的議程，不能只有自己看到！SITCON 2021 首次舉辦「事前人氣投票」，除了搶先看到精彩議程介紹，也能把手中關鍵一票投給最期待的議程！會眾期待度愈高的議程，愈有機會安排在空間比較寬敞的會議廳。
+    </article>
+    <p class="vote"><a class="vote button" href="https://docs.google.com/forms/d/e/1FAIpQLSdWJtLP96bqXWukmOEar0xiBfGScm3qAlp-Xii05-cmU2Gxlg/viewform" target="_blank" rel="noopeener">投票去</a></p>
     <article>
       <p>總是因為擠不進會議廳，而聽不到感興趣的議程嗎？</p>
       <p>喜歡的議程，不能只有自己看到！SITCON 2021 首次舉辦「事前人氣投票」，除了搶先看到精彩議程介紹，也能把手中關鍵一票投給最期待的議程！</p>
