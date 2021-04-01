@@ -52,7 +52,6 @@
         <img class="arrow" src="@/assets/images/arrow-right.svg">
       </div>
     </div>
-   
     <!-- Event Section End -->
   </div>
 </template>
