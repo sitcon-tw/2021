@@ -7,7 +7,7 @@
   @media screen and (max-width: $max-width-medium-0) {
     font-size: 12pt;
   }
-  }
+}
 @mixin RWDWidth {
   max-width: 80%;
   @media screen and (max-width: $max-width-medium-0) {
@@ -81,21 +81,39 @@
   }
 
   div.event.container:not(.mobile) {
-    display: grid;
-    grid-template-columns: min-content repeat(6, 1fr) min-content;
-    column-gap: 30px;
+    display: flex;
+    flex-direction: row;
+
+    --gap: 30px;
 
     @media screen and (max-width: 1200px) {
-      column-gap: 20px;
+      --gap: 20px;
     }
     @media screen and (max-width: 1024px) {
-      column-gap: 10px;
+      --gap: 10px;
     }
 
-    img.arrow {
-      margin: auto;
-      width: fit-content;
-      height: calc(99/217 * 100%);
+    .event.block {
+      flex: 1;
+      margin: 0 calc(var(--gap) / 2);
+    }
+
+    .arrow {
+      flex-basis: 0;
+      align-self: center;
+      width: 55px;
+
+      @media screen and (max-width: 1200px) {
+        width: 37px;
+      }
+      
+      &:first-of-type {
+        margin-right: calc(var(--gap) / 2);
+      }
+
+      &:last-of-type {
+        margin-left: calc(var(--gap) / 2);
+      }
     }
   }
 }
@@ -141,8 +159,13 @@
         }
       }
 
-      img.arrow {
-        height: 80%;
+      .arrow {
+        // percentage height in flex with dynamic main size doesn't work
+        // see more: https://www.w3.org/TR/css-flexbox-1/#change-201403-definite-flexing
+        // height: 80%;
+
+        // Setting its width then it works. magic, don't touch please
+        width: 17.5%;
       }
     }
   }
