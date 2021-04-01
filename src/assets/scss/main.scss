@@ -21,9 +21,16 @@
   cursor: pointer;
 }
 
+html {
+  // use 100% instead of 100vh to prevent strange behavior on mobile chrome
+  width: 100%;
+  height: 100%;
+}
+
 body {
-  width: 100vw;
-  height: 100vh;
+  // use 100% instead of 100vh to prevent strange behavior on mobile chrome
+  width: 100%;
+  height: 100%;
 
   position: relative;
   overflow-x: hidden;
@@ -36,8 +43,9 @@ body {
 }
 
 #app {
-  width: 100vw;
-  height: 100vh;
+  // use 100% instead of 100vh to prevent strange behavior on mobile chrome
+  width: 100%;
+  height: 100%;
   overflow-x: hidden;
   margin: 0;
 }
