@@ -1,11 +1,11 @@
-$fontFamily: "Noto Serif CJK TC -Black";
+@import './font';
 
 div.block.title {
     display: flex;
     justify-content: center;
 
     font-size: 26px;
-    font-family: $fontFamily;
+    @include fontFamily-black;
     font-weight: bold;
 
     line-height: 1.44;

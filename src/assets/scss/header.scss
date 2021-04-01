@@ -1,8 +1,6 @@
 @import './color.scss';
 @import './breakpoint.scss';
-
-$font-header-link: 'Noto Serif CJK TC -Bold';
-$font-header-apply: 'Noto Serif CJK TC -Black';
+@import './font';
 
 @mixin headerWidth {
   width: 88%;
@@ -228,11 +226,11 @@ $font-header-apply: 'Noto Serif CJK TC -Black';
         @include headerLinksMobileSelectWidth;
         height: 60px;
         @include headerLinksMobileSelectPadding;
-        font-family: $font-header-link;
         @include headerLinksMobileSelectFontsize;
         background-color: $white;
         border: none;
         border-bottom: 4px solid $indigo-blue;
+        @include fontFamily-bold;
 
         &:focus {
           border: none;
@@ -268,7 +266,7 @@ $font-header-apply: 'Noto Serif CJK TC -Black';
       visibility: hidden;
     }
 
-    font-family: $font-header-link;
+    @include fontFamily-bold;
     float: right;
     @include headerLinksWidth;
     @include headerLinksMarginRight;
@@ -305,7 +303,7 @@ $font-header-apply: 'Noto Serif CJK TC -Black';
   }
 
   &-apply {
-    font-family: $font-header-apply;
+    @include fontFamily-black;
     @include headerApplyWidthAndHeight;
     border-radius: 38px;
     background-color: $indigo-blue;
