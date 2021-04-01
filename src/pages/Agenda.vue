@@ -25,22 +25,34 @@
     </article>
     <!-- Vote Section End -->
     <!-- Event Section -->
-    <!-- wip
     <BlockTitle text="活動" id="#event" />
     <div v-if="!isMobile()" class="event container">
       <img class="arrow" src="@/assets/images/arrow-left.svg">
       <EventBlock icon="union" text="大地遊戲"/>
       <EventBlock icon="stall-outline" text="社群攤位"/>
       <EventBlock icon="group" text="天使計劃"/>
-      <EventBlock icon="lightning-outline" text="Lightning\nTalk" style="font-size: 20px"/>
+      <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true"/>
       <EventBlock icon="guide-outline" text="導遊團"/>
       <EventBlock text="開放式\n議程"/>
       <img class="arrow" src="@/assets/images/arrow-right.svg">
     </div>
-    -->
-    <div v-if="isMobile()" class="mobile event container">
-      <!-- TODO -->
+    <div v-else class="mobile event container">
+      <div class="column">
+        <EventBlock icon="union" text="大地遊戲"/>
+        <EventBlock icon="stall-outline" text="社群攤位"/>
+        <EventBlock icon="group" text="天使計劃"/>
+      </div>
+      <div class="column">
+        <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true"/>
+        <EventBlock icon="guide-outline" text="導遊團"/>
+      </div>
+      <div class="column">
+        <img class="arrow" src="@/assets/images/arrow-left.svg">
+        <EventBlock text="開放式\n議程"/>
+        <img class="arrow" src="@/assets/images/arrow-right.svg">
+      </div>
     </div>
+   
     <!-- Event Section End -->
   </div>
 </template>
