@@ -121,11 +121,6 @@
 					</div>
 				</div>
 			</section>
-			<img
-				class="home-sponsorsImg"
-				src="~@/assets/images/home/home-sponsors.png"
-				width="100%"
-			/>
 		</section>
 	</div>
 </template>
