@@ -47,6 +47,7 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
   margin: 0 auto;
   @include RWDWidth;
   padding-top: 50px;
+  padding-bottom: 50px;
 
   font-family: $fontFamily;
   @include RWDFontSize;
@@ -88,10 +89,17 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
     }
   }
 
-  div.event.container {
+  div.event.container:not(.mobile) {
     display: grid;
     grid-template-columns: min-content repeat(6, 1fr) min-content;
     column-gap: 30px;
+
+    @media screen and (max-width: 1200px) {
+      column-gap: 20px;
+    }
+    @media screen and (max-width: 1024px) {
+      column-gap: 10px;
+    }
 
     img.arrow {
       margin: auto;
@@ -100,10 +108,51 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
     }
   }
 }
+
 @media screen and (max-width: $max-width-medium-1) {
   #agenda {
     p.vote {
       padding: 0;
+    }
+
+    div.mobile.event.container {
+      .column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        .event.block {
+          width: 33%;
+        }
+
+        > :nth-child(2) {
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+
+        // column with two item only
+        > :last-child:nth-child(2) {
+          margin-left: 10px;
+          margin-right: 0;
+        }
+
+        // column with one item and two arrows
+        > .arrow ~ :nth-child(2) {
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+
+        &:not(:first-child) {
+          // more vertically compact column
+          margin-top: -20px;
+        }
+      }
+
+      img.arrow {
+        height: 80%;
+      }
     }
   }
 }

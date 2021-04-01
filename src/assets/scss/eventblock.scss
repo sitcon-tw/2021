@@ -1,4 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+@import './font';
+@import './breakpoint';
+
+$fontFamily: "Noto Serif CJK TC -Bold";
+
+@mixin RWDFontSize {
+  font-size: 18pt;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 16pt;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 15pt;
+  }
+  @media screen and (max-width: 1024px) {
+    font-size: 13pt;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    font-size: 22pt;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 16pt;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 15pt;
+  }
+}
+
+@mixin RWDIconScale {
+  transform: scale(0.75);
+
+  @media screen and (max-width: 1300px) {
+    transform: scale(0.6);
+  }
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.55);
+  }
+  @media screen and (max-width: 1024px) {
+    transform: scale(0.5);
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    transform: scale(1.25);
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    transform: scale(1);
+  }
+  @media screen and (max-width: 600px) {
+    transform: scale(0.75);
+  }
+  @media screen and (max-width: 500px) {
+    transform: scale(0.55);
+  }
+}
 
 .event.block {
   position: relative;
@@ -9,10 +61,9 @@
   align-items: center;
   justify-content: center;
 
-  font-size: 24px;
+  @include RWDFontSize;
   line-height: 1.44;
-  font-family: 'Noto Serif TC', serif;
-  font-weight: bold;
+  font-family: $fontFamily;
 
   .background {
     width: 100%;
@@ -36,12 +87,26 @@
     span {
       white-space: pre;
       z-index: 1;
+
+      // for lightning talk block
+      &.special {
+        // visual adjustment
+        margin-top: 5%;
+
+      }
+      @media screen and (min-width: $max-width-medium-1) {
+        &.special {
+          transform: scale(0.75);
+        }
+      }
     }
   
     i.icon {
       position: absolute;
       z-index: 0;
-      transform: scale(0.75);
+
+      @include RWDIconScale();
+      // transform: scale(0.75);
   
       &::before {
         width: 100%;
@@ -91,7 +156,7 @@
       }
   
       &.guide-outline {
-        margin-right: 40px;
+        margin-right: 25%;
         width: 74px;
         height: 95px;
   
