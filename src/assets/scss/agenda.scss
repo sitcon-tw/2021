@@ -2,7 +2,8 @@
 @import './color';
 
 $fontFamily: "Noto Serif CJK TC -SemiBold";
-$fontFamilyVote: "Noto Serif CJK TC -Black";
+$fontFamilyBlack: "Noto Serif CJK TC -Black";
+$fontFamilyBold: "Noto Serif CJK TC -Bold";
 
 @mixin RWDFontSize {
   font-size: 14pt;
@@ -74,7 +75,7 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
       border: none;
       border-radius: 32px;
       
-      font-family: $fontFamilyVote;
+      font-family: $fontFamilyBlack;
       color: white;
       @include RWDButton;
     }
