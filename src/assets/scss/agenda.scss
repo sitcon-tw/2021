@@ -55,6 +55,10 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
     white-space: pre-wrap;
     line-height: 2;
     margin: 50px 0;
+
+    &.bold {
+      font-weight: bold;
+  }
   }
 
   p.vote {
@@ -70,9 +74,7 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
       border-radius: 32px;
       
       font-family: $fontFamilyVote;
-      //font-size: 16pt;
       color: white;
-      //line-height: 1.44;
       @include RWDButton;
     }
   }
@@ -82,7 +84,9 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
     list-style-type: decimal;
 
     li {
-      line-height: 3;
+      line-height: 2;
+      // prevent marker overflow
+      margin-left: 1.5em;
     }
   }
 
@@ -95,6 +99,13 @@ $fontFamilyVote: "Noto Serif CJK TC -Black";
       margin: auto;
       width: fit-content;
       height: calc(99/217 * 100%);
+    }
+  }
+}
+@media screen and (max-width: $max-width-medium-1) {
+  #agenda {
+    p.vote {
+      padding: 0;
     }
   }
 }
