@@ -79,7 +79,7 @@
 						<p>
 							SITCON
 							歡迎不同身分、來自不同背景的與會者，也非常鼓勵女性、性少數與多元背景的參與者。為了讓大家都能愉快的參加
-							SITCON，我們要求所有參與者閱讀年會的<a href=""
+							SITCON，我們要求所有參與者閱讀年會的<a href="https://sitcon.org/code-of-conduct/" target="_blank"
 								>行為準則（Code of Conduct）</a
 							>，共同創造一個友善的環境。
 						</p>
