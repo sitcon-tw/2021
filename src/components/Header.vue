@@ -63,33 +63,31 @@
 
 			<div class="header-links--mobile">
 				<select onchange="location = this.value;">
-					<option value="/"> 年會主題</option>
+					<option value="/2021">年會主題</option>
 					<option
-						value="/agenda"
+						value="/2021/agenda"
 						:selected="onRoute('Agenda') ? true : false"
-					>
-						<a href="/2021/agenda"> 議程與活動</a></option
+					  >議程與活動</option
 					>
 					<option
-						value="/traffic"
+						value="/2021/traffic"
 						:selected="onRoute('Traffic') ? true : false"
-					>
-						<a href="/2021/traffic">交通方式</a></option
-					>
+					  >交通方式</option
+		      >
 					<option
-						value="/venue"
+						value="/2021/venue"
 						:selected="onRoute('Venue') ? true : false"
-						><a href="/2021/venue">會場地圖</a></option
+						>會場地圖</option
 					>
 					<option
-						value="/sponsor"
+						value="/2021/sponsor"
 						:selected="onRoute('Sponsor') ? true : false"
-						><a href="/2021/sponsor">贊助資訊</a></option
+						>贊助資訊</option
 					>
 					<option
-						value="/team"
+						value="/2021/team"
 						:selected="onRoute('Team') ? true : false"
-						><a href="/2021/team">籌備團隊</a></option
+						>籌備團隊</option
 					>
 				</select>
 				<!-- <div class="header-links--mobile-bg"></div> -->
