@@ -25,23 +25,30 @@ import FooterPrimary from '@/components/FooterPrimary.vue';
   }
 })
 export default class App extends Vue {
-  @Action('toggleDevice', { namespace: 'app' }) private toggleDevice!: (device: DeviceType) => void;
+  @Action('toggleDevice', { namespace: 'app' }) private toggleDevice!: (
+    device: DeviceType
+  ) => void;
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
-  private deviceTypeMediaQuery: MediaQueryList = window.matchMedia('(min-width: 900px)');
+  private deviceTypeMediaQuery: MediaQueryList = window.matchMedia(
+    '(min-width: 900px)'
+  );
 
-  public mounted () {
+  public mounted() {
     this.detectDeviceType(this.deviceTypeMediaQuery);
 
     // add change listener instead of resize listener
     if (this.deviceTypeMediaQuery.addEventListener) {
-      this.deviceTypeMediaQuery.addEventListener('change', this.detectDeviceType);
+      this.deviceTypeMediaQuery.addEventListener(
+        'change',
+        this.detectDeviceType
+      );
     } else {
       // sad safari
       this.deviceTypeMediaQuery.addListener(this.detectDeviceType);
     }
   }
 
-  public isRoot (): boolean {
+  public isRoot(): boolean {
     if (
       this.$route.name === 'CFP' ||
       this.$route.name === 'news' ||
@@ -53,7 +60,7 @@ export default class App extends Vue {
     }
   }
 
-  private detectDeviceType (mq: (MediaQueryList | MediaQueryListEvent)): void {
+  private detectDeviceType(mq: MediaQueryList | MediaQueryListEvent): void {
     const isDesktop: boolean = mq.matches;
 
     if (isDesktop) {
