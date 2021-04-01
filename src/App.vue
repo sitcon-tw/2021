@@ -22,14 +22,14 @@ import FooterPrimary from '@/components/FooterPrimary.vue';
     Header,
     FooterPrimary,
     FooterSecondary
-  },
+  }
 })
 export default class App extends Vue {
   @Action('toggleDevice', { namespace: 'app' }) private toggleDevice!: (device: DeviceType) => void;
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
   private deviceTypeMediaQuery: MediaQueryList = window.matchMedia('(min-width: 900px)');
 
-  public mounted() {
+  public mounted () {
     this.detectDeviceType(this.deviceTypeMediaQuery);
 
     // add change listener instead of resize listener
@@ -50,7 +50,7 @@ export default class App extends Vue {
       this.toggleDevice(DeviceType.MOBILE);
     }
   }
-  public isRoot (): boolean {
+  private isRoot (): boolean {
     if (
       this.$route.name === 'CFP' ||
       this.$route.name === 'news' ||
