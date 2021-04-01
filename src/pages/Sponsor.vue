@@ -19,8 +19,8 @@
 					<div class="info-left-button-wrapper"></div>
 				</div>
 				<div class="button-wrapper">
-					<a class="button" href="#">個人贊助</a>
-					<a class="button" href="#">企業合作</a>
+					<a class="button" href="http://bit.ly/donatesitcon2021">個人贊助</a>
+					<a class="button" href="mailto:contact@sitcon.org">企業合作</a>
 				</div>
 			</div>
 			<!--
