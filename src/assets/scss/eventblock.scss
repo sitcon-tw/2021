@@ -15,7 +15,7 @@ $fontFamily: "Noto Serif CJK TC -Bold";
   @media screen and (max-width: 1024px) {
     font-size: 13pt;
   }
-  @media screen and (max-width: $max-width-medium-1) {
+  @media screen and (max-width: $max-width-medium-1 - 1px) {
     font-size: 22pt;
   }
   @media screen and (max-width: 650px) {
@@ -38,7 +38,7 @@ $fontFamily: "Noto Serif CJK TC -Bold";
   @media screen and (max-width: 1024px) {
     transform: scale(0.5);
   }
-  @media screen and (max-width: $max-width-medium-1) {
+  @media screen and (max-width: $max-width-medium-1 - 1px) {
     transform: scale(1.25);
   }
   @media screen and (max-width: $max-width-small-0) {
