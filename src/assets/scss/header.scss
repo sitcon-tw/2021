@@ -133,7 +133,10 @@ $font-header-apply: 'Noto Serif CJK TC -Black';
     left: 35%;
   }
   @media screen and (max-width: $max-width-small-1) {
-    left: 28%;
+    left: 25%;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    left: 26%;
   }
 }
 @mixin headerLinksMobileSelectWidth {
@@ -142,7 +145,7 @@ $font-header-apply: 'Noto Serif CJK TC -Black';
     width: 120px;
   }
   @media screen and (max-width: $max-width-small-1) {
-    width: 110px;
+    width: 115px;
   }
   @media screen and (max-width: $max-width-small-2) {
     width: 95px;
