@@ -41,6 +41,16 @@ export default class App extends Vue {
     }
   }
 
+  public isRoot(): boolean {
+    if (
+      this.$route.name == "CFP" ||
+      this.$route.name === "news" ||
+      this.$route.name === "ocfp-news"
+    )
+      return false;
+    else return true;
+  }
+
   private detectDeviceType (mq: (MediaQueryList | MediaQueryListEvent)): void {
     const isDesktop: boolean = mq.matches;
 
@@ -48,17 +58,6 @@ export default class App extends Vue {
       this.toggleDevice(DeviceType.DESKTOP);
     } else {
       this.toggleDevice(DeviceType.MOBILE);
-    }
-  }
-  private isRoot (): boolean {
-    if (
-      this.$route.name === 'CFP' ||
-      this.$route.name === 'news' ||
-      this.$route.name === 'ocfp-news'
-    ) {
-      return false;
-    } else {
-      return true;
     }
   }
 }
