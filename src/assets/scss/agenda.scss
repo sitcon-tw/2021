@@ -1,9 +1,6 @@
 @import './breakpoint';
 @import './color';
-
-$fontFamily: "Noto Serif CJK TC -SemiBold";
-$fontFamilyBlack: "Noto Serif CJK TC -Black";
-$fontFamilyBold: "Noto Serif CJK TC -Bold";
+@import './font';
 
 @mixin RWDFontSize {
   font-size: 14pt;
@@ -50,7 +47,7 @@ $fontFamilyBold: "Noto Serif CJK TC -Bold";
   padding-top: 50px;
   padding-bottom: 50px;
 
-  font-family: $fontFamily;
+  @include fontFamily-semibold;
   @include RWDFontSize;
 
   article {
@@ -58,8 +55,7 @@ $fontFamilyBold: "Noto Serif CJK TC -Bold";
     margin: 50px 0;
 
     &.bold {
-      font-family: $fontFamilyBold;
-      font-weight: bold;
+      @include fontFamily-bold;
     }
   }
 
@@ -74,8 +70,7 @@ $fontFamilyBold: "Noto Serif CJK TC -Bold";
       background-color: $indigo-blue;
       border: none;
       border-radius: 32px;
-      
-      font-family: $fontFamilyBlack;
+      @include fontFamily-black;
       color: white;
       @include RWDButton;
     }

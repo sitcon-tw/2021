@@ -1,27 +1,26 @@
 // import web font
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500;700;900&display=swap');
-
-@font-face {
-  font-family: 'Noto Serif CJK TC -Bold';
-  // src: url("~@/assets/font/NotoSerifCJKtc-Bold.otf");
-  src: url('~@/assets/font/NotoSerifTC-Bold.otf');
-}
-
-@font-face {
-  font-family: 'Noto Serif CJK TC -Black';
-  // src: url("~@/assets/font/NotoSerifCJKtc-Black.otf");
-  src: url('~@/assets/font/NotoSerifTC-Black.otf');
-}
-
-@font-face {
-  font-family: 'Noto Serif CJK TC -SemiBold';
-  // src: url("~@/assets/font/NotoSerifCJKtc-SemiBold.otf");
-  src: url('~@/assets/font/NotoSerifTC-SemiBold.otf');
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&display=swap');
 
 @font-face {
   font-family: 'Letter Gothic Std Bold';
   src: url('~@/assets/font/Letter Gothic Std Bold.ttf');
 }
+
+@mixin fontFamily-semibold {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 500;
+}
+
+@mixin fontFamily-bold {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 700;
+}
+
+@mixin fontFamily-black {
+  font-family: 'Noto Serif TC', serif;
+  font-weight: 900;
+}
+
 
 $fontFamily: Noto Sans TC, monospace;

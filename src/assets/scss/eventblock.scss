@@ -1,8 +1,6 @@
 @import './font';
 @import './breakpoint';
 
-$fontFamily: "Noto Serif CJK TC -Bold";
-
 @mixin RWDFontSize {
   font-size: 18pt;
 
@@ -63,7 +61,7 @@ $fontFamily: "Noto Serif CJK TC -Bold";
 
   @include RWDFontSize;
   line-height: 1.44;
-  font-family: $fontFamily;
+  @include fontFamily-bold;
 
   .background {
     width: 100%;

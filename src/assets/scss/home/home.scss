@@ -1,9 +1,8 @@
 @import '../color.scss';
 @import '../breakpoint.scss';
-$font-home: 'Noto Serif CJK TC -SemiBold';
-$font-home-h1: 'Noto Serif CJK TC -Bold';
+@import '../font';
+
 $font-home-h2: 'Letter Gothic Std Bold';
-$font-home-button: 'Noto Serif CJK TC -Black';
 
 //default screen size width: 1440px
 
@@ -343,7 +342,7 @@ $font-home-button: 'Noto Serif CJK TC -Black';
 }
 
 .home {
-  font-family: $font-home;
+  @include fontFamily-semibold;
   position: relative;
   &__title {
     @include homeTitleWidth;
@@ -399,7 +398,7 @@ $font-home-button: 'Noto Serif CJK TC -Black';
 
       h1 {
         @include homeInfoTitleH1Fontsize;
-        font-family: $font-home-h1;
+        @include fontFamily-bold;
         padding-top: 25px;
       }
 
@@ -445,7 +444,7 @@ $font-home-button: 'Noto Serif CJK TC -Black';
 
   &-button {
     font-size: 12.5pt;
-    font-family: $font-home-button;
+    @include fontFamily-black;
     position: relative;
     top: 15px;
     color: $white;
