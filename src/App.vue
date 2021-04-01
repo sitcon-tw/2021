@@ -41,14 +41,16 @@ export default class App extends Vue {
     }
   }
 
-  public isRoot(): boolean {
+  public isRoot (): boolean {
     if (
-      this.$route.name == "CFP" ||
-      this.$route.name === "news" ||
-      this.$route.name === "ocfp-news"
-    )
+      this.$route.name === 'CFP' ||
+      this.$route.name === 'news' ||
+      this.$route.name === 'ocfp-news'
+    ) {
       return false;
-    else return true;
+    } else {
+      return true;
+    }
   }
 
   private detectDeviceType (mq: (MediaQueryList | MediaQueryListEvent)): void {
