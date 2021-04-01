@@ -7,20 +7,23 @@
   @media screen and (max-width: 1400px) {
     font-size: 16pt;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1300px) {
     font-size: 15pt;
   }
-  @media screen and (max-width: 1024px) {
-    font-size: 13pt;
+  @media screen and (max-width: 1100px) {
+    font-size: 14pt;
   }
   @media screen and (max-width: $max-width-medium-1 - 1px) {
     font-size: 22pt;
   }
   @media screen and (max-width: 650px) {
-    font-size: 16pt;
+    font-size: 18pt;
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $max-width-small-1) {
     font-size: 15pt;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    font-size: 12pt;
   }
 }
 
@@ -42,10 +45,10 @@
   @media screen and (max-width: $max-width-small-0) {
     transform: scale(1);
   }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $max-width-small-1) {
     transform: scale(0.75);
   }
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: $max-width-small-2) {
     transform: scale(0.55);
   }
 }
@@ -89,7 +92,7 @@
       // for lightning talk block
       &.special {
         // visual adjustment
-        margin-top: 5%;
+        margin-top: 10%;
 
       }
       @media screen and (min-width: $max-width-medium-1) {
