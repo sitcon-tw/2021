@@ -9,17 +9,18 @@
     <p class="vote"><a class="vote button" href="https://docs.google.com/forms/d/e/1FAIpQLSdWJtLP96bqXWukmOEar0xiBfGScm3qAlp-Xii05-cmU2Gxlg/viewform" target="_blank" rel="noopeener">投票去</a></p>
     <article>
      【注意事項】
-      <ol class="vote rule">
-        <li>0. 事前人氣投票結果，將作為議程組與審稿委員會於安排議程時段與會議廳的參考依據之一。</li>
-        <li>1. 投票為「記名投票」，使用 KKTIX 四碼檢查碼作為投票依據。議程組以檢查碼辨識投票的人是否持有年會門票，不對外公布各組檢查碼的具體投票內容。</li>
-        <li>2. 三個議程種類（Espresso、Double Espresso 與 Presentation）可各選擇投給 1 個議程。</li>
-        <li>3. 若同一議程種類選擇超過一個議程，或不選擇任何議程，視為無效票。各個議程種類的選票有效性互相獨立，無效票不影響其他議程種類的選票認定，舉例來說，若 Espresso 選擇 2 個議程、Double Espresso 選擇 1 個議程、Presentation 選擇 0 個議程，則 Double Espresso 的部分為有效票，其他二種議程為無效票。</li>
-        <li>4. 此投票表單使用 Google Forms「隨機決定問題順序」功能決定各個議程的顯示順序。</li>
-        <li>5. 在投票截止前，可以使用同一組檢查碼重複投票。計票時以最新一筆投票記錄為準。</li>
+      <ol class="vote rule" start="0" type="1">
+        <li>事前人氣投票結果，將作為議程組與審稿委員會於安排議程時段與會議廳的參考依據之一。</li>
+        <li>投票為「記名投票」，使用 KKTIX 四碼檢查碼作為投票依據。議程組以檢查碼辨識投票的人是否持有年會門票，不對外公布各組檢查碼的具體投票內容。</li>
+        <li>三個議程種類（Espresso、Double Espresso 與 Presentation）可各選擇投給 1 個議程。</li>
+        <li>若同一議程種類選擇超過一個議程，或不選擇任何議程，視為無效票。各個議程種類的選票有效性互相獨立，無效票不影響其他議程種類的選票認定，舉例來說，若 Espresso 選擇 2 個議程、Double Espresso 選擇 1 個議程、Presentation 選擇 0 個議程，則 Double Espresso 的部分為有效票，其他二種議程為無效票。</li>
+        <li>此投票表單使用 Google Forms「隨機決定問題順序」功能決定各個議程的顯示順序。</li>
+        <li>在投票截止前，可以使用同一組檢查碼重複投票。計票時以最新一筆投票記錄為準。</li>
       </ol>
     </article>
     <!-- Vote Section End -->
     <!-- Event Section -->
+    <!-- wip
     <BlockTitle text="活動" id="#event" />
     <div v-if="!isMobile()" class="event container">
       <img class="arrow" src="@/assets/images/arrow-left.svg">
@@ -31,6 +32,7 @@
       <EventBlock text="開放式\n議程"/>
       <img class="arrow" src="@/assets/images/arrow-right.svg">
     </div>
+    -->
     <div v-if="isMobile()" class="mobile event container">
       <!-- TODO -->
     </div>
