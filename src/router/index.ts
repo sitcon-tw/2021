@@ -29,7 +29,7 @@ export const routes: RouteConfig[] = [
     name: 'Agenda',
     component: Agenda,
     meta: {
-      index: 0,
+      index: 1,
       label: 'SITCON 2021',
       menuItem: true
     }
@@ -39,7 +39,7 @@ export const routes: RouteConfig[] = [
     name: 'Sponsor',
     component: Sponsor,
     meta: {
-      index: 0,
+      index: 4,
       label: '贊助資訊',
       menuItem: true
     }
@@ -49,7 +49,7 @@ export const routes: RouteConfig[] = [
     name: 'Team',
     component: Team,
     meta: {
-      index: 0,
+      index: 5,
       label: 'SITCON團隊',
       menuItem: true
     }
@@ -59,7 +59,7 @@ export const routes: RouteConfig[] = [
     name: 'Traffic',
     component: Traffic,
     meta: {
-      index: 0,
+      index: 2,
       label: '交通方式',
       menuItem: true
     }
@@ -69,7 +69,7 @@ export const routes: RouteConfig[] = [
     name: 'Venue',
     component: Venue,
     meta: {
-      index: 0,
+      index: 3,
       label: '會場地圖',
       menuItem: true
     }
