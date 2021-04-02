@@ -387,8 +387,11 @@
 
       &-left {
         @include fontFamily-semibold;
-        float: left;
-        width: 50%;
+        @media screen and (min-width: 700px) {
+          float: left;
+          width: 50%;
+        }
+        width: 70%;
         margin-left: 10%;
         // background-color: limegreen;
 
@@ -402,8 +405,23 @@
         }
       }
       &-right {
-        float: left;
-        width: 40%;
+        @media screen and (min-width: 700px) {
+          float: right;
+          width: 40%;
+        }
+        @media screen and (max-width: 700px) {
+          display: flex;
+          width: 500px;
+          a {
+            width: 300px;
+            height: 200px;
+            display: block;
+          }
+        }
+        @media screen and (max-width: 500px) {
+        width: 95vw;
+      }
+        
         // background-color: mediumseagreen;
       }
     }
@@ -418,7 +436,8 @@
       position: relative;
       span {
         color: $black;
-        font-size: 15pt;
+        font-size: 10pt;
+        text-align: center;
         width: 120px;
         // background-color: mediumspringgreen;
         position: absolute;
@@ -429,7 +448,7 @@
         p {
           margin-top: 20px;
           text-align: center;
-          font-size: 10pt;
+          font-size: 15pt;
           color: $gray;
           @include fontFamily-bold;
         }
