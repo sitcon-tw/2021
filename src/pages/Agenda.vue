@@ -71,6 +71,7 @@ import BlockTitle from '../components/BlockTitle.vue';
 })
 export default class Agenda extends Vue {
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
+  private eventClickable = false;
 
   private isMobile (): boolean {
     return this.device === DeviceType.MOBILE;
