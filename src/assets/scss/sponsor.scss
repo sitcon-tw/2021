@@ -1,6 +1,5 @@
 @import './breakpoint';
-
-$fontFamily: "Noto Serif CJK TC -SemiBold";
+@import './font';
 
 @mixin RWDFontSize {
   font-size: 14pt;
@@ -29,7 +28,7 @@ $fontFamily: "Noto Serif CJK TC -SemiBold";
 
 #sponsor {
 	line-height: 2em;
-	font-family: $fontFamily;
+	@include fontFamily-semibold;
 	h2 {
 		line-height: normal;
 		font-size: 36pt;
