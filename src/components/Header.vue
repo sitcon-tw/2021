@@ -77,16 +77,18 @@
         </select>
         <!-- <div class="header-links--mobile-bg"></div> -->
       </div>
-      <div class="header-apply">
-        <a href="#apply">
-          報名去
-        </a>
-      </div>
+      <a href="#apply">
+        <div class="header-apply">
+          <span>報名去</span>
+        </div>
+      </a>
     </div>
     <div class="header-applyPopup" id="apply">
       <div class="header-applyPopup-container">
         <div class="header-apply-popup__close">
-          <img src="~@/assets/images/home/home-icon-close.svg" />
+          <a href="">
+            <img src="~@/assets/images/home/home-icon-close.svg" />
+          </a>
         </div>
         <div class="header-applyPopup__title">
           <h2>SITCON 2021</h2>
