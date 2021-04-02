@@ -28,27 +28,27 @@
     <BlockTitle text="活動" id="#event" />
     <div v-if="!isMobile()" class="event container">
       <img class="arrow" src="@/assets/images/arrow-left.svg">
-      <EventBlock icon="union" text="大地遊戲"/>
-      <EventBlock icon="stall-outline" text="社群攤位"/>
-      <EventBlock icon="group" text="天使計劃"/>
-      <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true"/>
-      <EventBlock icon="guide-outline" text="導遊團"/>
-      <EventBlock text="開放式\n議程"/>
+      <EventBlock icon="union" text="大地遊戲" :clickable="eventClickable"/>
+      <EventBlock icon="stall-outline" text="社群攤位" :clickable="eventClickable"/>
+      <EventBlock icon="group" text="天使計劃" :clickable="eventClickable"/>
+      <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true" :clickable="eventClickable"/>
+      <EventBlock icon="guide-outline" text="導遊團" :clickable="eventClickable"/>
+      <EventBlock text="開放式\n議程" :clickable="eventClickable"/>
       <img class="arrow" src="@/assets/images/arrow-right.svg">
     </div>
     <div v-else class="mobile event container">
       <div class="column">
-        <EventBlock icon="union" text="大地遊戲"/>
-        <EventBlock icon="stall-outline" text="社群攤位"/>
-        <EventBlock icon="group" text="天使計劃"/>
+        <EventBlock icon="union" text="大地遊戲" :clickable="eventClickable"/>
+        <EventBlock icon="stall-outline" text="社群攤位" :clickable="eventClickable"/>
+        <EventBlock icon="group" text="天使計劃" :clickable="eventClickable"/>
       </div>
       <div class="column">
-        <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true"/>
-        <EventBlock icon="guide-outline" text="導遊團"/>
+        <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true" :clickable="eventClickable"/>
+        <EventBlock icon="guide-outline" text="導遊團" :clickable="eventClickable"/>
       </div>
       <div class="column">
         <img class="arrow" src="@/assets/images/arrow-left.svg">
-        <EventBlock text="開放式\n議程"/>
+        <EventBlock text="開放式\n議程" :clickable="eventClickable"/>
         <img class="arrow" src="@/assets/images/arrow-right.svg">
       </div>
     </div>

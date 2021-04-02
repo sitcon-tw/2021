@@ -66,6 +66,10 @@
   line-height: 1.44;
   @include fontFamily-bold;
 
+  &.unclickable {
+    pointer-events: none;
+  }
+
   .background {
     width: 100%;
     height: auto;
