@@ -116,14 +116,22 @@
             </p>
           </div>
           <div class="header-applyPopup__content-right">
-            <div class="header-applyPopup-box">
-              <p>學生 / 普通票</p>
-              <p>免費報名</p>
-            </div>
-            <div class="header-applyPopup-box">
-              <p>個人贊助方案</p>
-              <p>詳情請見 KKTIX</p>
-            </div>
+            <a href="">
+              <div class="header-applyPopup-box">
+                <span>
+                  學生 / 普通票
+                  <p>免費報名</p>
+                </span>
+              </div>
+            </a>
+            <a href="">
+              <div class="header-applyPopup-box">
+                <span
+                  >個人贊助方案
+                  <p>詳情請見 KKTIX</p>
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>

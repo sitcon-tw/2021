@@ -343,14 +343,14 @@
       overflow: hidden;
       opacity: 0;
 
-      width: 60%;
+      width: 55%;
       height: 50%;
       background-color: $white;
       box-shadow: 0 2rem 4rem rgba($black, 0.2);
       border-radius: 15px;
       display: table;
-      // transform: translate(-50%, -50%) scale(0.25);
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(0.25);
+      // transform: translate(-50%, -50%) scale(1);
       transition: all 0.5s 0.2s;
     }
 
@@ -381,7 +381,7 @@
     }
 
     &__content {
-      background-color: lightsteelblue;
+      // background-color: lightsteelblue;
       margin: 0 auto;
       width: 90%;
 
@@ -405,6 +405,41 @@
         float: left;
         width: 40%;
         // background-color: mediumseagreen;
+      }
+    }
+
+    &-box {
+      width: 60%;
+      height: 100px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      border: solid 2.5px $dark-blue;
+      position: relative;
+      span {
+        color: $black;
+        font-size: 15pt;
+        width: 120px;
+        // background-color: mediumspringgreen;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include fontFamily-black;
+        p {
+          margin-top: 20px;
+          text-align: center;
+          font-size: 10pt;
+          color: $gray;
+          @include fontFamily-bold;
+        }
+        &:hover {
+          color: $white;
+        }
+      }
+
+      &:hover {
+        background-color: $dark-blue;
       }
     }
 
