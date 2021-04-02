@@ -433,12 +433,12 @@
           color: $gray;
           @include fontFamily-bold;
         }
-        &:hover {
-          color: $white;
-        }
       }
 
       &:hover {
+        span {
+          color: $white;
+        }
         background-color: $dark-blue;
       }
     }
