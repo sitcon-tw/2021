@@ -1,0 +1,37 @@
+@import './font';
+
+div.block.title {
+    display: flex;
+    justify-content: center;
+
+    font-size: 26px;
+    @include fontFamily-black;
+    font-weight: bold;
+
+    line-height: 1.44;
+    
+    margin: 36px 0;
+    
+    span.text {
+        display: contents;
+
+        &::before, &::after {
+            display: inline-block;
+            content: '';
+            width: 1.44em;
+            height: 1.44em;
+            margin: auto;
+            vertical-align: middle;
+            background-image: url('../assets/images/title-block.svg');
+            background-size: contain;
+        }
+    
+        &::before {
+            margin-right: 18px;
+        }
+    
+        &::after {
+            margin-left: 18px;
+        }
+    }
+}

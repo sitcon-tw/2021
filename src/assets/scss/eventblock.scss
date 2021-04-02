@@ -1,0 +1,170 @@
+@import './font';
+@import './breakpoint';
+
+@mixin RWDFontSize {
+  font-size: 18pt;
+
+  @media screen and (max-width: 1400px) {
+    font-size: 16pt;
+  }
+  @media screen and (max-width: 1300px) {
+    font-size: 15pt;
+  }
+  @media screen and (max-width: 1100px) {
+    font-size: 14pt;
+  }
+  @media screen and (max-width: $max-width-medium-1 - 1px) {
+    font-size: 22pt;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 18pt;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 15pt;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    font-size: 12pt;
+  }
+}
+
+@mixin RWDIconScale {
+  transform: scale(0.75);
+
+  @media screen and (max-width: 1300px) {
+    transform: scale(0.6);
+  }
+  @media screen and (max-width: 1200px) {
+    transform: scale(0.55);
+  }
+  @media screen and (max-width: 1024px) {
+    transform: scale(0.5);
+  }
+  @media screen and (max-width: $max-width-medium-1 - 1px) {
+    transform: scale(1.25);
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    transform: scale(1);
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    transform: scale(0.75);
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    transform: scale(0.55);
+  }
+}
+
+.event.block {
+  position: relative;
+  height: 100%;
+
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include RWDFontSize;
+  line-height: 1.44;
+  @include fontFamily-bold;
+
+  .background {
+    width: 100%;
+    height: auto;
+  }
+
+  .inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: .75em;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    span {
+      white-space: pre;
+      z-index: 1;
+
+      // for lightning talk block
+      &.special {
+        // visual adjustment
+        margin-top: 10%;
+
+      }
+      @media screen and (min-width: $max-width-medium-1) {
+        &.special {
+          transform: scale(0.75);
+        }
+      }
+    }
+  
+    i.icon {
+      position: absolute;
+      z-index: 0;
+
+      @include RWDIconScale();
+      // transform: scale(0.75);
+  
+      &::before {
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: '';
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+  
+      // different size for each icon
+      &.union {
+        width: 65px;
+        height: 79px;
+  
+        &::before {
+          background-image: url('../assets/images/union.svg');
+        }
+      }
+  
+      &.stall-outline {
+        width: 61px;
+        height: 62px;
+  
+        &::before {
+          background-image: url('../assets/images/stall-outline.svg');
+        }
+      }
+  
+      &.group {
+        width: 100px;
+        height: 85px;
+  
+        &::before {
+          background-image: url('../assets/images/group.svg');
+        }
+      }
+  
+      &.lightning-outline {
+        margin-top: 10px;
+        width: 37px;
+        height: 78px;
+  
+        &::before {
+          background-image: url('../assets/images/lightning-outline.svg');
+        }
+      }
+  
+      &.guide-outline {
+        margin-right: 25%;
+        width: 74px;
+        height: 95px;
+  
+        &::before {
+          background-image: url('../assets/images/guide-outline.svg');
+        }
+      }
+    }
+  }
+}
