@@ -116,7 +116,7 @@
             </p>
           </div>
           <div class="header-applyPopup__content-right">
-            <a href="">
+            <a href="https://sitcon.kktix.cc/events/sitcon2021" target="_blank">
               <div class="header-applyPopup-box">
                 <span>
                   學生 / 普通票
@@ -124,7 +124,7 @@
                 </span>
               </div>
             </a>
-            <a href="#">
+            <a href="https://sitcon.kktix.cc/events/sitcon2021-individual-sponsor" target="_blank">
               <div class="header-applyPopup-box">
                 <span
                   >個人贊助方案
