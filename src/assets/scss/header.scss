@@ -321,4 +321,57 @@
       transform: translateX(-35%) translateY(-50%);
     }
   }
+
+  &-applyPopup {
+    // z-index: 100;
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100vw;
+    // height: 100vh;
+    // background-color: lime;
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, 0.8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    &-container {
+      // z-index: 10000;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 75%;
+      height: 50%;
+      // height: 50rem;
+      // background-color: $white;
+      background-color: #fff;
+      box-shadow: 0 2rem 4rem rgba($black, 0.2);
+      border-radius: 3px;
+      display: table;
+      overflow: hidden;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.25);
+      // inmixinabscenterhas transform property, we need to write it together.
+      transition: all 0.5s 0.2s; // all time delay;
+    }
+
+    &:target {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:target &-container {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
 }
