@@ -5,7 +5,7 @@
     <article class="bold">
       總是因為擠不進會議廳，而聽不到感興趣的議程嗎？
       <br /><br />
-      喜歡的議程，不能只有自己看到！SITCON 2021 首次舉辦「事前人氣投票」，除了搶先看到精彩議程介紹，也能把手中關鍵一票投給最期待的議程！會眾期待度愈高的議程，愈有機會安排在空間比較寬敞的會議廳。
+      喜歡的議程，不能只有自己看到！SITCON 2021 首次舉辦「會前人氣投票」，除了搶先看到精彩議程介紹，也能把手中關鍵一票投給最期待的議程！會眾期待度愈高的議程，愈有機會安排在空間比較寬敞的會議廳。
     </article>
     <p class="vote"><a class="vote button" href="https://docs.google.com/forms/d/e/1FAIpQLSdWJtLP96bqXWukmOEar0xiBfGScm3qAlp-Xii05-cmU2Gxlg/viewform" target="_blank" rel="noopeener">投票去</a></p>
     <article>
@@ -15,7 +15,7 @@
     <article>
      【注意事項】
       <ol class="vote rule" start="0" type="1">
-        <li>事前人氣投票結果，將作為議程組與審稿委員會於安排議程時段與會議廳的參考依據之一。</li>
+        <li>會前人氣投票結果，將作為議程組與審稿委員會於安排議程時段與會議廳的參考依據之一。</li>
         <li>投票為「記名投票」，使用 KKTIX 四碼檢查碼作為投票依據。議程組以檢查碼辨識投票的人是否持有年會門票，不對外公布各組檢查碼的具體投票內容。</li>
         <li>三個議程種類（Espresso、Double Espresso 與 Presentation）可各選擇投給 1 個議程。</li>
         <li>若同一議程種類選擇超過一個議程，或不選擇任何議程，視為無效票。各個議程種類的選票有效性互相獨立，無效票不影響其他議程種類的選票認定，舉例來說，若 Espresso 選擇 2 個議程、Double Espresso 選擇 1 個議程、Presentation 選擇 0 個議程，則 Double Espresso 的部分為有效票，其他二種議程為無效票。</li>
