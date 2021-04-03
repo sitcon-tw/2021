@@ -186,6 +186,7 @@
 .header {
   z-index: 99;
   position: relative;
+  overflow-y: hidden;
   top: 35px;
   margin: 0 auto;
   @include headerWidth;
