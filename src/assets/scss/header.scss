@@ -183,7 +183,6 @@
 // -------------------------------------------
 
 // header_applyPopup
-
 @mixin headerApplyPopupContainerHeight {
   height: 50%;
   @media screen and (max-width: $max-width-medium-0) {
@@ -208,7 +207,6 @@
     width: 95%;
   }
 }
-
 @mixin headerApplyPopupxTittle {
   width: 60%;
   margin: 5% 0 3% 5%;
