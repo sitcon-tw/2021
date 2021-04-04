@@ -71,7 +71,7 @@
         </div>
       </a>
     </div>
-    <div class="header-applyPopup" id="apply">
+    <Popup class="header-applyPopup" id="apply">
       <div class="header-applyPopup-container">
         <div class="header-applyPopup__close">
           <a href="">
@@ -133,14 +133,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </Popup>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 
+import Popup from '../components/Popup.vue';
+
 @Component({
+  components: {
+    Popup
+  },
   props: ['route']
 })
 export default class Header extends Vue {
