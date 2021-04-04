@@ -184,9 +184,18 @@
 
 // header_applyPopup
 @mixin headerApplyPopupContainerHeight {
-  height: 50%;
+  height: 55%;
+  @media screen and (min-width: $max-width-big) {
+    height: 60%;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    height: 65%;
+  }
   @media screen and (max-width: $max-width-medium-0) {
     height: 60%;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    height: 65%;
   }
   @media screen and (max-width: $max-width-small-1) {
     height: 70vh;
@@ -197,6 +206,9 @@
 }
 @mixin headerApplyPopupContainerWidth {
   width: 55%;
+  @media screen and (max-width: $max-width-medium-1) {
+    width: 70%;
+  }
   @media screen and (max-width: $max-width-small-0) {
     width: 80%;
   }
@@ -222,7 +234,7 @@
   margin-bottom: 2%;
   margin-left: 15%;
   @media screen and (max-width: $max-width-medium-0) {
-    margin-left: 20%;
+    margin-left: 25%;
   }
   @media screen and (max-width: $max-width-medium-1) {
     margin-left: 30%;
@@ -241,11 +253,35 @@
 }
 @mixin headerApplyPopupContentMargin {
   margin: 0 auto;
+  @media screen and (max-width: $max-width-medium-0) {
+    margin-top: 5%;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    margin-top: 7%;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    margin-top: 8%;
+  }
   @media screen and (max-width: $max-width-small-1) {
     margin-top: 7%;
   }
   @media screen and (max-width: $max-width-small-3) {
     margin-top: 10%;
+  }
+}
+@mixin headerApplyPopupContentLeftFontsize {
+  font-size: 11pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 12pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 13pt;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    font-size: 10pt;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    font-size: 10.5pt;
   }
 }
 @mixin headerApplyPopupContentLeftMargin {
@@ -282,16 +318,27 @@
   }
 }
 @mixin headerApplyPopupBox {
+  font-size: 14pt;
   width: 60%;
-  height: 100px;
+  height: 110px;
   margin: 0 auto;
   margin-bottom: 20px;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 14.5pt;
+  }
+  @media screen and (min-width: $max-width-big-0) {
+    font-size: 15pt;
+  }
+  @media screen and (max-width: $max-width-medium-0) {
+    font-size: 12pt;
+    width: 70%;
+  }
   @media screen and (max-width: $max-width-medium-1) {
+    font-size: 14pt;
     width: 80%;
-    margin: 10% auto;
   }
   @media screen and (max-width: $max-width-small-0) {
-    width: 70%;
+    font-size: 12pt;
   }
   @media screen and (max-width: $max-width-small-1) {
     width: 40%;
@@ -299,11 +346,41 @@
     float: left;
     margin: 5% 5% 0 5%;
   }
-  @media screen and (max-width: $max-width-small-3) {
+  @media screen and (max-width: $max-width-small-2) {
     width: 45%;
     height: 120px;
     float: left;
     margin: 5% 2.5% 0 2.5%;
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    width: 48%;
+    height: 120px;
+    float: left;
+    margin: 5% 1% 0 1%;
+  }
+}
+@mixin headerApplyPopupBoxParagphFontsize {
+  font-size: 11.5pt;
+  @media screen and (min-width: $max-width-big) {
+    font-size: 12pt;
+  }
+  @media screen and (min-width: $max-width-big-1) {
+    font-size: 13pt;
+  }
+  @media screen and (max-width: $max-width-medium-0) {
+    font-size: 11pt;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    font-size: 12pt;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    font-size: 10pt;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 10pt;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    font-size: 9.5pt;
   }
 }
 
@@ -354,6 +431,7 @@
 
       select {
         z-index: 99;
+        @include fontFamily-bold;
         @include headerLinksMobileSelectWidth;
         height: 60px;
         @include headerLinksMobileSelectPadding;
@@ -361,7 +439,6 @@
         background-color: $white;
         border: none;
         border-bottom: 4px solid $indigo-blue;
-        @include fontFamily-bold;
 
         &:focus {
           border: none;
@@ -369,8 +446,8 @@
         }
 
         option {
-          text-align: center;
           @include headerLinksMobileSelectFontsize;
+          text-align: center;
         }
       }
       select:focus ~ &-bg {
@@ -496,7 +573,6 @@
     &__title {
       @include fontFamily-black;
       @include headerApplyPopupxTittle;
-      // background-color: linen;
       h1 {
         @include headerApplyPopupxTittleH;
         @include headerApplyPopupxTittleH1Fontsize;
@@ -511,20 +587,16 @@
       width: 90%;
       height: 70%;
       @include headerApplyPopupContentMargin;
-      // background-color: midnightblue;
 
       &-left {
         @include fontFamily-semibold;
         float: left;
-        // margin-top: 5%;
         @include headerApplyPopupContentLeftWidth;
-
-        // background-color: limegreen;
 
         p {
           @include headerApplyPopupContentLeftMargin;
+          @include headerApplyPopupContentLeftFontsize;
           line-height: 25px;
-          font-size: 10pt;
         }
 
         &--br {
@@ -538,7 +610,6 @@
         &-container {
           margin: 0 auto;
           @include headerApplyPopupContentLeftAndRightContainerWidth;
-          // background-color: lightsalmon;
         }
       }
       &-right {
@@ -548,9 +619,7 @@
         &-container {
           margin: 0 auto;
           @include headerApplyPopupContentLeftAndRightContainerWidth;
-          // background-color: lightsteelblue;
         }
-        // background-color: mediumseagreen;
       }
     }
 
@@ -560,22 +629,20 @@
       border: solid 2.5px $dark-blue;
       position: relative;
       span {
+        @include fontFamily-black;
         color: $black;
-        font-size: 10pt;
         text-align: center;
         width: 120px;
-        // background-color: mediumspringgreen;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        @include fontFamily-black;
         p {
+          @include fontFamily-bold;
+          color: $gray;
+          @include headerApplyPopupBoxParagphFontsize;
           margin-top: 20px;
           text-align: center;
-          font-size: 15pt;
-          color: $gray;
-          @include fontFamily-bold;
         }
       }
 
