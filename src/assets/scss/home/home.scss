@@ -450,6 +450,66 @@ $font-home-h2: 'Letter Gothic Std Bold';
     }
   }
 
+  &__placard {
+      $width: 40px;
+      $height: 50px;
+      margin: 20px 0;
+      float: right;
+      position: relative;
+      width: 255px;
+      height: 40px;
+      @media screen and (max-width: 600px) {
+        transform: scale(.8);
+      }
+      .info {
+        position: absolute;
+        top: -2px;
+        left:0;
+        width: inherit;
+        height: inherit;
+        padding: 0 12px;
+        border: 2px solid #1060ff;
+        border-left: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        color: #1060ff;
+        @include fontFamily-black;
+      }
+      .hexagon {
+        $background: #1060ff;
+	      width: 104px;
+	      transform: rotate(90deg);
+        position: absolute;
+        top: 0;
+        left:-28px;
+        .l {
+          width: 0;
+          border-bottom: $height/2 solid $background;
+          border-left: $width/2 solid transparent;
+          border-right: $width/2 solid transparent;
+	      }
+	      .c{
+          width: $width;
+          height: $height;
+          background-color: $background;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          span {
+            transform: rotate(-90deg);
+            color: white;
+          }
+	      }
+	      .r {
+          width: 0;
+          border-top: $height/2 solid $background;
+          border-left: $width/2 solid transparent;
+          border-right: $width/2 solid transparent;
+        }
+      }
+  }
+
   &-button {
     font-size: 12.5pt;
     @include fontFamily-black;
