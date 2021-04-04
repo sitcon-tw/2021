@@ -20,6 +20,18 @@
 						中央研究院－人文社會科學館 •免費報名
 					</p>
 				</div>
+				<router-link to="/cfp" class="home__placard">
+					<div class="hexagon">
+						<div class="l"></div>
+						<div class="c">
+							<span>公告</span>
+						</div>
+						<div class="r"></div>
+					</div>
+					<div class="info">
+						開放式議程 徵稿中...
+					</div>
+				</router-link>
 			</div>
 		</section>
 		<section class="section-content">
@@ -145,4 +157,42 @@ export default class CFP extends Vue {
 
 <style lang="scss">
 @import '@/assets/scss/home/home';
+
+/*
+
+.hexagon {
+	float: right;
+	$width: 40px;
+	$height: 50px;
+	$background: #1060ff;
+	width: 104px;
+	transform: rotate(90deg);
+	div {
+		//display: inline;
+		margin: 0;
+	}
+	.l {
+width: 0;
+border-bottom: $height/2 solid $background;
+border-left: $width/2 solid transparent;
+border-right: $width/2 solid transparent;
+	}
+	.c{
+width: $width;
+height: $height;
+background-color: $background;
+display: flex;
+justify-content: center;
+align-items: center;
+		span {
+			transform: rotate(-90deg);
+		}
+	}
+	.r {
+width: 0;
+border-top: $height/2 solid $background;
+border-left: $width/2 solid transparent;
+border-right: $width/2 solid transparent;
+}
+}*/
 </style>
