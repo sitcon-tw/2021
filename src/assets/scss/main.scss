@@ -43,8 +43,18 @@ small {
 	font-size: 0.66em;
 }
 
-#app {
+.main-bg {
 	background-image: url('~@/assets/images/background-min.jpg');
-	background-size: 100vw;
+	background-size: 100vw 300vh;
+	background-position: 0 top;
 	background-repeat: no-repeat;
+	@media screen and (max-width: 900px) {
+		background-size: 100vw 200vh;
+	}
+	@media screen and (max-width: 500px) {
+		background-size: 120vw 200vh;
+	}
+	@media screen and (max-width: 400px) {
+		background-size: 150vw 200vh;
+	}
 }
