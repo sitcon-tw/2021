@@ -13,32 +13,48 @@
 // @import "./news.scss";
 
 .sitcon-burnfont {
-  color: $mid-blue;
-  font-weight: 900;
+	color: $mid-blue;
+	font-weight: 900;
 }
 
 .link {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 body {
-  min-width: 100vw;
+	min-width: 100vw;
 
-  position: relative;
-  overflow-x: hidden;
+	position: relative;
+	overflow-x: hidden;
 
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-  font-size: 13pt;
-  font-family: 'Noto Sans TC', sans-serif;
+	font-size: 13pt;
+	font-family: 'Noto Sans TC', sans-serif;
 }
 
 #app {
-  width: 100vw;
-  margin: 0;
+	width: 100vw;
+	margin: 0;
 }
 
 small {
-  font-size: 0.66em;
+	font-size: 0.66em;
+}
+
+#app {
+	background-image: url('~@/assets/images/background-min.jpg');
+	background-size: 100vw 300vh;
+	background-position: 0 top;
+	background-repeat: no-repeat;
+	@media screen and (max-width: 900px) {
+		background-size: 100vw 200vh;
+	}
+	@media screen and (max-width: 500px) {
+		background-size: 120vw 200vh;
+	}
+	@media screen and (max-width: 400px) {
+		background-size: 150vw 200vh;
+	}
 }
