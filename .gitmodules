@@ -1,0 +1,3 @@
+[submodule "src/util/session"]
+	path = src/util/session
+	url = https://github.com/CCIP-App/schedule-json-generator.git
