@@ -158,34 +158,34 @@ export default class CFP extends Vue {
 /*
 
 .hexagon {
-	float: right;
-	$width: 40px;
-	$height: 50px;
-	$background: #1060ff;
-	width: 104px;
-	transform: rotate(90deg);
-	div {
-		//display: inline;
-		margin: 0;
-	}
-	.l {
+  float: right;
+  $width: 40px;
+  $height: 50px;
+  $background: #1060ff;
+  width: 104px;
+  transform: rotate(90deg);
+  div {
+    //display: inline;
+    margin: 0;
+  }
+  .l {
 width: 0;
 border-bottom: $height/2 solid $background;
 border-left: $width/2 solid transparent;
 border-right: $width/2 solid transparent;
-	}
-	.c{
+  }
+  .c{
 width: $width;
 height: $height;
 background-color: $background;
 display: flex;
 justify-content: center;
 align-items: center;
-		span {
-			transform: rotate(-90deg);
-		}
-	}
-	.r {
+    span {
+      transform: rotate(-90deg);
+    }
+  }
+  .r {
 width: 0;
 border-top: $height/2 solid $background;
 border-left: $width/2 solid transparent;

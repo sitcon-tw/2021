@@ -34,8 +34,8 @@ $fontFamily: Noto Sans TC, monospace;
 
         @keyframes jump {
           50% {
-		    transform: translateY(-20px) rotate(45deg) ;
-	      } 
+        transform: translateY(-20px) rotate(45deg) ;
+        } 
         }
 
         &:hover {

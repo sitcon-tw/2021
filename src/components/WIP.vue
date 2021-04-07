@@ -1,9 +1,9 @@
 <template>
     <div id="wip">
         <img
-			class="wip-dev-icon"
-			src="~@/assets/images/teams/dev.svg"
-		/>
+      class="wip-dev-icon"
+      src="~@/assets/images/teams/dev.svg"
+    />
         <h1>施工中．．．</h1>
     </div>
 </template>

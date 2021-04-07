@@ -21,16 +21,16 @@ import { Component, Vue, Watch, Prop } from 'vue-property-decorator';
 })
 export default class Popup extends Vue {
   @Prop() private id!: string;
-  public mounted() {
-    if (window.location.hash == `#${this.id}`) {
+  public mounted () {
+    if (window.location.hash === `#${this.id}`) {
       this.fixedScroll();
     }
   }
 
-  public fixedScroll() {
+  public fixedScroll () {
     document.body.style.overflowY = 'hidden';
   }
-  public removeFixedScroll() {
+  public removeFixedScroll () {
     document.body.style.overflowY = 'scroll';
   }
 }

@@ -155,14 +155,14 @@ import Popup from '../components/Popup.vue';
   props: ['route']
 })
 export default class Header extends Vue {
-  public onRoute(routeName: string) {
+  public onRoute (routeName: string) {
     return this.$props.route.name === routeName ? true : false;
   }
 
-  public fixedScroll() {
+  public fixedScroll () {
     document.body.style.overflowY = 'hidden';
   }
-  public removeFixedScroll() {
+  public removeFixedScroll () {
     document.body.style.overflowY = 'scroll';
   }
 }
