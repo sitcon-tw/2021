@@ -202,7 +202,11 @@
 <script lang="ts">
 import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
 @Component({})
-export default class AgendaBlock extends Vue {}
+export default class AgendaBlock extends Vue {
+	public removeFixedScroll() {
+		document.body.style.overflowY = 'scroll';
+	}
+}
 </script>
 <style lang="scss">
 @import '@/assets/scss/agendaBlock';

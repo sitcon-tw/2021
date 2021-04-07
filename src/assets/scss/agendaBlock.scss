@@ -92,18 +92,15 @@
 // ----------------------------------------------------------------------------------------------
 
 .agendaBlock {
-  z-index: 9999;
   height: 100%;
   width: 100%;
   position: absolute;
   // position: fixed;
-  top: 0%;
+  top: 0;
   left: 0;
   background-color: rgba($black, 0.5);
   backdrop-filter: blur(5px);
   transition: all 0.3s;
-  opacity: 0;
-  visibility: hidden;
 
   &-container {
     position: relative;
@@ -118,11 +115,6 @@
     display: table;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
-  }
-
-  &:target {
-    opacity: 1;
-    visibility: visible;
   }
 
   &:target &-container {

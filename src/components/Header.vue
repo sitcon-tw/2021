@@ -65,7 +65,7 @@
         </select>
         <!-- <div class="header-links--mobile-bg"></div> -->
       </div>
-      <a href="#apply">
+      <a href="#apply" @click="fixedScroll()">
         <div class="header-apply">
           <span>報名去</span>
         </div>
@@ -74,9 +74,15 @@
     <Popup class="header-applyPopup" id="apply">
       <div class="header-applyPopup-container">
         <div class="header-applyPopup__close">
-          <a href="">
-            <img src="~@/assets/images/home/home-icon-close.svg" />
-          </a>
+          <img
+            src="~@/assets/images/home/home-icon-close.svg"
+            @click="
+              () => {
+                $router.go(-1);
+                removeFixedScroll();
+              }
+            "
+          />
         </div>
         <div class="header-applyPopup__title">
           <img
@@ -151,6 +157,13 @@ import Popup from '../components/Popup.vue';
 export default class Header extends Vue {
   public onRoute(routeName: string) {
     return this.$props.route.name === routeName ? true : false;
+  }
+
+  public fixedScroll() {
+    document.body.style.overflowY = 'hidden';
+  }
+  public removeFixedScroll() {
+    document.body.style.overflowY = 'scroll';
   }
 }
 </script>
