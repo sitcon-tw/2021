@@ -2,8 +2,14 @@
 @import './breakpoint';
 
 @mixin RWDFontSize {
-  font-size: 18pt;
+  font-size: 22pt;
 
+  @media screen and (max-width: 1600px) {
+    font-size: 18pt;
+  }
+  @media screen and (max-width: 1400px) {
+    font-size: 16pt;
+  }
   @media screen and (max-width: 1400px) {
     font-size: 16pt;
   }
