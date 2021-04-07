@@ -23,7 +23,11 @@
 							Facebook 的社群規範，Google 可不可以直接收掉 Google
 							Reader，蘋果為什麼阻擋某些 App
 							上架。儘管人們對資訊企業運作方式幾乎一無所知，仍然傾向於信任這些企業，並繼續使用著這些服務。
+<<<<<<< HEAD
 							在網路企業爭取營利、擴張影響力的路上，這些巨型、跨國、接近壟斷的資訊企業向使用者隱藏了些什麼？現今的政府和法律能保護我們嗎？我們應該相信政府會保障使用者的權益不為企業的各種決策所侵害嗎？上個世代的人向政府機構將資訊自由爭取回來，那我們這個世代「決定自己想看什麼說什麼」的資訊自由，是否還確實握在手中？
+=======
+							　　在網路企業爭取營利、擴張影響力的路上，這些巨型、跨國、接近壟斷的資訊企業向使用者隱藏了些什麼？現今的政府和法律能保護我們嗎？我們應該相信政府會保障使用者的權益不為企業的各種決策所侵害嗎？上個世代的人向政府機構將資訊自由爭取回來，那我們這個世代「決定自己想看什麼說什麼」的資訊自由，是否還確實握在手中？
+>>>>>>> 09cc58e... [Add] add agenda block
 						</p>
 					</article>
 					<article>
@@ -103,9 +107,17 @@
 		</div>
 	</div>
 </template>
+<<<<<<< HEAD
 <script>
 import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
 
 export default class AgendaBlock extends Vue {}
 </script>
 <style></style>
+=======
+<script lang="ts">
+import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
+@Component({})
+export default class AgendaBlock extends Vue {}
+</script>
+>>>>>>> 09cc58e... [Add] add agenda block
