@@ -30,7 +30,7 @@
       <img class="arrow" src="@/assets/images/arrow-left.svg">
       <EventBlock icon="union" text="大地遊戲" :clickable="eventClickable"/>
       <EventBlock icon="stall-outline" text="社群攤位" :clickable="eventClickable"/>
-      <EventBlock icon="group" text="天使計劃" :clickable="eventClickable"/>
+      <EventBlock icon="group" text="天使計畫" :clickable="eventClickable"/>
       <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true" :clickable="eventClickable"/>
       <EventBlock icon="guide-outline" text="導遊團" :clickable="eventClickable"/>
       <EventBlock text="開放式\n議程" :clickable="eventClickable"/>
@@ -40,7 +40,7 @@
       <div class="column">
         <EventBlock icon="union" text="大地遊戲" :clickable="eventClickable"/>
         <EventBlock icon="stall-outline" text="社群攤位" :clickable="eventClickable"/>
-        <EventBlock icon="group" text="天使計劃" :clickable="eventClickable"/>
+        <EventBlock icon="group" text="天使計畫" :clickable="eventClickable"/>
       </div>
       <div class="column">
         <EventBlock icon="lightning-outline" text="Lightning\nTalk" :special="true" :clickable="eventClickable"/>
