@@ -17,7 +17,7 @@
             中央研究院－人文社會科學館 •免費報名
           </p>
         </div>
-        <router-link to="/cfp" class="home__placard">
+        <!-- router-link to="/cfp" class="home__placard">
           <div class="hexagon">
             <div class="l"></div>
             <div class="c">
@@ -28,7 +28,7 @@
           <div class="info">
             <span>開放式議程 徵稿中</span>
           </div>
-        </router-link>
+        </!-->
       </div>
     </section>
     <section class="section-content">
