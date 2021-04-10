@@ -7,7 +7,7 @@
       <br /><br />
       喜歡的議程，不能只有自己看到！SITCON 2021 首次舉辦「會前人氣投票」，除了搶先看到精彩議程介紹，也能把手中關鍵一票投給最期待的議程！會眾期待度愈高的議程，愈有機會安排在空間比較寬敞的會議廳。
     </article>
-    <p class="vote"><a class="vote button" href="https://docs.google.com/forms/d/e/1FAIpQLSdWJtLP96bqXWukmOEar0xiBfGScm3qAlp-Xii05-cmU2Gxlg/viewform" target="_blank" rel="noopeener">投票去</a></p>
+    <p class="vote"><a class="vote button" href="https://docs.google.com/forms/d/e/1FAIpQLSdWJtLP96bqXWukmOEar0xiBfGScm3qAlp-Xii05-cmU2Gxlg/viewform" target="_blank" rel="noopeener" disabled="disabled" aria-disabled="true">投票截止</a></p>
     <article>
       投票時間：4/2 (五) 20:00 至 4/9 (五) 23:59（UTC+8）<br />
       投票資格：於 4/9 (五) 23:59 前取得 2021 年會門票的與會者（不分票種）、2021 年會志工、2021 年會講者
