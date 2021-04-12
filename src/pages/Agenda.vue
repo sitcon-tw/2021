@@ -107,8 +107,7 @@
       </div>
     </div>
     <!-- Event Section End -->
-    <a href="#individual-agenda">個別議程（測試按鈕）</a>
-    <!-- @click="ScrollOrNot()" -->
+    <a href="#individual-agenda" @click="fixedScroll()">個別議程（測試按鈕）</a>
 
     <Popup class="agendaBlock" id="individual-agenda">
       <AgendaBlock></AgendaBlock
@@ -141,11 +140,10 @@ export default class Agenda extends Vue {
   private isMobile(): boolean {
     return this.device === DeviceType.MOBILE;
   }
-  // public ScrollOrNot() {
-  //   if (this.isMobile() == true) {
-  //     document.body.style.overflowY = 'hidden';
-  //   }
-  // }
+
+  public fixedScroll() {
+    document.body.style.overflowY = 'hidden';
+  }
 }
 </script>
 <style lang="scss">

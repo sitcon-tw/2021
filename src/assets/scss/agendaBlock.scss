@@ -8,10 +8,9 @@
 }
 
 @mixin agendaBlockContainerScroll {
-  top: 5%;
-  max-height: 90%;
+  top: 5vh;
+  height: 90vh;
   @media screen and (max-width: $max-width-small-1) {
-    top: 5vh;
     height: 85vh;
   }
 }
