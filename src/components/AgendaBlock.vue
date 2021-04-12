@@ -68,10 +68,9 @@ import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
 export default class AgendaBlock extends Vue {
   @Prop() private info!: any;
   @Prop() private speakers!: any;
-  public getSpeaker(id: string):any {
-    return this.speakers.find((speaker:any) => (speaker.id === id));
+  public getSpeaker (id: string): any {
+    return this.speakers.find((speaker: any) => (speaker.id === id));
   }
-  
 }
 </script>
 <style lang="scss">

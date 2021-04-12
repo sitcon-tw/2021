@@ -139,10 +139,10 @@ export default class Agenda extends Vue {
     (x: any): boolean => x.type === 'P'
   );
   private action = {};
-  private isMobile(): boolean {
+  private isMobile (): boolean {
     return this.device === DeviceType.MOBILE;
   }
-  private handleAgendaClicked(x: any) {
+  private handleAgendaClicked (x: any) {
     this.action = x;
   }
 }
