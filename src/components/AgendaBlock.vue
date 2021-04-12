@@ -31,6 +31,7 @@
           </article>
         </div>
       </div>
+      <!--
       <div class="agendaBlock__content-right">
         <div class="agendaBlock__content-right-container">
           <article>
@@ -46,18 +47,17 @@
             </p>
           </article>
           <section class="agendaBlock_record">
-            <!-- agendaDefaultRecord -->
             <iframe src="" frameborder="0"></iframe>
             <div class="agendaBlock-buttonsBox">
               <a href="">簡報連結</a>
               <a href="">線上 QA</a>
             </div>
-          </section>
+            </section>
           <section v-for="speaker in info.speakers">
             <img :src="getSpeaker(speaker).avatar" alt="null" />
           </section>
         </div>
-      </div>
+      </div> -->
     </div>
     <!-- </div> -->
   </div>
