@@ -10,7 +10,7 @@
       {{x.zh.title}}
     </div>
     <BlockTitle text="espressoAgenda" class="agendaList"/>
-    <div v-for="x,index in presentation" class="agendaItems">
+    <div v-for="x,index in espressoAgenda" class="agendaItems">
       {{x.zh.title}}
     </div>
 
@@ -72,7 +72,7 @@
     <a href="#individual-agenda" @click="fixedScroll()">個別議程（測試按鈕）</a>
 
     <Popup class="agendaBlock" id="individual-agenda">
-      <AgendaBlock></AgendaBlock
+      <AgendaBlock :info="presentation[4]" :speakers="speakers"></AgendaBlock
     ></Popup>
   </div>
 </template>
@@ -101,6 +101,7 @@ export default class Agenda extends Vue {
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
   private eventClickable = false;
   private session = sessionData.sessions;
+  private speakers = sessionData.speakers;
   private espressoAgenda = this.session.filter((x:any):boolean => x.type === 'E');
   private doubleEspresso = this.session.filter((x:any):boolean => x.type === 'D');
   private presentation = this.session.filter((x:any):boolean => x.type === 'D');
@@ -111,6 +112,7 @@ export default class Agenda extends Vue {
   public fixedScroll() {
     document.body.style.overflowY = 'hidden';
   }
+
 }
 </script>
 <style lang="scss">

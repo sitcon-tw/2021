@@ -237,6 +237,9 @@
           float: left;
           border-radius: 5px;
           background-color: $gray;
+          img {
+            width: 100%;
+          }
         }
       }
     }
