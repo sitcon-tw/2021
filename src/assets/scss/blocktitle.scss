@@ -1,37 +1,74 @@
 @import './font';
+@import './breakpoint.scss';
+
+@mixin bookTitleFontsize {
+  font-size: 19pt;
+  @media screen and (max-width: $max-width-medium-0) {
+    font-size: 15pt;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    font-size: 12pt;
+  }
+  @media screen and (max-width: $max-width-small-0) {
+    // font-size: 10pt;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 11pt;
+  }
+}
 
 div.block.title {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    font-size: 26px;
-    @include fontFamily-black;
-    font-weight: bold;
+  @include bookTitleFontsize;
+  @include fontFamily-black;
+  font-weight: bold;
 
-    line-height: 1.44;
-    
-    margin: 36px 0;
-    
-    span.text {
-        display: contents;
+  line-height: 1.44;
 
-        &::before, &::after {
-            display: inline-block;
-            content: '';
-            width: 1.44em;
-            height: 1.44em;
-            margin: auto;
-            vertical-align: middle;
-            background-image: url('../assets/images/title-block.svg');
-            background-size: contain;
-        }
-    
-        &::before {
-            margin-right: 18px;
-        }
-    
-        &::after {
-            margin-left: 18px;
-        }
+  margin: 36px 0;
+
+  position: relative;
+
+  span.text {
+    // display: contents;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    @media screen and (max-width: $max-width-medium-0) {
     }
+    @media screen and (max-width: $max-width-medium-1) {
+    }
+    @media screen and (max-width: $max-width-small-0) {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateX(0) translateY(0);
+    }
+    @media screen and (max-width: $max-width-small-1) {
+    }
+
+    &::before,
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 1.44em;
+      height: 1.44em;
+      margin: auto;
+      vertical-align: middle;
+      background-image: url('../assets/images/title-block.svg');
+      background-size: contain;
+    }
+
+    &::before {
+      margin-right: 18px;
+    }
+
+    &::after {
+      margin-left: 18px;
+    }
+  }
 }

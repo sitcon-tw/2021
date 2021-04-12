@@ -159,10 +159,10 @@ export default class Header extends Vue {
     return this.$props.route.name === routeName ? true : false;
   }
 
-  public fixedScroll () {
+  public fixedScroll() {
     document.body.style.overflowY = 'hidden';
   }
-  public removeFixedScroll () {
+  public removeFixedScroll() {
     document.body.style.overflowY = 'scroll';
   }
 }

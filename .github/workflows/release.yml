@@ -18,6 +18,8 @@ jobs:
         node-version: '12.x'
 
     - run: npm ci
+    - run: npm run init
+    - run: npm run generate:session
     - run: npm run build
 
     - name: Deploy
