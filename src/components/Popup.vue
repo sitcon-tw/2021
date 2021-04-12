@@ -24,16 +24,10 @@ export default class Popup extends Vue {
 
   public mounted() {
     const { hash } = window.location;
-    if (hash == '#individual-agenda' || hash == '#apply') {
-      this.fixedScroll();
-    }
-  }
-
-  public fixedScroll() {
-    document.body.style.overflowY = 'hidden';
-  }
-  public removeFixedScroll() {
-    document.body.style.overflowY = 'scroll';
+    window.onpopstate = function(event: any) {
+      if (window.location.hash === '') document.body.style.overflowY = 'scroll';
+      else document.body.style.overflowY = 'hidden';
+    } 
   }
 }
 </script>

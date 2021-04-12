@@ -28,7 +28,7 @@
           </div>
         </a>
       </div>
-      <BlockTitle text="espressoAgenda" class="agendaList-topic" />
+      <BlockTitle text="Espresso Agenda" class="agendaList-topic" />
       <div class="agendaList-itemsBox">
         <a
           v-for="(x, index) in espressoAgenda"
@@ -144,9 +144,6 @@ export default class Agenda extends Vue {
   }
   private handleAgendaClicked(x: any) {
     this.action = x;
-  }
-  public fixedScroll() {
-    document.body.style.overflowY = 'hidden';
   }
 }
 </script>
