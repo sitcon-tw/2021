@@ -2,16 +2,28 @@
   <div id="agenda">
     <!-- Agenda Section -->
     <BlockTitle text="Presentation" class="agendaList" />
-    <div v-for="x,index in presentation" class="agendaItems">
-      {{x.zh.title}}
+    <div class="agendaList-itemsBox">
+      <a v-for="(x,index) in presentation" :href="'#' + x.id" :key="index" @click="fixedScroll()">
+        <div class="agendaList-item">
+          <span>{{ x.zh.title }}</span>
+        </div>
+      </a>
     </div>
     <BlockTitle text="Double Espresso" class="agendaList" />
-    <div v-for="x,index in doubleEspresso" class="agendaItems">
-      {{x.zh.title}}
+    <div class="agendaList-itemsBox">
+      <a v-for="(x,index) in doubleEspresso" :href="'#' + x.id" :key="index" @click="fixedScroll()">
+        <div class="agendaList-item">
+          <span>{{ x.zh.title }}</span>
+        </div>
+      </a>
     </div>
     <BlockTitle text="espressoAgenda" class="agendaList"/>
-    <div v-for="x,index in espressoAgenda" class="agendaItems">
-      {{x.zh.title}}
+    <div class="agendaList-itemsBox">
+      <a v-for="(x,index) in espressoAgenda" :href="'#' + x.id" :key="index" @click="fixedScroll()">
+        <div class="agendaList-item">
+          <span>{{ x.zh.title }}</span>
+        </div>
+      </a>
     </div>
 
     <!-- Event Section -->
@@ -104,7 +116,7 @@ export default class Agenda extends Vue {
   private speakers = sessionData.speakers;
   private espressoAgenda = this.session.filter((x:any):boolean => x.type === 'E');
   private doubleEspresso = this.session.filter((x:any):boolean => x.type === 'D');
-  private presentation = this.session.filter((x:any):boolean => x.type === 'D');
+  private presentation = this.session.filter((x:any):boolean => x.type === 'P');
   private isMobile(): boolean {
     return this.device === DeviceType.MOBILE;
   }
