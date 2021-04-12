@@ -143,6 +143,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import background from '@/components/Background.vue';
 
 @Component({
   components: {}
