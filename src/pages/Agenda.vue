@@ -3,7 +3,7 @@
     <!-- Agenda Section -->
     <BlockTitle text="Presentation" class="agendaList" />
     <div class="agendaList-itemsBox">
-      <a v-for="(x,index) in presentation" :href="'#' + x.id" :key="index" @click="fixedScroll()">
+      <a v-for="(x,index) in presentation" :href="'#' + x.id" :key="index" @click="()=>handleAgendaClicked(x)">
         <div class="agendaList-item">
           <span>{{ x.zh.title }}</span>
         </div>
@@ -11,7 +11,7 @@
     </div>
     <BlockTitle text="Double Espresso" class="agendaList" />
     <div class="agendaList-itemsBox">
-      <a v-for="(x,index) in doubleEspresso" :href="'#' + x.id" :key="index" @click="fixedScroll()">
+      <a v-for="(x,index) in doubleEspresso" :href="'#' + x.id" :key="index" @click="()=>handleAgendaClicked(x)">
         <div class="agendaList-item">
           <span>{{ x.zh.title }}</span>
         </div>
@@ -19,7 +19,7 @@
     </div>
     <BlockTitle text="espressoAgenda" class="agendaList"/>
     <div class="agendaList-itemsBox">
-      <a v-for="(x,index) in espressoAgenda" :href="'#' + x.id" :key="index" @click="fixedScroll()">
+      <a v-for="(x,index) in espressoAgenda" :href="'#' + x.id" :key="index" @click="()=>handleAgendaClicked(x)">
         <div class="agendaList-item">
           <span>{{ x.zh.title }}</span>
         </div>
@@ -81,10 +81,8 @@
       </div>
     </div>
     <!-- Event Section End -->
-    <a href="#individual-agenda" @click="fixedScroll()">個別議程（測試按鈕）</a>
-
-    <Popup class="agendaBlock" id="individual-agenda">
-      <AgendaBlock :info="presentation[4]" :speakers="speakers"></AgendaBlock
+    <Popup class="agendaBlock" :id="action.id">
+      <AgendaBlock :info="action" :speakers="speakers"></AgendaBlock
     ></Popup>
   </div>
 </template>
@@ -117,10 +115,13 @@ export default class Agenda extends Vue {
   private espressoAgenda = this.session.filter((x:any):boolean => x.type === 'E');
   private doubleEspresso = this.session.filter((x:any):boolean => x.type === 'D');
   private presentation = this.session.filter((x:any):boolean => x.type === 'P');
+  private action = {};
   private isMobile(): boolean {
     return this.device === DeviceType.MOBILE;
   }
-
+  private handleAgendaClicked(x:any) {
+    this.action = x;
+  }
   public fixedScroll() {
     document.body.style.overflowY = 'hidden';
   }
