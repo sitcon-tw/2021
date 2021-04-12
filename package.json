@@ -6,8 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build && mv ./dist/2021/* ./dist && rm -rf 2021 && cp ./dist/app.html ./dist/index.html",
     "lint": "vue-cli-service lint",
-    "init": "cd src/util/session && npm install",
-    "generate:session": "git submodule init && git submodule update && cp session.config.js src/util/session/config.js && node src/util/session/index.js > public/json/session.json"
+    "init": "git submodule init && git submodule update && cd src/util/session && npm install",
+    "generate:session": "cp session.config.js src/util/session/config.js && node src/util/session/index.js > public/json/session.json"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",

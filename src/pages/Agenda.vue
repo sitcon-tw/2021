@@ -2,8 +2,17 @@
   <div id="agenda">
     <!-- Agenda Section -->
     <BlockTitle text="Presentation" class="agendaList" />
+    <div v-for="x,index in presentation" class="agendaItems">
+      {{x.zh.title}}
+    </div>
     <BlockTitle text="Double Espresso" class="agendaList" />
-    <BlockTitle text="Espresso" class="agendaList"/>
+    <div v-for="x,index in doubleEspresso" class="agendaItems">
+      {{x.zh.title}}
+    </div>
+    <BlockTitle text="espressoAgenda" class="agendaList"/>
+    <div v-for="x,index in presentation" class="agendaItems">
+      {{x.zh.title}}
+    </div>
 
     <!-- Event Section -->
     <BlockTitle text="活動" id="#event" />
@@ -73,7 +82,7 @@ import { Action, Getter } from 'vuex-class';
 
 import { DeviceType } from '@/store/types/app';
 
-// import sessionData from '@/../public/json/session.json';
+import sessionData from '@/../public/json/session.json';
 
 import EventBlock from '../components/EventBlock.vue';
 import BlockTitle from '../components/BlockTitle.vue';
@@ -91,7 +100,10 @@ import AgendaBlock from '../components/AgendaBlock.vue';
 export default class Agenda extends Vue {
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
   private eventClickable = false;
-  //private session = sessionData.session;
+  private session = sessionData.sessions;
+  private espressoAgenda = this.session.filter((x:any):boolean => x.type === 'E');
+  private doubleEspresso = this.session.filter((x:any):boolean => x.type === 'D');
+  private presentation = this.session.filter((x:any):boolean => x.type === 'D');
   private isMobile(): boolean {
     return this.device === DeviceType.MOBILE;
   }
