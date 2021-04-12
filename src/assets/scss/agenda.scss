@@ -115,9 +115,6 @@
       }
     }
   }
-  .section-agendaList {
-    // background-color: $white;
-  }
 
   .agendaList {
     padding: 50px 0 120px 0;
@@ -125,6 +122,16 @@
       padding: 20px 0;
       margin: 0 auto;
       width: 80%;
+      @media screen and (max-width: $max-width-medium-0) {
+      }
+      @media screen and (max-width: $max-width-medium-1) {
+      }
+      @media screen and (max-width: $max-width-small-0) {
+        width: 90%;
+      }
+      @media screen and (max-width: $max-width-small-1) {
+        width: 95%;
+      }
       background-color: rgba($white, 0.3);
       box-shadow: 0 2rem 4rem rgba($black, 0.2);
     }
@@ -132,10 +139,24 @@
     &-topic {
       background-color: $white;
       width: 70%;
+
+      @media screen and (max-width: $max-width-medium-0) {
+      }
+      @media screen and (max-width: $max-width-medium-1) {
+      }
+      @media screen and (max-width: $max-width-small-0) {
+        width: 80%;
+        height: 50px;
+        padding-top: 13px;
+      }
+      @media screen and (max-width: $max-width-small-1) {
+        width: 85%;
+      }
+
       height: 80px;
       margin: 100px auto 20px auto;
       border-radius: 50px;
-      // border: $gray solid 1px;
+      border: $sky-blue solid 1px;
       &:nth-of-type(1) {
         margin: 0px auto 10px auto;
       }
@@ -144,7 +165,9 @@
     &-item {
       height: 60px;
       width: 70%;
-
+      @media screen and (max-width: $max-width-small-1) {
+        width: 80%;
+      }
       text-align: center;
       border: $white solid 1px;
       border-radius: 50px;
@@ -162,6 +185,21 @@
         @include fontFamily-black;
         width: 100%;
         font-size: 16pt;
+        line-height: 20px;
+        @media screen and (max-width: $max-width-medium-0) {
+          font-size: 15pt;
+          width: 90%;
+        }
+        @media screen and (max-width: $max-width-medium-1) {
+          font-size: 14pt;
+        }
+        @media screen and (max-width: $max-width-small-0) {
+          font-size: 12pt;
+        }
+        @media screen and (max-width: $max-width-small-1) {
+          font-size: 10pt;
+          width: 80%;
+        }
         position: absolute;
         top: 50%;
         left: 50%;

@@ -1,29 +1,46 @@
 <template>
   <div id="agenda">
     <!-- Agenda Section -->
-    <BlockTitle text="Presentation" class="agendaList" />
-    <div class="agendaList-itemsBox">
-      <a v-for="(x,index) in presentation" :href="'#' + x.id" :key="index" @click="()=>handleAgendaClicked(x)">
-        <div class="agendaList-item">
-          <span>{{ x.zh.title }}</span>
-        </div>
-      </a>
-    </div>
-    <BlockTitle text="Double Espresso" class="agendaList" />
-    <div class="agendaList-itemsBox">
-      <a v-for="(x,index) in doubleEspresso" :href="'#' + x.id" :key="index" @click="()=>handleAgendaClicked(x)">
-        <div class="agendaList-item">
-          <span>{{ x.zh.title }}</span>
-        </div>
-      </a>
-    </div>
-    <BlockTitle text="espressoAgenda" class="agendaList"/>
-    <div class="agendaList-itemsBox">
-      <a v-for="(x,index) in espressoAgenda" :href="'#' + x.id" :key="index" @click="()=>handleAgendaClicked(x)">
-        <div class="agendaList-item">
-          <span>{{ x.zh.title }}</span>
-        </div>
-      </a>
+    <div class="agendaList">
+      <BlockTitle text="Presentation" class="agendaList-topic" />
+      <div class="agendaList-itemsBox">
+        <a
+          v-for="(x, index) in presentation"
+          :href="'#' + x.id"
+          :key="index"
+          @click="() => handleAgendaClicked(x)"
+        >
+          <div class="agendaList-item">
+            <span>{{ x.zh.title }}</span>
+          </div>
+        </a>
+      </div>
+      <BlockTitle text="Double Espresso" class="agendaList-topic" />
+      <div class="agendaList-itemsBox">
+        <a
+          v-for="(x, index) in doubleEspresso"
+          :href="'#' + x.id"
+          :key="index"
+          @click="() => handleAgendaClicked(x)"
+        >
+          <div class="agendaList-item">
+            <span>{{ x.zh.title }}</span>
+          </div>
+        </a>
+      </div>
+      <BlockTitle text="espressoAgenda" class="agendaList-topic" />
+      <div class="agendaList-itemsBox">
+        <a
+          v-for="(x, index) in espressoAgenda"
+          :href="'#' + x.id"
+          :key="index"
+          @click="() => handleAgendaClicked(x)"
+        >
+          <div class="agendaList-item">
+            <span>{{ x.zh.title }}</span>
+          </div>
+        </a>
+      </div>
     </div>
 
     <!-- Event Section -->
@@ -112,20 +129,25 @@ export default class Agenda extends Vue {
   private eventClickable = false;
   private session = sessionData.sessions;
   private speakers = sessionData.speakers;
-  private espressoAgenda = this.session.filter((x:any):boolean => x.type === 'E');
-  private doubleEspresso = this.session.filter((x:any):boolean => x.type === 'D');
-  private presentation = this.session.filter((x:any):boolean => x.type === 'P');
+  private espressoAgenda = this.session.filter(
+    (x: any): boolean => x.type === 'E'
+  );
+  private doubleEspresso = this.session.filter(
+    (x: any): boolean => x.type === 'D'
+  );
+  private presentation = this.session.filter(
+    (x: any): boolean => x.type === 'P'
+  );
   private action = {};
   private isMobile(): boolean {
     return this.device === DeviceType.MOBILE;
   }
-  private handleAgendaClicked(x:any) {
+  private handleAgendaClicked(x: any) {
     this.action = x;
   }
   public fixedScroll() {
     document.body.style.overflowY = 'hidden';
   }
-
 }
 </script>
 <style lang="scss">
