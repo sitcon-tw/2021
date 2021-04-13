@@ -13,25 +13,24 @@
       />
     </div>
     <div class="agendaBlock__title">
-      <h1>{{info().zh.title}}</h1>
+      <h1>{{info.zh.title}}</h1>
       <div class="agendaBlock__title-sub">
-        <span v-for="tag in info().tags">{{tag}}</span>
+        <span v-for="tag in info.tags">{{tag}}</span>
       </div>
     </div>
     <div class="agendaBlock__content">
       <div class="agendaBlock__content-left">
         <div class="agendaBlock__content-left-container">
           <article class="--top">
-            <p>{{info().zh.description}}</p>
+            <p>{{description}}</p>
           </article>
-          <article v-for="speaker in info().speakers">
+          <article v-for="speaker in info.speakers">
             <h2>{{getSpeaker(speaker).zh.name}}</h2>
             <p>{{getSpeaker(speaker).zh.bio}}
             </p>
           </article>
         </div>
       </div>
-      <!--
       <div class="agendaBlock__content-right">
         <div class="agendaBlock__content-right-container">
           <article>
@@ -43,9 +42,10 @@
           <article>
             <h2>先備知識</h2>
             <p>
-              編輯中...
+              {{knowlege}}
             </p>
           </article>
+          <!--
           <section class="agendaBlock_record">
             <iframe src="" frameborder="0"></iframe>
             <div class="agendaBlock-buttonsBox">
@@ -56,8 +56,9 @@
           <section v-for="speaker in info.speakers">
             <img :src="getSpeaker(speaker).avatar" alt="null" />
           </section>
+          -->
         </div>
-      </div> -->
+      </div>
     </div>
     <!-- </div> -->
   </div>
@@ -76,21 +77,29 @@ export default class AgendaBlock extends Vue {
   @Prop() private id!: string;
   private sessions: any = sessionData.sessions;
   private speakers: any = sessionData.speakers;
-  // private animation: string = 'agendaBlock-container';
-  // private info: any = this.getSession(this.id);
+  private info: any;
+  private description: string = '';
+  private knowlege: string = '';
   public getSpeaker (id: string): any {
     return this.speakers.find((speaker: any) => (speaker.id === id));
   }
   public getSession (id: string): any {
     return this.sessions.find((session: any) => (session.id === id));
   }
-  private info () {
-    return this.getSession(this.id);
-  }
-  private mounted () {
-    head.title(this.info().zh.title);
-    head.ogTitle(this.info().zh.title);
-    head.ogDescription(this.info().zh.description);
+
+  // private info () {
+  //   return this.getSession(this.id);
+  // }
+  private created () {
+    this.info = this.getSession(this.id);
+    head.title(this.info.zh.title);
+    head.ogTitle(this.info.zh.title);
+    head.ogDescription(this.info.zh.description);
+    /********************/
+    const {description} = this.info.zh;
+    const temp = description.split('##先備知識');
+    this.description = temp[0];
+    this.knowlege = temp[1];
   }
   private removeFixed () {
     document.body.style.overflowY = 'scroll';

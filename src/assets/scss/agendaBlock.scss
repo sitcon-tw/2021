@@ -96,8 +96,8 @@
   }
 }
 @mixin agendaBlockContentLeftWidth {
-  //! width: 75%;
-  width: 100%;
+  width: 75%;
+  // ! width: 100%;
   @media screen and (max-width: $max-width-small-0) {
     width: 100%;
   }
@@ -106,8 +106,8 @@
   width: 90%;
 }
 @mixin agendaBlockContentRightWidth {
-  //!  width: 25%
-  width: 0%;
+  width: 25%;
+  // ! width: 0%;
   @media screen and (max-width: $max-width-small-0) {
     width: 100%;
   }
