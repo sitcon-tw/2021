@@ -544,8 +544,8 @@
     background-color: rgba($black, 0.5);
     backdrop-filter: blur(5px);
     transition: all 0.3s;
-    opacity: 0;
-    visibility: hidden;
+    // opacity: 0;
+    // visibility: hidden;
 
     &-container {
       position: absolute;
@@ -564,12 +564,12 @@
       transition: all 0.5s 0.2s;
     }
 
-    &:target {
+    &:target, .active {
       opacity: 1;
       visibility: visible;
     }
 
-    &:target &-container {
+    &:target &-container, .active {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
     }
