@@ -3,7 +3,7 @@ const fs = require("fs");
 
 const gaTempHTML = fs.readFileSync(path.join(__dirname, "./template/ga.html"));
 
-//const sessionData = require(path.join(__dirname, "./public/json/session.json"));
+const sessionData = require(path.join(__dirname, "./public/json/session.json"));
 
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "/2021/" : "/",
@@ -20,6 +20,8 @@ module.exports = {
         '/2021/cfp/ocfp-news/',
         '/2021/agenda',
         '/2021/agenda/',
+        ...sessionData.sessions.map((session) => `/2021/agenda/${session.id}`),
+        ...sessionData.sessions.map((session) => `/2021/agenda/${session.id}/`),
         '/2021/venue',
         '/2021/venue/',
         '/2021/traffic',
