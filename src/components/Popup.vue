@@ -4,7 +4,7 @@
       class="popup-bg"
       @click="
         () => {
-          $router.go(-1);
+          $router.push(backto);
         }
       "
     ></div>
@@ -16,10 +16,11 @@
 import { Component, Vue, Watch, Prop } from 'vue-property-decorator';
 
 @Component({
-  props: ['id']
+  props: ['id', 'backto']
 })
 export default class Popup extends Vue {
   @Prop() private id!: string;
+  @Prop() private backto!: string;
 
   public mounted () {
     document.body.style.overflowY = 'hidden';

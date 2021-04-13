@@ -6,7 +6,7 @@
         src="~@/assets/images/home/home-icon-close.svg"
         @click="
           () => {
-            $router.go(-1);
+            $router.push('/agenda');
           }
         "
       />

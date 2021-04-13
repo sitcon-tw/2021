@@ -98,7 +98,7 @@
       </div>
     </div>
     <!-- Event Section End -->
-    <Popup class="agendaBlock popup-active" v-if="$route.params.uid">
+    <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda">
       <AgendaBlock :id="$route.params.uid"></AgendaBlock
     ></Popup>
   </div>
