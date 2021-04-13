@@ -89,16 +89,22 @@ export default class App extends Vue {
 
   private autoDetectMetaOg (): void {
     switch (this.$route.name) {
+      case 'Home':
+        head.title('首頁');
+        head.ogTitle('首頁');
+        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」');
+        head.ogUrl('https://sitcon.org/2021/');
+        break;
       case 'Agenda':
         head.title('議程與活動');
         head.ogTitle('議程與活動');
-        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」現正徵稿中！');
+        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」');
         head.ogUrl('https://sitcon.org/2021/agenda/');
         break;
       case 'Traffic':
         head.title('交通方式');
         head.ogTitle('交通方式');
-        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」現正徵稿中！');
+        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」');
         head.ogUrl('https://sitcon.org/2021/traffic/');
         break;
       case 'Team':
@@ -106,19 +112,19 @@ export default class App extends Vue {
       case 'Team/You':
         head.title('SITCON 團隊');
         head.ogTitle('SITCON 團隊');
-        head.ogDescription('SITCON 學生計算機年會為學生自發組成籌辦的研討會，秉持著以學生為主軸的核心價值，提供一個經驗交流與資訊技術實務分享的平台，進而達到「學以致用、教學相長」的目標；而維繫這樣的交流平台，需要多人的努力及貢獻，亦十分需要在資金上的支持。');
+        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」');
         head.ogUrl('https://sitcon.org/2021/team/');
         break;
       case 'Venue':
         head.title('會場地圖');
         head.ogTitle('會場地圖');
-        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」現正徵稿中！');
+        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」');
         head.ogUrl('https://sitcon.org/2021/traffic/');
         break;
       case 'Sponsor':
         head.title('贊助資訊');
         head.ogTitle('贊助資訊');
-        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」現正徵稿中！');
+        head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」');
         head.ogUrl('https://sitcon.org/2021/sponsor/');
         break;
       default: break;

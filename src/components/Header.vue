@@ -65,7 +65,7 @@
         </select>
         <!-- <div class="header-links--mobile-bg"></div> -->
       </div>
-      <div @click="()=>{apply = true;fixedScroll();}">
+      <div class="pointer"@click="()=>{apply = true;fixedScroll();}">
         <div class="header-apply">
           <span>報名去</span>
         </div>
