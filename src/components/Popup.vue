@@ -4,6 +4,7 @@
       class="popup-bg"
       @click="
         () => {
+          removeFixed();
           $router.push(backto);
         }
       "
@@ -32,6 +33,9 @@ export default class Popup extends Vue {
     };
   }
   public unmounted () {
+    document.body.style.overflowY = 'scroll';
+  }
+  private removeFixed () {
     document.body.style.overflowY = 'scroll';
   }
 }

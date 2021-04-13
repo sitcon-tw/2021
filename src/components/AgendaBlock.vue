@@ -6,6 +6,7 @@
         src="~@/assets/images/home/home-icon-close.svg"
         @click="
           () => {
+            removeFixed();
             $router.push('/agenda');
           }
         "
@@ -90,6 +91,9 @@ export default class AgendaBlock extends Vue {
     head.title(this.info().zh.title);
     head.ogTitle(this.info().zh.title);
     head.ogDescription(this.info().zh.description);
+  }
+  private removeFixed () {
+    document.body.style.overflowY = 'scroll';
   }
 }
 </script>
