@@ -4,42 +4,42 @@
     <div class="agendaList">
       <BlockTitle text="Presentation" class="agendaList-topic" />
       <div class="agendaList-itemsBox">
-        <a
+        <router-link
           v-for="(x, index) in presentation"
-          :href="'#' + x.id"
+          :to="'/agenda/' + x.id"
           :key="index"
           @click="() => handleAgendaClicked(x)"
         >
           <div class="agendaList-item">
             <span>{{ x.zh.title }}</span>
           </div>
-        </a>
+        </router-link>
       </div>
       <BlockTitle text="Double Espresso" class="agendaList-topic" />
       <div class="agendaList-itemsBox">
-        <a
+        <router-link
           v-for="(x, index) in doubleEspresso"
-          :href="'#' + x.id"
+          :to="'/agenda/' + x.id"
           :key="index"
           @click="() => handleAgendaClicked(x)"
         >
           <div class="agendaList-item">
             <span>{{ x.zh.title }}</span>
           </div>
-        </a>
+        </router-link>
       </div>
       <BlockTitle text="Espresso Agenda" class="agendaList-topic" />
       <div class="agendaList-itemsBox">
-        <a
+        <router-link
           v-for="(x, index) in espressoAgenda"
-          :href="'#' + x.id"
+          :to="'/agenda/' + x.id"
           :key="index"
           @click="() => handleAgendaClicked(x)"
         >
           <div class="agendaList-item">
             <span>{{ x.zh.title }}</span>
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
 
@@ -98,12 +98,13 @@
       </div>
     </div>
     <!-- Event Section End -->
-    <Popup class="agendaBlock" :id="action.id">
-      <AgendaBlock :info="action" :speakers="speakers"></AgendaBlock
+    <Popup class="agendaBlock popup-active" v-if="$route.params.uid">
+      <AgendaBlock :id="$route.params.uid"></AgendaBlock
     ></Popup>
   </div>
 </template>
 <script lang="ts">
+import { Route } from 'vue-router';
 import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
 import { Action, Getter } from 'vuex-class';
 
@@ -138,12 +139,8 @@ export default class Agenda extends Vue {
   private presentation = this.session.filter(
     (x: any): boolean => x.type === 'P'
   );
-  private action = {};
   private isMobile (): boolean {
     return this.device === DeviceType.MOBILE;
-  }
-  private handleAgendaClicked (x: any) {
-    this.action = x;
   }
 }
 </script>

@@ -5,7 +5,6 @@
       @click="
         () => {
           $router.go(-1);
-          removeFixedScroll();
         }
       "
     ></div>
@@ -23,14 +22,16 @@ export default class Popup extends Vue {
   @Prop() private id!: string;
 
   public mounted () {
+    document.body.style.overflowY = 'hidden';
     const { hash } = window.location;
     window.onpopstate = (event: any) => {
       if (window.location.hash === '') {
         document.body.style.overflowY = 'scroll';
-      } else {
-        document.body.style.overflowY = 'hidden';
       }
     };
+  }
+  public unmounted () {
+    document.body.style.overflowY = 'scroll';
   }
 }
 </script>

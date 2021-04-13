@@ -1,30 +1,29 @@
 <template>
   <!-- <div class="agendaBlock"> -->
-  <div class="agendaBlock-container">
+  <div class="agendaBlock-container active">
     <div class="agendaBlock__close">
       <img
         src="~@/assets/images/home/home-icon-close.svg"
         @click="
           () => {
             $router.go(-1);
-            removeFixedScroll();
           }
         "
       />
     </div>
     <div class="agendaBlock__title">
-      <h1>{{info.zh.title}}</h1>
+      <h1>{{info().zh.title}}</h1>
       <div class="agendaBlock__title-sub">
-        <span v-for="tag in info.tags">{{tag}}</span>
+        <span v-for="tag in info().tags">{{tag}}</span>
       </div>
     </div>
     <div class="agendaBlock__content">
       <div class="agendaBlock__content-left">
         <div class="agendaBlock__content-left-container">
           <article class="--top">
-            <p>{{info.zh.description}}</p>
+            <p>{{info().zh.description}}</p>
           </article>
-          <article v-for="speaker in info.speakers">
+          <article v-for="speaker in info().speakers">
             <h2>{{getSpeaker(speaker).zh.name}}</h2>
             <p>{{getSpeaker(speaker).zh.bio}}
             </p>
@@ -64,12 +63,25 @@
 </template>
 <script lang="ts">
 import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
+import { Route } from 'vue-router';
+
+import sessionData from '@/../public/json/session.json';
+
 @Component({})
 export default class AgendaBlock extends Vue {
-  @Prop() private info!: any;
-  @Prop() private speakers!: any;
+  @Prop() private id!: string;
+  private sessions: any = sessionData.sessions;
+  private speakers: any = sessionData.speakers;
+  // private animation: string = 'agendaBlock-container';
+  // private info: any = this.getSession(this.id);
   public getSpeaker (id: string): any {
     return this.speakers.find((speaker: any) => (speaker.id === id));
+  }
+  public getSession (id: string): any {
+    return this.sessions.find((session: any) => (session.id === id));
+  }
+  private info () {
+    return this.getSession(this.id);
   }
 }
 </script>
