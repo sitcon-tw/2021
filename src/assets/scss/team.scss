@@ -1,0 +1,56 @@
+
+#team {
+    .team_list {
+        width: 80%;
+        margin: 20px auto;
+        .group {
+            width: 100%;
+            min-height: 200px;
+            background: white;
+            border-radius: 20px;
+            margin: 20px 0;
+            position: relative;
+            padding: 15px 35px;
+            box-shadow: 0px 4px 12px #0000FF40;
+            h1 {
+                font-size: 20pt;
+                margin: 20px auto;
+            }
+            p {
+                display: block;
+                max-width: calc(100% - 130pt);
+            }
+            &-img {
+                position: absolute;
+                height: 100px;
+                right: 20px;
+                top: 20px;
+            }
+            &-members {
+                margin: 25px auto;
+                .group-member {
+                    width: 120px;
+                    height: 120px;
+                    display: inline-flex;
+                    flex-direction: column;
+                    margin: 10px auto;
+                    .member-icon {
+                        max-width: 70%;
+                        border-radius: 50%;
+                        margin: auto;
+                    }
+                    &-text {
+                        text-align: center;
+                        margin: 5px 0;
+                    }
+                    .name {
+                        font-size: 12pt;
+                    }
+                    .type {
+                        font-size: 10pt;
+                    }
+                }
+            }
+        }
+    }
+}
