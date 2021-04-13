@@ -26,7 +26,7 @@ export const routes: RouteConfig[] = [
   },
   {
     path: '/agenda/:uid',
-    name: 'Agenda',
+    name: 'Agenda-view',
     component: Agenda,
     meta: {
       label: 'SITCON 2021',

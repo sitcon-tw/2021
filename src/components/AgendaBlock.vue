@@ -67,6 +67,9 @@ import { Route } from 'vue-router';
 
 import sessionData from '@/../public/json/session.json';
 
+import head from '../util/head';
+
+
 @Component({})
 export default class AgendaBlock extends Vue {
   @Prop() private id!: string;
@@ -82,6 +85,11 @@ export default class AgendaBlock extends Vue {
   }
   private info () {
     return this.getSession(this.id);
+  }
+  private mounted () {
+    head.title(this.info().zh.title);
+    head.ogTitle(this.info().zh.title);
+    head.ogDescription(this.info().zh.description);
   }
 }
 </script>
