@@ -36,7 +36,7 @@
           <article>
             <h2>適合聽眾</h2>
             <p>
-              編輯中...
+              {{audience}}
             </p>
           </article>
           <article>
@@ -80,6 +80,7 @@ export default class AgendaBlock extends Vue {
   private info: any;
   private description: string = '';
   private knowlege: string = '';
+  private audience: string = '';
   public getSpeaker (id: string): any {
     return this.speakers.find((speaker: any) => (speaker.id === id));
   }
@@ -97,9 +98,11 @@ export default class AgendaBlock extends Vue {
     head.ogDescription(this.info.zh.description);
     /********************/
     const {description} = this.info.zh;
-    const temp = description.split('##先備知識');
+    const temp = description.split('## 目標聽眾');
     this.description = temp[0];
-    this.knowlege = temp[1];
+    const tempp = temp[1].split('## 先備知識');
+    this.audience = tempp[0];
+    this.knowlege = tempp[1];
   }
   private removeFixed () {
     document.body.style.overflowY = 'scroll';
