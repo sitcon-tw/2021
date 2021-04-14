@@ -1,3 +1,49 @@
+@import './font.scss';
+
+$teamImageSize: 130px;
+$teamNameSize: 20pt;
+$memberNameSize: 10pt;
+$memberBlockSize: 100px;
+
+@mixin teamName {
+    @media screen and (max-width: 700px) {
+        $teamImageSize: 100px;
+        p {
+            max-width: calc(100% - #{$teamImageSize});
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        $teamImageSize: 100px;
+        p {
+            max-width: 100%;
+            margin-top: calc(#{$teamImageSize} - 15px);
+            font-size: calc(#{$teamNameSize} - 10pt);
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
+}
+@mixin member {
+    @media screen and (max-width: 550px) {
+        $memberBlockSize: 70px;
+        &-members {
+            .group-member {
+                width: $memberBlockSize;
+                height: $memberBlockSize;
+                .name {
+                    font-size: $memberNameSize;
+                }
+                .type {
+                    font-size: calc(#{$memberNameSize} - 3pt);
+                }
+            }
+        }
+    }
+}
 
 #team {
     .team_list {
@@ -12,28 +58,36 @@
             position: relative;
             padding: 15px 35px;
             box-shadow: 0px 4px 12px #0000FF40;
+            
             h1 {
-                font-size: 20pt;
-                margin: 20px auto;
+                font-size: $teamNameSize;
+                @include fontFamily-black;
+                margin: 25px auto;
             }
             p {
                 display: block;
-                max-width: calc(100% - 130pt);
+                max-width: calc(100% - #{$teamImageSize});
+                min-height: 40px;
+                font-size: calc(#{$teamNameSize} - 8pt);
+                @include fontFamily-semibold;
+                padding: 0 10px;
+                line-height: 20px;
             }
             &-img {
                 position: absolute;
-                height: 100px;
+                height: $teamImageSize;
                 right: 20px;
                 top: 20px;
             }
+            @include teamName;
             &-members {
                 margin: 25px auto;
                 .group-member {
-                    width: 120px;
-                    height: 120px;
+                    width: $memberBlockSize;
+                    height: $memberBlockSize;
                     display: inline-flex;
                     flex-direction: column;
-                    margin: 10px auto;
+                    margin: 15px auto;
                     .member-icon {
                         max-width: 70%;
                         border-radius: 50%;
@@ -44,10 +98,10 @@
                         margin: 5px 0;
                     }
                     .name {
-                        font-size: 12pt;
+                        font-size: $memberNameSize;
                     }
                     .type {
-                        font-size: 10pt;
+                        font-size: calc(#{$memberNameSize} - 3pt);
                     }
                 }
             }
