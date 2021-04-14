@@ -26,6 +26,28 @@ $memberBlockSize: 100px;
             height: $teamImageSize;
         }
     }
+    @media screen and (max-width: 400px) {
+        $teamImageSize: 80px;
+        p {
+            max-width: 100%;
+            margin-top: calc(#{$teamImageSize} - 15px);
+            font-size: calc(#{$teamNameSize} - 10pt);
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
+    @media screen and (max-width: 340px) {
+        $teamImageSize: 60px;
+        p {
+            max-width: 100%;
+            margin-top: calc(#{$teamImageSize} - 15px);
+            font-size: calc(#{$teamNameSize} - 10pt);
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
 }
 @mixin member {
     @media screen and (max-width: 550px) {
@@ -105,6 +127,7 @@ $memberBlockSize: 100px;
                     }
                 }
             }
+            @include member;
         }
     }
 }
