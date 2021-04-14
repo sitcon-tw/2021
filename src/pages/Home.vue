@@ -1,5 +1,6 @@
 <template>
   <div id="home" class="home">
+    <background></background>
     <section class="section-title">
       <div class="home__title">
         <div class="home__title-box1">
@@ -40,9 +41,7 @@
               src="~@/assets/images/home/home-icon-square.svg"
             />
             <h1>算盤的後裔</h1>
-            <h2 class="home__info-title-h2--big">
-              Descendants of the abacus
-            </h2>
+            <h2 class="home__info-title-h2--big">Descendants of the abacus</h2>
           </div>
           <div class="home__info-paragraph">
             <p>
@@ -85,9 +84,7 @@
         <div class="home__info-container">
           <div class="home__info-title">
             <h1>行為準則</h1>
-            <h2 class="home__info-title-h2--mid">
-              Code of Conduct
-            </h2>
+            <h2 class="home__info-title-h2--mid">Code of Conduct</h2>
           </div>
           <div class="home__info-paragraph">
             <p>
@@ -106,9 +103,7 @@
         <div class="home__info-container">
           <div class="home__info-title">
             <h1>參與討論</h1>
-            <h2 class="home__info-title-h2--mid">
-              Join the community
-            </h2>
+            <h2 class="home__info-title-h2--mid">Join the community</h2>
           </div>
           <div class="home__info-paragraph">
             <p>
@@ -144,9 +139,10 @@
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import background from '@/components/Background.vue';
-
 @Component({
-  components: {}
+  components: {
+    background
+  }
 })
 export default class CFP extends Vue {
   @Prop() private msg!: string;
@@ -154,10 +150,8 @@ export default class CFP extends Vue {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/home/home';
-
+@import "@/assets/scss/home/home";
 /*
-
 .hexagon {
   float: right;
   $width: 40px;
