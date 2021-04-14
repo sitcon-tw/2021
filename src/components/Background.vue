@@ -40,8 +40,9 @@ export default {
       divide: 45,
       half_divide: 45,
       divide_2: 50,
-      LOWER_BOUND_FPS: 1 / 45,
-      clock: null// WARNING Unnecessary trailing comma
+      LOWER_BOUND_FPS: 1 / 450, // FPS detect standard
+      clock: null,
+      flag:0 // WARNING Unnecessary trailing comma
     };
   },
   mounted () {
@@ -82,7 +83,7 @@ export default {
       });
       this.renderer.setSize(width, height);
       this.scene = new THREE.Scene();
-      this.light_ambient = new THREE.AmbientLight(0xb5b5b5); // 0xeef2ff
+      this.light_ambient = new THREE.AmbientLight(0xc1c1c1); // 0xeef2ff
       this.scene.add(this.light_ambient);
       this.camera = new THREE.PerspectiveCamera(
         50,
@@ -246,26 +247,42 @@ export default {
       if (!this.alive) {
           return;
       }
-
       let delta = this.clock.getDelta();
-      console.log(delta);
-      if (delta == 0) delta = 1 / 30;
-      
-
-      if (delta <= this.LOWER_BOUND_FPS) {
-        console.log('here');
+      // console.log(delta);
+      if (delta < this.LOWER_BOUND_FPS) {
+        // console.log('here');
+        if( this.flag == 1){
+          if(this.cylinder_group)this.scene.add( this.cylinder_group );
+          if(this.box_group)this.scene.add( this.box_group );
+          if(this.mesh)this.scene.add( this.mesh );
+          if(this.spotLight_box)this.scene.add( this.spotLight_box );
+          if(this.spotLight_box_top)this.scene.add( this.spotLight_box_top );
+        }
         requestAnimationFrame(this.animate);
         this.offset += (pageYOffset / 200 - this.offset) * 0.1;
         //   this.offset_momentum *= 0.9;
         this.box_group.rotation.z = (-this.offset * Math.PI) / this.divide_2;
         this.set_cylinder_position(this.offset % 1); // 這邊的取餘數是關鍵，因為 offset 的週期是1 (offset=1與offset=2畫面看起來相同)
         this.renderer.render(this.scene, this.camera);
+        this.flag = 0;
         //   this.render(this.animate); // 效能提升，渲染次數減半
       }
       else{
+        // console.log('here off');
         requestAnimationFrame(this.animate);
+        // if( this.flag == 1){
+        if(this.cylinder_group)this.scene.remove( this.cylinder_group );
+        if(this.box_group)this.scene.remove( this.box_group );
+        //if(this.geometry)this.scene.add( this.geometry );
+        //if(this.material)this.scene.add( this.material );
+        if(this.mesh)this.scene.remove( this.mesh );
+        if(this.spotLight_box)this.scene.remove( this.spotLight_box );
+        if(this.spotLight_box_top)this.scene.remove( this.spotLight_box_top );
+        if(this.geometry) this.geometry.dispose();
+        if(this.material) this.material.dispose();
+        // }
+        this.flag = 1;
       }
-      
     },
     // render() {
     //   if (this.skip !== 0) {
