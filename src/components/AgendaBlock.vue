@@ -34,7 +34,7 @@
       <div class="agendaBlock__content-right">
         <div class="agendaBlock__content-right-container">
           <article>
-            <h2>適合聽眾</h2>
+            <h2>目標聽眾</h2>
             <p>
               {{audience}}
             </p>
