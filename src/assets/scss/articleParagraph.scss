@@ -102,11 +102,9 @@
     @include midFlex;
   }
   &-content {
-    p {
-      @include fontFamily-semibold;
-      @include contentFontsize;
-      line-height: 30px;
-    }
+    @include fontFamily-semibold;
+    @include contentFontsize;
+    line-height: 30px; 
   }
 
   &-buttonsBox {
