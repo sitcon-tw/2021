@@ -121,6 +121,7 @@ $memberBlockSize: 100px;
                     }
                     .name {
                         font-size: $memberNameSize;
+                        @include fontFamily-bold;
                     }
                     .type {
                         font-size: calc(#{$memberNameSize} - 3pt);
