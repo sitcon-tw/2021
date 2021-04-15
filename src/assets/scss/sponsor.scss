@@ -1,4 +1,22 @@
 @import './breakpoint';
+@import './color';
+
+@mixin wrapperWidth {
+  width: 70%;
+  margin: 0 auto;
+  @media screen and (max-width: $max-width-medium-0) {
+    width: 80%;
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    width: 85%;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    width: 90%;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+    width: 95%;
+  }
+}
 
 #sponsor {
   .section {
@@ -10,9 +28,74 @@
 
     &-sponsors {
       width: 100%;
-      // padding-top: 110px;
-      // padding-bottom: 120px;
+      padding-top: 50px;
+      padding-bottom: 100px;
       background-color: lightcoral;
+    }
+  }
+
+  .sponsors {
+    background-color: antiquewhite;
+
+    &-wrapper {
+      @include wrapperWidth;
+    }
+
+    &__level {
+      background-color: lightgreen;
+      position: relative;
+      margin-bottom: 100px;
+
+      &-title {
+        background-color: lightgoldenrodyellow;
+        height: 150px;
+        h1 {
+          background-color: lightseagreen;
+          padding-left: 100px;
+          padding-top: 20px;
+          font-size: 40pt;
+        }
+      }
+
+      &-img {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: 130px;
+        width: 130px;
+        margin: 0 100px 0 0;
+
+        background-color: $gray;
+      }
+    }
+
+    &__sponsorBox {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      column-gap: 20px;
+      .sponsor {
+        background-color: aquamarine;
+        border: 1px $black solid;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+
+        &-img {
+          height: 130px;
+          width: 130px;
+          margin: 0 auto;
+          background-color: $gray;
+        }
+
+        &-name {
+          h2 {
+            font-size: 20pt;
+          }
+        }
+
+        &-discription {
+        }
+      }
     }
   }
 }

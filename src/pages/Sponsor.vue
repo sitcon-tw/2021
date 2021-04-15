@@ -15,107 +15,117 @@
         </div>
       </ArticleParagraph>
       <section class="section-sponsors">
+        <div class="sponsors-wrapper">
           <div class="sponsors">
-            <section class="sponsorsLevel">
-              <div class="sponsorsLevel-title">
+            <section class="sponsors__level">
+              <div class="sponsors__level-title">
                 <h1>深耕級</h1>
               </div>
-              <img src="" alt="sponsorsLevel level" class="sponsorsLevel-img">
+              <img src="" class="sponsors__level-img">
+              <!-- alt="sponsorsLevel-img"  -->
+                <div class="sponsors__sponsorBox">
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                    </article>
+                  </section>  
 
-                <section class="sponsor__box">
-                  <div class="sponsor-name">
-                    <h2>Testing developers</h2>
-                  </div>
-                  <img src="" alt="sponsor-logo" class="sponsor-img">
-                  <!-- <img
-                    :src="require(`../assets/images/sponsor/${}.svg`)"
-                    class="sponsor-logo"
-                /> -->
-                  <article class="sponsor-discription">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
-                  </article>
-                </section>  
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                    </article>
+                  </section>  
 
-                <section class="sponsor__box">
-                  <div class="sponsor-name">
-                    <h2>Testing developers</h2>
-                  </div>
-                  <img src="" alt="sponsor-logo" class="sponsor-img">
-                  <!-- <img
-                    :src="require(`../assets/images/sponsor/${}.svg`)"
-                    class="sponsor-logo"
-                /> -->
-                  <article class="sponsor-discription">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
-                  </article>
-                </section>  
-
-                <section class="sponsor__box">
-                  <div class="sponsor-name">
-                    <h2>Testing developers</h2>
-                  </div>
-                  <img src="" alt="sponsor-logo" class="sponsor-img">
-                  <!-- <img
-                    :src="require(`../assets/images/sponsor/${}.svg`)"
-                    class="sponsor-logo"
-                /> -->
-                  <article class="sponsor-discription">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
-                  </article>
-                </section>  
-
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                    </article>
+                  </section>  
+                </div>
             </section>
 
-             <section class="sponsorsLevel">
-              <div class="sponsorsLevel-title">
+             <section class="sponsors__level">
+              <div class="sponsors__level-title">
                 <h1>前瞻級</h1>
               </div>
-              <img src="" alt="sponsorsLevel level" class="sponsorsLevel-img">
+              <img src=""  class="sponsors__level-img">
+              <!-- alt="sponsorsLevel-img" -->
+                <div class="sponsors__sponsorBox">
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                    </article>
+                  </section>  
 
-                <section class="sponsor__box">
-                  <div class="sponsor-name">
-                    <h2>Testing developers</h2>
-                  </div>
-                  <img src="" alt="sponsor-logo" class="sponsor-img">
-                  <!-- <img
-                    :src="require(`../assets/images/sponsor/${}.svg`)"
-                    class="sponsor-logo"
-                /> -->
-                  <article class="sponsor-discription">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
-                  </article>
-                </section>  
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                    </article>
+                  </section>  
 
-                <section class="sponsor__box">
-                  <div class="sponsor-name">
-                    <h2>Testing developers</h2>
-                  </div>
-                  <img src="" alt="sponsor-logo" class="sponsor-img">
-                  <!-- <img
-                    :src="require(`../assets/images/sponsor/${}.svg`)"
-                    class="sponsor-logo"
-                /> -->
-                  <article class="sponsor-discription">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
-                  </article>
-                </section>  
-
-                <section class="sponsor__box">
-                  <div class="sponsor-name">
-                    <h2>Testing developers</h2>
-                  </div>
-                  <img src="" alt="sponsor-logo" class="sponsor-img">
-                  <!-- <img
-                    :src="require(`../assets/images/sponsor/${}.svg`)"
-                    class="sponsor-logo"
-                /> -->
-                  <article class="sponsor-discription">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
-                  </article>
-                </section>  
-
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                    </article>
+                  </section> 
+                </div> 
             </section>
-          </div>
+          </div>   
+        </div>
       </section>
 
     </section>
