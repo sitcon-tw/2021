@@ -11,8 +11,18 @@
                     你就會收到相關的資訊！
                 </p>
                 <div class="ariticleParagraph-buttonsBox">
-                    <a class="ariticleParagraph-button" href="" target="_blank"><span>跳坑表單</span></a>
-                    <a class="ariticleParagraph-button" href=""><span>郵件論壇</span></a>
+                    <a
+                        class="ariticleParagraph-button"
+                        href=""
+                        target="_blank">
+                        <span>跳坑表單</span>
+                    </a>
+                    <a
+                        class="ariticleParagraph-button"
+                        href="https://groups.google.com/g/sitcon-general"
+                        target="_blank">
+                        <span>郵件論壇</span>
+                    </a>
                 </div>
             </ArticleParagraph>
         </article>

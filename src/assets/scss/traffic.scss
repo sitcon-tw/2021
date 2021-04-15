@@ -1,4 +1,12 @@
 @import './font';
+
+@mixin traffic_method {
+    @media screen and (max-width: 500px) {
+        width: 500px;
+        overflow-x: auto;
+    }
+}
+
 #traffic {
     .title {
         margin-top: 60px;
@@ -15,6 +23,7 @@
     .traffic-methods {
         width: 80%;
         margin: 50px auto;
+        @include traffic_method;
         & > section {
             text-align: center;
             @include fontFamily-bold;

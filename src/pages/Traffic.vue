@@ -1,5 +1,7 @@
 <template>
     <div id="traffic">
+        <WIP/>
+        <!--
         <BlockTitle class="title" text="會場地點"></BlockTitle>
         <article>
         <section class="address">
@@ -14,6 +16,7 @@
             <section>交通方式</section>
             <img src="~@/assets/images/traff_info.svg"/>
         </article>
+        -->
         <!-- 
         <article class="traff-car-info">
             <section>交通車資訊</section>
@@ -26,11 +29,13 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 
 import BlockTitle from '../components/BlockTitle.vue';
 import SitconMap from '../components/sitcon-map.vue';
+import WIP from '../components/WIP.vue';
 
 @Component({
     components: {
         BlockTitle,
-        SitconMap
+        SitconMap,
+        WIP
     }
 })
 export default class Traffic extends Vue {}
