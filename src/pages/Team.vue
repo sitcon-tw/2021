@@ -13,7 +13,7 @@
                 <div class="ariticleParagraph-buttonsBox">
                     <a
                         class="ariticleParagraph-button"
-                        href=""
+                        href="https://forms.gle/ktKXrwMwVvD4FNB49"
                         target="_blank">
                         <span>跳坑表單</span>
                     </a>
