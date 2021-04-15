@@ -7,7 +7,7 @@
             <p>台北市南港區研究路二段 128 號</p>
         </section>
         <section>
-            <SitconMap width="70%" height="calc(80vh - 120px)"></SitconMap>
+            <SitconMap width="70%" height="500px"></SitconMap>
         </section>
         </article>
         <article class="traffic-methods">

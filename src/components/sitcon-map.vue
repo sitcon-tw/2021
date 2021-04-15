@@ -88,10 +88,6 @@ export default class SitconMap extends Vue {
   background: white;
   @media screen and (max-width: 900px) {
     width: 100vw !important;
-    height: 500px !important;
-    .map {
-      height: 500px !important;
-    }
   }
   .sitetext {
     text-align: center;
