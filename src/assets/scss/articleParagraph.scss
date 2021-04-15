@@ -1,5 +1,4 @@
 @import './font.scss';
-@import './color.scss';
 @import './breakpoint';
 
 @mixin wrapperWidth {
@@ -55,18 +54,6 @@
     flex: 7.5;
   }
 }
-@mixin buttonsBoxScale {
-  transform: scale(1);
-  @media screen and (max-width: $max-width-medium-0) {
-    transform: scale(0.95);
-  }
-  @media screen and (max-width: $max-width-small-0) {
-    transform: scale(0.9);
-  }
-  @media screen and (max-width: $max-width-small-3) {
-    transform: scale(0.85);
-  }
-}
 
 .ariticleParagraph {
   width: 100%;
@@ -104,36 +91,9 @@
   &-content {
     @include fontFamily-semibold;
     @include contentFontsize;
-    line-height: 30px; 
+    line-height: 30px;
   }
 
-  &-buttonsBox {
-    @include buttonsBoxScale;
-    margin: 50px auto;
-    width: 230px;
-    height: 42px;
-    a {
-      float: left;
-      background-color: $indigo-blue-dark;
-      color: $white;
-      width: 100px;
-      height: 42px;
-      &:nth-of-type(1) {
-        margin-right: 30px;
-      }
-      border-radius: 50px;
-      box-shadow: 0 3px 10px 0 rgba(0, 0, 255, 0.18);
-      text-align: center;
-      span {
-        @include fontFamily-black;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    }
-  }
   &-arrow {
     width: 40px;
     @media screen and (max-width: $max-width-medium-1) {

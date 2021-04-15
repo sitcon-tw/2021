@@ -10,21 +10,21 @@
                     若你對參與SITCON年會的籌備有興趣，歡迎填寫跳坑表單或是關注SITCON的郵件論壇，明年的籌備開始時，
                     你就會收到相關的資訊！
                 </p>
-                <div class="ariticleParagraph-buttonsBox">
-                    <a
-                        class="ariticleParagraph-button"
-                        href="https://forms.gle/ktKXrwMwVvD4FNB49"
-                        target="_blank">
-                        <span>跳坑表單</span>
-                    </a>
-                    <a
-                        class="ariticleParagraph-button"
-                        href="https://groups.google.com/g/sitcon-general"
-                        target="_blank">
-                        <span>郵件論壇</span>
-                    </a>
-                </div>
             </ArticleParagraph>
+            <div class="ariticleParagraph-buttonsBox">
+                <a
+                    class="ariticleParagraph-button"
+                    href="https://forms.gle/ktKXrwMwVvD4FNB49"
+                    target="_blank">
+                    <span>跳坑表單</span>
+                </a>
+                <a
+                    class="ariticleParagraph-button"
+                    href="https://groups.google.com/g/sitcon-general"
+                    target="_blank">
+                    <span>郵件論壇</span>
+                </a>
+            </div>
         </article>
         <article class="team_list">
             <section v-for="group in team" class="group">
