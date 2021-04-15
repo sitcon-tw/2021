@@ -1,7 +1,5 @@
 <template>
     <div id="traffic">
-        <WIP/>
-        <!--
         <BlockTitle class="title" text="會場地點"></BlockTitle>
         <article>
         <section class="address">
@@ -14,9 +12,10 @@
         </article>
         <article class="traffic-methods">
             <section>交通方式</section>
-            <img src="~@/assets/images/traff_info.svg"/>
+            <section class="traffic-methods-info">
+                <img src="~@/assets/images/traff_info.svg"/>
+            </section>
         </article>
-        -->
         <!-- 
         <article class="traff-car-info">
             <section>交通車資訊</section>
