@@ -4,6 +4,7 @@
         </article>
         <article class="team_list">
             <section v-for="group in team" class="group">
+                <div class="team_dotdot"></div>
                 <h1>{{group.name}}</h1>
                 <p>{{group.intro}}</p>
                  <img
