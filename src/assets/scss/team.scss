@@ -1,0 +1,143 @@
+@import './font.scss';
+
+$teamImageSize: 130px;
+$teamNameSize: 20pt;
+$memberNameSize: 10pt;
+$memberBlockSize: 100px;
+
+@mixin teamName {
+    @media screen and (max-width: 700px) {
+        $teamImageSize: 100px;
+        p {
+            max-width: calc(100% - #{$teamImageSize});
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
+    @media screen and (max-width: 550px) {
+        $teamImageSize: 100px;
+        p {
+            max-width: 100%;
+            margin-top: calc(#{$teamImageSize} - 15px);
+            font-size: calc(#{$teamNameSize} - 10pt);
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        $teamImageSize: 80px;
+        p {
+            max-width: 100%;
+            margin-top: calc(#{$teamImageSize} - 15px);
+            font-size: calc(#{$teamNameSize} - 10pt);
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
+    @media screen and (max-width: 340px) {
+        $teamImageSize: 60px;
+        p {
+            max-width: 100%;
+            margin-top: calc(#{$teamImageSize} - 15px);
+            font-size: calc(#{$teamNameSize} - 10pt);
+        }
+        &-img {
+            height: $teamImageSize;
+        }
+    }
+}
+@mixin member {
+    @media screen and (max-width: 550px) {
+        $memberBlockSize: 70px;
+        &-members {
+            .group-member {
+                width: $memberBlockSize;
+                height: $memberBlockSize;
+                .name {
+                    font-size: $memberNameSize;
+                }
+                .type {
+                    font-size: calc(#{$memberNameSize} - 3pt);
+                }
+            }
+        }
+    }
+}
+
+#team {
+    .team_list {
+        width: 80%;
+        margin: 20px auto;
+        .group {
+            width: 100%;
+            min-height: 200px;
+            background: white;
+            border-radius: 20px;
+            margin: 20px 0;
+            position: relative;
+            padding: 15px 35px;
+            box-shadow: 0px 4px 12px #0000FF40;
+            
+            h1 {
+                font-size: $teamNameSize;
+                @include fontFamily-black;
+                margin: 25px auto;
+            }
+            p {
+                display: block;
+                max-width: calc(100% - #{$teamImageSize});
+                min-height: 40px;
+                font-size: calc(#{$teamNameSize} - 8pt);
+                @include fontFamily-semibold;
+                padding: 0 10px;
+                line-height: 20px;
+            }
+            &-img {
+                position: absolute;
+                height: $teamImageSize;
+                right: 20px;
+                top: 20px;
+            }
+            @include teamName;
+            &-members {
+                margin: 25px auto;
+                .group-member {
+                    width: $memberBlockSize;
+                    height: $memberBlockSize;
+                    display: inline-flex;
+                    flex-direction: column;
+                    margin: 15px auto;
+                    .member-icon {
+                        max-width: 70%;
+                        border-radius: 50%;
+                        margin: auto;
+                    }
+                    &-text {
+                        text-align: center;
+                        margin: 5px 0;
+                    }
+                    .name {
+                        font-size: $memberNameSize;
+                        @include fontFamily-bold;
+                    }
+                    .type {
+                        font-size: calc(#{$memberNameSize} - 3pt);
+                    }
+                }
+            }
+            @include member;
+        }
+    }
+    .team_dotdot {
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: blue;
+        border-radius: 5px 0 5px 0;
+    }
+}

@@ -25,12 +25,14 @@
     "vuex-class": "^0.3.2"
   },
   "devDependencies": {
+    "@types/ol": "^6.4.2",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/cli-plugin-typescript": "~4.5.0",
     "@vue/cli-plugin-vuex": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
     "node-sass": "^4.12.0",
+    "ol": "^6.5.0",
     "prerender-spa-plugin": "^3.2.1",
     "sass-loader": "^8.0.2",
     "typescript": "~3.9.3",
