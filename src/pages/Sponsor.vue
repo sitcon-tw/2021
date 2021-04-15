@@ -14,6 +14,110 @@
             <a class="ariticleParagraph-button" href="mailto:contact@sitcon.org"><span>企業合作</span></a>
         </div>
       </ArticleParagraph>
+      <section class="section-sponsors">
+          <div class="sponsors">
+            <section class="sponsorsLevel">
+              <div class="sponsorsLevel-title">
+                <h1>深耕級</h1>
+              </div>
+              <img src="" alt="sponsorsLevel level" class="sponsorsLevel-img">
+
+                <section class="sponsor__box">
+                  <div class="sponsor-name">
+                    <h2>Testing developers</h2>
+                  </div>
+                  <img src="" alt="sponsor-logo" class="sponsor-img">
+                  <!-- <img
+                    :src="require(`../assets/images/sponsor/${}.svg`)"
+                    class="sponsor-logo"
+                /> -->
+                  <article class="sponsor-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                  </article>
+                </section>  
+
+                <section class="sponsor__box">
+                  <div class="sponsor-name">
+                    <h2>Testing developers</h2>
+                  </div>
+                  <img src="" alt="sponsor-logo" class="sponsor-img">
+                  <!-- <img
+                    :src="require(`../assets/images/sponsor/${}.svg`)"
+                    class="sponsor-logo"
+                /> -->
+                  <article class="sponsor-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                  </article>
+                </section>  
+
+                <section class="sponsor__box">
+                  <div class="sponsor-name">
+                    <h2>Testing developers</h2>
+                  </div>
+                  <img src="" alt="sponsor-logo" class="sponsor-img">
+                  <!-- <img
+                    :src="require(`../assets/images/sponsor/${}.svg`)"
+                    class="sponsor-logo"
+                /> -->
+                  <article class="sponsor-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                  </article>
+                </section>  
+
+            </section>
+
+             <section class="sponsorsLevel">
+              <div class="sponsorsLevel-title">
+                <h1>前瞻級</h1>
+              </div>
+              <img src="" alt="sponsorsLevel level" class="sponsorsLevel-img">
+
+                <section class="sponsor__box">
+                  <div class="sponsor-name">
+                    <h2>Testing developers</h2>
+                  </div>
+                  <img src="" alt="sponsor-logo" class="sponsor-img">
+                  <!-- <img
+                    :src="require(`../assets/images/sponsor/${}.svg`)"
+                    class="sponsor-logo"
+                /> -->
+                  <article class="sponsor-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                  </article>
+                </section>  
+
+                <section class="sponsor__box">
+                  <div class="sponsor-name">
+                    <h2>Testing developers</h2>
+                  </div>
+                  <img src="" alt="sponsor-logo" class="sponsor-img">
+                  <!-- <img
+                    :src="require(`../assets/images/sponsor/${}.svg`)"
+                    class="sponsor-logo"
+                /> -->
+                  <article class="sponsor-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                  </article>
+                </section>  
+
+                <section class="sponsor__box">
+                  <div class="sponsor-name">
+                    <h2>Testing developers</h2>
+                  </div>
+                  <img src="" alt="sponsor-logo" class="sponsor-img">
+                  <!-- <img
+                    :src="require(`../assets/images/sponsor/${}.svg`)"
+                    class="sponsor-logo"
+                /> -->
+                  <article class="sponsor-discription">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                  </article>
+                </section>  
+
+            </section>
+          </div>
+      </section>
+
     </section>
   </div>
 </template>
