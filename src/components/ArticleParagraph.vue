@@ -13,10 +13,6 @@
                 <img class="ariticleParagraph-arrow" src="@/assets/images/arrow-right-blue.svg" />
             </div>
         </div>
-        <div class="ariticleParagraph-buttonsBox">
-            <a class="ariticleParagraph-button" href="http://bit.ly/donatesitcon2021" target="_blank"><span>個人贊助</span></a>
-            <a class="ariticleParagraph-button" href="mailto:contact@sitcon.org"><span>企業合作</span></a>
-        </div>
     </div>
 </template>
 

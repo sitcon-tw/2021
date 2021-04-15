@@ -126,8 +126,11 @@
       text-align: center;
       span {
         @include fontFamily-black;
-        display: block;
-        padding-top: 12px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }

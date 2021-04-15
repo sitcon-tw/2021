@@ -9,6 +9,10 @@
         <p>維繫這樣的交流平台，需要多人的努力及貢獻，亦十分需要在資金上的支持。</p>
         <p>希望能藉由您的一份力量，來促成活動的舉行，讓更多學生能在舞台上展現自我成長。</p>
         <p>歡迎您參與贊助，支持 SITCON、讓我們將每年的活動辦得盡善盡美！ </p>
+        <div class="ariticleParagraph-buttonsBox">
+            <a class="ariticleParagraph-button" href="http://bit.ly/donatesitcon2021" target="_blank"><span>個人贊助</span></a>
+            <a class="ariticleParagraph-button" href="mailto:contact@sitcon.org"><span>企業合作</span></a>
+        </div>
       </ArticleParagraph>
     </section>
   </div>
