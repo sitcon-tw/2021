@@ -1,0 +1,85 @@
+@import './font';
+
+
+@mixin titleSection {
+    @media screen and (max-width: 501px) {
+        width: 100%;
+        & > img {
+            width: 35px;
+        }
+        & > h1 {
+            font-size: 14pt;
+        }
+    }
+    @media screen and (max-width: 300px) {
+        & > h1 {
+            font-size: 10pt;
+            line-height: 25px;
+        }
+    }
+}
+@mixin floorTitle {
+    @media screen and (max-width: 801px) {
+        width: 100px;
+    }
+    @media screen and (max-width: 501px) {
+        width: 80px;
+    }
+    @media screen and (max-width: 401px) {
+        width: 70px;
+    }
+    @media screen and (max-width: 301px) {
+        width: 60px;
+    }
+}
+
+#venue {
+    width: 100vw;
+    .venue-title {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px auto;
+        & > h1 {
+            text-align: center;
+            line-height: 40px;
+            @include fontFamily-bold;
+            font-size: 16pt;
+        }
+        & > img {
+            width: 50px;
+            
+        }
+        @include titleSection;
+        
+    }
+    .venue-map {
+        width: 80%;
+        margin: 60px auto;
+        display: flex;
+        flex-direction: column;
+        & > .floor {
+            width: 120px;
+            @include floorTitle;
+        }
+        & > .map {
+            width: 100%;
+        }
+
+    }
+    .temp {
+        width: 100vw;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        * {
+            margin: 10px 0;
+            font-size: 20pt;
+            @include fontFamily-black;
+        }
+    }
+}

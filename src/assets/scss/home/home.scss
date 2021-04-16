@@ -475,6 +475,8 @@ $font-home-h2: 'Letter Gothic Std Bold';
       align-items: center;
       color: $indigo-blue;
       text-align: center;
+      background: white;
+      z-index: 1;
 
       span {
         @include fontFamily-bold;
@@ -498,6 +500,7 @@ $font-home-h2: 'Letter Gothic Std Bold';
       position: absolute;
       top: 0;
       left: -28px;
+      z-index: 2;
       .l {
         width: 0;
         border-bottom: $height/2 solid $background;
