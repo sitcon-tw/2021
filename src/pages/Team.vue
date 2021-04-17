@@ -70,7 +70,7 @@ export default class Team extends Vue {
             case '議程組':
                 return 'agenda';
             case '議程助理':
-                return 'agenda';
+                return 'supage';
             case '行銷組':
                 return 'pr';
             case '場務組':
