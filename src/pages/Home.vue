@@ -17,7 +17,7 @@
             中央研究院－人文社會科學館 •免費報名
           </p>
         </div>
-        <!-- router-link to="/cfp" class="home__placard">
+        <a href="https://sitcon.kktix.cc/events/sitcon2021" class="home__placard" target="_blank">
           <div class="hexagon">
             <div class="l"></div>
             <div class="c">
@@ -26,9 +26,9 @@
             <div class="r"></div>
           </div>
           <div class="info">
-            <span>開放式議程 徵稿中</span>
+            <span>4/18  二階搶票開始！</span>
           </div>
-        </!-->
+        </a>
       </div>
     </section>
     <section class="section-content">
