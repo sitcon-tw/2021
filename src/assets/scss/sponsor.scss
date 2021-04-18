@@ -72,12 +72,22 @@
   grid-template-columns: auto auto auto;
   column-gap: 40px;
   row-gap: 30px;
+  &--2 {
+    grid-template-columns: auto auto;
+  }
+  &--1 {
+    grid-template-columns: auto;
+  }
+
   @media screen and (max-width: $max-width-medium-0) {
   }
   @media screen and (max-width: $max-width-medium-1) {
     grid-template-columns: auto auto;
     column-gap: 20px;
     row-gap: 15px;
+    &--1 {
+      grid-template-columns: auto;
+    }
   }
   @media screen and (max-width: $max-width-small-1) {
     grid-template-columns: auto;
@@ -102,7 +112,7 @@
 }
 
 @mixin sponsorDiscriptionMinWidth {
-  min-height: 200px;
+  min-height: 150px;
 
   @media screen and (max-width: $max-width-medium-0) {
   }
@@ -141,7 +151,7 @@
       background-color: rgba($white, 0.3);
       box-shadow: 0 2rem 4rem rgba($black, 0.2);
       position: relative;
-      // padding-bottom: 30px;
+      padding-bottom: 10px;
       margin-bottom: 100px;
 
       &-title {
@@ -159,26 +169,27 @@
           top: 0;
           @include sponsorsLevelImg;
 
-          background-color: $gray;
+          // background-color: $gray;
         }
       }
     }
 
     &__sponsorBox {
       @include sponsorBoxFlex;
+      // margin: 0 auto;
       margin: 0 15px 0 15px;
       .sponsor {
         background-color: $white;
         border: 5px solid $dark-blue;
         border-radius: 10px;
-        // height: 300px;
         display: flex;
         flex-direction: column;
 
         &-img {
           margin: 0 auto;
-          background-color: $gray;
           @include sponsorImg;
+
+          background-color: $gray;
         }
 
         &-name {
