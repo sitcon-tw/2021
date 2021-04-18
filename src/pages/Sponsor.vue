@@ -20,8 +20,8 @@
             <section class="sponsors__level">
               <div class="sponsors__level-title">
                 <h1>深耕級</h1>
+                <img src="" >
               </div>
-              <img src="" class="sponsors__level-img">
               <!-- alt="sponsorsLevel-img"  -->
                 <div class="sponsors__sponsorBox">
                   <section class="sponsor">
@@ -35,7 +35,9 @@
                       class="sponsor-logo"
                   /> -->
                     <article class="sponsor-discription">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
                     </article>
                   </section>  
 
@@ -50,7 +52,9 @@
                       class="sponsor-logo"
                   /> -->
                     <article class="sponsor-discription">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
                     </article>
                   </section>  
 
@@ -65,17 +69,54 @@
                       class="sponsor-logo"
                   /> -->
                     <article class="sponsor-discription">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
+                    </article>
+                  </section>
+
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
                     </article>
                   </section>  
+
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>Testing developers</h2>
+                    </div>
+                    <img src=""  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
+                    </article>
+                  </section>  
+                  
                 </div>
             </section>
 
              <section class="sponsors__level">
               <div class="sponsors__level-title">
                 <h1>前瞻級</h1>
+                <img src=""  class="sponsors__level-img">
               </div>
-              <img src=""  class="sponsors__level-img">
               <!-- alt="sponsorsLevel-img" -->
                 <div class="sponsors__sponsorBox">
                   <section class="sponsor">
@@ -89,7 +130,9 @@
                       class="sponsor-logo"
                   /> -->
                     <article class="sponsor-discription">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
                     </article>
                   </section>  
 
@@ -104,7 +147,9 @@
                       class="sponsor-logo"
                   /> -->
                     <article class="sponsor-discription">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
                     </article>
                   </section>  
 
@@ -119,7 +164,9 @@
                       class="sponsor-logo"
                   /> -->
                     <article class="sponsor-discription">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque
+                      <p>
+                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                      </p>
                     </article>
                   </section> 
                 </div> 

@@ -1,4 +1,5 @@
 @import './breakpoint';
+@import './font.scss';
 @import './color';
 
 @mixin wrapperWidth {
@@ -14,7 +15,103 @@
     width: 90%;
   }
   @media screen and (max-width: $max-width-small-2) {
-    width: 95%;
+    // width: 95%;
+  }
+}
+
+@mixin sponsorsLevelImg {
+  height: 120px;
+  width: 120px;
+  margin: 15px 80px 0 0;
+  @media screen and (max-width: $max-width-medium-0) {
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    height: 100px;
+    width: 100px;
+    margin: 20px 20px 0 0;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    height: 80px;
+    width: 80px;
+    margin: 30px 10px 0 0;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    height: 70px;
+    width: 70px;
+    margin: 35px 10px 0 0;
+  }
+}
+
+@mixin sponsorsLevelTitleH1 {
+  padding-left: 100px;
+  padding-top: 40px;
+  font-size: 40pt;
+
+  @media screen and (max-width: $max-width-medium-0) {
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    font-size: 35pt;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+  }
+  @media screen and (max-width: $max-width-small-3) {
+    font-size: 30pt;
+    padding-left: 50px;
+    padding-top: 50px;
+  }
+}
+
+@mixin sponsorBoxFlex {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 40px;
+  row-gap: 30px;
+  @media screen and (max-width: $max-width-medium-0) {
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+    grid-template-columns: auto auto;
+    column-gap: 20px;
+    row-gap: 15px;
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    grid-template-columns: auto;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+  }
+}
+@mixin sponsorImg {
+  height: 130px;
+  width: 130px;
+
+  @media screen and (max-width: $max-width-medium-0) {
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    height: 70px;
+    width: 70px;
+  }
+  @media screen and (max-width: $max-width-small-2) {
+  }
+}
+
+@mixin sponsorDiscriptionMinWidth {
+  min-height: 200px;
+
+  @media screen and (max-width: $max-width-medium-0) {
+  }
+  @media screen and (max-width: $max-width-medium-1) {
+  }
+  @media screen and (max-width: $max-width-small-1) {
+    // min-height: 200px;x
+  }
+  @media screen and (max-width: $max-width-small-2) {
   }
 }
 
@@ -30,70 +127,79 @@
       width: 100%;
       padding-top: 50px;
       padding-bottom: 100px;
-      background-color: lightcoral;
+      // background-color: lightcoral;
     }
   }
 
   .sponsors {
-    background-color: antiquewhite;
-
+    // background-color: antiquewhite;
     &-wrapper {
       @include wrapperWidth;
     }
 
     &__level {
-      background-color: lightgreen;
+      background-color: rgba($white, 0.3);
+      box-shadow: 0 2rem 4rem rgba($black, 0.2);
       position: relative;
+      // padding-bottom: 30px;
       margin-bottom: 100px;
 
       &-title {
-        background-color: lightgoldenrodyellow;
+        // background-color: lightgoldenrodyellow;
         height: 150px;
+        display: flex;
         h1 {
-          background-color: lightseagreen;
-          padding-left: 100px;
-          padding-top: 20px;
-          font-size: 40pt;
+          @include fontFamily-bold;
+          @include sponsorsLevelTitleH1;
+          // background-color: lightseagreen;
         }
-      }
+        img {
+          position: absolute;
+          right: 0;
+          top: 0;
+          @include sponsorsLevelImg;
 
-      &-img {
-        position: absolute;
-        right: 0;
-        top: 0;
-        height: 130px;
-        width: 130px;
-        margin: 0 100px 0 0;
-
-        background-color: $gray;
+          background-color: $gray;
+        }
       }
     }
 
     &__sponsorBox {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      column-gap: 20px;
+      @include sponsorBoxFlex;
+      margin: 0 15px 0 15px;
       .sponsor {
-        background-color: aquamarine;
-        border: 1px $black solid;
-        height: 300px;
+        background-color: $white;
+        border: 5px solid $dark-blue;
+        border-radius: 10px;
+        // height: 300px;
         display: flex;
         flex-direction: column;
 
         &-img {
-          height: 130px;
-          width: 130px;
           margin: 0 auto;
           background-color: $gray;
+          @include sponsorImg;
         }
 
         &-name {
+          // background-color: aquamarine;
           h2 {
+            @include fontFamily-bold;
+            margin: 30px 0 30px 0;
             font-size: 20pt;
+            text-align: center;
           }
         }
 
         &-discription {
+          // background-color: antiquewhite;
+          width: 90%;
+          @include sponsorDiscriptionMinWidth;
+          margin: 20px auto 20px auto;
+          p {
+            font-size: 14pt;
+            @include fontFamily-semibold;
+          }
         }
       }
     }
