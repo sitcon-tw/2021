@@ -14,9 +14,36 @@
             <a class="ariticleParagraph-button" href="mailto:contact@sitcon.org"><span>企業合作</span></a>
         </div>
       </ArticleParagraph>
+
+
       <section class="section-sponsors">
         <div class="sponsors-wrapper">
           <div class="sponsors">
+              <section class="sponsors__level">
+              <div class="sponsors__level-title">
+                <h1>主辦單位</h1>
+                <img src="~@/assets/images/teams/dev.svg">
+              </div>
+              <!-- alt="sponsorsLevel-img" -->
+                <div class="sponsors__sponsorBox sponsors__sponsorBox--1">
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>{{main.name}}</h2>
+                    </div>
+                    <img src="https://sitcon.org/branding/withname.svg"  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      <p>
+                        {{main.description}}
+                      </p>
+                    </article>
+                  </section> 
+                </div> 
+            </section>
              <section class="sponsors__level">
               <div class="sponsors__level-title">
                 <h1>共同主辦</h1>
@@ -24,341 +51,49 @@
               </div>
               <!-- alt="sponsorsLevel-img" -->
                 <div class="sponsors__sponsorBox sponsors__sponsorBox--2">
-                  <section class="sponsor">
+                  <section class="sponsor" v-for="x in coOrg">
                     <div class="sponsor-name">
-                      <h2>Testing developers</h2>
+                      <h2>{{x.name}}</h2>
                     </div>
-                    <img src=""  class="sponsor-img">
+                    <!-- img src=""  class="sponsor-img" -->
                     <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
+                    <img
+                      :src="require(`../assets/images/sponsor/${x.logo}`)"
+                      class="sponsor-logo sponsor-img"
+                    />
                     <article class="sponsor-discription">
                       <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section> 
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                        {{x.description}}
                       </p>
                     </article>
                   </section> 
                 </div> 
             </section>
 
-             <section class="sponsors__level">
+            <section class="sponsors__level" v-for="s in sponsers">
               <div class="sponsors__level-title">
-                <h1>協辦單位</h1>
-                <img src="~@/assets/images/teams/dev.svg">
-              </div>
-              <!-- alt="sponsorsLevel-img" -->
-                <div class="sponsors__sponsorBox sponsors__sponsorBox--1">
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section> 
-                </div> 
-            </section>
-
-            <section class="sponsors__level">
-              <div class="sponsors__level-title">
-                <h1>深耕級</h1>
+                <h1>{{s.type}}</h1>
                 <img src="~@/assets/images/teams/dev.svg" >
               </div>
               <!-- alt="sponsorsLevel-img"  -->
                 <div class="sponsors__sponsorBox">
-                  <section class="sponsor">
+                  <section class="sponsor" v-for="x in s.org">
                     <div class="sponsor-name">
-                      <h2>Testing developers</h2>
+                      <h2>{{x.name}}</h2>
                     </div>
-                    <img src=""  class="sponsor-img">
+                    <!-- <img src=""  class="sponsor-img"> -->
                     <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
+                    <img
+                      :src="require(`../assets/images/sponsor/${x.logo}`)"
+                      class="sponsor-logo sponsor-img"
+                  />
                     <article class="sponsor-discription">
                       <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
+                        {{x.description}}
                       </p>
                     </article>
                   </section>
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-                  
                 </div>
-            </section>
-
-             <section class="sponsors__level">
-              <div class="sponsors__level-title">
-                <h1>前瞻級</h1>
-                <img src="~@/assets/images/teams/dev.svg">
-              </div>
-              <!-- alt="sponsorsLevel-img" -->
-                <div class="sponsors__sponsorBox">
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section> 
-                </div> 
-            </section>
-
-             <section class="sponsors__level">
-              <div class="sponsors__level-title">
-                <h1>新芽級</h1>
-                <img src="~@/assets/images/teams/dev.svg">
-              </div>
-              <!-- alt="sponsorsLevel-img" -->
-                <div class="sponsors__sponsorBox">
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section> 
-                </div> 
-            </section>
-
-             <section class="sponsors__level">
-              <div class="sponsors__level-title">
-                <h1>特別感謝</h1>
-                <img src="~@/assets/images/teams/dev.svg">
-              </div>
-              <!-- alt="sponsorsLevel-img" -->
-                <div class="sponsors__sponsorBox">
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section>  
-
-                  <section class="sponsor">
-                    <div class="sponsor-name">
-                      <h2>Testing developers</h2>
-                    </div>
-                    <img src=""  class="sponsor-img">
-                    <!-- alt="sponsor-logo" -->
-                    <!-- <img
-                      :src="require(`../assets/images/sponsor/${}.svg`)"
-                      class="sponsor-logo"
-                  /> -->
-                    <article class="sponsor-discription">
-                      <p>
-                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Fusce ut placerat orci nulla pellentesque  
-                      </p>
-                    </article>
-                  </section> 
-                </div> 
             </section>
           </div>   
         </div>
@@ -372,14 +107,20 @@
 @import '@/assets/scss/sponsor';
 </style>
 
-<script>
+<script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import ArticleParagraph from '../components/ArticleParagraph';
+import ArticleParagraph from '../components/ArticleParagraph.vue';
+
+import sponsorInfo from '../../template/sponsor.json';
 
 @Component({
   components: {
     ArticleParagraph
   }
 })
-export default class Sponsor extends Vue {}
+export default class Sponsor extends Vue {
+  private main = sponsorInfo.main;
+  private coOrg = sponsorInfo.coOrg;
+  private sponsers = sponsorInfo.sponsors;
+}
 </script>

@@ -96,16 +96,15 @@
   }
 }
 @mixin sponsorImg {
-  height: 130px;
-  width: 130px;
-
+  // max-height: 130px;
+  max-width: 300px;
+  max-height: 200px;
   @media screen and (max-width: $max-width-medium-0) {
   }
   @media screen and (max-width: $max-width-medium-1) {
   }
   @media screen and (max-width: $max-width-small-1) {
-    height: 70px;
-    width: 70px;
+    // max-height: 130px;
   }
   @media screen and (max-width: $max-width-small-2) {
   }
@@ -189,7 +188,7 @@
           margin: 0 auto;
           @include sponsorImg;
 
-          background-color: $gray;
+          // background-color: $gray;
         }
 
         &-name {
@@ -207,6 +206,7 @@
           width: 90%;
           @include sponsorDiscriptionMinWidth;
           margin: 20px auto 20px auto;
+          white-space: pre-wrap;
           p {
             font-size: 14pt;
             @include fontFamily-semibold;
