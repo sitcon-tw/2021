@@ -48,7 +48,7 @@
               </div>
               <!-- alt="sponsorsLevel-img" -->
                 <div class="sponsors__sponsorBox">
-                  <section class="sponsor" v-for="x in coOrg">
+                  <section class="coOrg" v-for="x in coOrg">
                     <div class="sponsor-name">
                       <h2>{{x.name}}</h2>
                     </div>

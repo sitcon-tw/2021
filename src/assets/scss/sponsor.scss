@@ -69,8 +69,8 @@
   flex-wrap: wrap;
   .sponsor {
     width: 48%;
-    &:not(:nth-child(1)) {
-      margin-left: 4%;
+    &:nth-child(2n-1) {
+      margin-right: 4%;
     }
   }
   row-gap: 30px;
@@ -80,15 +80,29 @@
       width: 100%;
     }
   }
-
-  @media screen and (max-width: $max-width-medium-1) {
-    margin: 0 2.5% 0 2.5%;
-    row-gap: 20px;
-    column-gap: 3%;
+  @media screen and (min-width: $max-width-medium-1) {
+    margin: 0 2% 0 2%;
     .sponsor {
-      width: 48.5%;
-      &:not(:nth-child(1)) {
-        margin-left: 0%;
+      width: 32%;
+      &:nth-child(2n-1) {
+        margin-right: 0%;
+      }
+      &:not(:nth-child(3n)) {
+        margin-right: 2%;
+      }
+    }
+    &--1 {
+      .sponsor {
+        width: 100%;
+      }
+    }
+  }
+  @media screen and (max-width: 1000px) {
+    margin: 0 2.5% 0 2.5%;
+    .sponsor {
+      width: 48%;
+      &:not(:nth-child(2n)) {
+        margin-right: 2%;
       }
     }
     &--1 {
@@ -100,6 +114,9 @@
   @media screen and (max-width: $max-width-small-0) {
     .sponsor {
       width: 100%;
+      &:nth-child(2n-1) {
+        margin-right: 0%;
+      }
     }
     &--1 {
       .sponsor {
@@ -193,7 +210,29 @@
 
     &__sponsorBox {
       @include sponsorBoxFlex;
-
+        .coOrg {
+          background-color: $white;
+          border: 5px solid $dark-blue;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          width: 48.5%;
+          &:not(:nth-child(2n)) {
+            margin-right: 3%;
+          }
+          @media screen and (max-width: 700px) {
+            width: 100%;
+            &:not(:nth-child(2n)) {
+              margin-right: 0%;
+            }
+          }
+        }
+        &--1 {
+          .coOrg {
+            width: 100%;
+          }
+        }
+      
       .sponsor {
         background-color: $white;
         border: 5px solid $dark-blue;
