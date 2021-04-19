@@ -36,9 +36,7 @@
                       class="sponsor-logo"
                   /> -->
                     <article class="sponsor-discription">
-                      <p>
-                        {{main.description}}
-                      </p>
+                      <p>{{main.description}}</p>
                     </article>
                   </section> 
                 </div> 
@@ -61,9 +59,7 @@
                       class="sponsor-img"
                     />
                     <article class="sponsor-discription">
-                      <p>
-                        {{x.description}}
-                      </p>
+                      <p>{{x.description}}</p>
                     </article>
                   </section> 
                 </div> 
@@ -87,9 +83,7 @@
                        class="sponsor-img" 
                   />
                     <article class="sponsor-discription">
-                      <p>
-                        {{x.description}}
-                      </p>
+                      <p>{{x.description}}</p>
                     </article>
                   </section>
 
