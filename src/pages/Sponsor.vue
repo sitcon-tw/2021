@@ -58,8 +58,7 @@
                     <!-- alt="sponsor-logo" -->
                     <img
                       :src="require(`../assets/images/sponsor/${x.logo}`)"
-                      class="sponsor-logo sponsor-img"
-
+                      class="sponsor-img"
                     />
                     <article class="sponsor-discription">
                       <p>
@@ -85,7 +84,7 @@
                     <!-- alt="sponsor-logo" -->
                     <img
                       :src="require(`../assets/images/sponsor/${x.logo}`)"
-                      class="sponsor-logo sponsor-img"
+                       class="sponsor-img" 
                   />
                     <article class="sponsor-discription">
                       <p>
