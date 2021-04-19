@@ -22,7 +22,7 @@
               <section class="sponsors__level">
               <div class="sponsors__level-title">
                 <h1>主辦單位</h1>
-                <img src="~@/assets/images/teams/dev.svg">
+                <img src="~@/assets/images/teams/dev.svg" width = "600px" height="400px">
               </div>
               <!-- alt="sponsorsLevel-img" -->
                 <div class="sponsors__sponsorBox sponsors__sponsorBox--1">
@@ -60,6 +60,7 @@
                     <img
                       :src="require(`../assets/images/sponsor/${x.logo}`)"
                       class="sponsor-logo sponsor-img"
+
                     />
                     <article class="sponsor-discription">
                       <p>
@@ -76,7 +77,7 @@
                 <img src="~@/assets/images/teams/dev.svg" >
               </div>
               <!-- alt="sponsorsLevel-img"  -->
-                <div class="sponsors__sponsorBox">
+                <div class="sponsors__sponsorBox sponsors__sponsorBox--3">
                   <section class="sponsor" v-for="x in s.org">
                     <div class="sponsor-name">
                       <h2>{{x.name}}</h2>
@@ -86,6 +87,7 @@
                     <img
                       :src="require(`../assets/images/sponsor/${x.logo}`)"
                       class="sponsor-logo sponsor-img"
+                       width = "600px" height="400px"
                   />
                     <article class="sponsor-discription">
                       <p>
@@ -93,6 +95,8 @@
                       </p>
                     </article>
                   </section>
+
+                    
                 </div>
             </section>
           </div>   
