@@ -11,6 +11,7 @@
   >
     <Header v-if="isRoot()" v-bind:route="$route" />
     <router-view />
+    <SponsorFooter/>
     <FooterPrimary v-if="isRoot()" v-bind:route="$route" />
     <FooterSecondary v-if="!isRoot()" v-bind:route="$route" />
   </div>
@@ -28,12 +29,14 @@ import head from './util/head';
 import Header from '@/components/Header.vue';
 import FooterSecondary from '@/components/FooterSecondary.vue';
 import FooterPrimary from '@/components/FooterPrimary.vue';
+import SponsorFooter from '@/components/SponsorFooter.vue';
 
 @Component({
   components: {
     Header,
     FooterPrimary,
-    FooterSecondary
+    FooterSecondary,
+    SponsorFooter
   }
 })
 export default class App extends Vue {
