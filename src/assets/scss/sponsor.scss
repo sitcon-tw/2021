@@ -197,6 +197,9 @@
   }
 
   .sponsors {
+    a {
+      color: black;
+    }
     &-wrapper {
       @include wrapperWidth;
     }
