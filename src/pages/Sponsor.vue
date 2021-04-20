@@ -10,10 +10,86 @@
         <p>希望能藉由您的一份力量，來促成活動的舉行，讓更多學生能在舞台上展現自我成長。</p>
         <p>歡迎您參與贊助，支持 SITCON、讓我們將每年的活動辦得盡善盡美！ </p>
       </ArticleParagraph>
-      <div class="ariticleParagraph-buttonsBox">
-          <a class="ariticleParagraph-button" href="http://bit.ly/donatesitcon2021" target="_blank"><span>個人贊助</span></a>
-          <a class="ariticleParagraph-button" href="mailto:contact@sitcon.org"><span>企業合作</span></a>
-      </div>
+
+      <section class="section-sponsors">
+        <div class="sponsors-wrapper">
+          <div class="sponsors">
+              <section class="sponsors__level">
+              <div class="sponsors__level-title">
+                <h1>主辦單位</h1>
+                <img src="~@/assets/images/teams/dev.svg">
+              </div>
+              <!-- alt="sponsorsLevel-img" -->
+                <div class="sponsors__sponsorBox sponsors__sponsorBox--1">
+                  <section class="sponsor">
+                    <div class="sponsor-name">
+                      <h2>{{main.name}}</h2>
+                    </div>
+                    <img src="https://sitcon.org/branding/withname.svg"  class="sponsor-img">
+                    <!-- alt="sponsor-logo" -->
+                    <!-- <img
+                      :src="require(`../assets/images/sponsor/${}.svg`)"
+                      class="sponsor-logo"
+                  /> -->
+                    <article class="sponsor-discription">
+                      <p>{{main.description}}</p>
+                    </article>
+                  </section> 
+                </div> 
+            </section>
+             <section class="sponsors__level">
+              <div class="sponsors__level-title">
+                <h1>共同主辦</h1>
+                <img src="~@/assets/images/teams/dev.svg">
+              </div>
+              <!-- alt="sponsorsLevel-img" -->
+                <div class="sponsors__sponsorBox">
+                  <section class="coOrg" v-for="x in coOrg">
+                    <div class="sponsor-name">
+                      <h2>{{x.name}}</h2>
+                    </div>
+                    <!-- img src=""  class="sponsor-img" -->
+                    <!-- alt="sponsor-logo" -->
+                    <img
+                      :src="require(`../assets/images/sponsor/${x.logo}`)"
+                      class="sponsor-img"
+                    />
+                    <article class="sponsor-discription">
+                      <p>{{x.description}}</p>
+                    </article>
+                  </section> 
+                </div> 
+            </section>
+
+            <section class="sponsors__level" v-for="(s,index) in sponsers">
+              <div class="sponsors__level-title">
+                <h1>{{s.type}}</h1>
+                <img src="~@/assets/images/teams/dev.svg" >
+              </div>
+              <!-- alt="sponsorsLevel-img"  -->
+                <div class="sponsors__sponsorBox">
+                  <section class="sponsor" v-for="x in s.org" :style="`height: ${300+(sponsers.length-index)*75}px`">
+                    <div class="sponsor-name">
+                      <h2>{{x.name}}</h2>
+                    </div>
+                    <!-- <img src=""  class="sponsor-img"> -->
+                    <!-- alt="sponsor-logo" -->
+                    <img
+                      :src="require(`../assets/images/sponsor/${x.logo}`)"
+                       class="sponsor-img" 
+                  />
+                    <article class="sponsor-discription">
+                      <p>{{x.description}}</p>
+                    </article>
+                  </section>
+
+                    
+                </div>
+            </section>
+          </div>   
+        </div>
+      </section>
+
     </section>
   </div>
 </template>
@@ -22,14 +98,20 @@
 @import '@/assets/scss/sponsor';
 </style>
 
-<script>
+<script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import ArticleParagraph from '../components/ArticleParagraph';
+import ArticleParagraph from '../components/ArticleParagraph.vue';
+
+import sponsorInfo from '../../template/sponsor.json';
 
 @Component({
   components: {
     ArticleParagraph
   }
 })
-export default class Sponsor extends Vue {}
+export default class Sponsor extends Vue {
+  private main = sponsorInfo.main;
+  private coOrg = sponsorInfo.coOrg;
+  private sponsers = sponsorInfo.sponsors;
+}
 </script>
