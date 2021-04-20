@@ -70,7 +70,7 @@
                 <div class="sponsors__sponsorBox">
                   <section class="sponsor" v-for="x in s.org" :style="`height: ${300+(sponsers.length-index)*75}px`">
                     <div class="sponsor-name">
-                      <h2>{{x.name}}</h2>
+                      <h2><a :href="x.link">{{x.name}}</a></h2>
                     </div>
                     <!-- <img src=""  class="sponsor-img"> -->
                     <!-- alt="sponsor-logo" -->

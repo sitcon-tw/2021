@@ -267,6 +267,9 @@
             @include sponsorNameFontsize;
             margin: 30px 10px 30px 10px;
             text-align: center;
+            & > a {
+              color: black;
+            }
           }
         }
 
