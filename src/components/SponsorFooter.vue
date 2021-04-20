@@ -21,7 +21,7 @@ export default class SponsorFooter extends Vue {
 
 <style lang="scss">
 .sponsor-footer {
-    padding: 100px;
+    padding: 20px 100px;
     * {
         width: 150px;
         height: 100px;
