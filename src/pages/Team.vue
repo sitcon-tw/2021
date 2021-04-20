@@ -37,7 +37,7 @@
                 />
                 <div class="group-members">
                     <div v-for="member in group.member" class="group-member">
-                        <img :src="`https://www.gravatar.com/avatar/${member.mailHash}?s=320&d=https://sitcon.org/2021/img/404.svg&r=g`" class="member-icon"/>
+                        <img :src="`https://www.gravatar.com/avatar/${member.mailHash}?s=320&d=https://sitcon.org/2021/img/404.png&r=g`" class="member-icon"/>
                         <span class="group-member-text name">{{member.name}}</span>
                         <span class="group-member-text type">{{member.type}}</span>
                     </div>
