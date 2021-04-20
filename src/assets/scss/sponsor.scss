@@ -142,8 +142,8 @@
   }
 }
 @mixin sponsorImg {
-  max-width: 100%;
-  max-height: 200px;
+  max-width: 80%;
+  max-height: 150px;
 }
 
 @mixin sponsorNameFontsize {
@@ -163,9 +163,9 @@
   }
 }
 @mixin sponsorDescriptionFontsize {
-  font-size: 14pt;
+  font-size: 13pt;
   @media screen and (max-width: $max-width-small-0) {
-    font-size: 13pt;
+    font-size: 12pt;
   }
   @media screen and (max-width: $max-width-small-1) {
     font-size: 12pt;
