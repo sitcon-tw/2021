@@ -8,8 +8,10 @@
         >
       </p>
       <p class="footer-contact footer-font-block">
-        <span class="footer-context">聯絡我們</span>
+        <span class="footer-context">合作聯繫</span>
         <span class="footer-context">contact@sitcon.org</span>
+        <span class="footer-context">票務問題</span>
+        <span class="footer-context">ticket@sitcon.org</span>
       </p>
     </div>
     <div class="footer-right">
