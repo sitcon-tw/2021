@@ -20,7 +20,7 @@
         <BlockTitle text="攤位資訊"></BlockTitle>
         <div class="temp">
             <img 
-                src="~@/assets/images/teams/service.svg"
+                src="~@/assets/images/teams/wip.svg"
             />
             <h1>敬請期待...</h1>
         </div>
