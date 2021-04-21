@@ -81,5 +81,8 @@
             font-size: 20pt;
             @include fontFamily-black;
         }
+        & > img {
+            width: 250px;
+        }
     }
 }
