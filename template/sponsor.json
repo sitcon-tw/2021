@@ -63,7 +63,16 @@
   ],
   "thanks": [
     {
-      "type": "特別感謝"
+      "type": "特別感謝",
+      "org": [
+        {
+          "name": "教育部推動大學程式設計教學計畫",
+          "link": "http://plus.pro.edu.tw/",
+          "logo": "plus.png",
+          "id": "plus",
+          "description": ""
+        }
+      ]
     },
     {
       "type": "媒體夥伴"
