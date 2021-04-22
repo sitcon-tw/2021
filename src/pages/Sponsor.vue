@@ -132,7 +132,7 @@
 								<h1>{{ s.type }}</h1>
 								<img src="~@/assets/images/teams/dev.svg" />
 							</div>
-							<div v-if="index > 0" class="sponsors__sponsorBox">
+							<div class="sponsors__sponsorBox">
 								<a
 									:id="x.id"
 									class="sponsor"
