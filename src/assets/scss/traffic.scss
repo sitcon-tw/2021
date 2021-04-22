@@ -64,7 +64,10 @@
             margin-top: 15px;
             margin-bottom: 30px;
             li {
+                font-size: 12pt;
+                @media screen and (max-width: 650px) {
                 font-size: 9pt;
+            }
             }
         }
         
