@@ -16,11 +16,37 @@
                 <img src="~@/assets/images/traff_info.svg"/>
             </section>
         </article>
-        <!-- 
-        <article class="traff-car-info">
-            <section>交通車資訊</section>
+        
+        <article class="traffic-bus">
+            <h1>交通車資訊</h1>
+            <section class="traffic-bus-info">
+                <p>
+                    今年我們也提供了交通車來方便會眾往返南港展覽館捷運站與中研院活動場地之間，詳細資訊如下提供給你參考：
+                </p>
+                <br/>
+                <p>
+                    交通車時間：
+                    <ul>
+                        <li>去程（往中研院）07:30 ~ 10:30</li>
+                        <li>回程（往南港展覽館捷運站）16:30 ~ 19:30</li>
+                    </ul>
+                </p>
+                <p>
+                    上車地點：
+                    <ul>
+                        <li>去程（往中研院）南港展覽館捷運站 2A 出口前公車等候區</li>
+                        <li>回程（往南港展覽館捷運站）中央研究院人文科學館大門口前</li>
+                    </ul>
+                </p>
+                <p>
+                    注意事項：
+                    <ul>
+                        <li>因應疫情之，也為了你我健康，上車前請確實配戴口罩。</li>
+                        <li>請排隊配合工作人員測量體溫，確認配戴口罩後上車。</li>
+                    </ul>
+                </p>
+            </section>
         </article>
-        -->
     </div>
 </template>
 <script lang="ts">
