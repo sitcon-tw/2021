@@ -112,7 +112,18 @@ export const routes: RouteConfig[] = [
 const router = new VueRouter({
   mode: 'history',
   base: '/2021',
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (
+      !(to.name === 'Agenda' && from.name === 'Agenda-view') &&
+      !(to.name === 'Agenda-view' && from.name === 'Agenda')
+    ) {
+      return {
+        x: 0,
+        y: 0
+      };
+    }
+  }
 });
 
 export default router;
