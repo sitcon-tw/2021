@@ -71,6 +71,12 @@
 
       this.timeline = Array.from(temp).sort();
     }
+
+    @Watch('internalPopUp')
+    private onInternalPopUp (popUp: boolean) {
+      // pass to Agenda component
+      this.$emit('popup:session', popUp, this.popUpSession);
+    }
   }
 </script>
 <style lang="scss">

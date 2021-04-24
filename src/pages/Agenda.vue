@@ -7,6 +7,7 @@
       :isMobile="isMobile()"
       :popUp.sync="popUp"
       urlPrefix="http://sitcon.org/2021/agenda/"
+      @popup:session="onPopUp"
     />
     <!-- Agenda Section End -->
     <!-- Event Section -->
@@ -64,7 +65,7 @@
       </div>
     </div>
     <!-- Event Section End -->
-    <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda">
+    <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
       <AgendaBlock :id="$route.params.uid"></AgendaBlock
     ></Popup>
   </div>
@@ -117,6 +118,18 @@ export default class Agenda extends Vue {
 
   private isMobile (): boolean {
     return this.device === DeviceType.MOBILE;
+  }
+
+  // event is proxied by DecoratedSessionTable
+  private onPopUp (popUp: boolean, session: any = {}) {
+    if (popUp) {
+      const id = session.id;
+      this.$router.push(`/agenda/${id}`);
+    }
+  }
+
+  private onPopUpClose () {
+    this.popUp = false;
   }
 }
 </script>
