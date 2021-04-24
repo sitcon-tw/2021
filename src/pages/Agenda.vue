@@ -1,48 +1,14 @@
 <template>
   <div id="agenda">
     <!-- Agenda Section -->
-    <div class="agendaList">
-      <BlockTitle text="Presentation" class="agendaList-topic" />
-      <div class="agendaList-itemsBox">
-        <router-link
-          v-for="(x, index) in presentation"
-          :to="'/agenda/' + x.id"
-          :key="index"
-          @click="() => handleAgendaClicked(x)"
-        >
-          <div class="agendaList-item">
-            <span>{{ x.zh.title }}</span>
-          </div>
-        </router-link>
-      </div>
-      <BlockTitle text="Double Espresso" class="agendaList-topic" />
-      <div class="agendaList-itemsBox">
-        <router-link
-          v-for="(x, index) in doubleEspresso"
-          :to="'/agenda/' + x.id"
-          :key="index"
-          @click="() => handleAgendaClicked(x)"
-        >
-          <div class="agendaList-item">
-            <span>{{ x.zh.title }}</span>
-          </div>
-        </router-link>
-      </div>
-      <BlockTitle text="Espresso Agenda" class="agendaList-topic" />
-      <div class="agendaList-itemsBox">
-        <router-link
-          v-for="(x, index) in espressoAgenda"
-          :to="'/agenda/' + x.id"
-          :key="index"
-          @click="() => handleAgendaClicked(x)"
-        >
-          <div class="agendaList-item">
-            <span>{{ x.zh.title }}</span>
-          </div>
-        </router-link>
-      </div>
-    </div>
-
+    <DecoratedSessionTable
+      :sessionData="sessionData"
+      :rooms="['R2', 'R0', 'R1', 'R3', 'S']"
+      :isMobile="isMobile()"
+      :popUp.sync="popUp"
+      urlPrefix="http://sitcon.org/2021/agenda/"
+    />
+    <!-- Agenda Section End -->
     <!-- Event Section -->
     <BlockTitle text="活動" id="#event" />
     <div v-if="!isMobile()" class="event container">
@@ -116,18 +82,23 @@ import EventBlock from '../components/EventBlock.vue';
 import BlockTitle from '../components/BlockTitle.vue';
 import Popup from '../components/Popup.vue';
 import AgendaBlock from '../components/AgendaBlock.vue';
+import DecoratedSessionTable from '../components/DecoratedSessionTable.vue';
 
 @Component({
   components: {
     EventBlock,
     BlockTitle,
     Popup,
-    AgendaBlock
+    AgendaBlock,
+    DecoratedSessionTable
   }
 })
 export default class Agenda extends Vue {
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
   private eventClickable = false;
+  private popUp: boolean = false;
+
+  private sessionData = sessionData;
   private session = sessionData.sessions;
   private speakers = sessionData.speakers;
   private espressoAgenda = this.session.filter(
@@ -139,6 +110,11 @@ export default class Agenda extends Vue {
   private presentation = this.session.filter(
     (x: any): boolean => x.type === 'P'
   );
+
+  public created () {
+    this.popUp = !!this.$route.params.uid;
+  }
+
   private isMobile (): boolean {
     return this.device === DeviceType.MOBILE;
   }
