@@ -1,8 +1,8 @@
 <template lang="html">
-  <div id="session-table" :class="{ mobile: isMobile }" :style="{
+  <div id="session-table" :class="{ mobile: isMobile }" :style="!isMobile ? {
     'grid-template-columns': ['[TIME] 60px', ...rooms.map(r => `[${r}] 1fr`), '[END]'].join(' '),
     'grid-template-rows': ['[HEAD]', ...timeline, '[TAIL]'].join(' auto ')
-  }">
+  } : {}">
     <CCIPSessionTable
       :sessionData="sessionData"
       :rooms="rooms"
