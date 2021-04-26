@@ -149,9 +149,6 @@
 										"
 										class="sponsor-img"
 									/>
-									<article class="sponsor-discription">
-										<p>{{ x.description }}</p>
-									</article>
 								</a>
 							</div>
 						</section>
