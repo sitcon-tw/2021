@@ -9,7 +9,7 @@
         : 'main-bg'
     "
   >
-    <Header v-if="isRoot()" v-bind:route="$route" />
+    <Header v-if="isRoot() && !isInApp()" v-bind:route="$route" />
     <router-view />
     <SponsorFooter/>
     <FooterPrimary v-if="isRoot()" v-bind:route="$route" />
@@ -21,8 +21,7 @@ import { Route } from 'vue-router';
 import { Component, Vue, Watch } from 'vue-property-decorator';
 import { Action, Getter } from 'vuex-class';
 
-import { DeviceType } from '@/store/types/app';
-
+import { DeviceType, AppMode } from '@/store/types/app';
 import head from './util/head';
 
 // components
@@ -40,6 +39,8 @@ import SponsorFooter from '@/components/SponsorFooter.vue';
   }
 })
 export default class App extends Vue {
+  @Action('toggleMode', { namespace: 'app' }) private toggleMode!: (mode: AppMode) => void;
+  @Getter('mode', { namespace: 'app' }) private mode!: AppMode;
   @Action('toggleDevice', { namespace: 'app' }) private toggleDevice!: (
     device: DeviceType
   ) => void;
@@ -47,7 +48,6 @@ export default class App extends Vue {
   private deviceTypeMediaQuery: MediaQueryList = window.matchMedia(
     '(min-width: 900px)'
   );
-
   @Watch('$route')
   public onChangeRoute (to: Route, from: Route) {
     this.autoDetectMetaOg();
@@ -67,9 +67,18 @@ export default class App extends Vue {
       // sad safari
       this.deviceTypeMediaQuery.addListener(this.detectDeviceType);
     }
+    if (this.$route.query.mode === 'app') {
+      this.toggleMode(AppMode.APP);
+    } else {
+      this.toggleMode(AppMode.WEB);
+    }
   }
 
-  public isRoot (): boolean {
+  private isInApp () {
+    return this.mode === AppMode.APP;
+  }
+
+  private isRoot (): boolean {
     if (
       this.$route.name === 'CFP' ||
       this.$route.name === 'news' ||
