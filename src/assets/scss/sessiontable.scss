@@ -53,7 +53,7 @@
             font-size: 14pt;
             font-weight: bold;
           }
-  
+
           .ccip-session-speaker {
             font-size: 12pt;
           }
@@ -105,23 +105,25 @@
       &-table.mobile {
         display: flex;
         flex-direction: column;
-        gap: 10px;
       }
 
       &-time-group {
         display: flex;
         flex-direction: column;
-        row-gap: 10px;
+        
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
 
         .head {
-          padding: 2px 10px;
+          padding: 5px 10px;
           border-radius: 1em;
           background-color: $indigo-blue;
           color: white;
+          font-size: 12pt;
         }
 
         .session-block {
-          row-gap: 5px;
           flex-direction: row;
           flex-wrap: wrap;
 
@@ -132,6 +134,10 @@
 
           * {
             width: 100%;
+          }
+
+          *:not(:first-child) {
+            margin-top: 5px;
           }
 
           .ccip-session {
@@ -146,10 +152,11 @@
               display: inline-block;
               border-radius: 1em;
               padding: 2px 7.5px;
-              margin: auto 0;
+              background-color: $indigo-blue;
 
               color: white;
-              background-color: $indigo-blue;
+              line-height: 1.47;
+              white-space: nowrap;
     
               &::before {
                 content: '#';
@@ -161,10 +168,6 @@
               font-size: 13pt;
               font-weight: bold;
             }
-  
-            &-speaker {
-  
-            }
 
             &-room, &-time {
               display: inline-block;
@@ -172,6 +175,7 @@
 
               font-size: 13pt;
               line-height: 1.44;
+              white-space: nowrap;
             }
 
             &-room {
