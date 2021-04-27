@@ -52,11 +52,11 @@
               <a href="">簡報連結</a>
               <a href="">線上 QA</a>
             </div>
-            </section>
+          </section>
+          -->
           <section v-for="speaker in info.speakers">
             <img :src="getSpeaker(speaker).avatar" alt="null" />
           </section>
-          -->
         </div>
       </div>
     </div>
