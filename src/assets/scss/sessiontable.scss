@@ -1,0 +1,212 @@
+@import './color';
+@import './font';
+
+.ccip-app {
+  .clickable {
+    cursor: pointer;
+  }
+}
+
+// workaround for add decoration in session table
+#session-table:not(.mobile) {
+  display: grid;
+  row-gap: 30px;
+  column-gap: 20px;
+
+  & > .ccip-app, & > .ccip-app > .ccip-app.ccip-session-table.general {
+    display: contents;
+  }
+
+  .decoration.bar {
+    width: 32px;
+    height: calc(100% - 20px * 2);
+    margin: 20px auto;
+
+    background-color: #627aa8;
+
+    z-index: 0;
+  }
+
+  .ccip-app {
+    &.ccip-session {
+      &-block {
+        &.session-block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+  
+          padding: 20px;
+  
+          background-color: white;
+          // a big enough value to create pill
+          border-radius: 100vh;
+          box-shadow: 0 3px 10px 0 rgba(16, 96, 255, 0.75);
+  
+          line-height: 1.44;
+  
+          text-align: center;
+          z-index: 1;
+  
+          .ccip-session-title {
+            font-size: 14pt;
+            font-weight: bold;
+          }
+
+          .ccip-session-speakers {
+            width: 100%;
+          }
+  
+          .ccip-session-speaker {
+            font-size: 12pt;
+          }
+  
+          .ccip-session-tags > .ccip-session-tag {
+            border-radius: 1em;
+            line-height: 1.44;
+            font-size: 12pt;
+            padding: 2px 10px;
+            color: white;
+            background-color: $indigo-blue;
+  
+            &::before {
+              content: '#';
+              display: inline-block;
+            }
+          }
+        }
+
+        &.room-block {
+          p {
+            text-align: center;
+          }
+        }
+  
+        &.time-block {
+          position: relative;
+  
+          p {
+            position: absolute;
+            top: -10px;
+            padding: 2.5px 10px;
+    
+            background-color: $indigo-blue;
+            border-radius: 1em;
+  
+            line-height: 1.47;
+            color: #FFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+#session-table.mobile {
+  .ccip-app {
+    .ccip-session {
+      &-table.mobile {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-time-group {
+        display: flex;
+        flex-direction: column;
+        
+        &:not(:first-child) {
+          margin-top: 10px;
+        }
+
+        .head {
+          padding: 5px 20px;
+          border-radius: 1em;
+          background-color: $indigo-blue;
+          color: white;
+          font-size: 12pt;
+        }
+
+        .session-block {
+          flex-direction: row;
+          flex-wrap: wrap;
+
+          padding: 15px 20px 10px;
+          background-color: white;
+          border-radius: 8px;
+          box-shadow: 0 3px 10px 0 rgba(16, 96, 255, 0.75);
+
+          * {
+            width: 100%;
+          }
+
+          *:not(:first-child) {
+            margin-top: 7.5px;
+          }
+
+          .ccip-session {
+            &-tags {
+              order: 4;
+              width: fit-content;
+
+              padding: 2px 0;
+            }
+
+            &-tag {
+              display: inline-block;
+              border-radius: 1em;
+              padding: 2px 7.5px;
+              background-color: $indigo-blue;
+
+              color: white;
+              line-height: 1.47;
+              white-space: nowrap;
+    
+              &::before {
+                content: '#';
+                display: inline-block;
+              }
+            }
+
+            &-title {
+              // title is visually first element
+              margin-top: 0;
+
+              font-size: 14.5pt;
+              font-weight: bold;
+            }
+
+            &-speakers {
+              font-size: 12pt;
+            }
+
+            &-room, &-time {
+              display: inline-block;
+              width: fit-content;
+
+              color: #5d5d5d;
+              font-size: 14pt;
+              line-height: 1.44;
+              white-space: nowrap;
+            }
+
+            &-room {
+              order: 5;
+              margin-left: auto;
+
+              &::after {
+                content: '/';
+                margin: 0 .25em;
+              }
+            }
+
+            &-time {
+              order: 6;
+              margin-right: -10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

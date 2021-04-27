@@ -8,6 +8,7 @@
           () => {
             removeFixed();
             $router.push('/agenda');
+            $emit('popup:close');
           }
         "
       />
@@ -98,11 +99,12 @@ export default class AgendaBlock extends Vue {
     head.ogDescription(this.info.zh.description);
     /********************/
     const {description} = this.info.zh;
-    const temp = description.split('## 目標聽眾');
-    this.description = temp[0];
-    const tempp = temp[1].split('## 先備知識');
-    this.audience = tempp[0];
-    this.knowlege = tempp[1];
+    this.description = description;
+    // const temp = description.split('## 目標聽眾');
+    // this.description = temp[0];
+    // const tempp = temp[1].split('## 先備知識');
+    // this.audience = tempp[0];
+    // this.knowlege = tempp[1];
   }
   private removeFixed () {
     document.body.style.overflowY = 'scroll';
