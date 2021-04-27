@@ -68,6 +68,9 @@
     <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
       <AgendaBlock :id="$route.params.uid" @popup:close="onPopUpClose"></AgendaBlock
     ></Popup>
+    <Popup class="popup-active" v-if="popUpEventName" backto="/agenda" @popup:close="onPopUpClose">
+      <EventPopUp :name="popUpEventName" @popup:close="onPopUpClose" />
+    </Popup>
   </div>
 </template>
 <script lang="ts">
@@ -83,6 +86,7 @@ import EventBlock from '../components/EventBlock.vue';
 import BlockTitle from '../components/BlockTitle.vue';
 import Popup from '../components/Popup.vue';
 import AgendaBlock from '../components/AgendaBlock.vue';
+import EventPopUp from '../components/EventPopUp.vue';
 import DecoratedSessionTable from '../components/DecoratedSessionTable.vue';
 
 @Component({
@@ -91,6 +95,7 @@ import DecoratedSessionTable from '../components/DecoratedSessionTable.vue';
     BlockTitle,
     Popup,
     AgendaBlock,
+    EventPopUp,
     DecoratedSessionTable
   }
 })
@@ -98,6 +103,7 @@ export default class Agenda extends Vue {
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
   private eventClickable = false;
   private popUp: boolean = false;
+  private popUpEventName: string = '';
 
   private sessionData = sessionData;
   private session = sessionData.sessions;
