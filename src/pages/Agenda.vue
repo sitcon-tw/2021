@@ -6,7 +6,7 @@
       :rooms="['R2', 'R0', 'R1', 'R3', 'S']"
       :isMobile="isMobile()"
       :popUp.sync="popUp"
-      urlPrefix="http://sitcon.org/2021/agenda/"
+      urlPrefix="http://sitcon.org/2021/agenda"
       @popup:session="onPopUp"
     />
     <!-- Agenda Section End -->
