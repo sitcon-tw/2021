@@ -66,7 +66,7 @@
     </div>
     <!-- Event Section End -->
     <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
-      <AgendaBlock :id="$route.params.uid"></AgendaBlock
+      <AgendaBlock :id="$route.params.uid" @popup:close="onPopUpClose"></AgendaBlock
     ></Popup>
   </div>
 </template>
