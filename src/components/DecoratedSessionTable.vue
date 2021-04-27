@@ -56,7 +56,7 @@
 
     private normalizeTime (time: string) {
       const rule = RegExp('T\\d{2}:\\d{2}:\\d{2}');
-      return rule.exec(time)![0].replaceAll(':', '');
+      return rule.exec(time)![0].replace(/:/g, '');
     }
 
     private createTimeline () {
@@ -75,7 +75,7 @@
     @Watch('internalPopUp')
     private onInternalPopUp (popUp: boolean) {
       // pass to Agenda component
-      this.$emit('popup:session', popUp, this.popUpSession);
+      this.$emit('popup:session', popUp, popUp ? this.popUpSession : {});
     }
   }
 </script>
