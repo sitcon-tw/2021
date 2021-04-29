@@ -52,6 +52,20 @@
           "logo": "codezero.png",
           "id": "codezero",
           "description": "零碼科技以「匯聚人才，以科技改善生活」為團隊宗旨。我們熱愛開發以用戶體驗為優先的產品，並研發自家軟體產品為主。歡迎各方志同道合的人才加入！"
+        },
+        {
+          "name": "COSCUP",
+          "link": "https://coscup.org/",
+          "logo": "coscup.png",
+          "id": "coscup",
+          "description": "COSCUP 是由台灣開放原始碼社群聯合推動的研討會，希望藉由每一屆的年度會議，讓全球的 FLOSS 愛好者齊聚一堂。無論您是開放原始碼的開發者、推廣者、使用者、還是想了解軟體的新手，都歡迎您來參加開源人年會。"
+        },
+        {
+          "name": "Dcard 狄卡科技",
+          "link": "https://join.dcard.today/",
+          "logo": "dcard.png",
+          "id": "dcard",
+          "description": "Dcard 是在年輕族群有極高滲透率與影響力的社群平台，每月不重複訪客高達 1,600 萬，透過匿名機制，讓使用者能自在地說出想法與交流意見；獨特的抽卡功能讓卡友們可在每日午夜 12 點透過隨機配對，拓展朋友圈。"
         }
       ]
     },
