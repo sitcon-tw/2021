@@ -9,11 +9,15 @@
 </template>
 
 <script lang="ts">
+import { Action } from 'vuex-class';
 import { Component, Prop, Vue } from 'vue-property-decorator';
+import { ConfEvent } from '@/store/types/app';
 
 @Component({
 })
 export default class EventBlock extends Vue {
+  @Action('toggleEvent', { namespace: 'app' }) private toggleEvent!: (event: ConfEvent) => void;
+
   @Prop({ default: '' }) private text!: string;
   @Prop({ default: '' }) private icon!: string;
   @Prop({ default: false }) private special!: boolean;

@@ -68,8 +68,8 @@
     <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
       <AgendaBlock :id="$route.params.uid" @popup:close="onPopUpClose"></AgendaBlock
     ></Popup>
-    <Popup class="popup-active" v-if="popUpEventName" backto="/agenda" @popup:close="onPopUpClose">
-      <EventPopUp :name="popUpEventName" @popup:close="onPopUpClose" />
+    <Popup class="event-popup popup-active" v-if="popUpEvent.name" backto="/agenda" @popup:close="onPopUpClose">
+      <EventPopUp :event="popUpEvent" @popup:close="onPopUpClose" />
     </Popup>
   </div>
 </template>
@@ -78,7 +78,7 @@ import { Route } from 'vue-router';
 import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
 import { Action, Getter } from 'vuex-class';
 
-import { DeviceType } from '@/store/types/app';
+import { ConfEvent, DeviceType } from '@/store/types/app';
 
 import sessionData from '@/../public/json/session.json';
 
@@ -101,7 +101,9 @@ import DecoratedSessionTable from '../components/DecoratedSessionTable.vue';
 })
 export default class Agenda extends Vue {
   @Getter('device', { namespace: 'app' }) private device!: DeviceType;
-  private eventClickable = false;
+  @Getter('event', { namespace: 'app' }) private popUpEvent!: ConfEvent;
+  @Action('toggleEvent', { namespace: 'app' }) private toggleEvent!: (event: ConfEvent) => void;
+
   private popUp: boolean = false;
   private popUpEventName: string = '';
 
