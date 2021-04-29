@@ -29,7 +29,10 @@ export default class EventBlock extends Vue {
 
   private clickHandler (ev: Event) {
     if (this.clickable) {
-      // route...?
+      this.toggleEvent({
+        name: this.newlineText.replace(/\n/g, ''),
+        icon: this.icon
+      });
     }
 
     return this.clickable;

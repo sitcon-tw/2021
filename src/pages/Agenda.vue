@@ -104,8 +104,8 @@ export default class Agenda extends Vue {
   @Getter('event', { namespace: 'app' }) private popUpEvent!: ConfEvent;
   @Action('toggleEvent', { namespace: 'app' }) private toggleEvent!: (event: ConfEvent) => void;
 
+  private eventClickable = true;
   private popUp: boolean = false;
-  private popUpEventName: string = '';
 
   private sessionData = sessionData;
   private session = sessionData.sessions;
@@ -138,6 +138,9 @@ export default class Agenda extends Vue {
 
   private onPopUpClose () {
     this.popUp = false;
+    if (this.popUpEvent.name) {
+      this.toggleEvent({ name: '', icon: '' });
+    }
   }
 }
 </script>
