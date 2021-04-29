@@ -2,6 +2,7 @@
     <div class="main container">
         {{ event.name }}
         {{ event.icon }}
+        {{ eventData[event.name] }}
     </div>
 </template>
 <script lang="ts">
