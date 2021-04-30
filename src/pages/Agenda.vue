@@ -20,7 +20,7 @@
         text="社群攤位"
         :clickable="eventClickable"
       />
-      <EventBlock icon="group" text="天使計劃" :clickable="eventClickable" />
+      <EventBlock icon="group" text="天使計畫" :clickable="eventClickable" />
       <EventBlock
         icon="lightning-outline"
         text="Lightning\nTalk"
@@ -43,7 +43,7 @@
           text="社群攤位"
           :clickable="eventClickable"
         />
-        <EventBlock icon="group" text="天使計劃" :clickable="eventClickable" />
+        <EventBlock icon="group" text="天使計畫" :clickable="eventClickable" />
       </div>
       <div class="column">
         <EventBlock
