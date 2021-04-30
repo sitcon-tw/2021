@@ -68,7 +68,7 @@
     <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
       <AgendaBlock :id="$route.params.uid" @popup:close="onPopUpClose"></AgendaBlock
     ></Popup>
-    <Popup class="event-popup popup-active" v-if="popUpEvent.name" backto="/agenda" @popup:close="onPopUpClose">
+    <Popup class="event-popup popup-active" v-if="popUpEvent.name && !$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
       <EventPopUp :event="popUpEvent" @popup:close="onPopUpClose" />
     </Popup>
   </div>
