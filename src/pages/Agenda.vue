@@ -65,12 +65,16 @@
       </div>
     </div>
     <!-- Event Section End -->
-    <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
-      <AgendaBlock :id="$route.params.uid" @popup:close="onPopUpClose"></AgendaBlock
-    ></Popup>
-    <Popup class="event-popup popup-active" v-if="popUpEvent.name && !$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
-      <EventPopUp :event="popUpEvent" @popup:close="onPopUpClose" />
-    </Popup>
+    <transition name="popup">
+      <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
+        <AgendaBlock :id="$route.params.uid" @popup:close="onPopUpClose"></AgendaBlock
+      ></Popup>
+    </transition>
+    <transition name="popup">
+      <Popup class="event-popup popup-active" v-if="popUpEvent.name && !$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
+        <EventPopUp :event="popUpEvent" @popup:close="onPopUpClose" />
+      </Popup>
+    </transition>
   </div>
 </template>
 <script lang="ts">
