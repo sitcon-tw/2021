@@ -58,6 +58,12 @@
         // also create decoration bar starting from lunch time
         const lunch = this.sessionData.sessions.find((session: any) => session.zh.title === '午餐');
         this.lunchTime = this.normalizeTime(lunch.start);
+
+        let el = document.querySelector(`div.session-block[style='grid-area: ${this.normalizeTime(lunch.start)} / R2 / ${this.normalizeTime(lunch.end)} / END;']`);
+        while (el?.previousElementSibling) {
+          el = el.previousElementSibling;
+          el.classList.add('square');
+        }
       });
     }
 
