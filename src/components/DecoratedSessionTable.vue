@@ -17,6 +17,13 @@
       :style="{ 'grid-area': `${lunchTime} / ${r} / TAIL` }"
       :key="r"
     ></div>
+    <!-- just a empty block, substr for removing brackets -->
+    <div
+      class="tail decoration ccip-app ccip-session-block session-block"
+      :style="{
+        'grid-area': `${timeline[timeline.length - 1].substr(1, 7)} / ${rooms[0]} / TAIL / END`
+      }"
+    ></div>
   </div>
 </template>
 <script lang="ts">

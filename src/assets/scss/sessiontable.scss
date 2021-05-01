@@ -27,6 +27,11 @@
     z-index: 0;
   }
 
+  div.tail.decoration.session-block {
+    /* empty string effect: top 0.5 em + bottom 0.5em = 1em */
+    padding: calc(20px + .5em) 20px;
+  }
+
   .ccip-app {
     &.ccip-session {
       &-block {
