@@ -10,7 +10,7 @@
 // workaround for add decoration in session table
 #session-table:not(.mobile) {
   display: grid;
-  row-gap: 30px;
+  row-gap: 15px;
   column-gap: 20px;
 
   & > .ccip-app, & > .ccip-app > .ccip-app.ccip-session-table.general {
@@ -41,7 +41,7 @@
           align-items: center;
           justify-content: center;
   
-          padding: 20px;
+          padding: 15px 20px;
   
           background-color: white;
           // a big enough value to create pill
@@ -54,7 +54,7 @@
           z-index: 1;
 
           &.square {
-            border-radius: 16px;
+            border-radius: 8px;
 
             .ccip-session-tags > .ccip-session-tag {
               border-radius: 1em;
