@@ -1,7 +1,7 @@
 <template>
   <div id="agenda">
     <!-- Computer Event Section -->
-    <BlockTitle v-if="!isMobile()" text="活動" id="#event" />
+    <BlockTitle v-if="!isMobile()" text="活動" id="event" />
     <div v-if="!isMobile()" class="event container">
       <img class="arrow" src="@/assets/images/arrow-left.svg" />
       <EventBlock icon="union" text="大地遊戲" :clickable="eventClickable" />
@@ -28,7 +28,7 @@
     <!-- Computer Event Section End -->
     
     <!-- Agenda Section -->
-    <BlockTitle text="議程表" id="#event" />
+    <BlockTitle text="議程表" id="session" />
     <DecoratedSessionTable
       :sessionData="sessionData"
       :rooms="['R2', 'R0', 'R1', 'R3', 'S']"
