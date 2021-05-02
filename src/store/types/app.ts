@@ -3,12 +3,18 @@ import { SightState } from './sight';
 export interface AppState {
   mode: AppMode;
   device: DeviceType;
+  event: ConfEvent;
   sight: SightState;
   theme: ThemeType;
   isPopup: boolean;
   popupContent: string;
   popupOffsetTop: number;
   validPopupTypes: Array<keyof typeof PopupType>;
+}
+
+export interface ConfEvent {
+  name: string;
+  icon: string;
 }
 
 export enum AppMode {

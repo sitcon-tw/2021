@@ -6,6 +6,7 @@
         () => {
           removeFixed();
           $router.push(backto);
+          $emit('popup:close');
         }
       "
     ></div>
