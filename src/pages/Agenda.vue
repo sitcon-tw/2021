@@ -28,6 +28,7 @@
     <!-- Computer Event Section End -->
     
     <!-- Agenda Section -->
+    <BlockTitle text="議程表" id="#event" />
     <DecoratedSessionTable
       :sessionData="sessionData"
       :rooms="['R2', 'R0', 'R1', 'R3', 'S']"
