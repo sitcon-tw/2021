@@ -118,7 +118,7 @@
 										"
 										class="sponsor-img"
 									/>
-									<article class="sponsor-discription">
+									<article class="sponsor-discription" v-if="x.description">
 										<p>{{ x.description }}</p>
 									</article>
 								</a>
