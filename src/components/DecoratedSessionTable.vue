@@ -14,7 +14,7 @@
     <div class="decoration bar"
       v-if="!isMobile"
       v-for="r in rooms"
-      :style="{ 'grid-area': `${lunchTime} / ${r} / TAIL` }"
+      :style="{ 'grid-area': `${firstRestTime} / ${r} / TAIL` }"
       :key="r"
     ></div>
     <!-- just a empty block, substr for removing brackets -->
@@ -46,7 +46,7 @@
     private popUpSession = {};
 
     private timeline: string[] = [];
-    private lunchTime: string = '';
+    private firstRestTime: string = '';
 
     public created () {
       this.createTimeline();
@@ -54,16 +54,20 @@
 
     public mounted () {
       this.$nextTick().then(() => {
-        // sessions before lunch would be different style (WIP)
-        // also create decoration bar starting from lunch time
-        const lunch = this.sessionData.sessions.find((session: any) => session.zh.title === '午餐');
-        this.lunchTime = this.normalizeTime(lunch.start);
+        // sessions before first rest would be different style
+        // also create decoration bar starting from the first rest time
+        const firstRest = this.sessionData.sessions.find((s: any) => s.broadcast?.length === this.rooms.length);
+        this.firstRestTime = this.normalizeTime(firstRest.start);
 
-        let el = document.querySelector(`div.session-block[style='grid-area: ${this.normalizeTime(lunch.start)} / R2 / ${this.normalizeTime(lunch.end)} / END;']`);
-        while (el?.previousElementSibling) {
-          el = el.previousElementSibling;
-          el.classList.add('square');
-        }
+        // We have to iterate all elements because DOM order != visual order.
+        Array.from(
+          document.querySelectorAll<HTMLElement>('.ccip-app.ccip-session-table.general .session-block')
+        ).forEach((el: HTMLElement, i: number) => {
+          // grid row start => session.start
+          if (el.style.gridRowStart.localeCompare(this.firstRestTime) < 0) {
+            el.classList.add('square');
+          }
+        });
       });
     }
 
