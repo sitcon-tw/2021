@@ -140,7 +140,9 @@
   background-color: rgba($black, 0.5);
   backdrop-filter: blur(5px);
   transition: all 0.3s;
-
+  ol {
+    font-size: 11.5pt !important;
+  }
   &-container {
     position: relative;
     left: 50%;
@@ -199,6 +201,7 @@
             font-size: 16pt;
             margin-bottom: 10px;
           }
+          
           p {
             white-space: pre-wrap;
             @include agendaBlockContentLeftFontsize;

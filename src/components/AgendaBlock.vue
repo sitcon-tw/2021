@@ -36,9 +36,9 @@
         <div class="agendaBlock__content-right-container">
           <article>
             <h2>目標聽眾</h2>
-            <p>
+            <VueMarkdown>
               {{audience}}
-            </p>
+            </VueMarkdown>
           </article>
           <article>
             <h2>先備知識</h2>
@@ -67,13 +67,18 @@
 <script lang="ts">
 import { Watch, Component, Prop, Vue } from 'vue-property-decorator';
 import { Route } from 'vue-router';
+import VueMarkdown from 'vue-markdown';
 
 import sessionData from '@/../public/json/session.json';
 
 import head from '../util/head';
 
 
-@Component({})
+@Component({
+  components: {
+    VueMarkdown
+  }
+})
 export default class AgendaBlock extends Vue {
   @Prop() private id!: string;
   private sessions: any = sessionData.sessions;
