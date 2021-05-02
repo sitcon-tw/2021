@@ -1,18 +1,8 @@
 <template>
   <div id="agenda">
-    <!-- Agenda Section -->
-    <DecoratedSessionTable
-      :sessionData="sessionData"
-      :rooms="['R2', 'R0', 'R1', 'R3', 'S']"
-      :isMobile="isMobile()"
-      :popUp.sync="popUp"
-      urlPrefix="http://sitcon.org/2021/agenda"
-      @popup:session="onPopUp"
-    />
-    <!-- Agenda Section End -->
-    <!-- Event Section -->
+      <!-- Event Section -->
     <BlockTitle text="活動" id="#event" />
-    <div v-if="!isMobile()" class="event container">
+    <div v-if="!isMobile()" class="event container" style="margin:50px">
       <img class="arrow" src="@/assets/images/arrow-left.svg" />
       <EventBlock icon="union" text="大地遊戲" :clickable="eventClickable" />
       <EventBlock
@@ -65,6 +55,16 @@
       </div>
     </div>
     <!-- Event Section End -->
+    <!-- Agenda Section -->
+    <DecoratedSessionTable
+      :sessionData="sessionData"
+      :rooms="['R2', 'R0', 'R1', 'R3', 'S']"
+      :isMobile="isMobile()"
+      :popUp.sync="popUp"
+      urlPrefix="http://sitcon.org/2021/agenda"
+      @popup:session="onPopUp"
+    />
+    <!-- Agenda Section End -->
     <transition name="popup">
       <Popup class="agendaBlock popup-active" v-if="$route.params.uid" backto="/agenda" @popup:close="onPopUpClose">
         <AgendaBlock :id="$route.params.uid" @popup:close="onPopUpClose"></AgendaBlock
