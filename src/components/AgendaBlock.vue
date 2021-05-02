@@ -16,7 +16,7 @@
     <div class="agendaBlock__title">
       <h1>{{info.zh.title}}</h1>
       <div class="agendaBlock__title-sub">
-        <span v-for="tag in info.tags">{{ getTag(tag).zh.name }}</span>
+        <span v-for="tag in info.tags" :key="tag">{{ getTag(tag).zh.name }}</span>
       </div>
     </div>
     <div class="agendaBlock__content">
@@ -25,7 +25,7 @@
           <article class="--top">
             <VueMarkdown>{{description}}</VueMarkdown>
           </article>
-          <article v-for="speaker in info.speakers">
+          <article v-for="speaker in info.speakers" :key="speaker">
             <h2>{{getSpeaker(speaker).zh.name}}</h2>
             <p>{{getSpeaker(speaker).zh.bio}}
             </p>
@@ -55,7 +55,7 @@
             </div>
           </section>
           -->
-          <section v-for="speaker in info.speakers">
+          <section v-for="speaker in info.speakers" :key="speaker">
             <img :src="getSpeaker(speaker).avatar" alt="null" />
           </section>
         </div>
