@@ -16,7 +16,7 @@
     <div class="agendaBlock__title">
       <h1>{{info.zh.title}}</h1>
       <div class="agendaBlock__title-sub">
-        <span v-for="tag in info.tags">{{tag}}</span>
+        <span v-for="tag in info.tags">{{ getTag(tag).zh.name }}</span>
       </div>
     </div>
     <div class="agendaBlock__content">
@@ -92,6 +92,9 @@ export default class AgendaBlock extends Vue {
   }
   public getSession (id: string): any {
     return this.sessions.find((session: any) => (session.id === id));
+  }
+  public getTag (id: string): any {
+    return sessionData.tags.find((tag: any) => tag.id === id);
   }
 
   // private info () {
