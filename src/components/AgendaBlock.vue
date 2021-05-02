@@ -27,8 +27,7 @@
           </article>
           <article v-for="speaker in info.speakers" :key="speaker">
             <h2>{{getSpeaker(speaker).zh.name}}</h2>
-            <p>{{getSpeaker(speaker).zh.bio}}
-            </p>
+            <VueMarkdown>{{getSpeaker(speaker).zh.bio}}</VueMarkdown>
           </article>
         </div>
       </div>
