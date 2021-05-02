@@ -78,7 +78,15 @@
     },
     {
       "type": "新芽級",
-      "org": []
+      "org": [
+        {
+          "name": "趨勢科技",
+          "link": "https://careers.trendmicro.tw/",
+          "logo": "trendmicro.png",
+          "id": "trendmicro",
+          "description": ""
+        }  
+      ]
     }
   ],
   "thanks": [
