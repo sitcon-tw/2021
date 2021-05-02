@@ -23,7 +23,7 @@
       <div class="agendaBlock__content-left">
         <div class="agendaBlock__content-left-container">
           <article class="--top">
-            <p>{{description}}</p>
+            <VueMarkdown>{{description}}</VueMarkdown>
           </article>
           <article v-for="speaker in info.speakers">
             <h2>{{getSpeaker(speaker).zh.name}}</h2>
@@ -42,9 +42,9 @@
           </article>
           <article>
             <h2>先備知識</h2>
-            <p>
+            <VueMarkdown>
               {{knowlege}}
-            </p>
+            </VueMarkdown>
           </article>
           <!--
           <section class="agendaBlock_record">

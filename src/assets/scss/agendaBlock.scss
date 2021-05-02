@@ -140,7 +140,7 @@
   background-color: rgba($black, 0.5);
   backdrop-filter: blur(5px);
   transition: all 0.3s;
-  ol {
+  ol,ul {
     font-size: 11.5pt !important;
   }
   &-container {
