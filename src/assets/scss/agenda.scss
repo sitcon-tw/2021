@@ -16,11 +16,12 @@
   @media screen and (max-width: $max-width-medium-0) {
     max-width: 85%;
   }
-  @media screen and (max-width: $max-width-small-0) {
-    max-width: 85%;
+  @media screen and (max-width: 900px) {
+    max-width: 88%;
   }
-  @media screen and (max-width: $max-width-small-2) {
-    max-width: 85%;
+  // align with header
+  @media screen and (max-width: $max-width-small-0) {
+    max-width: 92%;
   }
 }
 @mixin RWDButton {
@@ -104,7 +105,6 @@
       flex: 1;
       margin: 0 calc(var(--gap) / 2);
     }
-
     .arrow {
       flex-basis: 0;
       align-self: center;

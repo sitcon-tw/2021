@@ -2,6 +2,7 @@
   opacity: 1;
   z-index: 9999;
   visibility: hidden;
+  transition: all 0.3s;
   &:target {
     opacity: 1;
     visibility: visible;
@@ -21,4 +22,8 @@
 .popup-active {
   opacity: 1;
   visibility: visible;
+}
+.popup-enter, .popup-leave-active{
+  opacity: 0;
+  visibility: hidden;
 }

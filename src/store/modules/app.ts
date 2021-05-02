@@ -9,6 +9,10 @@ const namespaced: boolean = true;
 const state: AppState = {
   mode: AppMode.WEB,
   device: DeviceType.DESKTOP,
+  event: {
+    name: '',
+    icon: ''
+  },
   sight: {
     offset: 0,
     containerWidth: 0,
@@ -34,7 +38,8 @@ const getters: GetterTree<AppState, RootState> = {
   isPopup: (state): AppState['isPopup'] => state.isPopup,
   popupContent: (state): AppState['popupContent'] => state.popupContent,
   popupOffsetTop: (state): AppState['popupOffsetTop'] => state.popupOffsetTop,
-  validPopupTypes: (state): AppState['validPopupTypes'] => state.validPopupTypes
+  validPopupTypes: (state): AppState['validPopupTypes'] => state.validPopupTypes,
+  event: (state): AppState['event'] => state.event
 };
 
 const actions: ActionTree<AppState, RootState> = {
@@ -64,6 +69,10 @@ const actions: ActionTree<AppState, RootState> = {
 
   setSightMeasure ({ commit }, sight: AppState['sight']): void {
     commit(mutationTypes.APP_SIGHT, sight);
+  },
+
+  toggleEvent ({ commit }, event: AppState['event']): void {
+    commit(mutationTypes.APP_EVENT, event);
   }
 };
 
@@ -94,6 +103,10 @@ const mutations: MutationTree<AppState> = {
 
   [mutationTypes.APP_SIGHT] (state, sight: AppState['sight']) {
     state.sight = sight;
+  },
+
+  [mutationTypes.APP_EVENT] (state, event: AppState['event']) {
+    state.event = event;
   }
 };
 

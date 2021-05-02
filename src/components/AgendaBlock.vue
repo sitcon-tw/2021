@@ -8,6 +8,7 @@
           () => {
             removeFixed();
             $router.push('/agenda');
+            $emit('popup:close');
           }
         "
       />
