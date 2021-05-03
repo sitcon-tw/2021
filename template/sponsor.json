@@ -85,7 +85,21 @@
           "logo": "trendmicro.png",
           "id": "trendmicro",
           "description": ""
-        }  
+        },
+        {
+          "name": "TeamT5 杜浦數位安全",
+          "link": "https://teamt5.org/",
+          "logo": "t5.png",
+          "id": "t5",
+          "description": ""
+        },
+        {
+          "name": "研華科技",
+          "link": "http://intern.advantech.tw/",
+          "logo": "advantech.png",
+          "id": "advantech",
+          "description": ""
+        }
       ]
     }
   ],
