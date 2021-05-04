@@ -73,6 +73,13 @@
           "logo": "freedom.png",
           "id": "freedom",
           "description": "自由系統為全台首家 ITaaS MSP，透過雲端技術服務、資訊安全管理及 IT 整合服務，協助企業優化資訊環境、無痛數位轉型，使客戶於可控風險內達成核心商業目標。"
+        },
+        {
+          "name": "Oursky",
+          "link": "https://jobs.oursky.com/tw",
+          "logo": "oursky.png",
+          "id": "oursky",
+          "description": "Oursky 是創立於香港的軟體公司，我們以開發開源軟體解決方案為己任，協助企業進行數位轉型。我們的目標是建立以開發者和科技為中心、重視技藝及社會公義的公司。"
         }
       ]
     },
