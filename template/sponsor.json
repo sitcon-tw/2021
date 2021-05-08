@@ -106,6 +106,20 @@
           "logo": "advantech.png",
           "id": "advantech",
           "description": ""
+        },
+        {
+          "name": "合勤基金會",
+          "link": "https://foundation.unizyx.com.tw/?lang=zh_tw",
+          "logo": "zyxel.png",
+          "id": "zyxel",
+          "description": ""
+        },
+        {
+          "name": "財團法人台灣網路資訊中心",
+          "link": "https://twnic.tw/",
+          "logo": "twnic.png",
+          "id": "twnic",
+          "description": ""
         }
       ]
     }
@@ -119,6 +133,13 @@
           "link": "http://plus.pro.edu.tw/",
           "logo": "plus.png",
           "id": "plus",
+          "description": ""
+        },
+        {
+          "name": "iCHEF 資廚",
+          "link": "https://www.ichefpos.com/zh-tw",
+          "logo": "ichef.png",
+          "id": "ichef",
           "description": ""
         }
       ]
