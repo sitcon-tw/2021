@@ -25,10 +25,12 @@
           <article class="--top">
             <VueMarkdown>{{description}}</VueMarkdown>
           </article>
+          <!--
           <article v-for="speaker in info.speakers" :key="speaker">
             <h2>{{getSpeaker(speaker).zh.name}}</h2>
             <VueMarkdown>{{getSpeaker(speaker).zh.bio}}</VueMarkdown>
           </article>
+          -->
         </div>
       </div>
       <div class="agendaBlock__content-right">
@@ -54,7 +56,26 @@
             </div>
           </section>
           -->
+          <!--
           <section v-for="speaker in info.speakers" :key="speaker">
+            <img :src="getSpeaker(speaker).avatar" alt="null" />
+          </section>
+          -->
+        </div>
+      </div>
+    </div>
+    <div class="agendaBlock__content" v-for="speaker in info.speakers" :key="speak">
+      <div class="agendaBlock__content-left">
+        <div class="agendaBlock__content-left-container">
+          <article>
+            <h2>{{getSpeaker(speaker).zh.name}}</h2>
+            <VueMarkdown>{{getSpeaker(speaker).zh.bio}}</VueMarkdown>
+          </article>
+        </div>
+      </div>
+      <div class="agendaBlock__content-right">
+        <div class="agendaBlock__content-right-container">
+          <section>
             <img :src="getSpeaker(speaker).avatar" alt="null" />
           </section>
         </div>
@@ -108,9 +129,9 @@ export default class AgendaBlock extends Vue {
     const {description} = this.info.zh;
     const temp = description.split('## 目標聽眾');
     this.description = temp[0];
-    const tempp = temp[1].split('## 先備知識');
-    this.audience = tempp[0];
-    this.knowlege = tempp[1];
+    const tempp = temp[1]?.split('## 先備知識');
+    this.audience = tempp?.[0];
+    this.knowlege = tempp?.[1];
   }
   private removeFixed () {
     document.body.style.overflowY = 'scroll';

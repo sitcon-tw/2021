@@ -47,7 +47,7 @@
           "
         >
           <option value="/">年會主題</option>
-          <option value="/agenda" :selected="onRoute('Agenda') ? true : false"
+          <option value="/agenda" :selected="(onRoute('Agenda') || onRoute('Agenda-view')) ? true : false"
             >議程與活動</option
           >
           <option value="/traffic" :selected="onRoute('Traffic') ? true : false"
