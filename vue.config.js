@@ -38,7 +38,7 @@ module.exports = {
         // Auto inject GA template
         route.html = route.html.replace(
           "<noscript>{{{ %GA_TEMPLATE% }}}</noscript>",
-          route.route === '/2021/' ? gaTempHTML : gaTempHTML
+          route.route === '/2021/' ? gaTempHTML + '<link rel="canonical" href="https://sitcon.org/2021/" />' : gaTempHTML
         );
         return route;
       }
