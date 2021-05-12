@@ -38,7 +38,7 @@ module.exports = {
         // Auto inject GA template
         route.html = route.html.replace(
           "<noscript>{{{ %GA_TEMPLATE% }}}</noscript>",
-          gaTempHTML
+          route.route === '/2021/' ? gaTempHTML : gaTempHTML
         );
         return route;
       }
