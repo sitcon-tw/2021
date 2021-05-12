@@ -562,3 +562,42 @@ $font-home-h2: 'Letter Gothic Std Bold';
     bottom: 0;
   }
 }
+
+#announcement {
+  width: 75%;
+  height: 80%;
+  background: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 20px;
+  padding: 55px 50px;
+  line-height: 24px;
+  overflow-y: auto;
+  @media screen and (max-width: 800px) {
+    width: 90%;
+    height: 90%;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: .85em;
+    li {
+      font-size: .85em;
+    }
+  }
+  & > img {
+    width: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  ul,ol {
+    list-style-position: inside;
+    margin: 8px 0;
+    li {
+      margin: 5px 0;
+    }
+  }
+}

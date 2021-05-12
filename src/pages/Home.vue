@@ -17,7 +17,7 @@
             中央研究院－人文社會科學館 •免費報名
           </p>
         </div>
-        <router-link to="/cfp" class="home__placard">
+        <router-link to="/?banner=announcement" class="home__placard">
           <div class="hexagon">
             <div class="l"></div>
             <div class="c">
@@ -26,7 +26,7 @@
             <div class="r"></div>
           </div>
           <div class="info">
-            <span>4/18  二階搶票開始！</span>
+            <span>疫情緊急應變公告</span>
           </div>
         </router-link>
       </div>
@@ -138,17 +138,47 @@
         </div>
       </section>
     </section>
+    <transition name="popup">
+      <Popup class="agendaBlock popup-active" v-if="$route.query.banner === 'announcement'" backto="/">
+        <div id="announcement">
+          <img
+            src="~@/assets/images/home/home-icon-close.svg"
+            @click="
+              () => {
+                removeFixed();
+                $router.push('/');
+              }
+            "
+          />
+          <VueMarkdown>{{announcement.RAWContent}}</VueMarkdown>
+          <script id="meta-content" type="application/json">
+            {{announcement.content}}
+          </script>
+        </div
+      ></Popup>
+    </transition>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
+import Popup from '@/components/Popup.vue';
+import announcement from '@/../template/announcement.ts';
+import VueMarkdown from 'vue-markdown';
+
 @Component({
-  components: {}
+  components: {
+    Popup,
+    VueMarkdown
+  }
 })
 export default class CFP extends Vue {
   @Prop() private msg!: string;
+  private announcement = announcement;
+  private removeFixed () {
+    document.body.style.overflowY = 'scroll';
+  }
 }
 </script>
 
