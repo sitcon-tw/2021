@@ -575,7 +575,7 @@ $font-home-h2: 'Letter Gothic Std Bold';
   margin: auto;
   border-radius: 20px;
   padding: 55px 50px;
-  line-height: 24px;
+  line-height: 36px;
   overflow-y: auto;
   @media screen and (max-width: 800px) {
     width: 90%;
@@ -599,5 +599,9 @@ $font-home-h2: 'Letter Gothic Std Bold';
     li {
       margin: 5px 0;
     }
+  }
+  h1 {
+    font-size: 32px;
+    margin: 5px 0 20px;
   }
 }
