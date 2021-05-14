@@ -16,7 +16,7 @@
                 <img src="~@/assets/images/traff_info.svg"/>
             </section>
         </article>
-        
+        <!-- cdc remove 
         <article class="traffic-bus">
             <h1>交通車資訊</h1>
             <section class="traffic-bus-info">
@@ -47,6 +47,7 @@
                 </p>
             </section>
         </article>
+        -->
     </div>
 </template>
 <script lang="ts">
