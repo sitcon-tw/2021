@@ -59,6 +59,8 @@ export default class App extends Vue {
     if (this.$cookies.get('cdc-announcement') === null) {
       this.$router.push({ path: '/', query: { banner: 'announcement' } });
       this.$cookies.set('cdc-announcement', 'OK');
+    } else {
+      document.body.style.overflowY = 'scroll';
     }
     // add change listener instead of resize listener
     if (this.deviceTypeMediaQuery.addEventListener) {
