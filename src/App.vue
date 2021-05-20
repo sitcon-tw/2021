@@ -56,9 +56,9 @@ export default class App extends Vue {
   public mounted () {
     this.detectDeviceType(this.deviceTypeMediaQuery);
     this.autoDetectMetaOg();
-    if (this.$cookies.get('cdc-announcement') === null) {
+    if (this.$cookies.get('cdc-announcement') !== 'v20210520') {
       this.$router.push({ path: '/', query: { banner: 'announcement' } });
-      this.$cookies.set('cdc-announcement', 'OK');
+      this.$cookies.set('cdc-announcement', 'v20210520');
     } else {
       document.body.style.overflowY = 'scroll';
     }
