@@ -10,10 +10,10 @@
         </div>
         <div class="home__title-box2">
           <p class="home__title-box2--p1">
-            05/29 • 中央研究院－人文社會科學館 •免費報名
+            09/04 • 中央研究院－人文社會科學館 •免費報名
           </p>
           <p class="home__title-box2--p2">
-            05/29 <br /><br />
+            09/04 <br /><br />
             中央研究院－人文社會科學館 •免費報名
           </p>
         </div>
@@ -26,7 +26,7 @@
             <div class="r"></div>
           </div>
           <div class="info">
-            <span>疫情緊急應變公告</span>
+            <span>活動延期至 9/4 （六）</span>
           </div>
         </router-link>
       </div>
