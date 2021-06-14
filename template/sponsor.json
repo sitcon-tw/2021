@@ -80,6 +80,13 @@
           "logo": "oursky.png",
           "id": "oursky",
           "description": "Oursky 是創立於香港的軟體公司，我們以開發開源軟體解決方案為己任，協助企業進行數位轉型。我們的目標是建立以開發者和科技為中心、重視技藝及社會公義的公司。"
+        },
+        {
+          "name": "Kronos Research 麒點科技",
+          "link": "https://kronosresearch.com/join-us",
+          "logo": "kronos.png",
+          "id": "kronos",
+          "description": "Kronos Research 是全球前五大的加密貨幣量化交易團隊，利用自建的基礎架構、交易策略和多年量化研究的經驗，達到單日最高 120 億美元的交易額。歡迎加入我們，與領域中最優秀的技術人才一起挑戰世界頂尖高手！"          
         }
       ]
     },
