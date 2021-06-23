@@ -1,0 +1,36 @@
+<svg 
+    xmlns="http://www.w3.org/2000/svg"
+    width="139.5" height="57" 
+    viewBox="0 0 139.5 57"
+>
+    <defs>
+        <style>
+            .a {
+                fill:#1060ff;
+            }
+            .b {
+                fill:#fff;font-size:32px;font-family:NotoSerifCJKtc-Bold, Noto Serif CJK TC;font-weight:700;
+            }
+        </style>
+    </defs>
+    <g transform="translate(-400.999 -356)">
+        <g transform="translate(-764.898 -547)">
+            <path 
+                class="a" 
+                d="M114,142.322l-13.06-13.06L89.448,117.768a3.9,3.9,0,0,0-5.513,0L59.286,142.419a3.9,3.9,0,0,0,0,5.513l24.552,24.552a3.9,3.9,0,0,0,5.513,0l11.494-11.494L114,147.834A3.9,3.9,0,0,0,114,142.322Z"
+                transform="translate(1190.254 786.373)"/>
+            <path 
+                class="a" 
+                d="M114,142.322l-13.06-13.06L89.448,117.768a3.9,3.9,0,0,0-5.513,0L59.286,142.419a3.9,3.9,0,0,0,0,5.513l24.552,24.552a3.9,3.9,0,0,0,5.513,0l11.494-11.494L114,147.834A3.9,3.9,0,0,0,114,142.322Z"
+                transform="translate(1107.754 786.373)"/>
+            <rect 
+                class="a"
+                width="82.5"
+                height="57"
+                transform="translate(1194.474 903)"/>
+        </g>
+        <text class="b" transform="translate(428 362)">
+            <tspan x="25.696" y="37">3F</tspan>
+        </text>
+    </g>
+</svg>
