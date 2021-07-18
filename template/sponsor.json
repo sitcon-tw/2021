@@ -86,7 +86,14 @@
           "link": "https://kronosresearch.com/join-us",
           "logo": "kronos.png",
           "id": "kronos",
-          "description": "Kronos Research 是全球前五大的加密貨幣量化交易團隊，利用自建的基礎架構、交易策略和多年量化研究的經驗，達到單日最高 120 億美元的交易額。歡迎加入我們，與領域中最優秀的技術人才一起挑戰世界頂尖高手！"          
+          "description": "Kronos Research 是全球前五大的加密貨幣量化交易團隊，利用自建的基礎架構、交易策略和多年量化研究的經驗，達到單日最高 120 億美元的交易額。歡迎加入我們，與領域中最優秀的技術人才一起挑戰世界頂尖高手！"
+        },
+        {
+          "name": "資策會數位轉型研究所",
+          "link": "https://www.iii.org.tw/",
+          "logo": "iii.png",
+          "id": "iii",
+          "description": "資策會數位轉型研究所長年投入開源技術並研發 DevOps 相關工具，為促進國內開源軟體技術發展，邀請程式武林高手共同加入研發行列，歡迎至攤位上與我們進行交流。"
         }
       ]
     },
