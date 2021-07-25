@@ -26,7 +26,7 @@
             <div class="r"></div>
           </div>
           <div class="info">
-            <span>活動延期至 9/4 （六）</span>
+            <span>年會形式或將調整</span>
           </div>
         </router-link>
       </div>
