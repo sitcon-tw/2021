@@ -4,7 +4,7 @@
 // This is a announcement template block, edit this and it will auto inject contents as popup-ready DOMElement.
 
 const RAWContent = `
-公告：年會形式將於 8/16 公告是否調整
+公告：年會形式或將調整，將於 8/16 (一) 公告
 
 各位關心 SITCON 的朋友大家好：
 
