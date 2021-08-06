@@ -87,6 +87,13 @@
           "logo": "iii.png",
           "id": "iii",
           "description": "資策會數位轉型研究所長年投入開源技術並研發 DevOps 相關工具，為促進國內開源軟體技術發展，邀請程式武林高手共同加入研發行列，歡迎至攤位上與我們進行交流。"
+        },
+        {
+          "name": "奧義智慧科技",
+          "link": "https://www.cycarrier.com/",
+          "logo": "cycarrier.png",
+          "id": "cycarrier",
+          "description": "奧義智慧為世界領先 AI 資安公司，堅持打造臺灣自研技術品牌，並以獨家 AI 技術自動化資安偵測與回應，屢獲國際肯定、國內市佔率第一名。"
         }
       ]
     },
