@@ -30,7 +30,12 @@
     <!-- Agenda Section -->
     <BlockTitle text="議程表" id="session" />
     <DecoratedSessionTable
-      :sessionData="sessionData"
+      :sessionData="{
+        ...sessionData,
+        sessions: sessionData.sessions.map((x) => (
+          x.broadcast.length? x : {...x, broadcast: null}
+        ))
+      }"
       :rooms="['R2', 'R0', 'R1', 'R3', 'S']"
       :isMobile="isMobile()"
       :popUp.sync="popUp"
