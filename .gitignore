@@ -22,4 +22,4 @@ pnpm-debug.log*
 *.sln
 *.sw?
 
-public/json/session.json
+# public/json/session.json
