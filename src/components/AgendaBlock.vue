@@ -64,7 +64,7 @@
         </div>
       </div>
     </div>
-    <div class="agendaBlock__content" v-for="speaker in info.speakers" :key="speak">
+    <div class="agendaBlock__content" v-for="speaker in info.speakers" :key="speaker">
       <div class="agendaBlock__content-left">
         <div class="agendaBlock__content-left-container">
           <article>
