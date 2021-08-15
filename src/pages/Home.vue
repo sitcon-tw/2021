@@ -10,11 +10,11 @@
         </div>
         <div class="home__title-box2">
           <p class="home__title-box2--p1">
-            09/04 • 中央研究院－人文社會科學館 •免費報名
+            09/04 • 線上舉行 •免費報名
           </p>
           <p class="home__title-box2--p2">
             09/04 <br /><br />
-            中央研究院－人文社會科學館 •免費報名
+            線上舉行 •免費報名
           </p>
         </div>
         <router-link to="/?banner=announcement" class="home__placard">
@@ -26,7 +26,7 @@
             <div class="r"></div>
           </div>
           <div class="info">
-            <span>年會形式或將調整</span>
+            <span>年會將改為線上舉辦</span>
           </div>
         </router-link>
       </div>

@@ -58,10 +58,10 @@
   }
 }
 @mixin headerLinksWidth {
-  width: 600px;
+  width: 500px;
 
   @media screen and (min-width: $max-width-big) {
-    width: 630px;
+    width: 500px;
   }
   @media screen and (min-width: $max-width-big-0) {
     width: 680px;

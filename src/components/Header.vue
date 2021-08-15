@@ -15,11 +15,11 @@
               >議程與活動</router-link
             >
           </li>
-          <li>
+          <!-- <li>
             <router-link to="/traffic" active-class="header-link--active"
               >交通方式</router-link
             >
-          </li>
+          </li> -->
           <li>
             <router-link to="/venue" active-class="header-link--active"
               >會場地圖</router-link
@@ -50,9 +50,9 @@
           <option value="/agenda" :selected="(onRoute('Agenda') || onRoute('Agenda-view')) ? true : false"
             >議程與活動</option
           >
-          <option value="/traffic" :selected="onRoute('Traffic') ? true : false"
+          <!-- <option value="/traffic" :selected="onRoute('Traffic') ? true : false"
             >交通方式</option
-          >
+          > -->
           <option value="/venue" :selected="onRoute('Venue') ? true : false"
             >會場地圖</option
           >
