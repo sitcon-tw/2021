@@ -104,7 +104,7 @@
 									class="sponsor"
 									v-for="x in s.org"
 									:style="
-										`height: ${300 +
+										`min-height: ${300 +
 											(sponsers.length - index) * 75}px`
 									"
 									:href="x.link"
