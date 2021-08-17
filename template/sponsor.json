@@ -162,6 +162,13 @@
           "logo": "ichef.png",
           "id": "ichef",
           "description": ""
+        },
+        {
+          "name": "資策會數位教育研究所",
+          "link": "https://www.iiiedu.org.tw/",
+          "logo": "iiiedu.png",
+          "id": "iiiedu",
+          "description": ""
         }
       ]
     },
