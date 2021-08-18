@@ -10,7 +10,7 @@
         </div>
         <div class="home__title-box2">
           <p class="home__title-box2--p1">
-            09/04 • 線上舉行 •免費報名
+            09/04 • 線上舉行 •免費參加
           </p>
           <p class="home__title-box2--p2">
             09/04 <br /><br />
