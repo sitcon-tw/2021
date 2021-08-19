@@ -246,8 +246,28 @@
             }
           }
         }
+        .supOrg {
+          background-color: $white;
+          border: 5px solid $dark-blue;
+          border-radius: 10px;
+          display: flex;
+          flex-direction: column;
+          // width: 48.5%;
+          &:not(:nth-child(2n)) {
+            margin-right: 3%;
+          }
+          @media screen and (max-width: 700px) {
+            width: 100%;
+            &:not(:nth-child(2n)) {
+              margin-right: 0%;
+            }
+          }
+        }
         &--1 {
           .coOrg {
+            width: 100%;
+          }
+          .supOrg {
             width: 100%;
           }
         }

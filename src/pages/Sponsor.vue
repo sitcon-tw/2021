@@ -66,6 +66,28 @@
 								</a>
 							</div>
 						</section>
+						<section class="sponsors__level">
+							<div class="sponsors__level-title">
+								<h1>協辦單位</h1>
+								<img src="~@/assets/images/teams/dev.svg" />
+							</div>
+							<div class="sponsors__sponsorBox">
+								<a v-for="x in supOrg" :href="x.link" class="supOrg">
+									<div class="sponsor-name">
+										<h2>{{ x.name }}</h2>
+									</div>
+									<img
+										:src="
+											require(`../assets/images/sponsor/${x.logo}`)
+										"
+										class="sponsor-img"
+									/>
+									<article class="sponsor-discription">
+										<p>{{ x.description }}</p>
+									</article>
+								</a>
+							</div>
+						</section>
 						<section
 							class="sponsors__level"
 							v-for="(s, index) in sponsers"
@@ -177,6 +199,7 @@ import sponsorInfo from '../../template/sponsor.json';
 export default class Sponsor extends Vue {
   private main = sponsorInfo.main;
   private coOrg = sponsorInfo.coOrg;
+  private supOrg = sponsorInfo.supOrg;
   private sponsers = sponsorInfo.sponsors;
   private thanks = sponsorInfo.thanks;
 }
