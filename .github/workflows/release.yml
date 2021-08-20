@@ -19,7 +19,9 @@ jobs:
 
     - run: npm ci
     - run: npm run init
-    #- run: npm run generate:session
+    - env:
+        GCP_API_KEY: ${{ secrets.GCP_API_KEY }}
+      run: npm run generate:session
     - run: npm run build
 
     - name: Deploy
