@@ -23,6 +23,8 @@ jobs:
         GCP_API_KEY: ${{ secrets.GCP_API_KEY }}
       run: npm run generate:session
     - run: npm run build
+    - run: npm run redirect:slido
+    - run: npm run redirect:record
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
