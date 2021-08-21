@@ -29,7 +29,11 @@ module.exports = {
         '/2021/team',
         '/2021/team/',
         '/2021/sponsor',
-        '/2021/sponsor/'
+        '/2021/sponsor/',
+        ...sessionData.rooms.map((room)=>`/2021/slido/${room.id.toLowerCase()}`),
+        ...sessionData.rooms.map((room)=>`/2021/record/${room.id.toLowerCase()}`),
+        ...sessionData.rooms.map((room)=>`/2021/slido/${room.id.toLowerCase()}/`),
+        ...sessionData.rooms.map((room)=>`/2021/record/${room.id.toLowerCase()}/`)
       ],
       useRenderEvent: true,
       headless: true,
