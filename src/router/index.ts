@@ -11,6 +11,8 @@ import Team from '../pages/Team.vue';
 import Traffic from '../pages/Traffic.vue';
 import Venue from '../pages/Venue.vue';
 
+import Redirect from '../pages/Redirect.vue';
+
 Vue.use(VueRouter);
 
 export const routes: RouteConfig[] = [
@@ -103,6 +105,14 @@ export const routes: RouteConfig[] = [
     path: '/cfp/news',
     name: 'news',
     component: News,
+    meta: {
+      menuItem: false
+    }
+  },
+  {
+    path: '/:type/:room',
+    name: 'redirect',
+    component: Redirect,
     meta: {
       menuItem: false
     }
