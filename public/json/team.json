@@ -142,11 +142,6 @@
                 "mailHash": "927ed83467b0b0112556a0218bff2937"
             },
             {
-                "name": "震龍",
-                "type": "組員",
-                "mailHash": "cc48dc8ae0f16b0bcffe707b89d0dbd8"
-            },
-            {
                 "name": "entroy",
                 "type": "組員",
                 "mailHash": "c2dc195c07fcd533dc73c72886aa55ba"
@@ -160,6 +155,11 @@
                 "name": "李賜明",
                 "type": "組員",
                 "mailHash": "a06e537965b337f802913b69848c4289"
+            },
+            {
+                "name": "林均安",
+                "type": "組員",
+                "mailHash": "911dfb6cdce2ce7acf5d053958455ea1"
             }
         ]
     },
@@ -259,11 +259,6 @@
                 "mailHash": "913e70e0bc08342c187643da82c684cd"
             },
             {
-                "name": "Sciuridae 松鼠",
-                "type": "報到股長",
-                "mailHash": "60ce6b00bae88e0ff15c9480a9ce92f5"
-            },
-            {
                 "name": "洋蔥",
                 "type": "物流股長",
                 "mailHash": "a4e1a23a50b9a8c3ab2100e52a71460b"
@@ -337,11 +332,6 @@
                 "name": "Vincent55",
                 "type": "機動組員",
                 "mailHash": "cdade6f4871313de8425f02471da9679"
-            },
-            {
-                "name": "貓又",
-                "type": "機動組員",
-                "mailHash": "147530bb3df05ac8b4631a3fa0bbac6d"
             },
             {
                 "name": "Jack",
@@ -507,19 +497,9 @@
                 "mailHash": "e10d7d1cecf2b1d8bf2bcb8cacacff57"
             },
             {
-                "name": "小默",
-                "type": "組員",
-                "mailHash": "cbc604823782f8a446029c6ca789f6d3"
-            },
-            {
                 "name": "zhennnnnn",
                 "type": "組員",
                 "mailHash": "b57a6e1d532a8914307d7375e2d90a5a"
-            },
-            {
-                "name": "小涼",
-                "type": "組員",
-                "mailHash": "494421bf92ed8ce9f8693cf532b1f3c7"
             },
             {
                 "name": "Sui （小酥）",
@@ -555,6 +535,11 @@
                 "name": "家維",
                 "type": "組員",
                 "mailHash": "6c9671ae54b2b490692a827fd1f2ae04"
+            },
+            {
+                "name": "葦葦",
+                "type": "組員",
+                "mailHash": "f4d2d82b00f14d8b54f9999f7ac909eb"
             },
             {
                 "name": "小草",
@@ -682,6 +667,64 @@
                 "name": "繁嵐",
                 "type": "組員",
                 "mailHash": "f46225edf97b66ca05c2cacc4bc19d9f"
+            }
+        ]
+    },
+    {
+        "name": "製播組",
+        "intro": "協助年會當天各會議廳之錄影及直播，並處理議程演講的剪接後製。",
+        "member": [
+            {
+                "name": "火柴",
+                "type": "組長",
+                "mailHash": "d91e670b0fdf31647b555b66e08c9c91"
+            },
+            {
+                "name": "Wama",
+                "type": "組員",
+                "mailHash": "a238d9c4b1f0a5685f7c32e3a39d2120"
+            },
+            {
+                "name": "貓又",
+                "type": "組員",
+                "mailHash": "147530bb3df05ac8b4631a3fa0bbac6d"
+            },
+            {
+                "name": "Sciuridae 松鼠",
+                "type": "組員",
+                "mailHash": "60ce6b00bae88e0ff15c9480a9ce92f5"
+            }
+        ]
+    },
+    {
+        "name": "導遊團",
+        "intro": "規劃並協助年會當天帶領年會的與會者們認識會場、講者以及各式景點。",
+        "member": [
+            {
+                "name": "小徐",
+                "type": "線上導遊",
+                "mailHash": "1a89d85b1504bf9268d9cb0dec09e222"
+            },
+            {
+                "name": "阿軒",
+                "type": "初心導遊",
+                "mailHash": "f77b0175dde41899d58953b2a7c9bb5d"
+            },
+            {
+                "name": "Sean",
+                "type": "初心導遊",
+                "mailHash": "a0bf2ae346cb12358df577151ee29888"
+            }
+        ]
+    },
+    {
+        "name": "大地遊戲負責人",
+        "intro": "協助年會規劃促進與會者在年會中互動交流的活動。",
+        "member": [
+            {
+                "name": "白兔",
+                "type": "負責人",
+                "mailHash": "18eb366edd0ccc5725ce36e0038cc862"
             }
         ]
     }
