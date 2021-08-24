@@ -55,6 +55,13 @@
           "logo": "micare.png",
           "id": "micare",
           "description": "咪卡創意，提供更專業的影音紀錄服務。\nWe let your event glow.\n\n我們協助眾多線上活動、跨國視訊連線、大型線上研討會執行直播與紀錄。\n提供您在有限的空間與時間下，達到最佳效果的影音服務方案。\n\n不論線上／線下、跨國／跨地、各式活動直播紀錄，歡迎洽詢咪卡創意！\n\n---\n活動直播 | 影像紀錄 | 音訊工程\n#咪卡創意 #MicareProduction\n#為您留下更專業的影像紀錄 "
+        },
+        {
+          "name": "美商超微半導體",
+          "link": "https://www.amd.com/zh-hant",
+          "logo": "amd.png",
+          "id": "amd",
+          "description": "AMD 是半導體創新領域的先鋒，致力於打造高效能運算和圖形技術，以提供完整的解決方案。隨著科技蛻變， AMD 和台積電合作的 7 奈米處理器延續市場熱潮，屢獲新客戶採用並創下效能新里程碑，並廣泛應用於筆電、桌機、電競、遊戲、繪圖、AI 企業應用和雲端商用的伺服器。"
         }
       ]
     },
@@ -162,6 +169,13 @@
           "link": "https://www.iiiedu.org.tw/",
           "logo": "iiiedu.png",
           "id": "iiiedu",
+          "description": ""
+        },
+        {
+          "name": "張國周製藥股份有限公司",
+          "link": "https://changkuochou.com.tw/",
+          "logo": "ckcp.png",
+          "id": "ckcp",
           "description": ""
         }
       ]
