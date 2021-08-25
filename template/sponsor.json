@@ -181,6 +181,13 @@
           "logo": "ckcp.png",
           "id": "ckcp",
           "description": ""
+        },
+        {
+          "name": "HackMD",
+          "link": "https://hackmd.io/",
+          "logo": "hackmd.png",
+          "id": "hackmd",
+          "description": ""
         }
       ]
     },
