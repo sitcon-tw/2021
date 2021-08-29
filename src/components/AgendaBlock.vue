@@ -47,15 +47,13 @@
               {{knowlege}}
             </VueMarkdown>
           </article>
-          <!--
           <section class="agendaBlock_record">
-            <iframe src="" frameborder="0"></iframe>
+            <iframe v-if="info.live" :src="info.live" frameborder="0"></iframe>
             <div class="agendaBlock-buttonsBox">
-              <a href="">簡報連結</a>
-              <a href="">線上 QA</a>
+              <a v-if="info.slide" :href="info.slide">簡報連結</a>
+              <a v-if="info.qa" :href="info.qa">線上 QA</a>
             </div>
           </section>
-          -->
           <!--
           <section v-for="speaker in info.speakers" :key="speaker">
             <img :src="getSpeaker(speaker).avatar" alt="null" />
