@@ -8,7 +8,7 @@
 		"lint": "vue-cli-service lint",
 		"init": "git submodule init && git submodule update --recursive --remote && cd src/util/session && npm install",
 		"generate:session": "cp session.config.js src/util/session/config.js && node src/util/session/index.js > public/json/session.json",
-		"redirect:slido": "cd dist && mkdir slido && cp app.html ./slido/r0.html && cp app.html ./slido/r1.html && cp app.html ./slido/r2.html && cp app.html ./slido/r3.html && cp app.html ./slido/s.html",
+		"redirect:qa": "cd dist && mkdir qa && cp app.html ./qa/r0.html && cp app.html ./qa/r1.html && cp app.html ./qa/r2.html && cp app.html ./qa/r3.html && cp app.html ./qa/s.html",
 		"redirect:record": "cd dist && mkdir record && cp app.html ./record/r0.html && cp app.html ./record/r1.html && cp app.html ./record/r2.html && cp app.html ./record/r3.html && cp app.html ./record/s.html"
 	},
 	"dependencies": {
