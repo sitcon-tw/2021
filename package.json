@@ -9,7 +9,9 @@
 		"init": "git submodule init && git submodule update --recursive --remote && cd src/util/session && npm install",
 		"generate:session": "cp session.config.js src/util/session/config.js && node src/util/session/index.js > public/json/session.json",
 		"redirect:qa": "cd dist && mkdir qa && cp app.html ./qa/r0.html && cp app.html ./qa/r1.html && cp app.html ./qa/r2.html && cp app.html ./qa/r3.html && cp app.html ./qa/s.html",
-		"redirect:record": "cd dist && mkdir record && cp app.html ./record/r0.html && cp app.html ./record/r1.html && cp app.html ./record/r2.html && cp app.html ./record/r3.html && cp app.html ./record/s.html"
+		"redirect:record": "cd dist && mkdir record && cp app.html ./record/r0.html && cp app.html ./record/r1.html && cp app.html ./record/r2.html && cp app.html ./record/r3.html && cp app.html ./record/s.html",
+		"heml-dev": "heml develop template/mail/SITCON-2021.heml",
+		"generate:mail": "heml build template/mail/SITCON-2021.heml --output public/mail/SITCON-2021.html && cp -R template/mail/assets public/mail/"
 	},
 	"dependencies": {
 		"@ccip-app/session-table": "^1.1.0",
@@ -19,6 +21,7 @@
 		"@types/vue-markdown": "^2.2.1",
 		"axios": "^0.21.1",
 		"core-js": "^3.6.5",
+		"heml": "^1.1.3",
 		"vue": "^2.6.11",
 		"vue-class": "^2.0.1",
 		"vue-class-component": "^7.2.3",

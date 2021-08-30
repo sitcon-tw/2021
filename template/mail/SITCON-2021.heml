@@ -1,0 +1,215 @@
+<heml>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <subject>SITCON 2020 行前通知信</subject>
+      <preview>
+         很高興能在 SITCON 2020 看到你！年會即將在下週六（8/8）揭開序幕，我們特別整理了一些實用的資訊，還請詳細閱讀；為始活動報到順利，請先行下載安裝「SITCON 通關」App —
+         若您無法順利閱讀此信件，請參閱線上版本：https://sitcon.org/2020/mail/SITCON-2020.html
+      </preview>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
+      <style>
+         body {
+            background-image: url('./assets/background.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+         }
+         div.container {
+           padding: 16px;
+           width: calc(100% - 16px * 2);
+           background-color: white;
+         }
+
+         img.banner {
+           width: 70%;
+           margin: 20px auto;
+         }
+         img.signature {
+           margin: 64px auto;
+           height: 128px;
+         }
+
+         .gather-images {display: flex;justify-content: center;}
+         .gather-image {margin: 5px 10px;}
+
+         h1, h2, p, a {
+            font-family: 'Noto Serif TC', serif, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            letter-spacing: 0.5pt;
+            color: #000000;
+            font-size: 14px;
+         }
+         h1, h2 {display: inline-block;}
+         p, a {line-height: 1.6;}
+         a {color: #2200cc;font-size: inherit;}
+         h1 {font-size: 24px;}
+         h2 {font-size: 20px;}
+         h1.title {
+            padding: 7px 18px;
+            border-left: 15px solid #0000FF;
+            padding-left: 15px;
+         }
+         h2.subtitle {
+            position: relative;
+            margin: 16px 0 8px 20px;
+            padding: 0 12px 0 24px;
+            border-left: 12px solid #105FFF;
+            padding-left: 15px;
+         }
+         .content {margin: 24px 0;}
+         p.paragraph {
+            margin-left: 40px;
+         }
+         .bigger {font-size: 18px;}
+         .font-bold {font-weight: 700;}
+         .font-medium {font-weight: 500;}
+      </style>
+   </head>
+   <body>
+      <container class="container">
+         <img class="banner top" src="./assets/mailHeader.svg" infer="retina" />
+         <block class="wrapper">
+            <block class="content">
+               <p class="font-medium bigger">Hi {{ nickname }}，</p>
+               <p class="">
+                  若您無法順利閱讀此信件，請參閱
+                  <a
+                     href="https://sitcon.org/2021/mail/SITCON-2021.html" target="_blank"
+                     rel="noopener noreferrer">線上版本
+                  </a>。
+               </p>
+               <p class="">很高興能在 SITCON 2021 看到你！受到 COVID-19 疫情影響，因此 SITCON 2021 將在本週六（09/04）以線上形式舉辦，我們特別整理了一些實用的資訊，還請您詳細閱讀：</p>
+            </block>
+            <block class="content">
+               <h1 class="title font-bold">一、 線上會場</h1>
+               <p class="paragraph"></p>
+               <h2 class="subtitle font-bold">1. Gather 場地</h2>
+               <p class="paragraph">
+               <p class="gather-images">
+                  <img class="gather-image" src="./assets/space00.png"/>
+                  <img class="gather-image" src="./assets/space01.png"/>
+                  <img class="gather-image" src="./assets/space10.png"/>
+               </p>
+               </p>
+               <p class="paragraph">
+                  備註：在 Gather 上會有攝影組的夥伴在會場內遊走紀錄，在開鏡頭的時候請注意環境跟衣裝哦！
+               </p>
+               <h2 class="subtitle font-black">2. 議程直播連結（<a href="https://sitcon.org/2021/agenda">議程表</a>）</h2>
+               <p class="paragraph">
+                  今年議程分為 4 軌進行，共計 2 場主題演講 (keynote)、27 場投稿議程與 3 場合作議程，將在年會當日於 YouTube 直播。
+                  投稿議程與合作議程將開放「議程線上討論區」匿名提問、與講者即時交流。
+               </p>
+               <p class="paragraph">
+                  因應本次年會主題「算盤的後裔」，2 場主題演講分別邀請到關注開源社群發展多年的 HC 與 Ubuntu Kernel 的長期內核開發者 Gavin Guo，從不同領域切入探討資訊社群與重要技術的發展。
+               </p>
+               <p class="paragraph">
+                  投稿議程與往年相同，作為學生展現自己的舞台，接受任何與資訊科技、電腦技術相關的講題，並特別期待以學生為主體的稿件。
+                  經過踴躍投稿與激烈審稿後，我們選出的 27 場投稿議程，主題涵蓋：資安、網路與雲端、程式開發、不只是程式開發、活動經驗、深度學習、自造者⋯⋯等。
+               </p>
+               <p class="paragraph">
+                  另外，延續著去年的熱潮，開放式議程將於 SITCON 2021 再次舉行，期待藉由講者及與會者的雙向資訊傳遞，激盪出熱烈的討論及更多的觀點。
+                  今年共有 6 場開放式議程，將於年會當日，在 Discord 上舉行。
+                  年會當日登入 Discord SITCON 伺服器，左側頻道列表可以找到開放式議程的標題，加入語音頻道與文字頻道，即可參與開放式議程。
+               </p>
+            </block>
+            <block class="content">
+               <h1 class="title font-bold">二、年會活動</h1>
+               <p class="paragraph"></p>
+               <p class="paragraph">
+                  除了一整天精彩的議程，今年的 SITCON 也有許多有趣的活動可以參加！不論是抓緊機會表現自己，或是想在年會認識新朋友，都千萬別錯過囉。
+               </p>
+               <h2 class="subtitle font-bold">1. 天使計畫</h2>
+               <p class="paragraph">
+               <p class="paragraph">
+                  先前天使計畫報名者，已於近日發送配對結果通知。如報名後尚未收到通知，請檢查信件是否分類至垃圾郵件。
+               </p>
+               <h2 class="subtitle font-bold">2. Lightning Talk 閃電秀</h2>
+               <p class="paragraph">
+               <p class="paragraph">
+                  Lightning Talk 中文譯為「閃電秀」，顧名思義即為「閃電一般短的演講」。有什麼想展現給全場所有人的技術、想法、甚至經驗談，都能把握這短短的 3 分鐘，在 SITCON 2021 的大舞台上讓大家看見你！
+               </p>
+               <p class="paragraph">
+                  Lightning Talk 安排於年會閉幕前（17:00）進行。報名表單會在開幕式和 Facebook 粉絲專頁上公佈，並於 13:00 抽出議程。
+               </p>
+               <h2 class="subtitle font-bold">3. 白板大戰</h2>
+               <p class="paragraph">
+               <p class="paragraph">
+                  在年會進行中的同時，一個離線的留言板將在場中出現，白板是你的戰場，而白板筆就是你的刀劍，盡情切磋、盡情揮灑，這就是白板大戰。
+               </p>
+               <p class="paragraph">
+                  不論你是要宣傳社團、推廣 vim、畫一隻貓、還是只是想說個嗨，白板大戰就是你的天空，在虛實之間，讓不同想法進行對話，相互交織。
+               <p>
+               <p class="paragraph">
+                  歡迎加入，白板大戰！
+               <p>
+               <h2 class="subtitle font-bold">4. 攤位大地遊戲</h2>
+               <p class="paragraph"></p>
+               <p class="paragraph">「欸，你快看！攤位上好像有奇怪的句子耶」</p>
+               <p class="paragraph">「有嗎？啊！我看到了！不知道這句子能幹嘛，不過還是先收著以備不時之需吧！」</p>
+               <p class="paragraph">- </p>
+               <p class="paragraph">「欸欸欸，這邊是哪裡啊，怎麼到處都有算盤相關的介紹呀？」</p>
+               <p class="paragraph">「好問題耶，而且前面還有一道神祕的大門。」</p>
+               <p class="paragraph">（從遠處滾來一顆算珠小石）</p>
+               <p class="paragraph">（他緩緩地開口道）</p>
+               <p class="paragraph">「你們...會用算盤嗎？知道為什麼 SITCON 2021 的主題跟算盤有關嗎...？」</p>
+               <p class="paragraph">-</p>
+               <p class="paragraph">錯過紀念品販售嗎？還想獲得 SITCON 2021 那潮潮的 code 印章嗎？</p>
+               <h2 class="subtitle font-bold">5. 導遊團</h2>
+               <p class="paragraph">
+                  第一次參加 SITCON 不知道該從何逛起嗎？年會當天下午，導遊們將帶大家走訪總副召、講者、社群攤位，用大約 40 分鐘的時間帶大家實地了解 SITCON 的運作方式和各路與會的夥伴！
+               </p>
+               <p class="paragraph">
+                  有興趣參加導遊團的朋友們，可以在下午 2:20 走到遊戲室上方吉祥物處或在 gather 找到暱稱前面帶有 [導遊] 的人，點選 follow 後就可以跟隨導遊走訪會場囉～
+               </p>
+               <p class="paragraph">
+               <h2 class="subtitle font-bold">6. 論壇：同學你這樣學寫程式？現今教育體系下的程式學習</h2>
+               <p class="paragraph">
+               <p class="paragraph">
+                  論壇的主軸將圍繞在「學生」族群身上，希望藉由與會者發言並進行討論的方式，讓參與論壇的人了解彼此的想法。討論範圍包含在教育體系下的程式學習以及取得資訊領域相關資源時會遇到的困難。
+               </p>
+               <p class="paragraph">
+                  如果想要在年會當天發言，還請各位事先把自己的想法寫進去 <a href="https://sli.do/SITCON21-P">Sli.do</a> 裡面，到時將由主持人主導論壇進行，並唸出 <a href="https://sli.do/SITCON21-P">Sli.do</a> 上的回應與大家分享。
+               </p>
+               <p class="paragraph">
+                  關於發言平台的部分，還請各位與會者關注後續宣告事項。
+               </p>
+            </block>
+            <block class="content">
+               <h1 class="title font-bold">三、共筆與議程線上討論區</h1>
+               <h2 class="subtitle font-bold">1. 共筆、Sli.do 發問區</h2>
+               <p class="paragraph">
+                  今年年會延續往年傳統，為各議程開設「共筆」與「議程線上討論區（Sli.do）」，共筆供聽眾一起編輯議程筆記，議程線上討論區則供講者與各位聽眾進行即時交流。各連結將公告於年會官方網站。您可以在議程中隨時使用議程線上討論區匿名提問，講者能自由選擇時間解答及互動。籌辦團隊雖開設此平台，但並非強制所有與會者及講者必須使用，僅供各位利用參考。  
+               </p>
+               <p class="paragraph">
+                  籌辦團隊雖開設此平台，但並非強制所有與會者及講者必須使用，僅供各位利用參考。
+               </p>
+               <p class="paragraph">
+                  議程共筆統整： 
+               </p>
+               <p class="paragraph">
+                  議程 Sli.do 發問區統整：<a href="https://hackmd.io/UPFlWuX5TjOG5Ut6Q7Ayow">https://hackmd.io/UPFlWuX5TjOG5Ut6Q7Ayow</a>
+               </p>
+               <h2 class="subtitle font-bold">2. Discord 及其他線上討論區</h2>
+               <p class="paragraph">
+                  年會當天的線上聊天室十分精彩，您可以和其他與會者抬槓、甚至找到志同道合的夥伴！除了加入
+                  <a href="https://sitcon.org/tg">Telegram @SITCONgeneral 群組</a>、<a href="https://discord.gg/KFWnPbQ2K4">Discord SITCON 伺服器</a>以外，也可以透過你熟悉的軟體連上 IRC #sitcon@libera.chat 頻道。
+               </p>
+            </block>
+            <block class="content">
+               <p class="">
+                  最後，也請您務必閱讀並一同遵守 <a href="https://sitcon.org/code-of-conduct/">SITCON 行為準則</a>，讓大家都能開心的在 SITCON 齊聚一堂，彼此激盪、傳承、啟發。
+               </p>
+               <p class="">
+                  感謝您讀完這份行前簡介，期待在 SITCON 2021 與您在空中相會！
+               </p>
+               <p class="">
+                  SITCON 2021 籌備團隊
+               </p>
+            </block>
+            <img class="signature" src="./assets/signature.svg" alt="" />
+         </block>
+      </container>
+   </body>
+</heml>
