@@ -106,6 +106,27 @@
           "logo": "cycarrier.png",
           "id": "cycarrier",
           "description": "奧義智慧為世界領先 AI 資安公司，堅持打造臺灣自研技術品牌，並以獨家 AI 技術自動化資安偵測與回應，屢獲國際肯定、國內市佔率第一名。"
+        },
+        {
+          "name": "新加坡商鈦坦科技",
+          "link": "https://titansoft.com/tw",
+          "logo": "titansoft.png",
+          "id": "titansoft",
+          "description": ""
+        },
+        {
+          "name": "AWS Educate",
+          "link": "https://aws.amazon.com/tw/education/awseducate/",
+          "logo": "aws_educate.png",
+          "id": "aws_educate",
+          "description": ""
+        },
+        {
+          "name": "MOPCON",
+          "link": "https://mopcon.org/",
+          "logo": "mopcon.png",
+          "id": "mopcon",
+          "description": ""
         }
       ]
     },
@@ -145,6 +166,13 @@
           "link": "https://twnic.tw/",
           "logo": "twnic.png",
           "id": "twnic",
+          "description": ""
+        },
+        {
+          "name": "社團法人台灣駭客協會",
+          "link": "https://www.hacker.org.tw/",
+          "logo": "hit.png",
+          "id": "hit",
           "description": ""
         }
       ]
