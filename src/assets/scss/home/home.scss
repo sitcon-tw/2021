@@ -23,25 +23,6 @@ $font-home-h2: 'Letter Gothic Std Bold';
     height: 500px;
   }
 }
-@mixin sectionContentHeight {
-  height: 1750px;
-  @media screen and (min-width: $max-width-big) {
-    height: 2050px;
-  }
-  @media screen and (min-width: $max-width-big-0) {
-    height: 2150px;
-  }
-  @media screen and (max-width: $max-width-medium-1) {
-    height: 1900px;
-  }
-  @media screen and (max-width: $max-width-small-1) {
-    height: 2200px;
-  }
-
-  @media screen and (max-width: $max-width-small-3) {
-    height: 2050px;
-  }
-}
 // -------------------------------------------
 
 //home__title
@@ -343,9 +324,6 @@ $font-home-h2: 'Letter Gothic Std Bold';
   &-title {
     margin-top: 20px;
     @include sectionTitleHeight;
-  }
-  &-content {
-    @include sectionContentHeight;
   }
 }
 
