@@ -216,6 +216,13 @@
           "logo": "hackmd.png",
           "id": "hackmd",
           "description": ""
+        },
+        {
+          "name": "Gather",
+          "link": "https://www.gather.town/",
+          "logo": "gather.png",
+          "id": "gather",
+          "description": ""
         }
       ]
     },
