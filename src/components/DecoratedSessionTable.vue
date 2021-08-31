@@ -53,22 +53,12 @@
     }
 
     public mounted () {
-      this.$nextTick().then(() => {
-        // sessions before first rest would be different style
-        // also create decoration bar starting from the first rest time
-        const firstRest = this.sessionData.sessions.find((s: any) => s.broadcast?.length === this.rooms.length);
-        this.firstRestTime = this.normalizeTime(firstRest.start);
-
-        // We have to iterate all elements because DOM order != visual order.
-        Array.from(
-          document.querySelectorAll<HTMLElement>('.ccip-app.ccip-session-table.general .session-block')
-        ).forEach((el: HTMLElement, i: number) => {
-          // grid row start => session.start
-          if (el.style.gridRowStart.localeCompare(this.firstRestTime) < 0) {
-            el.classList.add('square');
-          }
-        });
-      });
+      // sessions before first rest would be different style
+      // also create decoration bar starting from the first rest time
+      const firstRest = this.sessionData.sessions.find((s: any) => s.broadcast?.length === this.rooms.length);
+      this.firstRestTime = this.normalizeTime(firstRest.start);
+ 
+      this.applySquareSessionBlockStyle();
     }
 
     private normalizeTime (time: string) {
@@ -93,6 +83,26 @@
     private onInternalPopUp (popUp: boolean) {
       // pass to Agenda component
       this.$emit('popup:session', popUp, popUp ? this.popUpSession : {});
+    }
+
+    @Watch('isMobile')
+    private applySquareSessionBlockStyle () {
+      // only on desktop view
+      if (this.isMobile) {
+        return;
+      }
+
+      this.$nextTick().then(() => {
+        // We have to iterate all elements because DOM order != visual order.
+        Array.from(
+          document.querySelectorAll<HTMLElement>('.ccip-app.ccip-session-table.general .session-block')
+        ).forEach((el: HTMLElement, i: number) => {
+          // grid row start => session.start
+          if (el.style.gridRowStart.localeCompare(this.firstRestTime) < 0) {
+            el.classList.add('square');
+          }
+        });
+      });
     }
   }
 </script>
