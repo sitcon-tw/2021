@@ -159,7 +159,7 @@
 									:id="x.id"
 									class="sponsor"
 									v-for="x in s.org"
-									style="height:300px"
+									style="min-height:300px"
 									:href="x.link"
 								>
 									<div class="sponsor-name">

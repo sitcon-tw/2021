@@ -425,6 +425,10 @@ $font-home-h2: 'Letter Gothic Std Bold';
 
     &-buttonsBox {
       @include homeInfoButtonBox;
+
+      a {
+        white-space: nowrap;
+      }
     }
   }
 
