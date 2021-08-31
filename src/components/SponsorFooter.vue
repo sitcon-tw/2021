@@ -1,9 +1,9 @@
 <template>
     <div class="sponsor-footer">
-        <img v-for="x in coOrg" :src="require(`../assets/images/sponsor/${x.logo}`)"/>
-        <img v-for="x in supOrg" :src="require(`../assets/images/sponsor/${x.logo}`)"/>
+        <img v-for="x in coOrg" :src="require(`../assets/images/sponsor/${x.logo}`)" :key="x.logo"/>
+        <img v-for="x in supOrg" :src="require(`../assets/images/sponsor/${x.logo}`)" :key="x.logo"/>
         <template v-for="x in sponsors">
-            <img v-for="i in x.org" :src="require(`../assets/images/sponsor/${i.logo}`)"/>
+            <img v-for="i in x.org" :src="require(`../assets/images/sponsor/${i.logo}`)" :key="i.logo"/>
         </template>
     </div>
 </template>
