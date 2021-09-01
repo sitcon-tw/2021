@@ -11,7 +11,7 @@
 		"redirect:qa": "cd dist && mkdir qa && cp app.html ./qa/r0.html && cp app.html ./qa/r1.html && cp app.html ./qa/r2.html && cp app.html ./qa/r3.html && cp app.html ./qa/s.html",
 		"redirect:record": "cd dist && mkdir record && cp app.html ./record/r0.html && cp app.html ./record/r1.html && cp app.html ./record/r2.html && cp app.html ./record/r3.html && cp app.html ./record/s.html",
 		"heml-dev": "heml develop template/mail/SITCON-2021.heml",
-		"generate:mail": "cp -R template/mail/assets public/mail/ && heml build template/mail/SITCON-2021.heml --output public/mail/SITCON-2021.html"
+		"generate:mail": "cp -R template/mail/assets public/mail && heml build template/mail/SITCON-2021.heml --output public/mail/SITCON-2021.html"
 	},
 	"dependencies": {
 		"@ccip-app/session-table": "^1.1.0",
