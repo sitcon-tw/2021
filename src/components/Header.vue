@@ -104,7 +104,7 @@
           </div>
           <div class="header-applyPopup__content">
             <section class="description">
-              今年 SITCON 將在 09/04 採線上進行，我們會透過 Youtube 直播議程，並透過 Gather 平台搭建虛擬年會會場，希望帶給大家有別於實體年會的有趣體驗。 點擊下方連結即可前往相關活動會場。
+              今年 SITCON 將在 09/04 採線上進行，我們會透過 YouTube 直播議程，並透過 Gather 平台搭建虛擬年會會場，希望帶給大家有別於實體年會的有趣體驗。 點擊下方連結即可前往相關活動會場。
             </section>
             <section class="image-link">
               <a href="https://www.youtube.com/user/SITCONArchive?sub_confirmation=1">
