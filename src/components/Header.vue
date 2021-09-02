@@ -67,7 +67,7 @@
       </div>
       <div class="pointer" @click="()=>{apply = true;fixedScroll();}">
         <div class="header-apply">
-          <span>報名去</span>
+          前往活動
         </div>
       </div>
     </div>
@@ -100,53 +100,56 @@
               class="header-applyPopup-squareImg"
             />
             <h2>SITCON 2021</h2>
-            <h1>報名方式</h1>
+            <h1>線上會場</h1>
           </div>
           <div class="header-applyPopup__content">
-            <div class="header-applyPopup__content-left">
-              <div class="header-applyPopup__content-left-container">
-                <p>
-                  SITCON年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助。
-                </p>
-                <br />
-                <br class="header-applyPopup__content-left--br" />
-                <p>
-                  若你認同 SITCON 的理念與做法，歡迎參與 SITCON 2021
-                  的個人贊助方案，給予我們實質上的支持。
-                  參與方案者將會獲贈入場資格與紀念品等項目，以表感謝。
-                </p>
-                <br />
-                <p class="header-applyPopup__content-left--noticeInfo">
-                  *詳情請見個人贊助頁面
-                </p>
+            <section class="description">
+              今年 SITCON 將在 09/04 採線上進行，我們會透過 YouTube 直播議程，並透過 Gather 平台搭建虛擬年會會場，希望帶給大家有別於實體年會的有趣體驗。 點擊下方連結即可前往相關活動會場。
+            </section>
+            <section class="image-link">
+              <a href="https://www.youtube.com/user/SITCONArchive?sub_confirmation=1">
+                <img src="~@/assets/images/venue/apply-popup-yt.png"/>
+                <div class="filter"></div>
+                <div class="info">
+                  <span>議程直播</span>
+                  <img src="~@/assets/images/youtube.svg"/>
+                </div>
+              </a>
+              <a href="https://gather.town/app/VGDsDLUeG7nAXrld/SITCON%202021%20Space%2001">
+                <img src="~@/assets/images/venue/gather01.png"/>
+                <div class="filter"></div>
+                <div class="info">
+                  <span>Space01</span>
+                  <img src="~@/assets/images/gather.svg"/>
+                </div>
+              </a>
+              <a href="https://gather.town/app/nQwAJKcDkWOQNTxp/SITCON%202021%20Space%2010">
+                <img src="~@/assets/images/venue/gather10.png"/>
+                <div class="filter"></div>
+                <div class="info">
+                  <span>Space10</span>
+                  <img src="~@/assets/images/gather.svg"/>
+                </div>
+              </a>
+              <a href="https://gather.town/app/8xTwDiNGOoo732Gt/SITCON%202021%20Space%2011">
+                <img src="~@/assets/images/venue/gather11.png"/>
+                <div class="filter"></div>
+                <div class="info">
+                  <span>Space11</span>
+                  <img src="~@/assets/images/gather.svg"/>
+                </div>
+              </a>
+            </section>
+            <section class="sponsor">
+              <div>
+                <p>SITCON 年會堅持不收費原則，秉持著「降低學生參與門檻」的理念，預算全數由個人／企業贊助或是政府／教育單位協助。</p>
+                <br/>
+                <p>若你認同 SITCON 的理念與做法，歡迎參與 SITCON 2021 的個人贊助方案，給予我們實質上的支持。</p>
               </div>
-            </div>
-            <div class="header-applyPopup__content-right">
-              <div class="header-applyPopup__content-right-container">
-                <a
-                  href="https://sitcon.kktix.cc/events/sitcon2021"
-                  target="_blank"
-                >
-                  <div class="header-applyPopup-box">
-                    <span>
-                      學生 / 普通票
-                      <p>免費報名</p>
-                    </span>
-                  </div>
-                </a>
-                <a
-                  href="https://sitcon.kktix.cc/events/sitcon2021-individual-sponsor"
-                  target="_blank"
-                >
-                  <div class="header-applyPopup-box">
-                    <span
-                      >個人贊助方案
-                      <p>詳情請見 KKTIX</p>
-                    </span>
-                  </div>
-                </a>
-              </div>
-            </div>
+              <a class="header-applyPopup-box" href="https://sitcon.kktix.cc/events/sitcon2021-individual-sponsor">
+                <span>個人贊助方案<p>詳情請見 KKTIX</p></span>
+              </a>
+            </section>
           </div>
         </div>
       </div>

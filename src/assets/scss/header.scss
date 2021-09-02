@@ -68,7 +68,7 @@
 
 // header-apply
 @mixin headerApplyWidthAndHeight {
-  width: 92px;
+  width: 95px;
   height: 38px;
   @media screen and (max-width: $max-width-medium-1) {
     width: 85px;
@@ -88,9 +88,9 @@
   }
 }
 @mixin headerApplyFontsize {
-  font-size: 13pt;
+  font-size: 12pt;
   @media screen and (max-width: $max-width-medium-1) {
-    font-size: 12pt;
+    font-size: 11pt;
   }
   @media screen and (max-width: $max-width-small-1) {
     font-size: 10pt;
@@ -507,14 +507,13 @@
     top: 50%;
     transform: translateY(-50%);
 
-    span {
-      @include headerApplyFontsize;
-      color: $white;
-      position: absolute;
-      top: 50%;
-      left: 40%;
-      transform: translateX(-35%) translateY(-50%);
-    }
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include headerApplyFontsize;
+    
   }
 
   &-applyPopup {
@@ -535,14 +534,18 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      overflow: hidden;
+      overflow: auto;
       opacity: 0;
-      @include headerApplyPopupContainerWidth;
-      @include headerApplyPopupContainerHeight;
+      // @include headerApplyPopupContainerWidth;
+      // @include headerApplyPopupContainerHeight;
+      width: 75%;
+      height: 80%;
+      max-width: 900px;
+      min-width: 300px;
       background-color: $white;
       box-shadow: 0 2rem 4rem rgba($black, 0.2);
       border-radius: 15px;
-      display: table;
+      // display: table;
       transform: translate(-50%, -50%) scale(0.25);
       transition: all 0.5s 0.2s;
     }
@@ -571,43 +574,107 @@
     }
 
     &__content {
-      width: 90%;
-      height: 70%;
-      @include headerApplyPopupContentMargin;
-
-      &-left {
-        @include fontFamily-semibold;
-        float: left;
-        @include headerApplyPopupContentLeftWidth;
-
-        p {
-          @include headerApplyPopupContentLeftMargin;
-          @include headerApplyPopupContentLeftFontsize;
-          line-height: 25px;
+      font-size: 14pt;
+      @media screen and (max-width: 750px) {
+        font-size: 12pt;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 10pt;
+      }
+      & > section {
+        width: 80%;
+        margin: 30px auto;
+      }
+      & > .description {
+        @include fontFamily-bold;
+        width: 80%;
+        margin: 30px auto;
+        border-left:  5px solid #0025FF ;
+        padding-left: 15px;
+        line-height: 25px;
+      }
+      & >.image-link {
+        display: grid;
+        grid-template-columns:  repeat(4, 150px);
+        grid-template-rows: 100px;
+        @media screen and (max-width: 950px) {
+          grid-template-columns:  repeat(2, 150px);
+          grid-template-rows: repeat(2, 100px);
         }
-
-        &--br {
-          @include headerApplyPopupContentLeftBr;
+        @media screen and (max-width: 500px) {
+          grid-template-columns:  repeat(2, 120px);
+          grid-template-rows: repeat(2, 80px);
         }
-        &--noticeInfo {
-          @include fontFamily-bold;
-          color: $gray;
+        justify-content: space-around;
+        gap: 10px;
+        a {
+          width: 150px;
+          height: 100px;
+          border-radius: 20px;
+          @media screen and (max-width: 500px) {
+            border-radius: 10px;
+            width: 120px;
+            height: 80px;
+          }
+          display: block;
+          position: relative;
+          overflow: hidden;
+          * {
+            height: inherit;
+            width: inherit;
+            position: absolute;
+          }
+          .filter {
+            background: transparent linear-gradient(180deg, #344EA302 0%, #1B2855F6 82%, #1A2752 100%);          }
+          }
+          .info {
+            color: white;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            span {
+              font-size: 15pt;
+              text-align: center;
+              align-self: center;
+              height: 30px;
+              @include fontFamily-semibold;
+            }
+            img {
+              width: 30%;
+              height: 30px;
+            }
+          }
+      }
+      & > .sponsor {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        @media screen and (max-width: 800px) {
+          flex-direction: column;
         }
-
-        &-container {
-          margin: 0 auto;
-          @include headerApplyPopupContentLeftAndRightContainerWidth;
+        @include fontFamily-bold;
+        div {
+          margin: 0;
+          p {
+            margin: 0px 0;
+          }
+        }
+        .header-applyPopup-box {
+          display: block;
+          height:100px;
+          margin: 10px 20px;
+          flex-basis: 400px;
+          @media screen and (max-width: 800px) {
+            flex-basis: 150px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 300px;
+            max-height: 200px;
+          }
         }
       }
-      &-right {
-        float: left;
-        @include headerApplyPopupContentRightWidth;
-
-        &-container {
-          margin: 0 auto;
-          @include headerApplyPopupContentLeftAndRightContainerWidth;
-        }
-      }
+      
     }
 
     &-box {
@@ -642,6 +709,7 @@
     }
 
     &__close {
+      z-index: 9999;
       position: absolute;
       top: 20px;
       right: 20px;

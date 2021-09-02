@@ -22,6 +22,7 @@ jobs:
     - env:
         GCP_API_KEY: ${{ secrets.GCP_API_KEY }}
       run: npm run generate:session
+    - run: npm run generate:mail
     - run: npm run build
     - run: npm run redirect:qa
     - run: npm run redirect:record

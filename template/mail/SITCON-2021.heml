@@ -2,11 +2,12 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <subject>SITCON 2020 行前通知信</subject>
+      <subject>SITCON 2021 行前通知信</subject>
       <preview>
-         很高興能在 SITCON 2020 看到你！年會即將在下週六（8/8）揭開序幕，我們特別整理了一些實用的資訊，還請詳細閱讀；為始活動報到順利，請先行下載安裝「SITCON 通關」App —
-         若您無法順利閱讀此信件，請參閱線上版本：https://sitcon.org/2020/mail/SITCON-2020.html
+         很高興能在 SITCON 2021 看到你！受到 COVID-19 疫情影響，因此 SITCON 2021 將在本週六（09/04）以線上形式舉辦，我們特別整理了一些實用的資訊，還請您詳細閱讀；
+         若您無法順利閱讀此信件，請參閱線上版本：https://sitcon.org/2021/mail/SITCON-2021.html
       </preview>
+      <base href="https://sitcon.org/2021/mail/SITCON-2021.html" />
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -88,15 +89,21 @@
                <h2 class="subtitle font-bold">1. Gather 場地</h2>
                <p class="paragraph">
                <p class="gather-images">
-                  <img class="gather-image" src="./assets/space00.png"/>
-                  <img class="gather-image" src="./assets/space01.png"/>
-                  <img class="gather-image" src="./assets/space10.png"/>
+                  <a href="https://gather.town/app/VGDsDLUeG7nAXrld/SITCON%202021%20Space%2001">
+                     <img class="gather-image" src="./assets/space00.png"/>
+                  </a>
+                  <a href="https://gather.town/app/nQwAJKcDkWOQNTxp/SITCON%202021%20Space%2010">
+                     <img class="gather-image" src="./assets/space01.png"/>
+                  </a>
+                  <a href="https://gather.town/app/8xTwDiNGOoo732Gt/SITCON%202021%20Space%2011">
+                     <img class="gather-image" src="./assets/space10.png"/>
+                  </a>
                </p>
                </p>
                <p class="paragraph">
                   備註：在 Gather 上會有攝影組的夥伴在會場內遊走紀錄，在開鏡頭的時候請注意環境跟衣裝哦！
                </p>
-               <h2 class="subtitle font-black">2. 議程直播連結（<a href="https://sitcon.org/2021/agenda">議程表</a>）</h2>
+               <h2 class="subtitle font-bold">2. 議程直播連結（<a href="https://sitcon.org/2021/agenda">議程表</a>）</h2>
                <p class="paragraph">
                   今年議程分為 4 軌進行，共計 2 場主題演講 (keynote)、27 場投稿議程與 3 場合作議程，將在年會當日於 YouTube 直播。
                   投稿議程與合作議程將開放「議程線上討論區」匿名提問、與講者即時交流。
@@ -118,7 +125,6 @@
                <h1 class="title font-bold">二、年會活動</h1>
                <p class="paragraph"></p>
                <p class="paragraph">
-                  除了一整天精彩的議程，今年的 SITCON 也有許多有趣的活動可以參加！不論是抓緊機會表現自己，或是想在年會認識新朋友，都千萬別錯過囉。
                </p>
                <h2 class="subtitle font-bold">1. 天使計畫</h2>
                <p class="paragraph">
@@ -155,7 +161,7 @@
                <p class="paragraph">（他緩緩地開口道）</p>
                <p class="paragraph">「你們...會用算盤嗎？知道為什麼 SITCON 2021 的主題跟算盤有關嗎...？」</p>
                <p class="paragraph">-</p>
-               <p class="paragraph">錯過紀念品販售嗎？還想獲得 SITCON 2021 那潮潮的 code 印章嗎？</p>
+               <p class="paragraph">錯過紀念品販售嗎？還想獲得 SITCON 2021 那潮潮的 status code 印章嗎！把握年會當天的空閒時間，把我們精心準備的地圖走透透吧！偷偷說，今年抽獎獎品還多了一位乾爹的紀念品哦（撒花</p>
                <h2 class="subtitle font-bold">5. 導遊團</h2>
                <p class="paragraph">
                   第一次參加 SITCON 不知道該從何逛起嗎？年會當天下午，導遊們將帶大家走訪總副召、講者、社群攤位，用大約 40 分鐘的時間帶大家實地了解 SITCON 的運作方式和各路與會的夥伴！
@@ -170,20 +176,19 @@
                   論壇的主軸將圍繞在「學生」族群身上，希望藉由與會者發言並進行討論的方式，讓參與論壇的人了解彼此的想法。討論範圍包含在教育體系下的程式學習以及取得資訊領域相關資源時會遇到的困難。
                </p>
                <p class="paragraph">
-                  如果想要在年會當天發言，還請各位事先把自己的想法寫進去 <a href="https://sli.do/SITCON21-P">Sli.do</a> 裡面，到時將由主持人主導論壇進行，並唸出 <a href="https://sli.do/SITCON21-P">Sli.do</a> 上的回應與大家分享。
+                  論壇將在年會當日 13:10~14:40 於 YouTube 頻道直播，如果想在年會當天與大家分享想法，還請事前寫進
+                  <a href="https://sli.do/SITCON21-P">Sli.do</a>，關於發言平台的部分，煩請關注直播公告。另外有一個事前想請你填寫的
+                  <a href="https://forms.gle/vqFZdv7FEgckSq25A">表單</a>，希望能在論壇開始前，先了解你對「資訊教育」以及「寫程式」的看法。
                </p>
                <p class="paragraph">
-                  關於發言平台的部分，還請各位與會者關注後續宣告事項。
+                  期待和你在年會當天一同度過一個有趣的論壇時光。
                </p>
             </block>
             <block class="content">
                <h1 class="title font-bold">三、共筆與議程線上討論區</h1>
                <h2 class="subtitle font-bold">1. 共筆、Sli.do 發問區</h2>
                <p class="paragraph">
-                  今年年會延續往年傳統，為各議程開設「共筆」與「議程線上討論區（Sli.do）」，共筆供聽眾一起編輯議程筆記，議程線上討論區則供講者與各位聽眾進行即時交流。各連結將公告於年會官方網站。您可以在議程中隨時使用議程線上討論區匿名提問，講者能自由選擇時間解答及互動。籌辦團隊雖開設此平台，但並非強制所有與會者及講者必須使用，僅供各位利用參考。  
-               </p>
-               <p class="paragraph">
-                  籌辦團隊雖開設此平台，但並非強制所有與會者及講者必須使用，僅供各位利用參考。
+                  今年年會延續往年傳統，為各議程開設「共筆」與「議程線上討論區（Sli.do）」，共筆供聽眾一起編輯議程筆記，議程線上討論區則供講者與各位聽眾進行即時交流。各連結將公告於年會官方網站。您可以在議程中隨時使用議程線上討論區匿名提問，講者能自由選擇時間解答及互動。
                </p>
                <p class="paragraph">
                   議程共筆統整： 
