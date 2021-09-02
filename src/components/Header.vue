@@ -20,11 +20,11 @@
               >交通方式</router-link
             >
           </li> -->
-          <li>
+          <!-- <li>
             <router-link to="/venue" active-class="header-link--active"
               >會場地圖</router-link
             >
-          </li>
+          </li> -->
           <li>
             <router-link to="/sponsor" active-class="header-link--active"
               >贊助資訊</router-link
@@ -53,9 +53,9 @@
           <!-- <option value="/traffic" :selected="onRoute('Traffic') ? true : false"
             >交通方式</option
           > -->
-          <option value="/venue" :selected="onRoute('Venue') ? true : false"
+          <!-- <option value="/venue" :selected="onRoute('Venue') ? true : false"
             >會場地圖</option
-          >
+          > -->
           <option value="/sponsor" :selected="onRoute('Sponsor') ? true : false"
             >贊助資訊</option
           >
