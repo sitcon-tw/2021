@@ -70,7 +70,7 @@
    </head>
    <body>
       <container class="container">
-         <img class="banner top" src="./assets/mailHeader.svg" infer="retina" />
+         <img class="banner top" src="./assets/mailHeader.png" infer="retina" />
          <block class="wrapper">
             <block class="content">
                <p class="font-medium bigger">Hi {{ nickname }}，</p>
@@ -213,7 +213,7 @@
                   SITCON 2021 籌備團隊
                </p>
             </block>
-            <img class="signature" src="./assets/signature.svg" alt="" />
+            <img class="signature" src="./assets/signature.png" alt="" />
          </block>
       </container>
    </body>
