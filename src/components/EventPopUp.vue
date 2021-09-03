@@ -12,18 +12,24 @@
       />
     </div>
     <h1 class="title">{{ eventData[event.name].title }}</h1>
-    <div class="description">
+    <VueMarkdown class="description">
       {{ eventData[event.name].description }}
-    </div>
+    </VueMarkdown>
   </div>
 </template>
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
 import { ConfEvent } from '@/store/types/app';
 
+import VueMarkdown from 'vue-markdown';
+
 import EventData from '@/../public/json/event.json';
 
-@Component({})
+@Component({
+  components: {
+    VueMarkdown
+  }
+})
 export default class EventPopUp extends Vue {
   @Prop() private event!: ConfEvent;
 
