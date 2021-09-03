@@ -133,10 +133,10 @@ export default class App extends Vue {
         head.ogUrl('https://sitcon.org/2021/team/');
         break;
       case 'Venue':
-        head.title('會場地圖');
-        head.ogTitle('會場地圖');
+        head.title('線上會場');
+        head.ogTitle('線上會場');
         head.ogDescription('奠基於今日的科技成果，貢獻明日的資訊未來：SITCON 2021「算盤的後裔」');
-        head.ogUrl('https://sitcon.org/2021/traffic/');
+        head.ogUrl('https://sitcon.org/2021/venue/');
         break;
       case 'Sponsor':
         head.title('贊助資訊');

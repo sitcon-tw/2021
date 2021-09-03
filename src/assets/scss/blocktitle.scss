@@ -49,4 +49,18 @@ div.block.title {
       margin-left: 18px;
     }
   }
+
+  &.single {
+    span.text::after {
+      display: none;
+    }
+  }
+
+  &.left.aligned {
+    justify-content: flex-start;
+
+    span.text::before {
+      margin-left: 0;
+    }
+  }
 }
