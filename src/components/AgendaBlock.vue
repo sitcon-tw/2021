@@ -52,6 +52,7 @@
             <div class="agendaBlock-buttonsBox">
               <a v-if="info.slide" :href="info.slide">簡報連結</a>
               <a v-if="info.qa" :href="info.qa">線上 QA</a>
+              <a v-if="info.co_write" :href="info.co_write">共筆連結</a>
             </div>
           </section>
           <!--
