@@ -22,6 +22,8 @@ export default class SponsorFooter extends Vue {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/breakpoint';
+
 .sponsor-footer {
     text-align: center;
     padding: 20px 100px;
@@ -29,6 +31,12 @@ export default class SponsorFooter extends Vue {
         width: 150px;
         height: 100px;
         margin: 10px;
+    }
+}
+
+@media screen and (max-width: $max-width-medium-1) {
+    .sponsor-footer {
+        padding: 20px 50px;
     }
 }
 </style>
