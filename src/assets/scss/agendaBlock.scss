@@ -255,25 +255,32 @@
   }
 
   &_record {
-    height: 150px;
+    // height: 150px;
     position: relative;
     background-color: transparent !important;
     iframe {
       background-color: $black;
       width: 100%;
-      height: 65%;
       border-radius: 5px;
       box-shadow: 0 3px 8px 0 rgba(0, 0, 255, 0.33);
+    }
+
+    iframe:not(.discord) {
+      height: 70%;
+      aspect-ratio: 16 / 9;
+    }
+
+    &::after {
+      clear: both;
+      content: '';
+      display: block;
     }
   }
 
   &-buttonsBox {
     width: 100%;
     text-align: center;
-    position: absolute;
     margin-top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
     a {
       float: left;
       color: $white;
