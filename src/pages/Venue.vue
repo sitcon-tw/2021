@@ -26,7 +26,7 @@
                     <li>曉數碼攤位 [04]</li>
                     <li>COSCUP 攤位 [05]</li>
                     <li>開放文化基金會攤位 [06]</li>
-                    <li>PyCon 攤位 [07]</li>
+                    <li>PyCon Taiwan 攤位 [07]</li>
                 </ul>
             </div>
             <div class="mini map">
@@ -48,7 +48,7 @@
                     <li>教育部推動大學程式設計教學計畫攤位 [13]</li>
                     <li>中央創遊攤位 [14]</li>
                     <li>Chatbot Developers Taiwan 攤位 [15]</li>
-                    <li>夢想之都攤位 [16]</li>
+                    <li>夢想之都工作室攤位 [16]</li>
                 </ul>
             </div>
             <div class="mini map">
@@ -66,7 +66,7 @@
                     <li>資策會攤位 [18]</li>
                     <li>MOPCON 攤位 [19]</li>
                     <li>Monospace 攤位 [20]</li>
-                    <li>交大 VTuber 攤位 [21]</li>
+                    <li>交大 VTuber 社攤位 [21]</li>
                     <li>MozTW 攤位 [22]</li>
                     <li>Ubuntu-TW 攤位 [23]</li>
                     <li>梅竹黑客松攤位 [24]</li>
