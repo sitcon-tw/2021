@@ -48,11 +48,9 @@
             </VueMarkdown>
           </article>
           <section class="agendaBlock_record">
-            <iframe v-if="info.live && info.live.includes('youtu.be')" :src="embedYoutubeSrc(info.live)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe v-if="info.live && info.live.includes('discord')" class="discord" src="https://discord.com/widget?id=351339191453614080" width="350" height="350" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            <iframe v-if="info.record && info.record.includes('youtu.be')" :src="embedYoutubeSrc(info.record)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <div class="agendaBlock-buttonsBox">
               <a v-if="info.slide" :href="info.slide">簡報連結</a>
-              <a v-if="info.qa" :href="info.qa">線上 QA</a>
               <a v-if="info.co_write" :href="info.co_write">共筆連結</a>
             </div>
           </section>
