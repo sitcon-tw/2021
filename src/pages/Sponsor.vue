@@ -35,7 +35,7 @@
 										<h2>{{ main.name }}</h2>
 									</div>
 									<img
-										src="https://sitcon.org/branding/withname.svg"
+										src="https://sitcon.org/2021/logo.svg"
 										class="sponsor-img"
 									/>
 									<article class="sponsor-discription">
